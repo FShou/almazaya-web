@@ -1,0 +1,45 @@
+# STATUS — Al Mazaya Web Project
+
+*Last updated: 24 Aug 2026*
+
+## Current State
+
+**Phase 1 COMPLETE — static prototype** · branch `main` → github.com/FShou/almazaya-web
+
+| Piece | Status |
+|---|---|
+| Design system (`assets/css/style.css`) | ✅ done — all colors/fonts as CSS vars in `:root` |
+| ID pages: Beranda, Tentang, Jenjang, Berita, Galeri, PPDB | ✅ done (placeholder content where noted) |
+| EN mirrors under `en/` | ✅ done |
+| Header/nav/ID⇄EN toggle/WA button/mobile menu | ✅ working (toggle fix verified) |
+| Validation | ✅ all 12 pages: valid HTML, no broken links |
+| Local preview | `python3 -m http.server 8765` in repo root |
+
+**Known placeholders needing real content:**
+- All "Foto..." dashed slots (hero, profil, jenjang, galeri, berita thumbs) — need school photos
+- PPDB jadwal table & biaya — example data only
+- Fasilitas list — guessed, needs confirmation
+- Berita cards — copied from old site's real posts; dates/categories need verification
+- Copy fact-check: Cambridge claim, alumni UI/ULM/ITS/ITB, 4 olympiad medals
+
+## Next Steps (in order)
+
+1. **Content pass** ← *next session*
+   - Gather photos from school (or old WP media library via admin)
+   - Fact-check & finalize copy per list above
+   - Real PPDB schedule/fees
+2. **Design review iterations** — any layout/color feedback from stakeholder
+3. **Phase 2: port to WordPress block theme**
+   - Restructure approved HTML → `theme.json` + templates/parts/patterns
+   - Bilingual live = Polylang plugin (ID default)
+   - Output: `almazaya.zip`
+4. **Phase 3: deploy**
+   - WP admin → Appearance → Themes → Add New → upload zip → activate
+   - Old theme stays installed = instant rollback
+5. *(Later)* wire Berita/Galeri to real WP posts; migrate old content if wanted
+
+## Environment Notes
+
+- SSH config set: `github.com` uses key `~/.ssh/github` (user **FShou**) — pushes just work
+- Git identity (repo-local): Faqih <faqihsuyudi2020@gmail.com>
+- Palette is placeholder navy/gold — swap exact brand hexes anytime in `style.css:6`

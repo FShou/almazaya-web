@@ -75,7 +75,8 @@ news section wired later to WP posts.
 
 - [x] Research current site + reference template
 - [x] Plan finalized & approved
-- [ ] Phase 1 static prototype
+- [x] Phase 1 static prototype → see STATUS.md for details & next steps
+- [ ] Content pass (photos, fact-check, real PPDB data)
 - [ ] Design review & iterations
 - [ ] Phase 2 block theme port
 - [ ] Phase 3 deployment

@@ -15,8 +15,16 @@
 | Validation | ✅ all 12 pages: valid HTML, no broken links |
 | Local preview | `python3 -m http.server 8765` in repo root |
 
+**Tentang page restructured** (26 Aug 2026):
+- New section flow: Yayasan → Sejarah timeline → Visi-Misi → Nilai & Budaya → Fasilitas
+- Sub-nav anchor bar under hero (sticky on scroll)
+- Sejarah timeline with year badges (placeholder dates — verify with school)
+- Value cards grid (6 values) + Budaya Harian strip
+- Same restructure applied to both ID and EN versions
+
 **Known placeholders needing real content:**
 - All "Foto..." dashed slots (hero, profil, jenjang, galeri, berita thumbs) — need school photos
+- Sejarah timeline years & milestones — need verification from school
 - PPDB jadwal table & biaya — example data only
 - Fasilitas list — guessed, needs confirmation
 - Berita cards — copied from old site's real posts; dates/categories need verification

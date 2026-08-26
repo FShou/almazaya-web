@@ -43,7 +43,7 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
-ul[class] { list-style: none; }
+ul[class], ul { list-style: none; }
 button { font: inherit; cursor: pointer; background: none; border: none; }
 
 /* ---------- Typography ---------- */
@@ -118,7 +118,7 @@ p + p { margin-top: .8em; }
   border-bottom: 1px solid transparent;
   transition: border-color .25s ease, box-shadow .25s ease;
 }
-.site-header.scrolled { border-color: var(--line); box-shadow: var(--shadow-sm); }
+.site-header.scrolled { border-color: var(--line); box-shadow: var(--shadow-sm); background: var(--white); }
 .header-inner {
   height: var(--header-h);
   display: flex;
@@ -126,8 +126,14 @@ p + p { margin-top: .8em; }
   justify-content: space-between;
   gap: 1rem;
 }
-.brand { display: flex; align-items: center; gap: .7rem; }
-.brand img { width: 46px; height: 46px; object-fit: contain; border-radius: 8px; }
+.brand { display: flex; align-items: center; gap: .9rem; margin-right: auto; margin-left: -100px; }
+.logo-strip {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.logo-strip img { height: 56px; width: auto; object-fit: contain; }
+.logo-strip .logo-mmi { height: 72px; }
 .brand-name { line-height: 1.15; }
 .brand-name strong {
   display: block;
@@ -137,8 +143,8 @@ p + p { margin-top: .8em; }
 }
 .brand-name span { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; }
 
-.main-nav { margin-left: auto; }
-.main-nav ul { display: flex; align-items: center; gap: .35rem; }
+.main-nav { margin-left: auto; flex: 1; display: flex; justify-content: center; }
+.main-nav ul { display: flex; align-items: center; gap: .35rem; list-style: none; margin: 0; padding: 0; }
 .main-nav a {
   display: block;
   padding: .55rem .85rem;
@@ -173,26 +179,80 @@ p + p { margin-top: .8em; }
 
 .nav-burger { display: none; width: 44px; height: 44px; border-radius: 10px; }
 .nav-burger svg { width: 26px; height: 26px; stroke: var(--navy); }
+.nav-close { display: none; }
 
 @media (max-width: 960px) {
+  .main-nav { display: none !important; }
   .nav-burger { display: grid; place-items: center; margin-left: auto; }
   .lang-toggle { margin-left: .55rem; flex-shrink: 0; }
-  .main-nav {
-    position: fixed;
-    inset: 0;
-    background: rgba(10,29,54,.98);
-    display: grid;
-    place-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .28s ease;
-    margin-left: 0;
+  .brand { margin-left: 0; }
+  .header-inner { position: relative; }
+  .brand-name {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.1;
   }
-  .main-nav.open { opacity: 1; pointer-events: auto; }
-  .main-nav ul { flex-direction: column; gap: .4rem; text-align: center; }
-  .main-nav a { color: var(--white); font-size: 1.25rem; padding: .7rem 1.4rem; }
-  .main-nav a:hover, .main-nav a.active { background: transparent; color: var(--gold-soft); }
+  .brand-name strong { font-size: .82rem; }
+  .brand-name span { font-size: .6rem; }
+  .logo-strip img { height: 34px; }
+  .logo-strip .logo-mmi { height: 44px; }
 }
+
+/* Mobile nav overlay — parked off-screen, slides in with .open */
+.mobile-nav {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background: #10294A;
+  z-index: 9999;
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-nav.open { transform: translateX(0); }
+.mobile-nav .nav-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  cursor: pointer;
+  border: none;
+}
+.mobile-nav .nav-close svg { width: 24px; height: 24px; stroke: #fff; stroke-width: 2.5; }
+.mobile-nav .mobile-nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 1.5rem 2rem;
+  gap: .15rem;
+}
+.mobile-nav a {
+  display: block;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: .85rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+.mobile-nav a:hover, .mobile-nav a.active { background: rgba(255,255,255,.1); color: #C9A227; }
+.mobile-nav .nav-cta-mobile { margin-top: .8rem; width: 100%; max-width: 320px; text-align: center; }
+.mobile-nav .nav-cta-mobile .btn { font-size: 1.1rem; padding: .85rem 2.2rem; width: 100%; }
 
 /* ---------- Hero slider ---------- */
 .hero { position: relative; color: var(--white); overflow: hidden; }
@@ -518,7 +578,19 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
 .site-footer { background: var(--navy-deep); color: #9FB1CB; padding: 3.4rem 0 0; font-size: .92rem; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.4rem; padding-bottom: 2.6rem; }
 .site-footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 1rem; }
-.footer-brand img { width: 52px; height: 52px; border-radius: 10px; margin-bottom: .9rem; }
+.footer-brand .logo-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  background: var(--white);
+  padding: .5rem .75rem;
+  border-radius: 12px;
+  margin-bottom: .9rem;
+  max-width: 260px;
+}
+.footer-brand .logo-strip img { height: 68px; width: auto; object-fit: contain; }
+.footer-brand .logo-strip .logo-mmi { height: 84px; }
 .footer-links li { padding: .28rem 0; }
 .footer-links a:hover { color: var(--gold-soft); }
 .socials { display: flex; gap: .6rem; margin-top: 1.1rem; }
@@ -674,4 +746,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   .gallery-grid .img-slot:nth-child(1), .gallery-grid .img-slot:nth-child(8) { grid-column: span 2; }
   .hero-inner { padding: 4.5rem 0; }
   .brand-name strong { font-size: .92rem; }
+  .logo-strip img { height: 40px; }
+  .logo-strip .logo-mmi { height: 52px; }
+  .footer-brand .logo-strip img { height: 48px; }
+  .footer-brand .logo-strip .logo-mmi { height: 60px; }
 }

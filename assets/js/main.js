@@ -12,17 +12,25 @@
 
   /* Mobile nav */
   var burger = document.querySelector('.nav-burger');
-  var nav = document.querySelector('.main-nav');
-  if (burger && nav) {
+  var mobileNav = document.querySelector('.mobile-nav');
+  var closeBtn = document.querySelector('.mobile-nav .nav-close');
+  if (burger && mobileNav) {
+    function closeNav() {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      burger.setAttribute('aria-expanded', 'false');
+    }
     burger.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
+      var open = mobileNav.classList.toggle('open');
       document.body.style.overflow = open ? 'hidden' : '';
       burger.setAttribute('aria-expanded', open);
     });
-    nav.addEventListener('click', function (e) {
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeNav);
+    }
+    mobileNav.addEventListener('click', function (e) {
       if (e.target.closest('a')) {
-        nav.classList.remove('open');
-        document.body.style.overflow = '';
+        closeNav();
       }
     });
   }

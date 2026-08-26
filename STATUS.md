@@ -1,6 +1,6 @@
 # STATUS — Al Mazaya Web Project
 
-*Last updated: 24 Aug 2026*
+*Last updated: 26 Aug 2026*
 
 ## Current State
 
@@ -22,6 +22,29 @@
 - Value cards grid (6 values) + Budaya Harian strip
 - Same restructure applied to both ID and EN versions
 
+**Branding & header overhaul** (26 Aug 2026):
+- 3-logo strip (Yayasan → AMZ → MMI) in header & footer of all 12 pages
+- Logos: `logo-yayasan.jpeg` (200×200), `logo.jpeg` AMZ (148×148), `logo-mmi.jpeg` (225×225); MMI larger via `.logo-mmi`
+- Header: no background island, brand shifted `-100px` on desktop only, solid white bg on scroll (no transparency)
+- Footer: white island, `space-between`, `max-width: 260px`
+- Nav centered (`flex:1; justify-content:center`), global `ul` list-style reset
+- Mobile header (≤960px): no `-100px` margin, brand name text centered (absolute), logos 34px
+
+**Mobile nav rebuilt** (26 Aug 2026):
+- Separate `<div class="mobile-nav">` overlay on all 12 pages (desktop nav untouched)
+- Off-screen slide-in (`translateX(-100%)` → `0` on `.open`), z-index 9999, solid `#10294A`
+- Close button (X) top-right, links close on tap, body scroll-lock, `overflow-y: auto` if tall
+- Desktop `.main-nav` hidden ≤960px; burger + lang toggle remain in header
+
+**MMI Preschool section added** (26 Aug 2026):
+- New first section on `jenjang.html` + `en/jenjang.html` (before SMP)
+- Content researched: MMI London partnership, first authentic Montessori in Kalimantan
+- Programs: Mum & Me (6–24 mo), Playgroup (2–3 y), Montessori Kinderworld (3–6 y)
+- Contact: 0811-465-4040, IG @modernmontessoribanjarmasin (soft opening Jul 2025)
+
+**Infra**:
+- Cache-busting `?v=8` on all CSS/JS `<link>`/`<script>` tags (bump on future changes)
+
 **Known placeholders needing real content:**
 - All "Foto..." dashed slots (hero, profil, jenjang, galeri, berita thumbs) — need school photos
 - Sejarah timeline years & milestones — need verification from school
@@ -29,6 +52,7 @@
 - Fasilitas list — guessed, needs confirmation
 - Berita cards — copied from old site's real posts; dates/categories need verification
 - Copy fact-check: Cambridge claim, alumni UI/ULM/ITS/ITB, 4 olympiad medals
+- MMI Preschool photo slot + program details verification with MMI admin
 
 ## Next Steps (in order)
 

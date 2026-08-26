@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=8">
 <style>
   .jenjang-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.6rem; align-items: center; }
   .jenjang-detail.flip { direction: rtl; }
@@ -25,7 +25,11 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
+      <div class="logo-strip">
+        <img src="../assets/img/logo-yayasan.jpeg" alt="Logo Yayasan Al Mazaya Pelita Asia">
+        <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
+        <img src="../assets/img/logo-mmi.jpeg" alt="MMI logo" class="logo-mmi">
+      </div>
       <span class="brand-name"><strong>Al Mazaya Islamic School</strong><span>Banjarmasin</span></span>
     </a>
     <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
@@ -51,7 +55,26 @@
   <div class="container">
     <p class="breadcrumb"><a href="index.html">Home</a> / Programs</p>
     <h1>Our <span class="tone">Programs</span></h1>
-    <p>Accredited A SMP &amp; SMA with Kurikulum Merdeka grounded in Islamic education.</p>
+    <p>From early childhood through secondary — Accredited A with Kurikulum Merdeka grounded in Islamic education.</p>
+  </div>
+</section>
+
+<!-- MMI PRESCHOOL -->
+<section class="section">
+  <div class="container jenjang-detail">
+    <div class="reveal">
+      <span class="kicker">Preschool · Modern Montessori International</span>
+      <h2>MMI Al Mazaya <span class="tone">Preschool</span></h2>
+      <p style="margin-top:.9rem;">In partnership with <strong>MMI London</strong>, Al Mazaya brings authentic Montessori education to Kalimantan for the first time. The curriculum nurtures independence, curiosity, and a love of learning from the earliest ages.</p>
+      <ul class="prog-list" style="margin-top:1.2rem;">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Mum &amp; Me (ages 6–24 months) — early stimulation with parents</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Playgroup (ages 2–3) — structured Montessori play</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Montessori Kinderworld (ages 3–6) — full curriculum programme</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Hands-on learning with authentic Montessori materials</li>
+      </ul>
+      <p style="margin-top:1.2rem; font-size:.88rem; color:var(--slate-light);">📞 0811-465-4040 · 📸 <a href="https://www.instagram.com/modernmontessoribanjarmasin/" target="_blank" rel="noopener" style="color:var(--gold-deep);">@modernmontessoribanjarmasin</a></p>
+    </div>
+    <div class="img-slot reveal d1" style="min-height:360px;">MMI Preschool Al Mazaya Photo</div>
   </div>
 </section>
 
@@ -116,7 +139,11 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
+      <div class="logo-strip">
+        <img src="../assets/img/logo-yayasan.jpeg" alt="Logo Yayasan Al Mazaya Pelita Asia">
+        <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
+        <img src="../assets/img/logo-mmi.jpeg" alt="MMI logo" class="logo-mmi">
+      </div>
       <h4>AL MAZAYA ISLAMIC SCHOOL</h4>
       <p>Your Islamic School in Banjarmasin — shaping an excellent, noble Islamic generation.</p>
       <div class="socials">
@@ -156,6 +183,18 @@
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg>
 </a>
 
-<script src="../assets/js/main.js"></script>
+<div class="mobile-nav">
+  <button class="nav-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <div class="mobile-nav-inner">
+        <a href="index.html">Home</a>
+        <a href="tentang.html">About</a>
+        <a href="jenjang.html" class="active">Programs</a>
+        <a href="berita.html">News</a>
+        <a href="galeri.html">Gallery</a>
+        <a href="ppdb.html">Admission</a>
+        <div class="nav-cta-mobile"><a class="btn btn-gold" href="ppdb.html">Apply Now</a></div>
+  </div>
+</div>
+<script src="../assets/js/main.js?v=8"></script>
 </body>
 </html>

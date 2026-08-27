@@ -362,17 +362,31 @@ p + p { margin-top: .8em; }
 .feature-card p { font-size: .93rem; color: var(--slate-light); margin-top: .5rem; }
 
 /* ---------- Jenjang cards ---------- */
+.jenjang-arc { position: relative; overflow: hidden; }
+.jenjang-arc::before {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 140%; height: 220px;
+  background: white;
+  border-radius: 50%;
+  z-index: 0;
+}
+.jenjang-arc .grid { position: relative; z-index: 1; }
+
 .jenjang-card {
   position: relative;
-  border-radius: var(--radius);
+  border-radius: 2rem 2rem 0 0;
   overflow: hidden;
-  min-height: 430px;
+  min-height: 420px;
   display: flex;
   align-items: flex-end;
   color: var(--white);
   background: linear-gradient(165deg, var(--navy-soft), var(--navy-deep));
 }
 .jenjang-card.sma { background: linear-gradient(165deg, var(--gold-deep), #6e5710); }
+.jenjang-card.mmi { background: linear-gradient(165deg, #1a7a62, #0e5040); }
 .jenjang-card::before {
   content: "";
   position: absolute; inset: 0;
@@ -390,6 +404,7 @@ p + p { margin-top: .8em; }
   margin-bottom: .5rem;
 }
 .jenjang-card.sma .jenjang-body > span { color: #F3E3AE; }
+.jenjang-card.mmi .jenjang-body > span { color: #A8E6CF; }
 .jenjang-body p { font-size: .95rem; color: #D5DFEE; margin: .6rem 0 1.2rem; }
 .jenjang-body .btn { padding: .62rem 1.3rem; font-size: .86rem; }
 

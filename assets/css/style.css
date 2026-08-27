@@ -362,28 +362,40 @@ p + p { margin-top: .8em; }
 .feature-card p { font-size: .93rem; color: var(--slate-light); margin-top: .5rem; }
 
 /* ---------- Jenjang cards ---------- */
-.jenjang-arc { position: relative; overflow: hidden; }
-.jenjang-arc::before {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 140%; height: 220px;
-  background: white;
-  border-radius: 50%;
-  z-index: 0;
-}
-.jenjang-arc .grid { position: relative; z-index: 1; }
+.jenjang-arc { position: relative; }
+.jenjang-arc .grid { align-items: end; }
 
 .jenjang-card {
   position: relative;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 2rem;
   overflow: hidden;
   min-height: 420px;
   display: flex;
   align-items: flex-end;
   color: var(--white);
   background: linear-gradient(165deg, var(--navy-soft), var(--navy-deep));
+}
+
+/* override generic reveal for jenjang cards — stacked center, fan out */
+.jenjang-card.reveal { opacity: 1; transition: none; }
+.jenjang-card:nth-child(1).reveal { transform: translateX(calc(100% + .7rem)) rotate(-3deg) translateY(50px); }
+.jenjang-card:nth-child(2).reveal { transform: translateY(50px); }
+.jenjang-card:nth-child(3).reveal { transform: translateX(calc(-100% - .7rem)) rotate(3deg) translateY(50px); }
+.jenjang-card.reveal.in-view { animation: fan-left .9s cubic-bezier(.22,1,.36,1) forwards; }
+.jenjang-card:nth-child(2).reveal.in-view { animation-name: fan-mid; }
+.jenjang-card:nth-child(3).reveal.in-view { animation-name: fan-right; }
+
+@keyframes fan-left {
+  0%   { transform: translateX(calc(100% + .7rem)) rotate(-3deg) translateY(50px); }
+  100% { transform: rotate(-3deg) translateY(12px); }
+}
+@keyframes fan-mid {
+  0%   { transform: translateY(50px); }
+  100% { transform: translateY(-16px); }
+}
+@keyframes fan-right {
+  0%   { transform: translateX(calc(-100% - .7rem)) rotate(3deg) translateY(50px); }
+  100% { transform: rotate(3deg) translateY(12px); }
 }
 .jenjang-card.sma { background: linear-gradient(165deg, var(--gold-deep), #6e5710); }
 .jenjang-card.mmi { background: linear-gradient(165deg, #1a7a62, #0e5040); }

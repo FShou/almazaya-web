@@ -69,21 +69,25 @@
     restart();
   }
 
-  /* Scroll reveal */
+  /* Scroll reveal — only animate after user has scrolled */
   var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          en.target.classList.add('in-view');
-          io.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  var vh = window.innerHeight;
+  var hasScrolled = false;
+
+  function checkReveal() {
+    if (!hasScrolled) return;
+    revealEls.forEach(function (el) {
+      if (el.classList.contains('in-view')) return;
+      var rect = el.getBoundingClientRect();
+      if (rect.top < vh * 0.7) {
+        el.classList.add('in-view');
+      }
+    });
   }
+  window.addEventListener('scroll', function () {
+    hasScrolled = true;
+    checkReveal();
+  }, { passive: true });
 
   /* Footer year */
   document.querySelectorAll('[data-year]').forEach(function (el) {

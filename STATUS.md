@@ -43,7 +43,13 @@
 - Contact: 0811-465-4040, IG @modernmontessoribanjarmasin (soft opening Jul 2025)
 
 **Infra**:
-- Cache-busting `?v=8` on all CSS/JS `<link>`/`<script>` tags (bump on future changes)
+- Cache-busting `?v=10` on all CSS/JS `<link>`/`<script>` tags (bump on future changes)
+
+**Homepage jenjang section** (26 Aug 2026):
+- 3 cards: MMI (teal), SMP (navy), SMA (gold) in `grid-3`
+- Cards stacked at center on load, fan out with CSS animation when 70% into viewport
+- Scroll reveal uses `hasScrolled` flag — no animation fires until user scrolls first
+- `.jenjang-arc` class on section (grid bottom-aligned via `align-items: end`)
 
 **Known placeholders needing real content:**
 - All "Foto..." dashed slots (hero, profil, jenjang, galeri, berita thumbs) — need school photos

@@ -69,25 +69,25 @@
     restart();
   }
 
-  /* Scroll reveal — only animate after user has scrolled */
+  /* Scroll reveal — all pages, per-element threshold via data-reveal */
   var revealEls = document.querySelectorAll('.reveal');
-  var vh = window.innerHeight;
-  var hasScrolled = false;
-
-  function checkReveal() {
-    if (!hasScrolled) return;
+  if ('IntersectionObserver' in window) {
     revealEls.forEach(function (el) {
-      if (el.classList.contains('in-view')) return;
-      var rect = el.getBoundingClientRect();
-      if (rect.top < vh * 0.7) {
-        el.classList.add('in-view');
-      }
+      var ratio = parseFloat(el.getAttribute('data-reveal'));
+      if (!ratio || ratio <= 0 || ratio > 1) ratio = 0.15;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting && en.intersectionRatio >= ratio) {
+            en.target.classList.add('in-view');
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: [ratio] });
+      io.observe(el);
     });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
-  window.addEventListener('scroll', function () {
-    hasScrolled = true;
-    checkReveal();
-  }, { passive: true });
 
   /* Footer year */
   document.querySelectorAll('[data-year]').forEach(function (el) {

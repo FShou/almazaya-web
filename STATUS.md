@@ -1,6 +1,6 @@
 # STATUS — Al Mazaya Web Project
 
-*Last updated: 26 Aug 2026*
+*Last updated: 2 Sep 2026*
 
 ## Current State
 
@@ -50,6 +50,26 @@
 - Cards stacked at center on load, fan out with CSS animation when 70% into viewport
 - Scroll reveal uses `hasScrolled` flag — no animation fires until user scrolls first
 - `.jenjang-arc` class on section (grid bottom-aligned via `align-items: end`)
+
+**Tentang halaman — implementasi konten resmi** (2 Sep 2026):
+- Source: `Narasi Websites 1 About Us.docx` → disalin ke `ABOUT_US.md`
+- Overview section: nama "Sekilas Al Mazaya", konsep one-stop education services, 4 fondasi (nilai Islam, karakter, akademik, Bahasa Inggris), kutipan visi dalam blockquote
+- Sejarah: tanggal resmi (2015 SMP · 2017 SMA · 2021 YAPA · 2025 KB-TK MMI · 2027 SD rencana) menggantikan placeholder lama; tiap item **click-to-expand** (accordion via `.hist-detail`)
+- Visi & Misi: visi resmi + 4 misi resmi
+- **NEW section "Empat Pilar"** (`#pilar`): Islamic Studies, Character Building, Academic Excellence, English Development — **interactive cards** (click to expand, `.pillar.active` toggles gold)
+- Nilai & Budaya: 5 nilai resmi (Jujur, Disiplin, Tanggung Jawab, Mandiri, Inisiatif) menggantikan 6 placeholder + budaya 5S & 5R menggantikan budaya harian
+- Interactivity via `data-pillar` + `.hist-item` handlers in `main.js`
+- Applied to both ID (`tentang.html`) & EN (`en/tentang.html`); sub-nav updated with "Pilar" link
+- CSS: `.pillars-grid`, `.pillar`, `.pillar-desc`, `.pillar-toggle`, `.hist-detail`, `.hist-chev`
+
+**Tentang — Sejarah timeline rework** (2 Sep 2026, replace click-to-expand):
+- Timeline = **sticky full-screen slides** (`.hist-row` `position:sticky` at `--header-h`, `min-height: calc(100vh - var(--header-h))`, z-index 1..5)
+- Each year pins at the same top; the next year's slide **covers** the previous (no fan/overlap wisps)
+- Photo **bleeds to the browser edge**, alternating sides per year (`.hist-photo` `order:-1` on even), `object-fit:cover`
+- Text side: big outlined year inside, tag, title, checklist; subtle tonal gradient per year (teal/navy/gold family)
+- No card box; timeline moved **outside `.container`** so it spans full viewport width
+- Mobile (≤640px): stacked column, text top + photo `flex:1 1 40vh` fills remaining height
+- `.hist-scroll` container: full width; the old card/dot/rail CSS and `.hist-item` JS handlers removed
 
 **Known placeholders needing real content:**
 - All "Foto..." dashed slots (hero, profil, jenjang, galeri, berita thumbs) — need school photos

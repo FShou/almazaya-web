@@ -89,6 +89,16 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
+  /* Pillar cards — toggle open on click */
+  var pillars = document.querySelectorAll('[data-pillar]');
+  pillars.forEach(function (pillar) {
+    pillar.addEventListener('click', function () {
+      var wasActive = pillar.classList.contains('active');
+      pillars.forEach(function (p) { p.classList.remove('active'); });
+      if (!wasActive) pillar.classList.add('active');
+    });
+  });
+
   /* Footer year */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();

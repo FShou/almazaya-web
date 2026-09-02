@@ -71,6 +71,41 @@ news section wired later to WP posts.
 1. Appearance → Themes → Add New → upload `almazaya.zip` → Activate
 2. Old theme stays installed = instant rollback; content untouched
 
+## Plan (saved) — CDN blur-up photos, site-wide
+
+**Goal:** blur-up image loading — tiny blurred copy of each photo shows instantly, full-res fades in sharp on `load`. CDN-generated placeholder (Cloudinary / Imgix / ImageKit), CDN-agnostic.
+
+**Scope:** all ~70 photo slots across the 12 pages:
+- `hist-photo` ×10 (tentang + en/tentang timeline: `2015-smp`, `2017-sma`, `2021-yapa`, `2025-kbtk`, `2027-sd`)
+- `img-slot` / `post-thumb` ×~60 (galeri grid, berita thumbs, about overview, jenjang cards)
+
+**Pattern — every slot becomes a wrap with 2 layers + fallback:**
+```html
+<figure class="img-slot bp-wrap reveal d1" data-bp-base="…">  <!-- slug filled later -->
+  <img class="bp-blur" alt="">
+  <img class="bp-full" alt="…">
+  <span class="gal-label bp-cap">…caption…</span>  <!-- overlay caption kept on loaded photos -->
+  <span class="bp-fallback">Foto Prestasi</span>    <!-- dashed placeholder text -->
+</figure>
+```
+- `.img-slot` class retained → existing sizing kept (post-thumb 170px, galeri aspect-ratios, min-height slots)
+- bare "Foto …" text → `.bp-fallback`; galeri `.gal-label` stays as permanent overlay
+- outer classes (`warm`/`light`/`tall`/`reveal`) untouched; EN pages reuse the same slugs/assets
+
+**CSS state machine:**
+- default (no `data-bp-base`) / `has-fallback` → only dashed placeholder visible (today's look)
+- `bp-loading` → tiny blurred layer (`filter: blur(20px)`, scaled) shown
+- `bp-loaded` → full layer fades in + de-blurs (`opacity 0→1`, `blur(8px)→0`); dashed `::after` hidden
+- `.gal-label` gets a subtle bottom scrim when `bp-loaded` for readability
+
+**JS (`main.js`, new IIFE):**
+- top config: `BLUR_SUFFIX` + `FULL_SUFFIX` (one-line CDN swap, e.g. Cloudinary `w_25,e_blur:1200,f_auto,q_auto`)
+- per `.bp-wrap`: empty `data-bp-base` → keep fallback; else set srcs, add `bp-loading` → `bp-loaded` on `load`, `has-fallback` on `error`; handle cached (`complete`); honor `prefers-reduced-motion`
+
+**Edits:** 12 HTML pages (scriptable slot conversion, slug from caption), `style.css` (`.bp-*` + states), `main.js` (loader), cache bump v41 → v42.
+
+**Not touched:** hero slider (text-only; trivial to add photo+blur later).
+
 ## Status log
 
 - [x] Research current site + reference template

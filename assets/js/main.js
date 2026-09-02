@@ -103,4 +103,38 @@
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  /* Timeline slides — fade & blur the slide being covered, tied to scroll progress */
+  (function timelineBlur() {
+    var rows = Array.prototype.slice.call(document.querySelectorAll('.hist-row'));
+    if (rows.length < 2) return;
+
+    var headerH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 74;
+    var raf = null;
+
+    function update() {
+      raf = null;
+      var H = window.innerHeight - headerH;   // slide travel as the next one rises
+      var range = H - headerH;
+      if (range <= 0) return;
+
+      for (var i = 0; i < rows.length - 1; i++) {
+        var next = rows[i + 1].getBoundingClientRect().top;
+        var p = Math.min(1, Math.max(0, (H - next) / range));
+        var content = rows[i].querySelector('.hist-content');
+        if (!content) continue;
+
+        content.style.opacity = String(1 - p);
+        content.style.filter = p > 0.001 ? 'blur(' + (p * 6).toFixed(2) + 'px)' : '';
+        content.style.willChange = 'opacity, filter';
+      }
+    }
+
+    function onScroll() {
+      if (!raf) raf = requestAnimationFrame(update);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    update();
+  })();
 })();

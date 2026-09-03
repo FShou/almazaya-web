@@ -1,6 +1,6 @@
 # STATUS — Al Mazaya Web Project
 
-*Last updated: 2 Sep 2026*
+*Last updated: 3 Sep 2026*
 
 ## Current State
 
@@ -14,6 +14,28 @@
 | Header/nav/ID⇄EN toggle/WA button/mobile menu | ✅ working (toggle fix verified) |
 | Validation | ✅ all 12 pages: valid HTML, no broken links |
 | Local preview | `python3 -m http.server 8765` in repo root |
+
+**IA restructure — align to sitemap** (3 Sep 2026, `v=57`):
+- `berita.html` + `en/berita.html`: grouped post cards under sitemap-style dividers — "Kehidupan Siswa · Prestasi → Student Achievements" and "Kehidupan Siswa · Kegiatan → Activities"; activities span full-width band
+- New `.posts-group-head` + `.posts-editorial .post-card:nth-of-type(1)` feature span (was `:first-child`, broke w/ divider)
+- Nav labels aligned to sitemap groups: ID `Jenjang→Sekolah`, `Galeri→Kehidupan Siswa`; added `Akademik/Academics` item (desktop+mobile+EN footer) → links `index.html#akademik` (Empat Pilar section, id added on ID+EN)
+- Tighter `.main-nav` spacing to fit 7 items (gap/padding reduced)
+- Cache bump all pages `v=55 → v=57`
+
+**IA restructure — nav final + new Academics page** (3 Sep 2026):
+- **NEW `akademik.html` + `en/akademik.html`** (Academics page, fresh content): Empat Pilar, kombinasi modern-classroom/IT-lab/Science-lab interactive showcase (`mc-stage` + fullscreen lightbox), Program Akademik (MMI/SMP/SMA/Virtual Class), Kurikulum & Pembinaan Kompetisi. Reuses existing CSS (`.modclass`,`mc-*`,`pillars-grid`,`feature-card`,`vm-grid`) — no new CSS.
+- Sitemap groups now each map to a page: About(tentang) / Our School(jenjang) / **Academics(akademik)** / Student Life(galeri) / News(berita) / Admission(ppdb)
+- Nav labels finalized on all 13 pages (ID): `Beranda / Tentang / Sekolah Kami / Akademik / Berita / Aktivitas Siswa / PPDB`; (EN): `Home / About / Our School / Academics / News / Student Activities / Admission`
+- Nav item `Akademik` retargeted from `index.html#akademik` → `akademik.html` on every page (was the Empat Pilar anchor); galeri label `Kehidupan Siswa/Gallery` → `Aktivitas Siswa/Student Activities`; jenjang label `Sekolah/Programs` → `Sekolah Kami/Our School`
+- `galeri.html`/`en/galeri.html` retitled as **Aktivitas Siswa / Student Activities** (hero + breadcrumb + title/meta)
+- Footer quick links updated to match; verified tag balance on all 13 files (all OK)
+- No CSS/JS change → cache stays `v=57`; working tree uncommitted
+
+**Header cleanup — remove Apply Now CTA + toggle to side** (3 Sep 2026):
+- Removed the header `nav-cta` "Daftar Sekarang/Apply Now" pill button from the desktop nav on all pages (incl. PPDB `#daftar` variant) + mobile-menu CTA block; deleted now-dead `.nav-cta` / `.nav-cta-mobile` CSS
+- `.lang-toggle` now absolutely positioned at the right edge of `.header-inner` (`right:0`, vertical-center) so the centered `.main-nav` stays perfectly centered and the toggle sits flush to the side/browser edge
+- Cache bump `v=57 → v=58` (CSS changed); all 14 files; tag balance verified
+- Working tree uncommitted
 
 **Tentang page restructured** (26 Aug 2026):
 - New section flow: Yayasan → Sejarah timeline → Visi-Misi → Nilai & Budaya → Fasilitas

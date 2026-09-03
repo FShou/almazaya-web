@@ -35,17 +35,22 @@
 
 ## Site structure (ID primary, EN secondary)
 
+Sitemap groups covered by the nav (Beranda / Tentang / Sekolah Kami / Akademik / Berita / Aktivitas Siswa / PPDB):
+
 | ID page | EN mirror | Content |
 |---|---|---|
-| `index.html` Beranda | `en/index.html` | Hero slider, Keunggulan, Program Unggulan, Prestasi, Agenda/Berita cards, Galeri teaser, CTA PPDB, Kontak strip |
-| `tentang.html` | `en/tentang.html` | Visi-misi, profil, fasilitas, akreditasi |
-| `jenjang.html` | `en/jenjang.html` | SMP & SMA program pages |
-| `berita.html` | `en/berita.html` | News grid (placeholder cards for now) |
-| `galeri.html` | `en/galeri.html` | Event galleries (placeholders) |
-| `ppdb.html` | `en/ppdb.html` | Admission info + button ke psb subdomain |
+| `index.html` Beranda | `en/index.html` | Hero slider, Keunggulan, Program Unggulan, Prestasi, Agenda/Berita cards, Aktivitas teaser, CTA PPDB, Kontak strip |
+| `tentang.html` Tentang | `en/tentang.html` | Visi-misi, profil, fasilitas, akreditasi |
+| `jenjang.html` Sekolah Kami | `en/jenjang.html` | SMP & SMA program pages (Our School) |
+| `akademik.html` Akademik | `en/akademik.html` | Pilar evaluasi, modern classroom / virtual class, program akademik, kurikulum & pembinaan kompetisi |
+| `berita.html` Berita | `en/berita.html` | News grid grouped (Prestasi / Kegiatan) |
+| `galeri.html` Aktivitas Siswa | `en/galeri.html` | Student activities galleries (placeholders) |
+| `ppdb.html` PPDB | `en/ppdb.html` | Admission info + button ke psb subdomain |
 
 Header: logo + nav + **ID ⇄ EN toggle** + WA floating button.
 Footer: kontak, tautan cepat, sosmed, copyright.
+Nav label mapping: ID `Beranda / Tentang / Sekolah Kami / Akademik / Berita / Aktivitas Siswa / PPDB`;
+EN `Home / About / Our School / Academics / News / Student Activities / Admission`.
 
 ## Phases
 

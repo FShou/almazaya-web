@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=49">
+<link rel="stylesheet" href="assets/css/style.css?v=55">
 </head>
 <body>
 
@@ -121,6 +121,108 @@
     </div>
   </div>
 </div>
+
+<!-- ================= KELAS MODERN ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">Kelas Modern</span>
+      <h2>Belajar <span class="tone">Digital</span>, Tumbuh Tanpa Batas</h2>
+    </div>
+
+    <div class="modclass">
+      <div class="modclass-media reveal" id="mc-stage">
+        <button class="mc-fs-btn" aria-label="Fullscreen" onclick="mcFullscreen()">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
+
+        <div class="mc-scene active" data-scene="desk">
+          <span class="modclass-badge">Ruang Kelas Digital</span>
+          <div class="mc-wall">
+            <div class="mc-board">
+              <span class="mc-board-logo">◈ Al Mazaya</span>
+              <span class="mc-board-line"></span>
+              <span class="mc-board-line short"></span>
+              <span class="mc-board-chip">Belajar Interaktif</span>
+            </div>
+          </div>
+          <div class="mc-desk">
+            <div class="mc-tablet">
+              <span class="mc-tablet-bar"></span>
+              <span class="mc-tablet-line"></span>
+              <span class="mc-tablet-line"></span>
+            </div>
+            <div class="mc-book"><i></i></div>
+          </div>
+          <div class="mc-chair"></div>
+        </div>
+
+        <div class="mc-scene" data-scene="lab">
+          <span class="modclass-badge">Lab Komputer &amp; IT</span>
+          <div class="mc-wall">
+            <div class="mc-board lab-board">
+              <span class="mc-board-logo">◈ Digital Lab</span>
+              <span class="mc-board-line"></span>
+              <span class="mc-board-line short"></span>
+              <span class="mc-board-chip">Coding &amp; Literasi Digital</span>
+            </div>
+          </div>
+          <div class="mc-lab-row">
+            <div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div>
+            <div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div>
+            <div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div>
+          </div>
+          <div class="mc-lab-desk"></div>
+        </div>
+
+        <div class="mc-scene" data-scene="sci">
+          <span class="modclass-badge">Lab IPA · Fisika &amp; Kimia</span>
+          <div class="mc-wall">
+            <div class="mc-board sci-board">
+              <span class="mc-board-logo">◈ Science Lab</span>
+              <span class="mc-board-line"></span>
+              <span class="mc-board-line short"></span>
+              <span class="mc-board-chip">Praktikum &amp; Riset</span>
+            </div>
+          </div>
+          <div class="mc-sci-table"></div>
+          <div class="mc-flask"></div>
+          <div class="mc-flask f2"></div>
+          <div class="mc-beaker"></div>
+        </div>
+      </div>
+
+      <div class="modclass-panel reveal d1">
+        <span class="kicker" id="mc-label">Pengalaman Belajar</span>
+        <h3 id="mc-heading">Kelas yang <span class="tone">Hidup</span>, Tanpa Hard Copy</h3>
+        <p id="mc-desc">Mayoritas pembelajaran berlangsung lewat tablet &amp; perangkat smart. Setiap siswa belajar dengan cara yang personal dan menyenangkan.</p>
+
+        <ul class="modclass-list" id="mc-list">
+          <li><span class="mc-dot"></span><b>Tablet &amp; Gadget</b> — tanpa modul kertas</li>
+          <li><span class="mc-dot gold"></span><b>WiFi Cepat</b> — merata di seluruh kampus</li>
+          <li><span class="mc-dot teal"></span><b>Virtual Class</b> — belajar kapan &amp; di mana saja</li>
+        </ul>
+
+        <a class="btn btn-gold" href="tentang.html#kelas-modern" id="mc-cta">Kenali Kelas Modern →</a>
+      </div>
+    </div>
+
+    <div class="modclass-more">
+      <button class="mc-peek active reveal" data-target="desk" onclick="mcSwitch('desk',this)">
+        <div class="mc-peek-scene desk-scene"></div>
+        <span>Ruang Kelas Digital</span>
+      </button>
+      <button class="mc-peek reveal d1" data-target="lab" onclick="mcSwitch('lab',this)">
+        <div class="mc-peek-scene lab-scene"></div>
+        <span>Lab Komputer &amp; IT</span>
+      </button>
+      <button class="mc-peek reveal d2" data-target="sci" onclick="mcSwitch('sci',this)">
+        <div class="mc-peek-scene sci-scene"></div>
+        <span>Lab IPA (Fisika–Kimia)</span>
+      </button>
+    </div>
+  </div>
+</section>
 
 <!-- ================= EMPAT PILAR ================= -->
 <section class="section">
@@ -407,6 +509,57 @@
         <div class="nav-cta-mobile"><a class="btn btn-gold" href="ppdb.html">Daftar Sekarang</a></div>
   </div>
 </div>
-<script src="assets/js/main.js?v=49"></script>
+<script src="assets/js/main.js?v=55"></script>
+<script>
+function mcSwitch(scene,btn){
+  var stage=document.getElementById('mc-stage'),peeks=document.querySelectorAll('.mc-peek');
+  stage.querySelectorAll('.mc-scene').forEach(function(s){s.classList.remove('active')});
+  stage.querySelector('[data-scene="'+scene+'"]').classList.add('active');
+  peeks.forEach(function(p){p.classList.remove('active')});
+  btn.classList.add('active');
+  var lb=document.getElementById('mc-lightbox');
+  lb.querySelectorAll('.mc-scene').forEach(function(s){s.classList.remove('active')});
+  lb.querySelector('[data-scene="'+scene+'"]').classList.add('active');
+  var descs={desk:{label:'Pengalaman Belajar',head:'Kelas yang <span class="tone">Hidup</span>, Tanpa Hard Copy',desc:'Mayoritas pembelajaran berlangsung lewat tablet & perangkat smart. Setiap siswa belajar dengan cara yang personal dan menyenangkan.',items:'<li><span class="mc-dot"></span><b>Tablet & Gadget</b> — tanpa modul kertas</li><li><span class="mc-dot gold"></span><b>WiFi Cepat</b> — merata di seluruh kampus</li><li><span class="mc-dot teal"></span><b>Virtual Class</b> — belajar kapan & di mana saja</li>'},lab:{label:'Lab Komputer & IT',head:'Kode & <span class="tone">Literasi Digital</span>',desc:'Lab komputer berisi monitor interaktif & perangkat lengkap untuk coding, desain, dan penelusuran digital.',items:'<li><span class="mc-dot"></span><b>Monitor Interaktif</b> — 1 siswa : 1 perangkat</li><li><span class="mc-dot gold"></span><b>Koneksi Cepat</b> — akses materi online</li><li><span class="mc-dot teal"></span><b>Proyek Kreatif</b> — koding, desain, riset</li>'},sci:{label:'Lab IPA (Fisika–Kimia)',head:'Eksperimen <span class="tone">Langsung</span>',desc:'Laboratorium IPA terpadu dengan peralatan praktikum fisika dan kimia untuk pembelajaran berbasis inquiry.',items:'<li><span class="mc-dot"></span><b>Peralatan Lengkap</b> — gelas kimia, mikroskop, timbangan</li><li><span class="mc-dot gold"></span><b>Praktikum Inquiry</b> — metode saintifik</li><li><span class="mc-dot teal"></span><b>Riset Siswa</b> — olimpiade sains & kompetisi</li>'}};
+  var d=descs[scene]||descs.desk;
+  document.getElementById('mc-label').innerHTML=d.label;
+  document.getElementById('mc-heading').innerHTML=d.head;
+  document.getElementById('mc-desc').innerHTML=d.desc;
+  document.getElementById('mc-list').innerHTML=d.items;
+}
+function mcFullscreen(){
+  var lb=document.getElementById('mc-lightbox');
+  var active=document.querySelector('#mc-stage .mc-scene.active');
+  lb.querySelectorAll('.mc-scene').forEach(function(s){s.classList.remove('active')});
+  lb.querySelector('[data-scene="'+active.dataset.scene+'"]').classList.add('active');
+  lb.classList.add('open');document.body.style.overflow='hidden';
+}
+function mcCloseLB(){document.getElementById('mc-lightbox').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')mcCloseLB()});
+</script>
+<!-- lightbox -->
+<div class="mc-lightbox" id="mc-lightbox" onclick="if(event.target===this)mcCloseLB()">
+  <div class="mc-lightbox-inner">
+    <div class="mc-scene active" data-scene="desk">
+      <span class="modclass-badge">Ruang Kelas Digital</span>
+      <div class="mc-wall"><div class="mc-board"><span class="mc-board-logo">◈ Al Mazaya</span><span class="mc-board-line"></span><span class="mc-board-line short"></span><span class="mc-board-chip">Belajar Interaktif</span></div></div>
+      <div class="mc-desk"><div class="mc-tablet"><span class="mc-tablet-bar"></span><span class="mc-tablet-line"></span><span class="mc-tablet-line"></span></div><div class="mc-book"><i></i></div></div>
+      <div class="mc-chair"></div>
+    </div>
+    <div class="mc-scene" data-scene="lab">
+      <span class="modclass-badge">Lab Komputer &amp; IT</span>
+      <div class="mc-wall"><div class="mc-board lab-board"><span class="mc-board-logo">◈ Digital Lab</span><span class="mc-board-line"></span><span class="mc-board-line short"></span><span class="mc-board-chip">Coding &amp; Literasi Digital</span></div></div>
+      <div class="mc-lab-row"><div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div><div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div><div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div></div>
+      <div class="mc-lab-desk"></div>
+    </div>
+    <div class="mc-scene" data-scene="sci">
+      <span class="modclass-badge">Lab IPA · Fisika &amp; Kimia</span>
+      <div class="mc-wall"><div class="mc-board sci-board"><span class="mc-board-logo">◈ Science Lab</span><span class="mc-board-line"></span><span class="mc-board-line short"></span><span class="mc-board-chip">Praktikum &amp; Riset</span></div></div>
+      <div class="mc-sci-table"></div>
+      <div class="mc-flask"></div><div class="mc-flask f2"></div><div class="mc-beaker"></div>
+    </div>
+  </div>
+  <button class="mc-lb-close" onclick="mcCloseLB()" aria-label="Tutup">×</button>
+</div>
 </body>
 </html>

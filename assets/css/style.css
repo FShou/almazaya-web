@@ -1093,6 +1093,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 @media (max-width: 960px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .jenjang-card.reveal,
+  .jenjang-card:nth-child(1).reveal,
+  .jenjang-card:nth-child(2).reveal,
+  .jenjang-card:nth-child(3).reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  .jenjang-card.reveal.in-view,
+  .jenjang-card:nth-child(1).reveal.in-view,
+  .jenjang-card:nth-child(2).reveal.in-view,
+  .jenjang-card:nth-child(3).reveal.in-view { opacity: 1; transform: none; animation: none; }
   .vm-grid { grid-template-columns: 1fr; }
   .contact-cards { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }

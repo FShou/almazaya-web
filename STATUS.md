@@ -37,6 +37,21 @@
 - Cache bump `v=57 → v=58` (CSS changed); all 14 files; tag balance verified
 - Working tree uncommitted
 
+**About de-slop — editorial V&M + values** (3 Sep 2026):
+- New `.vm-split` (about only): asymmetric `1.45fr/1fr` — Vision = dark display panel w/ oversized quote + gold rule + muted `رؤية` watermark; Mission = white panel, numbered 01–04 editorial rows split by 1px rules
+- New `.values-editorial` (about only): 5 rampsembay value columns as a ruled editorial strip (top/bottom rules + column dividers + big index numeral), not uniform equal cards
+- Removed `.vm-card`/`.value-card` usage on `tentang.html`/`en/tentang.html`; legacy `.values-grid`/`.vm-grid` untouched (still used by `akademik.html`)
+- Cache bump `v=58 → v=59`; tag balance verified
+
+**About pillars → home-style story-chapters** (3 Sep 2026):
+- `#pilar` rebuilt on the home page's proven narrative zigzag: 4 `story-chapter` articles (gold medallion 01–04, oversized ghost numeral, `story-img` `warm`/`light` with `gal-label`, `story-marker`) + `story-bridge` pull-quote between 02 and 03 — replaces the uniform navy bento boxes (`.pillar`/`.pillars-grid` now dead on about)
+- Applied to ID + EN; reuses existing home CSS (no new CSS) → no cache bump needed
+
+**About overview → clean intro-lead/intro-stats** (3 Sep 2026):
+- `#yayasan` Overview: asymmetric `1.4fr/1fr` — left `.intro-lead` = kicker + large navy/gold heading + narrative + gold CTA; right `.intro-stats` = 4 foundations as strong numbered statement rows (`.fd` 01–04, top-rule dividers), echoing home's confident rhythm w/o a grid of equal boxes
+- This **supersedes** the earlier intermediate `.intro-split`/`.four-fond`/`.edu-path` version (rooted out as part of the "jomplang" clutter); dead CSS for `.intro-split`/`.four-fond`/`.edu-path`/`.pillar-ghost` + pillar tone rules **removed** from `style.css`
+- Applied to ID + EN; cache bump `v=60 → v=61`; tag balance verified
+
 **Tentang page restructured** (26 Aug 2026):
 - New section flow: Yayasan → Sejarah timeline → Visi-Misi → Nilai & Budaya → Fasilitas
 - Sub-nav anchor bar under hero (sticky on scroll)

@@ -692,7 +692,57 @@ p + p { margin-top: .8em; }
 .breadcrumb { font-size: .82rem; color: var(--gold-soft); margin-bottom: 1rem; }
 .breadcrumb a:hover { text-decoration: underline; }
 
-/* ---------- Vision / mission ---------- */
+/* ---------- Vision / mission (refined editorial, About) ---------- */
+.vm-split { display: grid; grid-template-columns: 1.45fr 1fr; gap: 2rem; align-items: stretch; }
+.vm-vision {
+  position: relative;
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: 3rem 2.6rem 2.6rem;
+  background: var(--navy);
+  color: #D5DFEE;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.vm-vision::after {
+  content: "رؤية";
+  position: absolute; right: -1rem; bottom: -2.6rem;
+  font-family: var(--font-head);
+  font-size: 6rem; line-height: 1;
+  color: rgba(201,162,39,.1);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.vm-vision .vm-eyebrow { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--gold-soft); }
+.vm-vision blockquote {
+  margin: 1.15rem 0 0; padding: 0;
+  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+  line-height: 1.35; font-weight: 700;
+  color: var(--white);
+}
+.vm-vision blockquote em { color: var(--gold-soft); font-style: normal; }
+.vm-vision .vm-rule { height: 1px; background: rgba(201,162,39,.35); margin: 1.6rem 0; }
+.vm-vision .vm-trail { font-size: .95rem; color: var(--gold-soft); font-weight: 600; }
+.vm-mission {
+  padding: 3rem 2.4rem 2.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+.vm-mission .vm-eyebrow { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: var(--gold-deep); }
+.vm-op-list { margin: 1.2rem 0 0; padding: 0; list-style: none; }
+.vm-op-list li {
+  display: flex; gap: .9rem; align-items: baseline;
+  padding: 1rem 0 .25rem;
+}
+.vm-op-list li + li { border-top: 1px solid var(--line); }
+.vm-op-list .vm-idx {
+  font-family: var(--font-head);
+  font-size: 1.15rem; font-weight: 700; color: var(--gold-deep);
+  min-width: 2ch; opacity: .9;
+}
+.vm-op-list li div { flex: 1; font-size: .97rem; color: var(--slate); line-height: 1.55; }
+
+/* ---------- Vision / mission (legacy) ---------- */
 .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
 .vm-card { border-radius: var(--radius); padding: 2.2rem; background: var(--navy); color: #D5DFEE; position: relative; overflow: hidden; }
 .vm-card.mission { background: var(--gold-deep); color: #FBF4DC; }
@@ -715,6 +765,32 @@ p + p { margin-top: .8em; }
   color: var(--navy);
 }
 .value-pill span { color: var(--gold-deep); margin-right: .4rem; }
+
+/* ---------- Values (refined editorial, About) ---------- */
+.values-editorial {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-top: 2px solid var(--navy);
+  border-bottom: 1px solid var(--line);
+}
+.values-editorial .val {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2.2rem 1.1rem 1.6rem;
+  border-right: 1px solid var(--line);
+}
+.values-editorial .val:first-child { border-left: 1px solid var(--line); }
+.values-editorial .val .val-idx { font-family: var(--font-head); font-size: .8rem; font-weight: 700; color: var(--gold-deep); }
+.values-editorial .val .val-icon { width: 30px; height: 30px; stroke: var(--navy); margin-top: 1rem; }
+.values-editorial .val h3 { font-size: 1.08rem; color: var(--navy); font-weight: 700; margin-top: .55rem; }
+.values-editorial .val p { font-size: .87rem; color: var(--slate-light); line-height: 1.5; margin-top: .35rem; }
+@media (max-width: 960px) {
+  .values-editorial { grid-template-columns: repeat(2, 1fr); }
+  .values-editorial .val { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
+  .values-editorial { grid-template-columns: 1fr; border-bottom: 0; }
+}
 
 /* Facilities */
 .facility-card { text-align: center; padding: 1.8rem 1.2rem; }
@@ -1225,6 +1301,18 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 .stats-split .stat strong { font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
 .stats-split .stat:first-child strong { color: var(--gold); }
 
+/* Overview (About) — light-section variant of the home stats rhythm */
+.intro-lead { padding-right: 1rem; color: var(--slate); }
+.intro-lead h2 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); color: var(--navy); }
+.intro-lead p, .intro-lead strong { color: var(--slate); }
+.intro-lead p + p { margin-top: .8rem; }
+.intro-lead h2 span.tone { color: var(--gold); }
+.intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 1.8rem; align-items: start; }
+.intro-stats .fd { border-top: 1px solid var(--line); padding: 1.05rem 0 .9rem; }
+.intro-stats .fd strong { display: block; font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: var(--navy); }
+.intro-stats .fd strong i { color: var(--gold-deep); margin-right: .5rem; font-style: normal; font-weight: 700; }
+.intro-stats .fd span { display: block; font-size: .88rem; color: var(--slate-light); margin-top: .25rem; }
+
 /* News/posts -> featured-first: wide tall feature + stacked rail */
 .posts-featured { display: grid; grid-template-columns: 1.45fr 1fr; grid-template-rows: 1fr 1fr; gap: 1.4rem; align-items: stretch; }
 .posts-featured .post-card:first-child { grid-row: span 2; }
@@ -1303,6 +1391,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   .jenjang-card:nth-child(2).reveal.in-view,
   .jenjang-card:nth-child(3).reveal.in-view { opacity: 1; transform: none; animation: none; }
   .vm-grid { grid-template-columns: 1fr; }
+  .vm-split { grid-template-columns: 1fr; }
   .contact-cards { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1313,6 +1402,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   .pillars-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
+  .intro-stats { grid-template-columns: 1fr; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }

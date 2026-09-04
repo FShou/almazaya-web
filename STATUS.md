@@ -52,6 +52,13 @@
 - This **supersedes** the earlier intermediate `.intro-split`/`.four-fond`/`.edu-path` version (rooted out as part of the "jomplang" clutter); dead CSS for `.intro-split`/`.four-fond`/`.edu-path`/`.pillar-ghost` + pillar tone rules **removed** from `style.css`
 - Applied to ID + EN; cache bump `v=60 → v=61`; tag balance verified
 
+**Move Fasilitas → Program page; drop Kelas Modern from About** (3 Sep 2026):
+- `tentang.html` + `en/tentang.html`: removed the `#kelas-modern` CTA band (was non-source marketing content) and the `#fasilitas` section (placeholder, not in ABOUT_US.md); removed "Fasilitas/Facilities" from the About sub-nav — About now = Sekilas/Sejarah/Visi-Misi/Pilar/Nilai (all MD-sourced)
+- `jenjang.html` + `en/jenjang.html`: added `#fasilitas` facilities gallery section (gallery-grid + facility-chips) before footer — temporary home until real facility data
+- Retargeted home `mc-cta` (index + en/index) `tentang.html#kelas-modern` → `jenjang.html#fasilitas`; no dangling `#kelas-modern` refs remain
+- HTML-only change → no cache bump; tag balance verified on all edited files
+- Working tree uncommitted
+
 **Tentang page restructured** (26 Aug 2026):
 - New section flow: Yayasan → Sejarah timeline → Visi-Misi → Nilai & Budaya → Fasilitas
 - Sub-nav anchor bar under hero (sticky on scroll)

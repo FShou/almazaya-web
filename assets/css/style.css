@@ -1053,31 +1053,48 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
 .value-card h3 { font-size: 1rem; margin-bottom: .3rem; }
 .value-card p { font-size: .9rem; color: var(--slate-light); }
 
-/* ---------- Culture strip ---------- */
-.culture-strip {
-  margin-top: 2.2rem;
+/* Culture — visual split: photo slots + numbered 5S/5R editorial panel */
+.culture-visual { display: grid; grid-template-columns: 1.15fr 1fr; gap: 2.2rem; align-items: stretch; }
+.culture-visual .cv-media { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-content: start; }
+.culture-visual .cv-media .img-slot::after { border-color: rgba(255,255,255,.28); }
+.culture-visual .cv-media .img-slot .gal-label { font-size: .68rem; }
+.culture-visual .cv-panel {
   background: var(--navy);
   border-radius: var(--radius);
-  padding: 1.4rem 1.6rem;
+  padding: 1.7rem 1.8rem;
+  color: #C9D6EA;
   display: flex;
-  flex-wrap: wrap;
-  gap: .6rem 1.6rem;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 }
-.culture-strip .culture-label {
-  width: 100%;
-  text-align: center;
+.culture-visual .cv-panel .culture-label {
   font-family: var(--font-head);
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+  font-size: .8rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: .3rem;
 }
-.culture-strip span { color: #C9D6EA; font-size: .92rem; font-weight: 500; display: flex; align-items: center; gap: .4rem; }
-.culture-strip span::before { content: "✦"; color: var(--gold-soft); font-size: .7rem; }
+.culture-visual .cv-panel .cv-lead { font-size: .9rem; line-height: 1.55; }
+.culture-visual .cv-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.4rem; margin-top: .2rem; }
+.culture-visual .cv-group h4 {
+  font-family: var(--font-head); font-size: 1.25rem; font-weight: 800;
+  color: var(--gold-soft); margin: 0 0 .55rem;
+}
+.culture-visual .cv-group + .cv-group h4 { color: var(--gold-deep); }
+.culture-visual .cv-term { display: flex; align-items: baseline; gap: .55rem; padding: .28rem 0; }
+.culture-visual .cv-term + .cv-term { border-top: 1px solid rgba(201,214,234,.14); }
+.culture-visual .cv-term b {
+  font-family: var(--font-head); font-size: .66rem; font-weight: 700; color: var(--gold);
+  width: 1.5rem; text-align: center; flex-shrink: 0;
+}
+.culture-visual .cv-term span { flex: 1; font-size: .98rem; color: #E6ECF6; font-weight: 500; }
+@media (max-width: 900px) {
+  .culture-visual { grid-template-columns: 1fr; }
+  .culture-visual .cv-media { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .culture-visual .cv-media { grid-template-columns: 1fr; }
+  .culture-visual .cv-groups { grid-template-columns: 1fr; }
+}
 
 /* ---------- Sub-nav (in-page anchors) ---------- */
 .sub-nav {

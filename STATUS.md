@@ -52,6 +52,11 @@
 - This **supersedes** the earlier intermediate `.intro-split`/`.four-fond`/`.edu-path` version (rooted out as part of the "jomplang" clutter); dead CSS for `.intro-split`/`.four-fond`/`.edu-path`/`.pillar-ghost` + pillar tone rules **removed** from `style.css`
 - Applied to ID + EN; cache bump `v=60 → v=61`; tag balance verified
 
+**About — Budaya visual overhaul** (3 Sep 2026):
+- Replaced the plain navy `.culture-strip` box with `.culture-visual` — asymmetric split: left = 2 stacked student photo slots (Senyum & Salam / Sopan & Santun, warm/gold + cool/green); right = dark editorial panel listing the 5S and 5R as numbered ruled rows (gold accent) with a lead line tying values to daily ritual
+- Removed now-dead `.culture-strip` CSS; values-editorial (5 core values) kept intact
+- Applied to ID + EN; cache bump `v=61 → v=62`; tag balance verified
+
 **Move Fasilitas → Program page; drop Kelas Modern from About** (3 Sep 2026):
 - `tentang.html` + `en/tentang.html`: removed the `#kelas-modern` CTA band (was non-source marketing content) and the `#fasilitas` section (placeholder, not in ABOUT_US.md); removed "Fasilitas/Facilities" from the About sub-nav — About now = Sekilas/Sejarah/Visi-Misi/Pilar/Nilai (all MD-sourced)
 - `jenjang.html` + `en/jenjang.html`: added `#fasilitas` facilities gallery section (gallery-grid + facility-chips) before footer — temporary home until real facility data

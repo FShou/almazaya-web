@@ -420,7 +420,7 @@ p + p { margin-top: .8em; }
 }
 
 /* ---------- Modern classroom: more scenes (spill) ---------- */
-.modclass-more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 1.4rem; }
+.modclass-more { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; margin-top: 1.4rem; }
 .mc-peek { margin: 0; border: none; background: none; cursor: pointer; text-align: left; padding: 0; color: inherit; }
 .mc-peek span { display: block; margin-top: .6rem; font-size: .9rem; color: var(--slate); font-weight: 600; font-family: inherit; }
 .mc-peek-scene {
@@ -432,11 +432,13 @@ p + p { margin-top: .8em; }
 .mc-peek:hover .mc-peek-scene { border-color: var(--gold); box-shadow: 0 10px 24px rgba(16,41,74,.18); }
 .mc-peek.active .mc-peek-scene { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(204,163,52,.35); }
 .mc-peek-scene::before { content: ""; position: absolute; inset: 0; background: radial-gradient(130% 80% at 50% 0%, rgba(255,255,255,.6), transparent 55%); }
+.mc-peek-scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 
 /* stage scene layers */
 .modclass-media { position: relative; }
 .mc-scene { display: none; position: absolute; inset: 0; }
 .mc-scene.active { display: block; }
+.mc-scene .mc-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 /* fullscreen button */
 .mc-fs-btn {
@@ -1012,6 +1014,8 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
 
 /* photo — fully bleeds to the browser edge, alternating sides */
 .hist-photo {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1237,6 +1241,15 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   object-fit: cover; z-index: 0;
 }
 
+/* Shared photo fill for all placeholder slots */
+.slot-photo {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; z-index: 0;
+}
+.has-photo::after { display: none; }
+.has-photo { background: var(--navy-deep) !important; }
+.has-photo .gal-label { color: #fff !important; }
+
 .story-text {
   position: relative; z-index: 1;
   padding: 1rem 0;
@@ -1393,7 +1406,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   .modclass { grid-template-columns: 1fr; }
   .modclass-media { min-height: 320px; border-radius: var(--radius) var(--radius) 0 0; }
   .modclass-panel { border-left: 1px solid var(--line); border-top: 0; border-radius: 0 0 var(--radius) var(--radius); }
-  .modclass-more { grid-template-columns: 1fr; }
+  .modclass-more { grid-template-columns: repeat(2, 1fr); }
   .mc-lightbox-inner { width: 95vw; }
 }
 @media (max-width: 960px) {
@@ -1421,6 +1434,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 @media (max-width: 640px) {
   .intro-stats { grid-template-columns: 1fr; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .modclass-more { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }

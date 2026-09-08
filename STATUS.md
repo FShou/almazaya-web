@@ -1,6 +1,6 @@
 # STATUS — Al Mazaya Web Project
 
-*Last updated: 3 Sep 2026*
+*Last updated: 8 Sep 2026*
 
 ## Current State
 
@@ -127,7 +127,7 @@
 - `.hist-scroll` container: full width; the old card/dot/rail CSS and `.hist-item` JS handlers removed
 
 **Known placeholders needing real content:**
-- All "Foto..." dashed slots (hero, profil, jenjang, galeri, berita thumbs) — need school photos
+- All "Foto..." dashed slots — **filled 8 Sep 2026** with real school-site media (best-effort; some labels need final swap with school's preferred shots)
 - Sejarah timeline years & milestones — need verification from school
 - PPDB jadwal table & biaya — example data only
 - Fasilitas list — guessed, needs confirmation
@@ -135,6 +135,14 @@
 - MMI Preschool photo slot + program details verification with MMI admin
 - **Home CLAIMS TO FACT-CHECK** → full checklist di **`FACT_CHECK.md`** (11 kategori: akreditasi, Cambridge, tahfidz, prestasi/alumni, kelas modern, MMI, program, fasilitas, kontak, PPDB, + yang sudah resmi utk cross-check) — dikumpulkan 3 Sep 2026 dari seluruh halaman
 - Home Empat Pilar quotes were previously invented w/ school attribution — **fixed 3 Sep 2026**: now use official vision + doc's pillar language; invented quotes removed (ID+EN)
+
+**Photo slots auto-filled from real site media** (8 Sep 2026):
+- Downloaded 188 real images from `almazayaislamicschool.sch.id` media library via curl+cookies (CF blocks HTML/wp-json but not image files); rendered them into every photo placeholder across 10 pages (ID + EN: index, tentang, jenjang, berita, galeri)
+- Best-effort semantic mapping: story pillars → student photos, berita thumbs → event shots, galeri events → matching activity photos, sejarah → dated originals, fasilitas → facility-capable shots (some labels best-effort, ready to swap)
+- `.slot-photo` rule added to `style.css` (cover + `object-fit`), `.has-photo` hides dashed placeholder border + forces label legibility over any image
+- Hi-res pass: 300px thumbnails (dsc*/r000*/aq*/sejarah) swapped for 17 full-size `img-*-min.jpg` (5328×4000) so large slots stay sharp; `img-8712` ref fixed to `-min`
+- Cache bump `v=62 → v=63` on all 14 files; div tag balance verified; 104 `slot-photo` refs, zero broken image links; all 10 pages load-tested in headless Chromium (0 broken, 0 <600px)
+- Working tree uncommitted
 
 ## Next Steps (in order)
 

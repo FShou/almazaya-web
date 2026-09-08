@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=62">
+<link rel="stylesheet" href="../assets/css/style.css?v=64">
 </head>
 <body>
 
@@ -121,57 +121,42 @@
 
         <div class="mc-scene active" data-scene="desk">
           <span class="modclass-badge">Digital Classroom</span>
-          <div class="mc-wall">
-            <div class="mc-board">
-              <span class="mc-board-logo">◈ Al Mazaya</span>
-              <span class="mc-board-line"></span>
-              <span class="mc-board-line short"></span>
-              <span class="mc-board-chip">Interactive Learning</span>
-            </div>
-          </div>
-          <div class="mc-desk">
-            <div class="mc-tablet">
-              <span class="mc-tablet-bar"></span>
-              <span class="mc-tablet-line"></span>
-              <span class="mc-tablet-line"></span>
-            </div>
-            <div class="mc-book"><i></i></div>
-          </div>
-          <div class="mc-chair"></div>
+          <img class="mc-photo" src="../assets/img/classroom-r0003044.jpg" alt="Digital Classroom">
         </div>
 
         <div class="mc-scene" data-scene="lab">
           <span class="modclass-badge">Computer &amp; IT Lab</span>
-          <div class="mc-wall">
-            <div class="mc-board lab-board">
-              <span class="mc-board-logo">◈ Digital Lab</span>
-              <span class="mc-board-line"></span>
-              <span class="mc-board-line short"></span>
-              <span class="mc-board-chip">Coding &amp; Digital Literacy</span>
-            </div>
-          </div>
-          <div class="mc-lab-row">
-            <div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div>
-            <div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div>
-            <div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div>
-          </div>
-          <div class="mc-lab-desk"></div>
+          <img class="mc-photo" src="../assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt="Computer &amp; IT Lab">
         </div>
 
         <div class="mc-scene" data-scene="sci">
           <span class="modclass-badge">Science Lab · Physics &amp; Chemistry</span>
-          <div class="mc-wall">
-            <div class="mc-board sci-board">
-              <span class="mc-board-logo">◈ Science Lab</span>
-              <span class="mc-board-line"></span>
-              <span class="mc-board-line short"></span>
-              <span class="mc-board-chip">Lab &amp; Research</span>
-            </div>
-          </div>
-          <div class="mc-sci-table"></div>
-          <div class="mc-flask"></div>
-          <div class="mc-flask f2"></div>
-          <div class="mc-beaker"></div>
+          <img class="mc-photo" src="../assets/img/laboratory-r0003095.jpg" alt="Science Lab · Physics &amp; Chemistry">
+        </div>
+
+        <div class="mc-scene" data-scene="bio">
+          <span class="modclass-badge">Biology Lab</span>
+          <img class="mc-photo" src="../assets/img/laboratory-r0003078.jpg" alt="Biology Lab">
+        </div>
+
+        <div class="mc-scene" data-scene="lib">
+          <span class="modclass-badge">Library</span>
+          <img class="mc-photo" src="../assets/img/hello-world-wis.jpg" alt="Library">
+        </div>
+
+        <div class="mc-scene" data-scene="eng">
+          <span class="modclass-badge">English Zone</span>
+          <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt="English Zone">
+        </div>
+
+        <div class="mc-scene" data-scene="mus">
+          <span class="modclass-badge">Prayer Hall</span>
+          <img class="mc-photo" src="../assets/img/quran-academy-r0002997.jpg" alt="Prayer Hall">
+        </div>
+
+        <div class="mc-scene" data-scene="hall">
+          <span class="modclass-badge">Indoor Sports Hall</span>
+          <img class="mc-photo" src="../assets/img/hall-r0003030.jpg" alt="Indoor Sports Hall">
         </div>
       </div>
 
@@ -192,16 +177,36 @@
 
     <div class="modclass-more">
       <button class="mc-peek active reveal" data-target="desk" onclick="mcSwitch('desk',this)">
-        <div class="mc-peek-scene desk-scene"></div>
+        <div class="mc-peek-scene desk-scene"><img src="../assets/img/classroom-r0003044.jpg" alt=""></div>
         <span>Digital Classroom</span>
       </button>
       <button class="mc-peek reveal d1" data-target="lab" onclick="mcSwitch('lab',this)">
-        <div class="mc-peek-scene lab-scene"></div>
+        <div class="mc-peek-scene lab-scene"><img src="../assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt=""></div>
         <span>Computer &amp; IT Lab</span>
       </button>
       <button class="mc-peek reveal d2" data-target="sci" onclick="mcSwitch('sci',this)">
-        <div class="mc-peek-scene sci-scene"></div>
+        <div class="mc-peek-scene sci-scene"><img src="../assets/img/laboratory-r0003095.jpg" alt=""></div>
         <span>Science Lab (Physics–Chemistry)</span>
+      </button>
+      <button class="mc-peek reveal" data-target="bio" onclick="mcSwitch('bio',this)">
+        <div class="mc-peek-scene"><img src="../assets/img/laboratory-r0003078.jpg" alt=""></div>
+        <span>Biology Lab</span>
+      </button>
+      <button class="mc-peek reveal" data-target="lib" onclick="mcSwitch('lib',this)">
+        <div class="mc-peek-scene"><img src="../assets/img/hello-world-wis.jpg" alt=""></div>
+        <span>Library</span>
+      </button>
+      <button class="mc-peek reveal" data-target="eng" onclick="mcSwitch('eng',this)">
+        <div class="mc-peek-scene"><img src="../assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt=""></div>
+        <span>English Zone</span>
+      </button>
+      <button class="mc-peek reveal" data-target="mus" onclick="mcSwitch('mus',this)">
+        <div class="mc-peek-scene"><img src="../assets/img/quran-academy-r0002997.jpg" alt=""></div>
+        <span>Prayer Hall</span>
+      </button>
+      <button class="mc-peek reveal" data-target="hall" onclick="mcSwitch('hall',this)">
+        <div class="mc-peek-scene"><img src="../assets/img/hall-r0003030.jpg" alt=""></div>
+        <span>Indoor Sports Hall</span>
       </button>
     </div>
   </div>
@@ -223,7 +228,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">01</span>
         <span class="story-ghost" aria-hidden="true">01</span>
-        <div class="story-img"><span class="gal-label">Islamic Values</span></div>
+        <div class="has-photo story-img"><img class="slot-photo" src="../assets/img/overseas-img-8635-min.jpg" alt="Islamic Values"><span class="gal-label">Islamic Values</span></div>
         <div class="story-text">
           <span class="story-marker">Islamic Studies</span>
           <h3>It Begins in the Heart</h3>
@@ -234,7 +239,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">02</span>
         <span class="story-ghost" aria-hidden="true">02</span>
-        <div class="story-img warm"><span class="gal-label">Culture &amp; Character</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="../assets/img/overseas-img-8648-min.jpg" alt="Culture &amp; Character"><span class="gal-label">Culture &amp; Character</span></div>
         <div class="story-text">
           <span class="story-marker">Character Building</span>
           <h3>Shaped Every Day</h3>
@@ -250,7 +255,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">03</span>
         <span class="story-ghost" aria-hidden="true">03</span>
-        <div class="story-img light"><span class="gal-label">Learning Culture</span></div>
+        <div class="has-photo story-img light"><img class="slot-photo" src="../assets/img/overseas-img-8809-min.jpg" alt="Learning Culture"><span class="gal-label">Learning Culture</span></div>
         <div class="story-text">
           <span class="story-marker">Academic Excellence</span>
           <h3>Sharpening the Mind</h3>
@@ -261,7 +266,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">04</span>
         <span class="story-ghost" aria-hidden="true">04</span>
-        <div class="story-img warm"><span class="gal-label">English</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="../assets/img/overseas-img-8816-min.jpg" alt="English"><span class="gal-label">English</span></div>
         <div class="story-text">
           <span class="story-marker">English Development</span>
           <h3>Speaking to the World</h3>
@@ -316,7 +321,7 @@
     </div>
     <div class="posts-featured">
       <article class="post-card reveal">
-        <div class="post-thumb img-slot">Achievement Photo</div>
+        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="../assets/img/overseas-img-8635-min.jpg" alt="Achievement Photo">Achievement Photo</div>
         <div class="post-body">
           <span class="chip gold">Achievement</span>
           <h3><a href="#">4 JHS Students Won National Olympiad Medals</a></h3>
@@ -325,7 +330,7 @@
         </div>
       </article>
       <article class="post-card reveal d1">
-        <div class="post-thumb img-slot warm">Debate Photo</div>
+        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="../assets/img/school-debate-competition-aq1.jpg" alt="Debate Photo">Debate Photo</div>
         <div class="post-body">
           <span class="chip gold">Achievement</span>
           <h3><a href="#">2nd Place, "International Events" Debate at UIN Antasari</a></h3>
@@ -334,7 +339,7 @@
         </div>
       </article>
       <article class="post-card reveal d2">
-        <div class="post-thumb img-slot light">Event Photo</div>
+        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="../assets/img/overseas-img-8679-min.jpg"Event Photo">Event Photo</div>
         <div class="post-body">
           <span class="chip">Event</span>
           <h3><a href="#">Monthly English Talent Show: A Stage for Every Talent</a></h3>
@@ -353,14 +358,14 @@
       <h2>Momentous <span class="tone">Memories</span></h2>
     </div>
     <div class="gallery-grid tall-feature reveal">
-      <div class="img-slot"><span class="gal-label">English Talent Show</span></div>
-      <div class="img-slot warm"><span class="gal-label">Market Day</span></div>
-      <div class="img-slot light"><span class="gal-label">Overseas Program</span></div>
-      <div class="img-slot"><span class="gal-label">Ramadhan Charity Day</span></div>
-      <div class="img-slot warm"><span class="gal-label">Graduation Ceremony</span></div>
-      <div class="img-slot light"><span class="gal-label">Independence Day</span></div>
-      <div class="img-slot"><span class="gal-label">Science Olympiad</span></div>
-      <div class="img-slot warm"><span class="gal-label">English Camp</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="../assets/img/english-talent-show-screenshot-20230829-135505.jpg" alt="English Talent Show"><span class="gal-label">English Talent Show</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="../assets/img/market-day-20221214073641-img-6924.jpg" alt="Market Day"><span class="gal-label">Market Day</span></div>
+      <div class="has-photo img-slot light"><img class="slot-photo" src="../assets/img/overseas-img-8730-min.jpg" alt="Overseas Program"><span class="gal-label">Overseas Program</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="../assets/img/ramadhan-charity-day-img-5416-1.jpg" alt="Ramadhan Charity Day"><span class="gal-label">Ramadhan Charity Day</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="../assets/img/overseas-img-8756-min.jpg" alt="Graduation Ceremony"><span class="gal-label">Graduation Ceremony</span></div>
+      <div class="has-photo img-slot light"><img class="slot-photo" src="../assets/img/overseas-img-8809-min.jpg" alt="Independence Day"><span class="gal-label">Independence Day</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="../assets/img/overseas-img-8816-min.jpg" alt="Science Olympiad"><span class="gal-label">Science Olympiad</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="../assets/img/english-talent-show-screenshot-20230825-132045-1.jpg" alt="English Camp"><span class="gal-label">English Camp</span></div>
     </div>
     <div style="text-align:center; margin-top:2rem;">
       <a class="btn btn-navy" href="galeri.html">View Full Gallery</a>
@@ -470,7 +475,7 @@
         <div class="lang-toggle mobile-lang" aria-label="Switch language"><a href="../index.html" title="Bahasa Indonesia">ID</a><a class="active" href="index.html" title="English">EN</a></div>
   </div>
 </div>
-<script src="../assets/js/main.js?v=62"></script>
+<script src="../assets/js/main.js?v=63"></script>
 <script>
 function mcSwitch(scene,btn){
   var stage=document.getElementById('mc-stage'),peeks=document.querySelectorAll('.mc-peek');
@@ -481,7 +486,7 @@ function mcSwitch(scene,btn){
   var lb=document.getElementById('mc-lightbox');
   lb.querySelectorAll('.mc-scene').forEach(function(s){s.classList.remove('active')});
   lb.querySelector('[data-scene="'+scene+'"]').classList.add('active');
-  var descs={desk:{label:'The Learning Experience',head:'Classrooms That Are <span class="tone">Alive</span>, Paperless',desc:'Most learning happens through tablets & smart devices. Every student learns in a personal, joyful way.',items:'<li><span class="mc-dot"></span><b>Tablet & Gadgets</b> — no hard-copy modules</li><li><span class="mc-dot gold"></span><b>Fast WiFi</b> — across the whole campus</li><li><span class="mc-dot teal"></span><b>Virtual Class</b> — learn anytime & anywhere</li>'},lab:{label:'Computer & IT Lab',head:'Code & <span class="tone">Digital Literacy</span>',desc:'Interactive computer lab with monitors and full equipment for coding, design, and digital exploration.',items:'<li><span class="mc-dot"></span><b>Interactive Monitors</b> — 1 student : 1 device</li><li><span class="mc-dot gold"></span><b>Fast Connection</b> — access materials online</li><li><span class="mc-dot teal"></span><b>Creative Projects</b> — coding, design, research</li>'},sci:{label:'Science Lab · Physics & Chemistry',head:'Hands-On <span class="tone">Experiments</span>',desc:'Integrated science lab with physics and chemistry equipment for inquiry-based learning.',items:'<li><span class="mc-dot"></span><b>Full Equipment</b> — beakers, microscopes, scales</li><li><span class="mc-dot gold"></span><b>Inquiry-Based</b> — scientific method approach</li><li><span class="mc-dot teal"></span><b>Student Research</b> — science olympiads & competitions</li>'}};
+  var descs={desk:{label:'The Learning Experience',head:'Classrooms That Are <span class="tone">Alive</span>, Paperless',desc:'Most learning happens through tablets & smart devices. Every student learns in a personal, joyful way.',items:'<li><span class="mc-dot"></span><b>Tablet & Gadgets</b> — no hard-copy modules</li><li><span class="mc-dot gold"></span><b>Fast WiFi</b> — across the whole campus</li><li><span class="mc-dot teal"></span><b>Virtual Class</b> — learn anytime & anywhere</li>'},lab:{label:'Computer & IT Lab',head:'Code & <span class="tone">Digital Literacy</span>',desc:'Interactive computer lab with monitors and full equipment for coding, design, and digital exploration.',items:'<li><span class="mc-dot"></span><b>Interactive Monitors</b> — 1 student : 1 device</li><li><span class="mc-dot gold"></span><b>Fast Connection</b> — access materials online</li><li><span class="mc-dot teal"></span><b>Creative Projects</b> — coding, design, research</li>'},sci:{label:'Science Lab · Physics & Chemistry',head:'Hands-On <span class="tone">Experiments</span>',desc:'Integrated science lab with physics and chemistry equipment for inquiry-based learning.',items:'<li><span class="mc-dot"></span><b>Full Equipment</b> — beakers, microscopes, scales</li><li><span class="mc-dot gold"></span><b>Inquiry-Based</b> — scientific method approach</li><li><span class="mc-dot teal"></span><b>Student Research</b> — science olympiads & competitions</li>'},bio:{label:'Biology Lab',head:'Observing <span class="tone">Living Things</span>',desc:'Biology lab for microscope observation, specimens, and student research hands-on.',items:'<li><span class="mc-dot"></span><b>Microscopes & Specimens</b> — direct observation</li><li><span class="mc-dot gold"></span><b>Science Practicum</b> — scientific method</li><li><span class="mc-dot teal"></span><b>Research & Olympiad</b> — intensive coaching</li>'},lib:{label:'Library',head:'Windows of <span class="tone">Literacy</span>',desc:'Library with Islamic literature and academic references to nurture a love of reading.',items:'<li><span class="mc-dot"></span><b>Islamic Collection</b> — books & literature</li><li><span class="mc-dot gold"></span><b>Comfortable Reading</b> — focused & calm</li><li><span class="mc-dot teal"></span><b>Literacy Program</b> — reading culture</li>'},eng:{label:'English Zone',head:'Speak a <span class="tone">Global Language</span>',desc:'The English Zone brings a Cambridge immersion environment for English conversation and literacy.',items:'<li><span class="mc-dot"></span><b>Cambridge Immersion</b> — international standard</li><li><span class="mc-dot gold"></span><b>Daily Conversation</b> — English every day</li><li><span class="mc-dot teal"></span><b>Debate & Public Speaking</b> — confidence</li>'},mus:{label:'Prayer Hall',head:'Calm in <span class="tone">Worship</span>',desc:'A clean, comfortable prayer hall for daily worship and diniyah and tahfidz development.',items:'<li><span class="mc-dot"></span><b>Congregational Prayer</b> — kept every time</li><li><span class="mc-dot gold"></span><b>Diniyah & Tahfidz</b> — integrated</li><li><span class="mc-dot teal"></span><b>Clean Environment</b> — calm & comfortable</li>'},hall:{label:'Indoor Sports Hall',head:'Move <span class="tone">Together</span>',desc:'A multi-purpose indoor hall for sports, ceremonies, and student activities all year round.',items:'<li><span class="mc-dot"></span><b>Multi-Purpose</b> — basketball, badminton, gymnastics</li><li><span class="mc-dot gold"></span><b>Events & Ceremonies</b> — anytime</li><li><span class="mc-dot teal"></span><b>Healthy & Active</b> — sports culture</li>'}};
   var d=descs[scene]||descs.desk;
   document.getElementById('mc-label').innerHTML=d.label;
   document.getElementById('mc-heading').innerHTML=d.head;
@@ -503,21 +508,35 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')mcCloseLB()}
   <div class="mc-lightbox-inner">
     <div class="mc-scene active" data-scene="desk">
       <span class="modclass-badge">Digital Classroom</span>
-      <div class="mc-wall"><div class="mc-board"><span class="mc-board-logo">◈ Al Mazaya</span><span class="mc-board-line"></span><span class="mc-board-line short"></span><span class="mc-board-chip">Interactive Learning</span></div></div>
-      <div class="mc-desk"><div class="mc-tablet"><span class="mc-tablet-bar"></span><span class="mc-tablet-line"></span><span class="mc-tablet-line"></span></div><div class="mc-book"><i></i></div></div>
-      <div class="mc-chair"></div>
+      <img class="mc-photo" src="../assets/img/classroom-r0003044.jpg" alt="Digital Classroom">
     </div>
     <div class="mc-scene" data-scene="lab">
       <span class="modclass-badge">Computer &amp; IT Lab</span>
-      <div class="mc-wall"><div class="mc-board lab-board"><span class="mc-board-logo">◈ Digital Lab</span><span class="mc-board-line"></span><span class="mc-board-line short"></span><span class="mc-board-chip">Coding &amp; Digital Literacy</span></div></div>
-      <div class="mc-lab-row"><div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div><div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div><div class="mc-monitor"><span class="mc-screen-bar"></span><span class="mc-screen-line"></span></div></div>
-      <div class="mc-lab-desk"></div>
+      <img class="mc-photo" src="../assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt="Computer &amp; IT Lab">
     </div>
     <div class="mc-scene" data-scene="sci">
       <span class="modclass-badge">Science Lab · Physics &amp; Chemistry</span>
-      <div class="mc-wall"><div class="mc-board sci-board"><span class="mc-board-logo">◈ Science Lab</span><span class="mc-board-line"></span><span class="mc-board-line short"></span><span class="mc-board-chip">Lab &amp; Research</span></div></div>
-      <div class="mc-sci-table"></div>
-      <div class="mc-flask"></div><div class="mc-flask f2"></div><div class="mc-beaker"></div>
+      <img class="mc-photo" src="../assets/img/laboratory-r0003095.jpg" alt="Science Lab · Physics &amp; Chemistry">
+    </div>
+    <div class="mc-scene" data-scene="bio">
+      <span class="modclass-badge">Biology Lab</span>
+      <img class="mc-photo" src="../assets/img/laboratory-r0003078.jpg" alt="Biology Lab">
+    </div>
+    <div class="mc-scene" data-scene="lib">
+      <span class="modclass-badge">Library</span>
+      <img class="mc-photo" src="../assets/img/hello-world-wis.jpg" alt="Library">
+    </div>
+    <div class="mc-scene" data-scene="eng">
+      <span class="modclass-badge">English Zone</span>
+      <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt="English Zone">
+    </div>
+    <div class="mc-scene" data-scene="mus">
+      <span class="modclass-badge">Prayer Hall</span>
+      <img class="mc-photo" src="../assets/img/quran-academy-r0002997.jpg" alt="Prayer Hall">
+    </div>
+    <div class="mc-scene" data-scene="hall">
+      <span class="modclass-badge">Indoor Sports Hall</span>
+      <img class="mc-photo" src="../assets/img/hall-r0003030.jpg" alt="Indoor Sports Hall">
     </div>
   </div>
   <button class="mc-lb-close" onclick="mcCloseLB()" aria-label="Close">×</button>

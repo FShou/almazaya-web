@@ -57,6 +57,12 @@
 - Removed now-dead `.culture-strip` CSS; values-editorial (5 core values) kept intact
 - Applied to ID + EN; cache bump `v=61 → v=62`; tag balance verified
 
+**Home audit — Empat Pilar realigned to source doc** (3 Sep 2026):
+- Audited `index.html` + `en/index.html` against ABOUT_US.md: About page was already 100% doc-faithful; the Home Empat Pilar section (which maps to the doc's Pilar Pendidikan) contained invented quotes attributed to the school + unsourced claims (30 juz, national olympiads, Cambridge class)
+- Fixed: lead quote → official vision verbatim (attributed "Visi Pendidikan Al Mazaya"); each pillar now uses the doc's exact language (nilai-nilai Islam kuat / budaya 5S + 5 ninti / budaya belajar kreatif-kritis / keterampilan Bahasa Inggris utk dunia berkembang); story-bridge → doc's integration statement instead of fabricated adab quote
+- Remaining home claims (Cambridge cert, 30 juz, Akreditasi A, Kurikulum Merdeka, 6 negara, UI/ULM/ITS/ITB, tablet-majority) → moved to Known placeholders fact-check list
+- HTML-only → no cache bump; tag balance verified
+
 **Move Fasilitas → Program page; drop Kelas Modern from About** (3 Sep 2026):
 - `tentang.html` + `en/tentang.html`: removed the `#kelas-modern` CTA band (was non-source marketing content) and the `#fasilitas` section (placeholder, not in ABOUT_US.md); removed "Fasilitas/Facilities" from the About sub-nav — About now = Sekilas/Sejarah/Visi-Misi/Pilar/Nilai (all MD-sourced)
 - `jenjang.html` + `en/jenjang.html`: added `#fasilitas` facilities gallery section (gallery-grid + facility-chips) before footer — temporary home until real facility data
@@ -126,8 +132,9 @@
 - PPDB jadwal table & biaya — example data only
 - Fasilitas list — guessed, needs confirmation
 - Berita cards — copied from old site's real posts; dates/categories need verification
-- Copy fact-check: Cambridge claim, alumni UI/ULM/ITS/ITB, 4 olympiad medals
 - MMI Preschool photo slot + program details verification with MMI admin
+- **Home CLAIMS TO FACT-CHECK** → full checklist di **`FACT_CHECK.md`** (11 kategori: akreditasi, Cambridge, tahfidz, prestasi/alumni, kelas modern, MMI, program, fasilitas, kontak, PPDB, + yang sudah resmi utk cross-check) — dikumpulkan 3 Sep 2026 dari seluruh halaman
+- Home Empat Pilar quotes were previously invented w/ school attribution — **fixed 3 Sep 2026**: now use official vision + doc's pillar language; invented quotes removed (ID+EN)
 
 ## Next Steps (in order)
 

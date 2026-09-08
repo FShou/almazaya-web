@@ -8,3 +8,6 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+
+# Vendor docs (keep content in ABOUT_US.md only)
+*.docx

@@ -144,6 +144,22 @@
 - Cache bump `v=62 → v=63` on all 14 files; div tag balance verified; 104 `slot-photo` refs, zero broken image links; all 10 pages load-tested in headless Chromium (0 broken, 0 <600px)
 - Working tree uncommitted
 
+**Kelas Modern scenes → real facility photos** (8 Sep 2026):
+- The 8 `mc-scene` showcase panels (akademik + index, ID + EN) now show real photos instead of CSS illustration icons: `desk` Ruang Kelas Digital, `lab` Lab Komputer & IT, `sci` Lab IPA Fisika-Kimia, `bio` Lab Biologi, `lib` Perpustakaan, `eng` English Zone, `mus` Musala, `hall` Lapangan Indoor
+- New CSS: `.mc-scene .mc-photo` (absolute cover), `.mc-peek-scene img` thumbnails; showcase grid `.modclass-more` 4→2 (≤960)→1 (≤640) cols
+- Same validated filenames as `jenjang.html#fasilitas` mapping; EN paths use `../assets/img/`; verified 0 dangling img refs
+- Cache bump `v=63 → v=64` on all 14 files (CSS changed); tag balance verified
+
+**Sejarah timeline photo/caption fix** (8 Sep 2026):
+- Bug: `.hist-photo` lacked `position:relative`, so `<img class="slot-photo">` (`absolute; inset:0`) anchored to the sticky `.hist-row` → photo full-bled over the whole slide and hid the text column + "Foto…" captions ("g full" + "tulisannya g keliatan")
+- Fix: `.hist-photo` now `position:relative; overflow:hidden` (photo locked to its column); all 5 per-page history captions in `tentang.html` + `en/tentang.html` wrapped in `<span class="gal-label">` (z-index 2 → legible over photo)
+- No cache bump needed beyond `v=64`; tag balance verified; 0 dangling refs
+
+**Housekeeping — prune unused assets + crawl leftovers** (8 Sep 2026):
+- Queried all `src= assets/img/*` refs across ID+EN pages, diffed vs `assets/img/` → 104 files (14MB) never referenced; moved to `/home/tiny/crawler-archive/unused-imgs/` (repo `assets/img` now 43 files, all used)
+- Entire crawling toolchain/leftovers from `/tmp/opencode` (501MB: crawlers, cookies sqlite, captured html/png, logs, ff profiles, venv) consolidated to `/home/tiny/crawler-archive/opencode-tmp/` — one archive folder outside the repo
+- **Committed & pushed**: `c5ba57b` → origin/main (57 files, +458/−377)
+
 ## Next Steps (in order)
 
 1. **Content pass** ← *next session*

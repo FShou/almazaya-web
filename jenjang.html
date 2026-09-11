@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=64">
+<link rel="stylesheet" href="assets/css/style.css?v=65">
 <style>
   .jenjang-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.6rem; align-items: center; }
   .jenjang-detail.flip { direction: rtl; }
@@ -62,8 +62,48 @@
   </div>
 </section>
 
+<!-- RINGKASAN JENJANG -->
+<section class="section bg-mist jenjang-arc">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">Jenjang Pendidikan</span>
+      <h2>Program <span class="tone">Al Mazaya</span></h2>
+      <p>Tiga jenjang, satu tujuan: lulusan intelek, berkepribadian muslim, dan gemar beribadah.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="jenjang-card mmi reveal" data-reveal="0.75">
+        <div class="jenjang-body">
+          <span>MMI Preschool · Montessori Authentic</span>
+          <h3>Preschool &amp; Playgroup</h3>
+          <p>Program Montessori autentik satu-satunya di Kalimantan — partnership MMI London. Usia 6 bulan sampai 6 tahun dengan pendekatan child-led learning.</p>
+          <a class="btn btn-outline" href="#mmi">Selengkapnya</a>
+        </div>
+      </article>
+
+      <article class="jenjang-card reveal d1" data-reveal="0.75">
+        <div class="jenjang-body">
+          <span>SMP · Terakreditasi A</span>
+          <h3>Junior High School</h3>
+          <p>Fondasi kuat akademik &amp; karakter: English Camp kelas 7, tahfidz bertahap, serta pembiasaan Bahasa Inggris dan Arab setiap hari.</p>
+          <a class="btn btn-outline" href="#smp">Selengkapnya</a>
+        </div>
+      </article>
+
+      <article class="jenjang-card sma reveal d2" data-reveal="0.75">
+        <div class="jenjang-body">
+          <span>SMA · Terakreditasi A</span>
+          <h3>Senior High School</h3>
+          <p>Persiapan lanjut studi ke PTN ternama (UI, ULM, ITS, ITB) dengan pembinaan olimpiade sains, debat, dan pendalaman tahfidz.</p>
+          <a class="btn btn-outline" href="#sma">Selengkapnya</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- MMI PRESCHOOL -->
-<section class="section">
+<section class="section" id="mmi">
   <div class="container jenjang-detail">
     <div class="reveal">
       <span class="kicker">Preschool · Modern Montessori International</span>
@@ -82,7 +122,7 @@
 </section>
 
 <!-- SMP -->
-<section class="section">
+<section class="section" id="smp">
   <div class="container jenjang-detail">
     <div class="reveal">
       <span class="kicker">SMP · Terakreditasi A</span>
@@ -101,7 +141,7 @@
 </section>
 
 <!-- SMA -->
-<section class="section bg-mist">
+<section class="section bg-mist" id="sma">
   <div class="container jenjang-detail flip">
     <div class="reveal">
       <span class="kicker">SMA · Terakreditasi A</span>
@@ -240,6 +280,6 @@
         <div class="lang-toggle mobile-lang" aria-label="Ganti bahasa"><a class="active" href="jenjang.html" title="Bahasa Indonesia">ID</a><a href="en/jenjang.html" title="English">EN</a></div>
   </div>
 </div>
-<script src="assets/js/main.js?v=63"></script>
+<script src="assets/js/main.js?v=64"></script>
 </body>
 </html>

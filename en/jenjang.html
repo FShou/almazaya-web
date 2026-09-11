@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=64">
+<link rel="stylesheet" href="../assets/css/style.css?v=65">
 <style>
   .jenjang-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.6rem; align-items: center; }
   .jenjang-detail.flip { direction: rtl; }
@@ -62,8 +62,45 @@
   </div>
 </section>
 
+<!-- LEVELS OVERVIEW -->
+<section class="section bg-mist jenjang-arc">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">Education Levels</span>
+      <h2>Al Mazaya <span class="tone">Programs</span></h2>
+      <p>Three levels, one goal: intellectual, faithful, and worship-loving graduates.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="jenjang-card mmi reveal" data-reveal="0.75">
+        <div class="jenjang-body">
+          <span>MMI Preschool · Authentic Montessori</span>
+          <h3>Preschool &amp; Playgroup</h3>
+          <p>Kalimantan's only authentic Montessori — partnership with MMI London. Ages 6 months to 6 years with child-led learning.</p>
+          <a class="btn btn-outline" href="#mmi">Learn More</a>
+        </div>
+      </article>
+      <article class="jenjang-card reveal d1" data-reveal="0.75">
+        <div class="jenjang-body">
+          <span>JHS · Accredited A</span>
+          <h3>Junior High School</h3>
+          <p>Strong academic &amp; character foundation: grade-7 English Camp, gradual tahfidz, and daily English &amp; Arabic practice.</p>
+          <a class="btn btn-outline" href="#smp">Learn More</a>
+        </div>
+      </article>
+      <article class="jenjang-card sma reveal d2" data-reveal="0.75">
+        <div class="jenjang-body">
+          <span>SHS · Accredited A</span>
+          <h3>Senior High School</h3>
+          <p>Preparation for top state universities (UI, ULM, ITS, ITB) with science olympiad coaching, debate, and advanced tahfidz.</p>
+          <a class="btn btn-outline" href="#sma">Learn More</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- MMI PRESCHOOL -->
-<section class="section">
+<section class="section" id="mmi">
   <div class="container jenjang-detail">
     <div class="reveal">
       <span class="kicker">Preschool · Modern Montessori International</span>
@@ -81,7 +118,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="smp">
   <div class="container jenjang-detail">
     <div class="reveal">
       <span class="kicker">JHS · Accredited A</span>
@@ -99,7 +136,7 @@
   </div>
 </section>
 
-<section class="section bg-mist">
+<section class="section bg-mist" id="sma">
   <div class="container jenjang-detail flip">
     <div class="reveal">
       <span class="kicker">SHS · Accredited A</span>
@@ -238,6 +275,6 @@
         <div class="lang-toggle mobile-lang" aria-label="Switch language"><a href="../jenjang.html" title="Bahasa Indonesia">ID</a><a class="active" href="jenjang.html" title="English">EN</a></div>
   </div>
 </div>
-<script src="../assets/js/main.js?v=63"></script>
+<script src="../assets/js/main.js?v=64"></script>
 </body>
 </html>

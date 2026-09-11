@@ -99,6 +99,26 @@
     });
   });
 
+  /* Programs carousel — prev/next under a scroll-snap track */
+  var progTrack = document.getElementById('prog-track');
+  if (progTrack) {
+    var progCard = progTrack.querySelector('.mc-peek');
+    var progStep = function () {
+      var w = progCard ? progCard.offsetWidth + 18 : 250;
+      return w;
+    };
+    window.progMove = function (dir) {
+      progTrack.scrollBy({ left: dir * progStep(), behavior: 'smooth' });
+    };
+    progTrack.addEventListener('scroll', function () {
+      var max = progTrack.scrollWidth - progTrack.clientWidth;
+      var atEnd = progTrack.scrollLeft >= max - 4;
+      var atStart = progTrack.scrollLeft <= 4;
+      progTrack.classList.toggle('is-end', atEnd);
+      progTrack.classList.toggle('is-start', atStart);
+    });
+  }
+
   /* Footer year */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();

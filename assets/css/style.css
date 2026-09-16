@@ -189,7 +189,7 @@ p + p { margin-top: .8em; }
   .main-nav { display: none !important; }
   .nav-burger { display: grid; place-items: center; margin-left: auto; }
   .lang-toggle { display: none; }
-  .lang-toggle.mobile-lang { display: inline-flex; margin: 1.25rem auto .2rem; }
+  .lang-toggle.mobile-lang { display: inline-flex; position: static; margin: 1.25rem auto .2rem; }
   .brand { margin-left: 0; }
   .header-inner { position: relative; }
   .brand-name { display: none; }

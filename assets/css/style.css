@@ -1488,10 +1488,15 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   }
   .prog-arrow { display: none; }
   .modclass { margin-top: 1.2rem; }
-  .modclass-media { min-height: 0; aspect-ratio: 4 / 3; }
+  .modclass-panel { order: -1; gap: .8rem; padding: 1.3rem 1.15rem 1.1rem; }
+  .modclass-panel h3 { font-size: 1.3rem; }
+  .modclass-panel > p { font-size: .92rem; line-height: 1.5; }
+  .modclass-list { gap: .55rem; margin-bottom: .2rem; }
+  .modclass-list li { font-size: .88rem; gap: .5rem; }
+  .modclass-media { order: 0; min-height: 0; aspect-ratio: 16 / 9; border-radius: 0 0 var(--radius) var(--radius); }
   .modclass-badge { font-size: .72rem; padding: .4rem .95rem; bottom: 3%; }
-  .modclass-panel { padding: 1.4rem 1.15rem; }
   .modclass-panel .btn { align-self: stretch; justify-content: center; }
+  .modclass-panel { border-radius: var(--radius) var(--radius) 0 0; }
   .modclass-more { grid-template-columns: 1fr; }
   .pillars-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }

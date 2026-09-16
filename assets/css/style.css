@@ -259,6 +259,10 @@ p + p { margin-top: .8em; }
   max-width: 320px;
 }
 .mobile-nav a:hover, .mobile-nav a.active { background: rgba(255,255,255,.1); color: #C9A227; }
+.mobile-nav .lang-toggle { background: var(--white); border-color: var(--line); }
+.mobile-nav .lang-toggle a { color: var(--navy); }
+.mobile-nav .lang-toggle a.active { color: var(--white); }
+.mobile-nav .lang-toggle a:hover { color: var(--navy); background: var(--mist); }
 
 
 /* ---------- Hero slider ---------- */

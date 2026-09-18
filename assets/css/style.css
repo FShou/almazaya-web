@@ -90,6 +90,7 @@ p + p { margin-top: .8em; }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid > * { min-width: 0; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -901,7 +902,7 @@ a.partner-card { display: block; text-decoration: none; color: inherit; }
 .checklist svg { width: 21px; height: 21px; stroke: var(--gold-deep); flex-shrink: 0; margin-top: 2px; }
 
 /* Table */
-.table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); min-width: 0; }
 table { width: 100%; border-collapse: collapse; background: var(--white); font-size: .93rem; min-width: 480px; }
 th, td { padding: .95rem 1.2rem; text-align: left; }
 thead th { background: var(--navy); color: var(--white); font-family: var(--font-head); font-weight: 700; }

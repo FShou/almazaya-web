@@ -1533,8 +1533,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 
 /* ---------- Overseas Destinations ---------- */
 .overseas { overflow: hidden; }
-.overseas .section-head p { color: var(--navy-soft); }
-.on-dark .overseas .section-head p { color: #AFC3DC; }
+.overseas .section-head p { color: #C9DAEF; }
 
 .map-shell {
   position: relative;

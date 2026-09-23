@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=80">
+<link rel="stylesheet" href="assets/css/style.css?v=81">
 </head>
 <body>
 
@@ -280,6 +280,304 @@
       <button class="prog-arrow next" aria-label="Program berikutnya" onclick="progMove(1)">›</button>
     </div>
   </div>
+</section>
+
+<!-- ================= OVERSEAS DESTINATIONS ================= -->
+<section class="section on-dark overseas" id="overseas">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">Jejak Global</span>
+      <h2>Our Overseas <span class="tone">Destinations</span></h2>
+      <p>Empat benua, lima negara. Siswa Al Mazaya berangkat ke sekolah mitra di luar negeri — imersi budaya, pertukaran pelajar, dan jalur studi internasional. Klik titik di peta untuk melihat detailnya.</p>
+    </div>
+    <div class="map-shell reveal" id="overseas-map">
+      <svg class="world-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" role="img" aria-label="World map of our overseas destinations">
+        <path class="map-land" d="M159 120L146 114L137 102L139 96L124 83L118 86L108 81L108 49L121 52L144 46L151 50L154 47L155 50L159 48L198 57L203 52L218 56L227 56L226 53L229 53L233 57L238 51L232 48L236 41L242 43L246 47L243 49L248 50L248 53L256 53L257 58L262 48L270 49L274 51L274 58L262 60L238 79L237 86L241 86L244 92L271 99L278 112L282 108L278 101L287 94L282 86L285 83L283 74L295 74L307 79L308 86L312 88L321 81L328 95L345 105L343 111L333 116L316 116L302 127L319 119L322 121L319 123L321 129L329 131L332 127L334 131L318 139L316 136L321 133L314 133L308 125L303 133L291 134L271 145L271 133L255 122L245 123L237 119L159 120Z M267 74L273 72L267 74Z M278 38L275 35L288 37L278 38Z M277 75L280 75L277 75Z M240 31L231 31L240 31Z M239 22L232 21L239 22Z M231 18L235 19L230 21L226 19L231 18Z M255 33L230 25L246 25L252 29L275 28L277 32L255 33Z M191 20L195 21L189 23L185 21L191 20Z M192 18L187 19L192 18Z M346 112L342 117L351 119L353 128L349 124L346 127L335 125L342 112L346 112Z M267 65L277 70L269 68L262 72L258 70L261 63L267 65Z M281 40L309 46L314 51L309 52L328 59L322 65L315 60L311 61L319 67L319 73L309 69L316 76L292 66L284 68L284 64L295 64L298 57L296 55L281 47L254 47L249 40L262 35L262 39L271 35L276 41L281 40Z M237 34L249 35L235 41L233 36L237 34Z M159 27L177 22L175 26L159 27Z M131 103L134 102L136 109L131 103Z M207 16L223 21L208 19L211 18L207 16Z M157 122L143 114L151 116L157 122Z M162 33L179 36L158 45L150 42L156 35L153 33L162 33Z M201 28L206 28L205 31L188 33L184 32L189 30L173 30L179 26L197 29L193 26L198 25L201 28Z M204 37L210 45L219 48L215 52L185 53L174 48L188 47L168 43L180 37L195 38L199 42L199 37L204 37Z M221 39L218 36L221 35L230 35L228 38L232 39L227 44L215 39L221 39Z M204 36L210 36L207 39L204 36Z M226 25L229 27L227 31L215 29L215 26L226 25Z M233 12L243 9L262 16L248 20L233 15L233 12Z M246 7L275 3L328 5L295 16L286 16L291 19L278 23L284 25L276 27L251 26L255 21L264 22L256 19L264 16L259 13L273 12L257 12L246 7Z M291 57L285 56L289 54L291 57Z M233 50L223 50L233 50Z M321 117L328 120L321 117Z M322 127L328 129L322 127Z"/>
+        <path class="map-land" d="M996 44L1000 43L996 44Z M636 129L630 135L635 145L633 147L604 135L602 133L609 127L606 125L611 123L611 118L598 115L594 109L589 110L587 106L591 105L586 98L578 95L576 87L581 82L578 81L588 72L583 70L583 56L579 51L589 48L614 57L607 62L592 60L597 62L597 67L603 69L603 65L610 67L610 63L622 61L624 59L621 53L628 54L629 59L649 52L652 55L663 52L667 54L670 52L668 49L690 55L692 53L686 50L685 44L692 38L702 38L700 43L705 53L698 61L701 61L708 56L708 51L704 49L707 46L703 43L708 41L707 38L712 44L715 40L726 42L724 35L741 35L739 33L742 30L769 28L790 22L817 28L804 34L814 34L815 37L853 36L865 45L867 42L889 43L887 40L890 38L915 40L925 45L942 45L947 50L966 49L971 52L974 51L973 48L988 48L1000 52L1000 65L993 66L998 74L982 77L973 83L969 80L954 83L950 88L953 95L936 113L933 93L957 74L945 80L943 76L935 77L928 83L931 85L920 86L916 83L895 86L875 100L884 104L889 102L893 106L889 122L875 139L863 143L864 134L870 133L875 122L864 124L855 117L850 107L843 105L836 105L827 118L818 116L807 120L775 110L770 118L756 114L743 119L732 113L722 114L714 101L704 105L692 98L669 104L671 106L667 110L670 114L641 111L635 117L632 115L629 122L636 129Z M760 10L772 11L778 14L778 18L759 16L753 13L760 10Z M786 16L793 18L792 20L776 21L781 16L786 16Z M886 27L903 29L886 32L880 30L886 27Z M912 30L919 31L912 30Z M889 36L899 37L889 36Z M625 12L643 11L632 14L625 12Z M563 102L555 100L562 99L563 102Z M649 35L670 27L691 26L662 33L654 40L660 46L643 43L649 35Z M897 104L902 120L898 119L896 124L899 130L894 128L893 110L895 102L897 104Z M14 58L16 61L15 58L28 62L21 64L20 68L5 64L4 61L0 65L0 52L14 58Z M4 45L0 43L7 44L4 45Z M593 130L601 133L594 136L590 133L593 130Z"/>
+        <path class="map-land" d="M159 120L237 119L245 123L255 122L271 133L269 145L291 134L303 133L308 125L312 127L314 134L305 138L303 143L306 145L295 148L300 148L295 148L290 153L292 156L289 160L287 155L290 166L274 180L277 202L270 194L270 188L260 184L252 184L252 188L239 186L230 193L230 199L227 199L220 187L211 188L204 179L192 181L175 176L165 169L154 150L154 122L159 127L159 120Z M68 219L70 221L67 223L68 219Z M67 217L65 216L67 217Z M65 215L63 216L65 215Z M61 214L61 214Z M57 212L57 212Z M38 81L40 83L35 82L38 81Z M74 89L77 91L71 93L74 89Z M108 49L108 81L118 86L124 83L139 96L137 100L128 89L109 83L91 79L79 85L82 78L60 96L42 101L62 91L64 86L50 87L49 82L41 81L39 77L43 71L47 72L53 66L42 67L33 63L51 61L37 54L38 52L65 43L108 49Z M23 69L31 71L23 69Z"/>
+        <path class="map-land" d="M892 297L892 319L889 316L882 317L885 313L883 306L871 300L869 302L867 298L872 297L863 291L872 291L876 300L882 294L892 297Z M847 318L843 324L847 318Z M873 312L874 307L873 312Z M827 274L827 282L831 285L827 285L823 302L806 298L803 283L816 284L822 273L827 274Z M859 298L863 301L855 300L859 298Z M852 301L850 299L852 301Z M855 281L857 291L855 281Z M841 285L847 282L846 287L834 287L833 290L836 293L843 290L838 295L842 306L841 303L837 304L836 297L833 307L830 298L833 286L841 285Z M834 323L830 321L833 320L834 323Z M837 317L841 316L837 317Z M829 317L824 319L829 317Z M801 310L808 310L821 317L801 315L793 311L795 308L801 310Z M790 292L795 298L794 308L791 308L765 269L771 270L790 292Z"/>
+        <path class="map-land" d="M804 226L803 220L808 219L804 226Z M723 143L725 140L722 134L728 133L731 126L737 127L743 119L751 124L753 133L765 136L768 142L792 145L807 141L811 138L811 133L833 127L828 123L821 123L824 117L831 116L836 105L850 107L855 117L864 124L875 122L870 133L864 134L863 143L861 141L836 155L838 148L826 155L830 160L840 160L831 168L839 179L839 189L830 204L807 218L793 208L782 211L783 215L776 212L774 205L771 206L774 194L767 191L767 187L747 194L721 182L719 170L705 156L705 151L723 143Z"/>
+        <path class="map-land" d="M370 5L403 1L442 4L411 6L436 7L439 8L436 10L456 7L466 9L444 13L451 13L445 18L445 22L449 24L440 25L445 27L446 30L443 30L446 33L435 37L438 41L431 40L440 46L429 43L427 47L438 48L412 54L389 64L381 73L380 82L376 82L366 79L355 68L350 58L359 48L348 49L349 45L357 46L345 42L348 39L341 32L330 27L306 26L302 24L315 23L296 20L317 16L311 13L326 8L360 5L376 8L370 5Z"/>
+        <path class="map-land" d="M352 404L351 398L340 392L351 378L346 366L339 364L338 344L333 344L332 335L318 328L319 321L304 326L304 321L299 322L294 314L298 306L306 303L306 282L312 281L316 286L324 280L320 274L328 274L331 270L337 284L345 279L353 281L357 274L361 282L360 288L365 289L365 292L375 293L376 297L389 298L401 306L404 313L392 335L390 355L386 363L368 373L365 385L352 404Z"/>
+        <path class="map-land" d="M910 428L912 432L908 438L902 428L910 428Z M850 398L843 404L833 404L828 408L820 405L822 398L815 379L817 363L836 355L850 336L860 339L868 326L880 330L876 339L889 349L894 340L896 325L900 338L904 339L907 353L925 375L925 396L917 416L906 422L903 418L895 420L884 410L884 406L880 409L883 401L878 408L873 400L865 396L850 398Z"/>
+        <path class="map-land" d="M770 191L770 195L764 197L763 203L759 205L759 212L753 207L757 202L746 197L747 214L742 214L723 233L722 252L715 261L704 233L702 215L696 216L689 207L697 204L693 196L707 182L709 177L705 170L716 166L719 180L725 185L722 189L739 197L745 197L745 192L749 196L756 196L755 193L767 187L767 191L770 191Z"/>
+        <path class="map-land" d="M743 119L737 127L731 126L728 133L722 134L725 140L723 143L705 140L691 149L685 147L680 138L672 139L663 132L655 134L654 147L650 143L646 145L640 135L647 133L647 127L636 129L629 122L632 115L635 117L641 111L670 114L667 110L671 106L669 104L692 98L704 105L714 101L722 114L732 113L743 119Z"/>
+        <path class="map-land" d="M836 244L834 242L836 244Z M841 254L845 249L843 256L841 254Z M851 259L848 269L843 261L839 264L848 255L851 259Z M829 256L825 259L832 249L829 256Z M840 226L838 239L844 241L845 245L836 241L833 235L835 225L840 226Z M839 249L842 248L839 252L839 249Z M849 246L847 253L845 245L849 246Z"/>
+        <path class="map-land" d="M175 176L192 181L204 179L211 188L220 187L225 198L230 199L228 211L233 222L238 226L248 222L249 216L258 214L256 225L247 227L249 233L245 233L244 238L237 232L228 233L212 225L206 218L207 213L188 189L186 181L181 179L181 185L196 209L180 193L183 190L175 176Z"/>
+        <path class="map-land" d="M309 468L309 476L314 476L311 479L299 475L293 469L302 473L309 468Z M307 348L314 367L304 396L306 405L300 428L302 442L296 457L300 466L310 467L303 469L302 473L291 465L290 455L294 449L290 448L293 439L297 440L298 433L295 437L294 431L302 399L307 348Z"/>
+        <path class="map-land" d="M309 468L319 476L309 476L309 468Z M340 392L340 419L327 421L326 429L319 429L324 434L313 444L312 447L318 450L308 462L311 467L300 466L296 457L302 442L300 428L310 372L316 363L321 366L322 363L340 374L337 381L345 382L350 376L351 380L340 392Z"/>
+        <path class="map-land" d="M542 15L560 17L544 25L529 15L542 15Z M586 50L579 51L581 49L577 47L569 53L559 50L550 53L535 68L531 86L529 84L520 89L516 87L516 73L553 49L578 44L587 46L583 47L586 50Z M576 14L564 16L548 13L564 11L576 14Z M569 21L558 22L564 19L569 21Z"/>
+        <path class="map-land" d="M894 154L890 168L881 169L877 173L875 169L864 172L867 174L863 182L859 174L868 167L877 166L880 160L882 162L890 147L893 146L894 154Z M902 137L904 136L904 140L898 144L893 142L889 145L894 132L902 137Z M868 173L874 171L869 176L868 173Z"/>
+        <path class="map-land" d="M365 480L380 480L365 480Z M316 480L335 480L316 480Z M295 480L310 480L295 480Z M216 480L233 480L216 480Z M159 480L170 480L159 480Z M146 480L155 480L146 480Z M45 480L58 480L45 480Z M1000 480L0 480L1000 480Z"/>
+        <path class="map-land" d="M529 127L538 129L539 132L534 132L535 137L551 150L547 149L545 158L544 152L531 143L528 137L519 136L519 130L529 127Z M541 157L542 162L535 159L541 157Z M524 148L527 149L527 154L524 155L524 148Z"/>
+        <path class="map-land" d="M357 274L353 281L349 280L350 268L357 274Z M517 118L522 120L517 128L521 138L505 143L496 140L497 130L487 121L496 121L495 117L497 119L505 113L517 118Z M524 142L526 141L526 146L524 142Z"/>
+        <path class="map-land" d="M892 297L902 301L919 324L911 323L902 314L898 319L892 319L892 297Z M924 301L919 297L924 301Z M920 308L916 310L912 307L919 307L923 302L920 308Z M930 306L932 312L930 306Z"/>
+        <path class="map-land" d="M483 103L479 103L479 99L483 103Z M491 105L484 98L486 87L492 87L489 91L495 90L491 96L499 101L501 107L505 107L502 114L485 117L491 112L485 110L488 109L487 105L491 105Z"/>
+        <path class="map-land" d="M581 303L585 317L579 319L582 333L575 328L562 326L560 313L549 316L545 308L534 309L536 304L541 305L544 301L554 271L560 274L568 270L583 272L587 280L583 286L581 303Z"/>
+        <path class="map-land" d="M635 185L626 172L628 166L623 153L629 155L634 152L633 155L641 162L657 157L670 163L668 175L672 183L669 186L676 196L671 202L659 200L657 195L649 196L639 185L635 185Z"/>
+        <path class="map-land" d="M545 386L555 386L555 373L560 380L563 375L570 376L578 366L587 364L589 372L585 380L591 382L576 402L552 406L545 386Z M580 387L576 388L577 393L581 390L580 387Z"/>
+        <path class="map-land" d="M331 270L328 274L320 274L324 280L316 286L312 278L313 267L300 264L297 252L302 248L302 257L302 250L306 246L311 252L328 251L327 254L334 259L329 268L331 270Z"/>
+        <path class="map-land" d="M716 166L705 170L709 177L707 182L693 196L697 204L689 207L684 201L671 202L676 195L669 186L684 186L686 181L693 179L694 171L698 170L700 163L709 161L716 166Z"/>
+        <path class="map-land" d="M744 119L756 114L770 118L775 110L807 120L824 117L821 123L828 123L833 127L811 133L811 138L807 141L792 145L768 142L765 136L753 133L753 127L744 119Z"/>
+        <path class="map-land" d="M624 161L606 161L600 165L600 162L582 164L577 162L573 153L576 149L593 144L607 148L618 145L624 152L624 161Z M573 145L581 146L573 150L573 145Z"/>
+        <path class="map-land" d="M991 425L989 430L985 430L985 416L980 406L987 416L987 413L991 418L996 417L991 425Z M971 437L978 428L983 428L981 438L972 447L963 446L971 437Z"/>
+        <path class="map-land" d="M306 303L298 306L294 314L299 322L304 321L304 326L309 331L305 351L289 338L274 304L277 300L277 303L282 304L291 288L297 296L305 297L306 303Z"/>
+        <path class="map-land" d="M596 327L604 328L612 323L613 338L610 345L597 356L599 369L589 380L587 364L591 358L591 345L584 342L584 339L595 337L597 346L599 338L596 327Z"/>
+        <path class="map-land" d="M778 218L770 225L775 233L773 238L777 247L774 254L770 230L762 233L756 214L764 197L772 191L774 199L771 206L774 205L776 212L781 213L778 218Z"/>
+        <path class="map-land" d="M536 304L534 308L533 305L536 304Z M534 309L545 308L549 316L560 313L562 326L567 327L567 332L561 332L564 348L533 347L538 329L534 309Z"/>
+        <path class="map-land" d="M792 239L786 239L785 246L778 242L775 254L784 267L781 268L773 261L777 247L773 238L775 233L770 225L778 218L781 228L789 225L792 239Z"/>
+        <path class="map-land" d="M685 160L692 161L697 156L700 162L704 159L709 161L698 164L693 179L686 181L684 186L669 186L672 183L668 175L670 166L675 167L685 160Z"/>
+        <path class="map-land" d="M646 145L650 143L654 147L659 146L663 141L685 160L675 167L657 157L650 160L650 154L646 151L647 148L652 148L649 144L647 147L646 145Z"/>
+        <path class="map-land" d="M950 324L948 323L950 324Z M949 321L946 317L949 321Z M947 322L943 321L947 322Z M943 315L939 313L943 315Z M936 312L938 313L936 312Z"/>
+        <path class="map-land" d="M597 187L600 188L606 183L603 180L609 178L624 188L634 190L644 209L655 213L653 219L636 224L631 230L621 228L619 232L596 192L597 187Z"/>
+        <path class="map-land" d="M655 146L655 134L663 132L672 139L680 138L685 147L691 149L698 143L696 146L703 148L693 148L688 152L688 161L663 141L655 146Z"/>
+        <path class="map-land" d="M568 260L561 244L566 234L569 213L602 213L607 226L602 230L594 258L591 246L586 255L582 253L574 256L572 252L566 258L568 260Z"/>
+        <path class="map-land" d="M307 326L319 321L318 328L332 335L333 344L338 344L339 356L328 355L326 364L322 363L321 366L316 363L312 366L307 348L307 326Z"/>
+        <path class="map-land" d="M314 284L312 281L306 282L306 303L305 297L297 296L291 288L281 283L286 275L285 258L301 245L296 257L300 264L313 267L314 284Z"/>
+        <path class="map-land" d="M468 245L468 235L485 235L482 202L486 202L509 220L509 223L512 222L510 235L494 238L488 243L484 253L478 253L475 246L468 245Z"/>
+        <path class="map-land" d="M588 109L611 118L611 123L606 127L597 131L585 128L580 133L580 129L583 129L580 123L561 122L567 114L565 111L585 112L588 109Z"/>
+        <path class="map-land" d="M778 266L786 269L790 284L782 279L778 266Z M827 274L822 273L816 284L805 283L817 272L820 273L824 264L831 269L827 274Z"/>
+        <path class="map-land" d="M541 210L544 220L539 245L536 241L525 244L515 240L511 242L510 248L503 244L501 237L510 235L512 222L533 208L541 210Z"/>
+        <path class="map-land" d="M579 51L583 56L583 70L588 72L578 81L564 83L559 80L558 73L571 65L566 62L565 55L557 51L569 53L577 47L581 49L579 51Z"/>
+        <path class="map-land" d="M566 221L566 234L561 244L564 250L550 261L542 263L539 254L543 254L538 239L544 220L541 210L544 208L566 221Z"/>
+        <path class="map-land" d="M453 216L464 215L467 199L476 199L476 194L486 202L482 202L485 235L468 235L466 238L460 231L454 233L453 216Z"/>
+        <path class="map-land" d="M476 194L476 189L497 176L494 167L504 162L523 161L521 174L527 187L526 199L533 208L509 223L509 220L476 194Z"/>
+        <path class="map-land" d="M586 276L583 272L578 273L566 258L572 252L574 256L582 253L586 255L592 246L592 261L598 269L593 275L586 276Z"/>
+        <path class="map-land" d="M539 104L542 113L534 116L538 120L536 125L521 125L522 120L517 118L519 105L528 99L530 103L535 101L539 104Z"/>
+        <path class="map-land" d="M573 167L565 167L573 167Z M564 146L574 146L566 151L563 149L567 159L564 158L562 163L556 152L564 146Z"/>
+        <path class="map-land" d="M594 291L609 304L612 323L604 328L596 327L594 320L585 317L582 310L581 303L586 294L584 292L594 291Z"/>
+        <path class="map-land" d="M507 267L512 241L525 244L537 242L540 247L537 255L533 264L528 264L524 272L516 273L512 267L507 267Z"/>
+        <path class="map-land" d="M585 317L592 321L592 336L584 339L575 350L564 348L561 332L567 332L566 325L582 333L579 319L585 317Z"/>
+        <path class="map-land" d="M338 357L339 364L345 365L346 370L349 370L345 382L337 381L340 374L326 364L328 355L336 354L338 357Z"/>
+        <path class="map-land" d="M494 167L497 176L476 189L476 195L468 196L459 214L453 215L460 198L473 185L474 176L484 165L494 167Z"/>
+        <path class="map-land" d="M531 86L535 68L539 67L547 55L556 51L565 55L566 62L550 73L548 78L552 82L544 96L536 98L531 86Z"/>
+        <path class="map-land" d="M653 210L657 203L666 212L661 223L648 231L644 223L653 219L653 210Z M656 200L657 197L656 200Z"/>
+        <path class="map-land" d="M629 144L640 150L636 157L634 152L629 155L625 147L630 147L629 144Z M628 155L624 152L628 155Z"/>
+        <path class="map-land" d="M540 244L543 254L539 254L543 262L540 272L544 282L527 280L524 269L528 264L533 264L540 244Z"/>
+        <path class="map-land" d="M551 276L544 301L541 305L533 305L532 297L540 295L540 284L536 280L544 282L548 275L551 276Z"/>
+        <path class="map-land" d="M798 239L792 239L789 225L781 228L778 218L783 215L782 211L790 217L789 222L798 233L798 239Z"/>
+        <path class="map-land" d="M790 252L799 246L799 236L784 211L793 208L800 214L794 223L804 242L803 248L792 259L790 252Z"/>
+        <path class="map-land" d="M688 161L690 157L687 154L693 148L697 150L693 152L708 156L708 160L700 162L697 156L688 161Z"/>
+        <path class="map-land" d="M569 213L566 221L544 208L539 211L528 203L526 184L532 174L553 184L560 175L570 180L569 213Z"/>
+        <path class="map-land" d="M633 261L625 271L606 276L599 272L592 259L601 239L609 237L618 245L616 250L621 257L633 261Z"/>
+        <path class="map-land" d="M863 143L863 143Z M863 143L854 152L857 156L850 159L846 157L847 149L861 141L863 143Z"/>
+        <path class="map-land" d="M1000 343L996 346L1000 343Z M995 348L994 351L992 349L995 348Z M1 343L0 345L1 343Z"/>
+        <path class="map-land" d="M609 304L594 291L597 281L594 273L598 269L606 276L613 273L616 275L616 294L609 304Z"/>
+        <path class="map-land" d="M285 258L284 263L280 257L276 260L277 263L270 260L271 255L274 258L279 255L285 258Z"/>
+        <path class="map-land" d="M244 238L245 233L249 233L247 227L252 227L252 234L255 234L252 239L250 241L244 238Z"/>
+        <path class="map-land" d="M582 364L570 376L563 375L560 380L557 379L555 363L558 363L558 351L570 349L582 364Z"/>
+        <path class="map-land" d="M638 331L640 342L631 374L626 376L622 374L620 366L624 355L623 344L629 342L638 331Z"/>
+        <path class="map-land" d="M609 178L608 174L614 170L615 163L622 160L628 166L626 172L635 185L624 188L609 178Z"/>
+        <path class="map-land" d="M578 95L586 98L591 105L587 106L588 109L585 112L565 111L565 103L571 102L578 95Z"/>
+        <path class="map-land" d="M460 60L462 65L451 70L437 69L440 67L433 66L438 64L432 63L439 60L443 63L460 60Z"/>
+        <path class="map-land" d="M281 196L284 197L281 196Z M284 195L286 199L284 195Z M283 202L285 207L283 202Z"/>
+        <path class="map-land" d="M616 294L614 278L617 273L625 271L635 258L636 249L642 247L633 274L616 294Z"/>
+        <path class="map-land" d="M343 281L337 284L334 282L335 274L329 268L334 259L341 268L339 274L343 281Z"/>
+        <path class="map-land" d="M462 245L476 247L477 262L474 263L469 254L463 257L460 254L458 250L462 245Z"/>
+        <path class="map-land" d="M757 212L757 217L754 210L747 212L746 197L757 202L753 207L756 207L757 212Z"/>
+        <path class="map-land" d="M697 143L706 140L720 141L723 144L699 153L693 152L703 148L696 146L697 143Z"/>
+        <path class="map-land" d="M479 161L482 146L475 144L474 140L478 138L508 142L494 162L485 165L479 161Z"/>
+        <path class="map-land" d="M644 223L648 231L645 235L621 245L618 236L621 228L631 230L636 224L644 223Z"/>
+        <path class="map-land" d="M528 99L524 100L522 94L529 90L528 99Z M534 96L534 100L530 97L534 96Z"/>
+        <path class="map-land" d="M476 193L476 199L467 199L464 215L453 216L459 214L468 196L476 193Z"/>
+        <path class="map-land" d="M587 364L578 362L570 349L575 350L584 341L591 345L591 358L587 364Z"/>
+        <path class="map-land" d="M454 241L451 237L460 231L468 246L454 246L453 243L462 242L454 241Z"/>
+        <path class="map-land" d="M485 252L488 243L499 236L506 245L503 250L492 250L492 255L485 252Z"/>
+        <path class="map-land" d="M576 270L562 274L554 271L544 280L540 267L564 250L565 257L576 270Z"/>
+        <path class="map-land" d="M526 184L521 171L523 161L528 160L531 161L528 170L532 177L526 184Z"/>
+        <path class="map-land" d="M599 177L608 174L609 178L603 180L606 183L600 188L597 187L599 177Z"/>
+        <path class="map-land" d="M578 132L582 133L579 138L564 138L556 130L564 123L575 123L578 132Z"/>
+        <path class="map-land" d="M483 103L481 109L472 110L475 107L473 103L479 99L479 103L483 103Z"/>
+        <path class="map-land" d="M269 237L264 237L259 243L252 239L252 236L261 233L269 237Z"/>
+        <path class="map-land" d="M349 280L345 279L344 282L341 279L341 268L350 268L349 280Z"/>
+        <path class="map-land" d="M271 208L294 219L284 220L285 217L273 210L264 213L271 208Z"/>
+        <path class="map-land" d="M555 373L555 386L545 386L533 347L570 348L558 351L555 373Z"/>
+        <path class="map-land" d="M531 280L540 284L540 295L532 297L531 302L524 292L531 280Z"/>
+        <path class="map-land" d="M591 320L594 320L599 338L597 346L596 338L591 335L591 320Z"/>
+        <path class="map-land" d="M785 246L786 239L798 239L799 246L795 250L787 252L785 246Z"/>
+        <path class="map-land" d="M565 103L567 114L563 120L546 116L539 106L549 100L565 103Z"/>
+        <path class="map-land" d="M561 122L563 124L556 130L551 131L545 127L547 123L561 122Z"/>
+        <path class="map-land" d="M576 91L578 95L575 97L558 96L563 90L565 93L570 89L576 91Z"/>
+        <path class="map-land" d="M601 239L602 230L607 226L609 233L620 244L609 237L601 239Z"/>
+        <path class="map-land" d="M602 213L569 213L569 181L595 181L595 193L590 186L602 213Z"/>
+        <path class="map-land" d="M636 249L633 261L621 257L618 252L620 249L623 252L636 249Z"/>
+        <path class="map-land" d="M964 342L965 345L964 342Z M963 342L963 338L963 342Z"/>
+        <path class="map-land" d="M301 220L301 226L293 225L298 225L296 221L301 220Z"/>
+        <path class="map-land" d="M268 250L262 250L256 244L264 237L269 237L268 250Z"/>
+        <path class="map-land" d="M291 289L282 304L276 302L278 285L281 283L291 289Z"/>
+        <path class="map-land" d="M507 267L504 265L502 250L508 246L511 251L507 267Z"/>
+        <path class="map-land" d="M500 250L503 268L495 272L491 267L492 250L500 250Z"/>
+        <path class="map-land" d="M478 253L492 255L492 271L479 273L476 266L478 253Z"/>
+        <path class="map-land" d="M477 262L479 273L468 265L472 259L474 263L477 262Z"/>
+        <path class="map-land" d="M463 257L465 254L470 255L472 259L468 265L463 257Z"/>
+        <path class="map-land" d="M643 205L650 205L656 199L653 211L644 209L643 205Z"/>
+        <path class="map-land" d="M745 192L745 197L739 197L722 189L726 184L745 192Z"/>
+        <path class="map-land" d="M547 123L541 129L526 127L536 125L538 120L547 123Z"/>
+        <path class="map-land" d="M546 129L554 133L544 133L552 142L538 133L546 129Z"/>
+        <path class="map-land" d="M594 291L582 293L586 276L594 273L597 281L594 291Z"/>
+        <path class="map-land" d="M552 131L556 130L563 135L562 143L553 139L552 131Z"/>
+        <path class="map-land" d="M580 387L581 390L577 393L575 390L580 387Z"/>
+        <path class="map-land" d="M340 392L351 398L351 406L339 406L340 392Z"/>
+        <path class="map-land" d="M271 255L270 260L261 251L268 250L271 255Z"/>
+        <path class="map-land" d="M454 246L462 245L462 248L458 250L454 246Z"/>
+        <path class="map-land" d="M527 280L531 280L531 284L526 285L527 280Z"/>
+        <path class="map-land" d="M850 159L857 156L859 168L851 170L850 159Z"/>
+        <path class="map-land" d="M755 193L756 196L747 195L750 191L755 193Z"/>
+        <path class="map-land" d="M599 176L602 162L618 160L614 170L599 176Z"/>
+        <path class="map-land" d="M574 123L580 123L583 129L578 132L574 123Z"/>
+        <path class="map-land" d="M563 136L579 138L578 144L564 146L563 136Z"/>
+        <path class="map-land" d="M558 148L556 152L554 150L555 142L558 148Z"/>
+        <path class="map-land" d="M527 125L529 129L517 129L519 125L527 125Z"/>
+        <path class="map-land" d="M519 105L517 114L509 112L513 106L519 105Z"/>
+        <path class="map-land" d="M475 144L482 146L478 162L475 162L475 144Z"/>
+        <path class="map-land" d="M727 262L727 266L723 268L723 254L727 262Z"/>
+        <path class="map-land" d="M838 204L835 213L834 207L837 201L838 204Z"/>
+        <path class="map-land" d="M611 139L626 142L630 147L615 146L611 139Z"/>
+        <path class="map-land" d="M538 129L546 129L543 132L538 132L538 129Z"/>
+        <path class="map-land" d="M542 113L552 118L540 122L534 116L542 113Z"/>
+        <path class="map-land" d="M562 143L564 146L558 148L557 144L562 143Z"/>
+        <path class="map-land" d="M557 144L556 141L559 140L560 143L557 144Z"/>
+        <path class="map-land" d="M574 97L571 102L565 103L558 96L574 97Z"/>
+        <path class="map-land" d="M578 84L576 91L565 87L568 84L578 84Z"/>
+        <path class="map-land" d="M301 226L301 220L310 224L301 226Z"/>
+        <path class="map-land" d="M330 466L337 463L340 465L330 466Z"/>
+        <path class="map-land" d="M691 455L696 457L691 459L691 455Z"/>
+        <path class="map-land" d="M252 239L256 243L251 242L252 239Z"/>
+        <path class="map-land" d="M252 227L255 225L253 234L252 227Z"/>
+        <path class="map-land" d="M285 225L288 227L282 226L285 225Z"/>
+        <path class="map-land" d="M502 250L505 257L503 268L502 250Z"/>
+        <path class="map-land" d="M589 380L585 380L586 376L589 380Z"/>
+        <path class="map-land" d="M585 296L581 303L581 298L585 296Z"/>
+        <path class="map-land" d="M599 176L597 187L595 181L599 176Z"/>
+        <path class="map-land" d="M633 185L634 190L629 188L633 185Z"/>
+        <path class="map-land" d="M629 155L621 147L627 148L629 155Z"/>
+        <path class="map-land" d="M517 114L516 118L507 113L517 114Z"/>
+        <path class="map-land" d="M960 360L963 365L956 358L960 360Z"/>
+        <path class="map-land" d="M563 120L547 123L552 118L563 120Z"/>
+        <path class="map-land" d="M618 245L619 251L616 250L618 245Z"/>
+        <path class="map-land" d="M584 292L586 294L581 298L584 292Z"/>
+        <path class="map-land" d="M552 142L544 133L554 134L552 142Z"/>
+        <path class="map-land" d="M556 142L551 142L553 139L556 142Z"/>
+        <path class="map-land" d="M329 251L331 253L328 254L329 251Z"/>
+        <path class="map-land" d="M847 318L854 317L847 318Z"/>
+        <path class="map-land" d="M316 225L313 226L316 225Z"/>
+        <path class="map-land" d="M600 174L601 169L600 174Z"/>
+        <path class="map-land" d="M598 180L598 176L598 180Z"/>
+        <path class="map-land" d="M454 241L462 242L454 241Z"/>
+        <path class="map-land" d="M641 203L642 198L641 203Z"/>
+        <path class="map-land" d="M517 116L516 118L517 116Z"/>
+        <path class="map-land" d="M821 269L818 274L821 269Z"/>
+        <path class="map-land" d="M591 168L596 166L591 168Z"/>
+        <path class="map-land" d="M591 168L594 168L591 168Z"/>
+        <path class="map-land" d="M788 284L788 284Z"/>
+        <path class="map-partner" data-country="Singapore" d="M788 284L788 284Z"/>
+        <path class="map-partner" data-country="Japan" d="M894 154L890 168L881 169L877 173L875 169L864 172L867 174L863 182L859 174L868 167L877 166L880 160L882 162L890 147L893 146L894 154Z M902 137L904 136L904 140L898 144L893 142L889 145L894 132L902 137Z M868 173L874 171L869 176L868 173Z"/>
+        <path class="map-partner" data-country="Australia" d="M910 428L912 432L908 438L902 428L910 428Z M850 398L843 404L833 404L828 408L820 405L822 398L815 379L817 363L836 355L850 336L860 339L868 326L880 330L876 339L889 349L894 340L896 325L900 338L904 339L907 353L925 375L925 396L917 416L906 422L903 418L895 420L884 410L884 406L880 409L883 401L878 408L873 400L865 396L850 398Z"/>
+        <path class="map-partner" data-country="Malaysia" d="M778 266L786 269L790 284L782 279L778 266Z M827 274L822 273L816 284L805 283L817 272L820 273L824 264L831 269L827 274Z"/>
+        <path class="map-partner" data-country="Turkey" d="M624 161L606 161L600 165L600 162L582 164L577 162L573 153L576 149L593 144L607 148L618 145L624 152L624 161Z M573 145L581 146L573 150L573 145Z"/>
+
+        <g class="map-home"><circle cx="818.3" cy="299.3" r="4.5" class="map-home-dot"/><circle cx="818.3" cy="299.3" r="11" class="map-home-halo"/></g>
+        <path class="map-arc" d="M818.3 299.3 Q707.6 102.4 596.9 154.4"/>
+        <path class="map-arc" d="M818.3 299.3 Q849.6 108.4 881.0 160.4"/>
+        <path class="map-arc" d="M818.3 299.3 Q811.5 222.5 804.6 274.5"/>
+        <path class="map-arc" d="M818.3 299.3 Q803.3 231.4 788.3 283.4"/>
+        <path class="map-arc" d="M818.3 299.3 Q845.5 247.3 872.8 374.0"/>
+        <g class="map-dest" data-country="turkey" role="button" tabindex="0" aria-label="turkey"><circle cx="596.9" cy="154.4" r="16" class="map-hit"/><circle cx="596.9" cy="154.4" r="6" class="map-marker"/><text x="596.9" y="134.4" class="map-label" text-anchor="middle">turkey</text></g>
+        <g class="map-dest" data-country="japan" role="button" tabindex="0" aria-label="japan"><circle cx="881.0" cy="160.4" r="16" class="map-hit"/><circle cx="881.0" cy="160.4" r="6" class="map-marker"/><text x="865.0" y="147.4" class="map-label" text-anchor="end">japan</text></g>
+        <g class="map-dest" data-country="malaysia" role="button" tabindex="0" aria-label="malaysia"><circle cx="804.6" cy="274.5" r="16" class="map-hit"/><circle cx="804.6" cy="274.5" r="6" class="map-marker"/><text x="820.6" y="258.5" class="map-label" text-anchor="middle">malaysia</text></g>
+        <g class="map-dest" data-country="singapore" role="button" tabindex="0" aria-label="singapore"><circle cx="788.3" cy="283.4" r="16" class="map-hit"/><circle cx="788.3" cy="283.4" r="6" class="map-marker"/><text x="768.3" y="271.4" class="map-label" text-anchor="end">singapore</text></g>
+        <g class="map-dest" data-country="australia" role="button" tabindex="0" aria-label="australia"><circle cx="872.8" cy="374.0" r="16" class="map-hit"/><circle cx="872.8" cy="374.0" r="6" class="map-marker"/><text x="872.8" y="392.0" class="map-label" text-anchor="middle">australia</text></g>
+      </svg>
+      <div class="map-legend"><span class="lg-dot"></span>Rumah · Al Mazaya Banjarmasin<span class="lg-sep"></span><span class="lg-dot gold"></span>Destinasi mitra</div>
+    </div>
+    <div class="overseas-chips reveal">
+      <button class="ov-chip" data-country="singapore">🇸🇬 Singapore</button> <button class="ov-chip" data-country="japan">🇯🇵 Japan</button> <button class="ov-chip" data-country="malaysia">🇲🇾 Malaysia</button> <button class="ov-chip" data-country="australia">🇦🇺 Australia</button> <button class="ov-chip" data-country="turkey">🇹🇷 Turkey</button>
+    </div>
+  </div>
+
+  <div class="map-modal" id="overseas-modal" role="dialog" aria-modal="true" aria-label="Overseas destination">
+    <div class="map-modal-inner">
+      <button class="map-modal-close" id="overseasModalClose" aria-label="Tutup">×</button>
+      <div class="map-modal-nav">
+        <button class="map-nav-btn" data-dir="-1" aria-label="Previous">‹</button>
+        <h3 class="map-modal-country" id="overseasModalCountry">Singapore</h3>
+        <button class="map-nav-btn" data-dir="1" aria-label="Next">›</button>
+      </div>
+
+        <article class="map-modal-card" id="mc-singapore">
+          <header class="map-modal-head"><span class="map-modal-flag">🇸🇬</span><div><span class="map-modal-tag">Montessori Authentic</span><h4>Modern Montessori International (MMI)</h4></div></header>
+          <img class="map-modal-logo" src="assets/img/logo-mmi-site.png" alt="Modern Montessori International (MMI)" loading="lazy">
+          <p class="map-modal-desc">Kemitraan utama jenjang KB-TK. MMI Singapore adalah otoritas Montessori autentik — Bahasa Inggris harian dan belajar dipandu anak untuk usia 6 bulan–6 tahun.</p>
+          <a class="btn btn-gold map-link" href="https://modern-montessori.com" target="_blank" rel="noopener">Kunjungi Website →</a>
+        </article>
+        <article class="map-modal-card" id="mc-japan">
+          <header class="map-modal-head"><span class="map-modal-flag">🇯🇵</span><div><span class="map-modal-tag">Science & Technology</span><h4>MITA International School of Science</h4></div></header>
+          <img class="map-modal-logo" src="assets/img/logo-mita.svg" alt="MITA International School of Science" loading="lazy">
+          <p class="map-modal-desc">Sekolah sains internasional di Chiba, Jepang. Imersi singkat mengenalkan siswa pada budaya disiplin, riset, dan teknologi Jepang.</p>
+          <a class="btn btn-gold map-link" href="https://www.mita-is.ed.jp" target="_blank" rel="noopener">Kunjungi Website →</a>
+        </article>
+        <article class="map-modal-card" id="mc-malaysia">
+          <header class="map-modal-head"><span class="map-modal-flag">🇲🇾</span><div><span class="map-modal-tag">University Pathway</span><h4>Lincoln University College (LUC)</h4></div></header>
+          <img class="map-modal-logo" src="assets/img/logo-luc.webp" alt="Lincoln University College (LUC)" loading="lazy">
+          <p class="map-modal-desc">Universitas terakreditasi di Malaysia untuk studi lanjut dan pertukaran pelajar — membuka jalur pendidikan tinggi internasional.</p>
+          <a class="btn btn-gold map-link" href="https://www.lincoln.edu.my" target="_blank" rel="noopener">Kunjungi Website →</a>
+        </article>
+        <article class="map-modal-card" id="mc-australia">
+          <header class="map-modal-head"><span class="map-modal-flag">🇦🇺</span><div><span class="map-modal-tag">Islamic Education</span><h4>Minaret College</h4></div></header>
+          <img class="map-modal-logo" src="assets/img/logo-minaret.png" alt="Minaret College" loading="lazy">
+          <p class="map-modal-desc">Sekolah Islam terkemuka di Melbourne, Australia. Belajar Bahasa Inggris di negara berbahasa Inggris sambil memperkuat identitas Islami.</p>
+          <a class="btn btn-gold map-link" href="https://minaret.vic.edu.au" target="_blank" rel="noopener">Kunjungi Website →</a>
+        </article>
+        <article class="map-modal-card" id="mc-turkey">
+          <header class="map-modal-head"><span class="map-modal-flag">🇹🇷</span><div><span class="map-modal-tag">Multilingual & Culture</span><h4>Harvest International School</h4></div></header>
+          <img class="map-modal-logo" src="assets/img/logo-harvest.avif" alt="Harvest International School" loading="lazy">
+          <p class="map-modal-desc">Sekolah internasional di Istanbul, Turki. Wawasan budaya Eurasia dan lingkungan belajar multibahasa memperluas cara pandang siswa.</p>
+          <span class="map-nolink">Website resmi belum tersedia</span>
+        </article>
+    </div>
+  </div>
+
+  <script>
+  (function(){{
+    var DATA = {"singapore": {"c": "Singapore", "n": "Modern Montessori International (MMI)", "e": "\ud83c\uddf8\ud83c\uddec"}, "japan": {"c": "Japan", "n": "MITA International School of Science", "e": "\ud83c\uddef\ud83c\uddf5"}, "australia": {"c": "Australia", "n": "Minaret College", "e": "\ud83c\udde6\ud83c\uddfa"}, "malaysia": {"c": "Malaysia", "n": "Lincoln University College (LUC)", "e": "\ud83c\uddf2\ud83c\uddfe"}, "turkey": {"c": "Turkey", "n": "Harvest International School", "e": "\ud83c\uddf9\ud83c\uddf7"}};
+    var ORDER = ['singapore','japan','malaysia','australia','turkey'];
+    var modal = document.getElementById('overseas-modal');
+    var country = document.getElementById('overseasModalCountry');
+    var idx = 0;
+    var active = null;
+    function show(k, focus) {{
+      idx = ORDER.indexOf(k);
+      for (var i=0;i<ORDER.length;i++) document.getElementById('mc-'+ORDER[i]).classList.toggle('active', ORDER[i]===k);
+      var d = DATA[k];
+      country.textContent = d.e + ' ' + d.c;
+      modal.classList.add('open');
+      document.body.classList.add('modal-open');
+      if (active) active.classList.remove('active');
+      var m = document.querySelector('.map-dest[data-country="'+k+'"] .map-marker');
+      if (m) {{ m.classList.add('active'); active = m; }}
+      if (focus) document.getElementById('overseasModalClose').focus();
+    }}
+    function hide() {{
+      modal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+      if (active) {{ active.classList.remove('active'); active = null; }}
+    }}
+    function nav(d) {{ show(ORDER[(idx + d + ORDER.length) % ORDER.length]); }}
+    document.querySelectorAll('.map-dest').forEach(function(el){{
+      el.addEventListener('click', function(){{ show(el.getAttribute('data-country'), true); }});
+      el.addEventListener('keydown', function(e){{ if (e.key==='Enter'||e.key===' ') {{ e.preventDefault(); show(el.getAttribute('data-country'), true); }} }});
+    }});
+    document.querySelectorAll('.ov-chip').forEach(function(el){{
+      el.addEventListener('click', function(){{ show(el.getAttribute('data-country'), true); }});
+    }});
+    document.querySelectorAll('.map-nav-btn').forEach(function(el){{
+      el.addEventListener('click', function(){{ nav(parseInt(el.getAttribute('data-dir'),10)); }});
+    }});
+    document.getElementById('overseasModalClose').addEventListener('click', hide);
+    modal.addEventListener('click', function(e){{ if (e.target===modal) hide(); }});
+    document.addEventListener('keydown', function(e){{ if (e.key==='Escape' && modal.classList.contains('open')) hide(); }});
+  }})();
+  </script>
 </section>
 
 <!-- ================= KEMITRAAN GLOBAL ================= -->

@@ -1663,8 +1663,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 body.modal-open { overflow: hidden; }
 
 @media (max-width: 640px) {
-  .map-shell { padding: .5rem .5rem .7rem; }
-  .map-legend { flex-wrap: wrap; gap: .6rem; }
+  .map-shell { padding: .3rem .3rem .4rem; }
+  .map-legend { display: none; }
   .map-label { font-size: 9px; letter-spacing: .3px; }
   .map-marker { stroke-width: 1.2; }
   .ov-chip { padding: .42rem .85rem; font-size: .82rem; }

@@ -1074,12 +1074,14 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
 .hist-row:nth-of-type(even) .hist-photo { order: -1; }
 
 /* each timeline carries one subtle brands-tinted wash behind its text side */
-.hist-content { background: linear-gradient(135deg, #E9EFF8 0%, #FFFFFF 55%, #FBF5E6 100%); }
-.hist-row:nth-of-type(even) .hist-content { background: linear-gradient(315deg, #E9EFF8 0%, #FFFFFF 55%, #FBF5E6 100%); }
+.hist-row:nth-of-type(odd)  .hist-content { background: linear-gradient(120deg, #C7D8EE 0%, #EAF1FA 55%, #FFFFFF 100%); }
+.hist-row:nth-of-type(even) .hist-content { background: linear-gradient(300deg, #F3DFA8 0%, #FAF1DC 55%, #FFFFFF 100%); }
 
 @media (max-width: 640px) {
   .hist-row { min-height: auto; }
   .hist-content { display: flex; flex-direction: column; min-height: auto; }
+  .hist-row:nth-of-type(odd)  .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #D7E3F3 100%); }
+  .hist-row:nth-of-type(even) .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #F7E7BC 100%); }
   .hist-text { padding: 1.6rem 1.3rem; }
   .hist-photo { order: -1; flex: 0 0 auto; height: clamp(190px, 32vh, 300px); width: 100%; }
   .hist-year { font-size: 2.6rem; }

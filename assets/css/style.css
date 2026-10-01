@@ -1085,7 +1085,7 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
   .hist-row { min-height: calc(100vh - var(--header-h)); }
   .hist-content { display: flex; flex-direction: column; min-height: calc(100vh - var(--header-h)); }
   .hist-text { padding: 1.6rem 1.3rem; }
-  .hist-photo { order: 0; flex: 1 1 40vh; width: 100%; min-height: 200px; }
+  .hist-photo { order: -1; flex: 1 1 42vh; width: 100%; min-height: 200px; }
   .hist-year { font-size: 2.6rem; }
 }
 

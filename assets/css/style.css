@@ -1146,39 +1146,6 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
   .culture-visual .cv-groups { grid-template-columns: 1fr; }
 }
 
-/* ---------- Sub-nav (in-page anchors) ---------- */
-.sub-nav {
-  position: sticky;
-  top: var(--header-h);
-  z-index: 40;
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
-}
-.sub-nav-inner {
-  display: flex;
-  gap: .3rem;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.sub-nav-inner::-webkit-scrollbar { display: none; }
-.sub-nav a {
-  padding: .75rem .9rem;
-  font-size: .87rem;
-  font-weight: 700;
-  color: var(--slate-light);
-  white-space: nowrap;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: color .15s ease, border-color .15s ease;
-}
-.sub-nav a:hover, .sub-nav a:focus { color: var(--gold-deep); border-bottom-color: var(--gold); }
-@media (max-width: 640px) {
-  .sub-nav a { padding: .65rem .7rem; font-size: .82rem; }
-}
-
 /* ---------- Scroll offset for anchor targets ---------- */
 section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 

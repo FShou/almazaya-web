@@ -129,8 +129,10 @@ p + p { margin-top: .8em; }
 .topbar-social svg { width: 17px; height: 17px; fill: var(--gold-soft); }
 .topbar-social:hover svg { fill: var(--white); }
 @media (max-width: 640px) {
-  .topbar-inner { justify-content: center; padding: .32rem .4rem; }
-  .topbar-class span { display: none; }
+  .topbar-inner { justify-content: center; padding: .3rem .4rem; gap: .15rem; }
+  .topbar-class, .topbar-social { padding: .1rem .28rem; font-size: .68rem; letter-spacing: .02em; }
+  .topbar-class svg, .topbar-social svg { display: none; }
+  .topbar-sep { height: 12px; margin: 0 .15rem; }
 }
 
 /* ---------- Header ---------- */

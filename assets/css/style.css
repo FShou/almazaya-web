@@ -127,11 +127,12 @@ p + p { margin-top: .8em; }
 .topbar-sep { width: 1px; height: 14px; background: rgba(201,162,39,.4); margin: 0 .45rem; }
 .topbar-social { display: inline-flex; padding: .18rem; }
 .topbar-social svg { width: 17px; height: 17px; fill: var(--gold-soft); }
+.topbar-social span { display: none; }
 .topbar-social:hover svg { fill: var(--white); }
 @media (max-width: 640px) {
   .topbar-inner { justify-content: center; padding: .3rem .4rem; gap: .15rem; }
-  .topbar-class, .topbar-social { padding: .1rem .28rem; font-size: .68rem; letter-spacing: .02em; }
-  .topbar-class svg, .topbar-social svg { display: none; }
+  .topbar-class { padding: .1rem .28rem; font-size: .68rem; letter-spacing: .02em; }
+  .topbar-class svg { display: none; }
   .topbar-sep { height: 12px; margin: 0 .15rem; }
 }
 

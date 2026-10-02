@@ -1049,17 +1049,30 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
 }
 
 /* ---------- Tentang : 2 section layout ---------- */
-.divider-block { border-top: 1px solid var(--line); padding-top: 2.2rem; margin-top: 3rem; }
-.block-head { max-width: 640px; margin-bottom: 1.5rem; }
+.divider-block { border-top: 1px solid var(--line); padding-top: 1.8rem; margin-top: 2.2rem; }
+.block-head { max-width: 640px; margin-bottom: 1.2rem; }
 .block-head .kicker { margin-bottom: .4rem; }
-.block-head h2 { font-size: clamp(1.25rem, 2.4vw, 1.75rem); color: var(--navy); margin: 0; }
+.block-head h2 { font-size: clamp(1.2rem, 2.3vw, 1.6rem); color: var(--navy); margin: 0; }
 .block-head h2 .tone { color: var(--gold); }
 .block-head > p { color: var(--slate-light); font-size: .9rem; max-width: 560px; margin-top: .4rem; }
+
+/* Tentang — page-scoped compacity */
+body.about .page-hero { padding: clamp(2rem, 4.5vw, 3.2rem) 0; }
+body.about #profil, body.about #kultur { padding: clamp(2.2rem, 4vw, 3.2rem) 0; }
+body.about #kultur { padding-bottom: clamp(3rem, 5.5vw, 4.2rem); }
+body.about .divider-block { margin-top: 2.1rem; }
+body.about .block-head { margin-bottom: 1.1rem; }
+body.about .vm-vision { padding: 2.2rem 2rem 2rem; }
+body.about .story-chapter { gap: 2.6rem; margin: 1.7rem 0; }
+@media (max-width: 640px) {
+  body.about .story-chapter { gap: 1.1rem; margin: 1.3rem 0; }
+  body.about #profil, body.about #kultur { padding: clamp(1.9rem, 5vw, 2.6rem) 0; }
+}
 
 /* ---------- Sejarah timeline (compact cards) ---------- */
 .hist-scroll { max-width: 1080px; margin-inline: auto; }
 
-.hist-row { margin-bottom: 1.6rem; }
+.hist-row { margin-bottom: 1.2rem; }
 
 .hist-content {
   display: grid;
@@ -1077,32 +1090,32 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
 /* text side */
 .hist-text {
   align-self: center;
-  padding: clamp(24px, 3.4vw, 56px);
+  padding: clamp(22px, 2.8vw, 44px);
 }
-.hist-text .hist-tag { display: inline-block; font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-deep); background: rgba(201,162,39,.14); padding: .25rem .7rem; border-radius: 999px; margin-bottom: .9rem; }
-.hist-text h3 { font-size: clamp(1.35rem, 2.4vw, 1.8rem); margin-bottom: .6rem; color: var(--navy-deep); }
-.hist-text p { font-size: .96rem; color: var(--slate-light); line-height: 1.65; max-width: 52ch; }
+.hist-text .hist-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-deep); background: rgba(201,162,39,.14); padding: .24rem .65rem; border-radius: 999px; margin-bottom: .8rem; }
+.hist-text h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); margin-bottom: .5rem; color: var(--navy-deep); }
+.hist-text p { font-size: .95rem; color: var(--slate-light); line-height: 1.6; max-width: 52ch; }
 
 /* year badge */
 .hist-year {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
   line-height: 1;
   color: var(--navy-deep);
-  margin-bottom: 1rem;
+  margin-bottom: .85rem;
   display: flex;
   flex-direction: column;
   gap: .35rem;
 }
-.hist-year small { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); font-family: var(--font-body); font-weight: 700; }
+.hist-year small { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); font-family: var(--font-body); font-weight: 700; }
 
 /* photo — contained inside the card */
 .hist-photo {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 340px;
+  height: 300px;
   object-fit: cover;
   background: var(--navy-soft);
   display: grid;
@@ -1116,18 +1129,18 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
 .hist-row:nth-of-type(even) .hist-content { background: linear-gradient(300deg, #FBF3DD 0%, #FFFFFF 62%); }
 
 @media (max-width: 640px) {
-  .hist-row { margin-bottom: .9rem; }
+  .hist-row { margin-bottom: .75rem; }
   .hist-content, .hist-row:nth-of-type(even) .hist-content { display: flex; flex-direction: column; grid-template-columns: 1fr; }
   .hist-row:nth-of-type(odd)  .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #E7EFF8 100%); }
   .hist-row:nth-of-type(even) .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #F9ECD3 100%); }
-  .hist-text { padding: 1.25rem 1.15rem 1.4rem; }
-  .hist-text h3 { font-size: 1.2rem; margin-bottom: .45rem; }
-  .hist-text p { font-size: .9rem; line-height: 1.55; }
-  .hist-text .checklist { margin-top: .8rem; }
-  .hist-text .checklist li { font-size: .86rem; line-height: 1.5; }
-  .hist-photo { order: -1; flex: 0 0 auto; height: clamp(160px, 24vh, 220px); width: 100%; }
-  .hist-year { font-size: 1.55rem; margin-bottom: .75rem; }
-  .hist-year small { font-size: .7rem; }
+  .hist-text { padding: 1.05rem 1.05rem 1.2rem; }
+  .hist-text h3 { font-size: 1.1rem; margin-bottom: .4rem; }
+  .hist-text p { font-size: .88rem; line-height: 1.5; }
+  .hist-text .checklist { margin-top: .7rem; }
+  .hist-text .checklist li { font-size: .84rem; line-height: 1.45; }
+  .hist-photo { order: -1; flex: 0 0 auto; height: clamp(140px, 20vh, 190px); width: 100%; }
+  .hist-year { font-size: 1.4rem; margin-bottom: .6rem; }
+  .hist-year small { font-size: .68rem; }
 }
 
 /* ---------- Value cards ---------- */
@@ -1399,25 +1412,25 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 .intro-stats .fd span { display: block; font-size: .88rem; color: var(--slate-light); margin-top: .25rem; }
 
 @media (max-width: 640px) {
-  #yayasan .container { padding-top: 0; }
-  #yayasan .grid-2 { grid-template-columns: 1fr !important; }
+  #profil .container { padding-top: 0; }
+  #profil .grid-2 { grid-template-columns: 1fr !important; }
   .intro-lead { padding-right: 0; }
   .intro-lead .kicker {
-    padding: .4rem 1rem; border-radius: 999px;
+    padding: .35rem .9rem; border-radius: 999px;
     background: rgba(201,162,39,.14); color: var(--gold-deep);
   }
-  .intro-lead h2 { font-size: clamp(1.75rem, 6.4vw, 2.2rem); line-height: 1.22; }
-  .intro-lead p { font-size: 1rem; }
+  .intro-lead h2 { font-size: clamp(1.45rem, 5.8vw, 1.85rem); line-height: 1.25; }
+  .intro-lead p { font-size: .95rem; }
   .intro-lead .btn { width: 100%; justify-content: center; }
-  #yayasan .intro-stats { grid-template-columns: 1fr 1fr; gap: .9rem; }
-  #yayasan .intro-stats .fd {
+  #profil .intro-stats { grid-template-columns: 1fr 1fr; gap: .7rem; }
+  #profil .intro-stats .fd {
     border: 1px solid var(--line); border-top: 1px solid var(--line);
-    border-radius: var(--radius-sm); padding: 1.05rem .95rem;
+    border-radius: var(--radius-sm); padding: .9rem .85rem;
     background: var(--mist); box-shadow: var(--shadow-sm);
   }
-  #yayasan .intro-stats .fd strong { font-size: .98rem; }
-  #yayasan .intro-stats .fd strong i { margin-right: .45rem; }
-  #yayasan .intro-stats .fd span { font-size: .82rem; }
+  #profil .intro-stats .fd strong { font-size: .95rem; }
+  #profil .intro-stats .fd strong i { margin-right: .4rem; }
+  #profil .intro-stats .fd span { font-size: .8rem; }
 }
 
 /* News/posts -> featured-first: wide tall feature + stacked rail */

@@ -1048,56 +1048,53 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
   html { scroll-behavior: auto; }
 }
 
-/* ---------- Sejarah timeline (full-screen slides) ---------- */
-.hist-scroll { width: 100%; }
+/* ---------- Sejarah timeline (compact cards) ---------- */
+.hist-scroll { max-width: 1080px; margin-inline: auto; }
 
-.hist-row {
-  position: sticky;
-  top: var(--header-h);
-  min-height: calc(100vh - var(--header-h)); /* one full screen per timeline */
-}
-.hist-row:nth-of-type(1) { z-index: 1; }
-.hist-row:nth-of-type(2) { z-index: 2; }
-.hist-row:nth-of-type(3) { z-index: 3; }
-.hist-row:nth-of-type(4) { z-index: 4; }
-.hist-row:nth-of-type(5) { z-index: 5; }
+.hist-row { margin-bottom: 1.6rem; }
 
 .hist-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - var(--header-h));
+  grid-template-columns: 1.05fr 1fr;
   align-items: stretch;
+  background: linear-gradient(135deg, #F0F4FA 0%, #FFFFFF 60%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
+.hist-row:nth-of-type(even) .hist-content { grid-template-columns: 1fr 1.05fr; }
+.hist-row:nth-of-type(even) .hist-photo { order: -1; }
 
 /* text side */
 .hist-text {
   align-self: center;
-  padding: clamp(24px, 5vw, 90px);
+  padding: clamp(24px, 3.4vw, 56px);
 }
-.hist-text .hist-tag { display: inline-block; font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-deep); background: rgba(201,162,39,.14); padding: .25rem .7rem; border-radius: 999px; margin-bottom: 1rem; }
-.hist-text h3 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: .6rem; color: var(--navy-deep); }
-.hist-text p { font-size: 1.02rem; color: var(--slate-light); line-height: 1.7; max-width: 46ch; }
+.hist-text .hist-tag { display: inline-block; font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-deep); background: rgba(201,162,39,.14); padding: .25rem .7rem; border-radius: 999px; margin-bottom: .9rem; }
+.hist-text h3 { font-size: clamp(1.35rem, 2.4vw, 1.8rem); margin-bottom: .6rem; color: var(--navy-deep); }
+.hist-text p { font-size: .96rem; color: var(--slate-light); line-height: 1.65; max-width: 52ch; }
 
-/* big year number */
+/* year badge */
 .hist-year {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: clamp(3rem, 8vw, 5.6rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
   line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--gold-deep);
-  white-space: nowrap;
-  margin-bottom: 1.2rem;
+  color: var(--navy-deep);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
 }
-.hist-year small { display: block; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--slate-light); -webkit-text-stroke: 0; font-family: var(--font-body); font-weight: 600; margin-bottom: .4rem; }
+.hist-year small { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); font-family: var(--font-body); font-weight: 700; }
 
-/* photo — fully bleeds to the browser edge, alternating sides */
+/* photo — contained inside the card */
 .hist-photo {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 340px;
   object-fit: cover;
   background: var(--navy-soft);
   display: grid;
@@ -1105,20 +1102,24 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
   color: #C9D6EA;
   font-size: .9rem;
 }
-.hist-row:nth-of-type(even) .hist-photo { order: -1; }
 
 /* each timeline carries one subtle brands-tinted wash behind its text side */
-.hist-row:nth-of-type(odd)  .hist-content { background: linear-gradient(120deg, #C7D8EE 0%, #EAF1FA 55%, #FFFFFF 100%); }
-.hist-row:nth-of-type(even) .hist-content { background: linear-gradient(300deg, #F3DFA8 0%, #FAF1DC 55%, #FFFFFF 100%); }
+.hist-row:nth-of-type(odd)  .hist-content { background: linear-gradient(120deg, #EAF1FA 0%, #FFFFFF 62%); }
+.hist-row:nth-of-type(even) .hist-content { background: linear-gradient(300deg, #FBF3DD 0%, #FFFFFF 62%); }
 
 @media (max-width: 640px) {
-  .hist-row { min-height: auto; }
-  .hist-content { display: flex; flex-direction: column; min-height: auto; }
-  .hist-row:nth-of-type(odd)  .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #D7E3F3 100%); }
-  .hist-row:nth-of-type(even) .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #F7E7BC 100%); }
-  .hist-text { padding: 1.6rem 1.3rem; }
-  .hist-photo { order: -1; flex: 0 0 auto; height: clamp(190px, 32vh, 300px); width: 100%; }
-  .hist-year { font-size: 2.6rem; }
+  .hist-row { margin-bottom: .9rem; }
+  .hist-content, .hist-row:nth-of-type(even) .hist-content { display: flex; flex-direction: column; grid-template-columns: 1fr; }
+  .hist-row:nth-of-type(odd)  .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #E7EFF8 100%); }
+  .hist-row:nth-of-type(even) .hist-content { background: linear-gradient(180deg, #FFFFFF 0%, #F9ECD3 100%); }
+  .hist-text { padding: 1.25rem 1.15rem 1.4rem; }
+  .hist-text h3 { font-size: 1.2rem; margin-bottom: .45rem; }
+  .hist-text p { font-size: .9rem; line-height: 1.55; }
+  .hist-text .checklist { margin-top: .8rem; }
+  .hist-text .checklist li { font-size: .86rem; line-height: 1.5; }
+  .hist-photo { order: -1; flex: 0 0 auto; height: clamp(160px, 24vh, 220px); width: 100%; }
+  .hist-year { font-size: 1.55rem; margin-bottom: .75rem; }
+  .hist-year small { font-size: .7rem; }
 }
 
 /* ---------- Value cards ---------- */

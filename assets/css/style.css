@@ -1285,6 +1285,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 .story-img.warm  { background: linear-gradient(150deg, #8a6d1d, var(--gold-deep)); }
 .story-img.light { background: linear-gradient(150deg, #C7D4E6, #97AAC4); color: var(--navy-deep); }
 .story-img .gal-label {
+  display: none;
   position: relative; z-index: 1;
   font-size: .72rem; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase;

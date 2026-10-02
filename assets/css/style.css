@@ -1048,6 +1048,14 @@ tbody td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap
   html { scroll-behavior: auto; }
 }
 
+/* ---------- Tentang : 2 section layout ---------- */
+.divider-block { border-top: 1px solid var(--line); padding-top: 2.2rem; margin-top: 3rem; }
+.block-head { max-width: 640px; margin-bottom: 1.5rem; }
+.block-head .kicker { margin-bottom: .4rem; }
+.block-head h2 { font-size: clamp(1.25rem, 2.4vw, 1.75rem); color: var(--navy); margin: 0; }
+.block-head h2 .tone { color: var(--gold); }
+.block-head > p { color: var(--slate-light); font-size: .9rem; max-width: 560px; margin-top: .4rem; }
+
 /* ---------- Sejarah timeline (compact cards) ---------- */
 .hist-scroll { max-width: 1080px; margin-inline: auto; }
 

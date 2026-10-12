@@ -109,4 +109,6 @@ wp post meta update "$G3" _almazaya_heading 'Hafalan <span class="tone">Al-Qur'"
 wp post meta update "$G3" _almazaya_items '<li><span class="mc-dot"></span><b>Halaqah Rutin</b> — setoran terjadwal</li>' >/dev/null
 echo "programs: $G1 $G2 $G3"
 wp rewrite flush >/dev/null
+echo "== tetapkan bahasa ID bila Polylang aktif =="
+wp eval 'if (function_exists("pll_set_post_language")) { $ids=get_posts(array("post_type"=>"any","post_status"=>"any","posts_per_page"=>-1,"fields"=>"ids")); foreach($ids as $id){ if(!pll_get_post_language($id)) pll_set_post_language($id,"id"); } $terms=get_terms(array("taxonomy"=>array("category"),"hide_empty"=>false,"fields"=>"ids")); foreach($terms as $t){ if(!pll_get_term_language($t)) pll_set_term_language($t,"id"); } echo "lang assigned\n"; } else { echo "polylang off, skip\n"; }'
 echo DONE

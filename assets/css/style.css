@@ -824,6 +824,7 @@ a.partner-card { display: block; text-decoration: none; color: inherit; }
 .article-body { max-width: 780px; margin: 0 auto; }
 .article-hero { min-height: 320px; margin-bottom: 1.4rem; }
 .article-body .art-p { line-height: 1.8; margin: 0 0 1.1rem; }
+.art-paras p { line-height: 1.8; margin: 0 0 1.1rem; }
 .related-block { margin-top: 2.4rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
 .related-block h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: .7rem; }
 .related-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }

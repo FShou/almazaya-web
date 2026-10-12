@@ -329,6 +329,43 @@ p + p { margin-top: .8em; }
 .hero-dot { width: 11px; height: 11px; border-radius: 50%; background: rgba(255,255,255,.35); transition: background .2s ease, transform .2s ease; }
 .hero-dot.current { background: var(--gold); transform: scale(1.25); }
 
+/* hero slide with photo background (CPT slides) */
+.hero-slide .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-slide.has-bg::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(100deg, rgba(13,33,62,.94) 0%, rgba(13,33,62,.72) 52%, rgba(13,33,62,.30) 100%);
+}
+.hero-slide.has-bg .hero-inner, .hero-slide.has-bg .hero-badge { position: relative; z-index: 2; }
+
+/* pagination (berita loop) */
+.pagination { display: flex; gap: .5rem; justify-content: center; margin-top: 2.8rem; }
+.page-btn {
+  display: inline-grid; place-items: center;
+  min-width: 42px; height: 42px; padding: 0 .8rem;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--white); color: var(--navy); font-weight: 700; font-size: .9rem;
+}
+a.page-btn:hover { border-color: var(--gold); color: var(--gold-deep); }
+.page-btn.current { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.page-btn.dots { border: 0; background: none; }
+
+/* partner card without logo */
+.partner-logo-fallback {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; border-radius: 50%;
+  background: linear-gradient(145deg, var(--navy), var(--navy-deep));
+  color: var(--gold-soft); font-weight: 800; font-size: 1.4rem;
+  margin-inline: auto;
+}
+
+/* post thumb without featured image */
+.post-thumb:empty { min-height: 180px; background: linear-gradient(150deg, var(--navy-soft), var(--navy-deep)); }
+
+/* single article */
+.single-article { max-width: 780px; margin: 0 auto; }
+.single-article .post-meta { margin: .6rem 0 1.2rem; }
+.single-article img { border-radius: var(--radius-sm); }
+
 .hero-badge {
   position: absolute;
   right: 6%;

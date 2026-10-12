@@ -4,6 +4,9 @@
  * Loaded by page templates via almazaya_lang_suffix().
  */
 ?>
+<?php if ( almazaya_has_posts( 'slide' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/slider-loop' ); ?>
+<?php else : ?>
 <section data-slider>
   <div class="hero">
     <div class="hero-slide current">
@@ -45,7 +48,8 @@
 
     <div class="hero-controls"></div>
   </div>
-</section>
+
+<?php endif; ?></section>
 
 <div class="stats-strip on-dark">
   <div class="container">
@@ -74,7 +78,10 @@
       <p>Modern classrooms and facilities delivering the most memorable learning experience for every student.</p>
     </div>
 
-                <div class="modclass">
+                <?php if ( almazaya_has_posts( 'program' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/programs-loop' ); ?>
+<?php else : ?>
+<div class="modclass">
       <div class="modclass-media reveal" id="mc-stage">
         <button class="mc-fs-btn" aria-label="Fullscreen" onclick="mcFullscreen()">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
@@ -222,7 +229,8 @@
       <button class="prog-arrow next" aria-label="Program berikutnya" onclick="progMove(1)">›</button>
     </div>
   </div>
-</section>
+
+<?php endif; ?></section>
 
 <!-- ================= OVERSEAS DESTINATIONS ================= -->
 <section class="section on-dark overseas" id="overseas">
@@ -524,7 +532,10 @@
       <p>Collaboration with educational institutions across countries to broaden our students' horizons and learning opportunities.</p>
     </div>
 
-    <div class="partner-grid">
+    <?php if ( almazaya_has_posts( 'mitra' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/mitra-loop' ); ?>
+<?php else : ?>
+<div class="partner-grid">
       <a class="partner-card reveal" href="https://modern-montessori.com" target="_blank" rel="noopener">
         <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.webp" alt="Modern Montessori International">
         <h3>Modern Montessori International (MMI)</h3>
@@ -551,6 +562,7 @@
         <p>Turkey</p>
       </div>
     </div>
+<?php endif; ?>
   </div>
 </section>
 
@@ -561,7 +573,10 @@
       <h2>News &amp; <span class="tone">Events</span></h2>
       <p><a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita', '', '' ) ); ?>">View all news &amp; events →</a></p>
     </div>
-    <div class="posts-featured">
+    <?php if ( almazaya_has_posts( 'post' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/teaser-loop' ); ?>
+<?php else : ?>
+<div class="posts-featured">
       <article class="post-card reveal">
         <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8635_min' ) ); ?>" alt="Achievement Photo">Achievement Photo</div>
         <div class="post-body">
@@ -590,6 +605,7 @@
         </div>
       </article>
     </div>
+<?php endif; ?>
 
     <div class="section-head center reveal stack">
       <span class="kicker">Gallery</span>
@@ -654,6 +670,9 @@
 
 
 
+<?php if ( almazaya_has_posts( 'program' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/programs-tail' ); ?>
+<?php else : ?>
 <script>
 function mcSwitch(scene,btn){
   var stage=document.getElementById('mc-stage'),peeks=document.querySelectorAll('.mc-peek');
@@ -746,3 +765,5 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')mcCloseLB()}
   </div>
   <button class="mc-lb-close" onclick="mcCloseLB()" aria-label="Tutup">×</button>
 </div>
+
+<?php endif; ?>

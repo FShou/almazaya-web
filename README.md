@@ -87,12 +87,30 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
 - `languages/almazaya.pot` — katalog string theme (11 string chrome/admin).
 - Versi asset mengikuti `ALMAZAYA_VERSION` (ganti tiap rilis agar cache pecah).
 
+## Konten dinamis (tambah/hapus dari dashboard)
+
+- **Posts → Berita**: halaman Berita = loop asli (6/halaman, filter
+  `?kategori=slug`, pagination beneran). Kategori: `prestasi/kegiatan/pengumuman`
+  (ID) + `achievement/event/announcement` (EN, terjemahkan via Polylang).
+  Teaser beranda = 3 post terbaru otomatis. Detail = `single.php`.
+- **Slide Hero / Mitra / Program** (CPT): tambah-hapus-urut dari dashboard
+  (featured image = gambar; urutan = Page Attributes → Order).
+  - Slide: kicker, judul (HTML), deskripsi (editor), 2 tombol (`page:slug`
+    jadi link halaman), badge, bg foto. Tanpa foto = gradient navy.
+  - Mitra: nama (title), negara (excerpt), logo (featured), URL website.
+    Logo SVG tidak bisa di-upload WP — pakai PNG/WebP/JPG.
+  - Program: label (title), judul panel + poin (meta box), deskripsi (editor),
+    foto, key data = slug (unik, tanpa spasi).
+  - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
+    bawaan theme (fallback statis, tidak kosong).
+- **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`
+  (kategori, 3 post, 3 slide, 4 mitra, 3 program + foto dari theme).
+  Isi artikel lengkap: salin dari halaman detail statis (`rehaul`).
+
 ## Catatan porting (v1)
 
 - Konten halaman masih statis 1:1 dari HTML (ID/EN dipilih via locale).
   Migrasi ke block editor/ACF bisa incremental per halaman.
-- Template *Berita* = listing statis; `single.php` siap untuk post Berita WP
-  begitu redaksi mulai publish via Posts.
 - Halaman PPDB tidak punya `<form>` (CTA mengarah ke Portal PSB eksternal).
 - `hreflang` + switcher bahasa otomatis dari Polylang.
 

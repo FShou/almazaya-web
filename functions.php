@@ -523,3 +523,220 @@ function almazaya_text( $key ) {
 function almazaya_html( $key ) {
 	return almazaya_text( $key );
 }
+
+/* ---------- Manageable content: CPT Slide / Mitra / Program ----------
+ * Hero slider, partner logos, and program explorer pull from these post
+ * types (tambah/hapus/susun via dashboard, featured image = gambar).
+ * Templates fall back to the bundled static markup when a type is empty.
+ * Bilingual: translate each entry with Polylang; loops follow the locale.
+ */
+
+function almazaya_register_cpts() {
+	register_post_type(
+		'slide',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Slide Hero', 'almazaya' ),
+				'singular_name' => __( 'Slide', 'almazaya' ),
+				'add_new_item'  => __( 'Tambah Slide', 'almazaya' ),
+			),
+			'public'       => true,
+			'has_archive'  => false,
+			'show_in_rest' => true,
+			'menu_icon'    => 'dashicons-images-alt2',
+			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+		)
+	);
+	register_post_type(
+		'mitra',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Mitra', 'almazaya' ),
+				'singular_name' => __( 'Mitra', 'almazaya' ),
+				'add_new_item'  => __( 'Tambah Mitra', 'almazaya' ),
+			),
+			'public'       => true,
+			'has_archive'  => false,
+			'show_in_rest' => true,
+			'menu_icon'    => 'dashicons-networking',
+			'supports'     => array( 'title', 'thumbnail', 'excerpt', 'page-attributes' ),
+		)
+	);
+	register_post_type(
+		'program',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Program', 'almazaya' ),
+				'singular_name' => __( 'Program', 'almazaya' ),
+				'add_new_item'  => __( 'Tambah Program', 'almazaya' ),
+			),
+			'public'       => true,
+			'has_archive'  => false,
+			'show_in_rest' => true,
+			'menu_icon'    => 'dashicons-welcome-learn-more',
+			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+		)
+	);
+}
+add_action( 'init', 'almazaya_register_cpts' );
+
+/** Ordered, published posts of a CPT (Polylang filters by locale automatically). */
+function almazaya_get_ordered_posts( $type, $number = -1 ) {
+	$posts = get_posts(
+		array(
+			'post_type'      => $type,
+			'post_status'    => 'publish',
+			'posts_per_page' => $number,
+			'orderby'        => 'menu_order',
+			'order'          => 'ASC',
+		)
+	);
+	return is_array( $posts ) ? $posts : array();
+}
+
+/** True when the CPT has at least one published post. */
+function almazaya_has_posts( $type ) {
+	$found = get_posts(
+		array(
+			'post_type'      => $type,
+			'post_status'    => 'publish',
+			'posts_per_page' => 1,
+			'fields'         => 'ids',
+		)
+	);
+	return ! empty( $found );
+}
+
+/** Resolve a button URL: "page:slug" becomes the theme page URL. */
+function almazaya_btn_url( $url ) {
+	if ( strpos( $url, 'page:' ) === 0 ) {
+		return almazaya_url( substr( $url, 5 ), almazaya_is_en() ? 'en/' : '' );
+	}
+	return $url;
+}
+
+/* ----- Meta boxes ----- */
+
+function almazaya_add_meta_boxes() {
+	add_meta_box( 'almazaya_slide', __( 'Konten Slide', 'almazaya' ), 'almazaya_slide_box', 'slide', 'normal', 'high' );
+	add_meta_box( 'almazaya_mitra', __( 'Tautan Mitra', 'almazaya' ), 'almazaya_mitra_box', 'mitra', 'side', 'default' );
+	add_meta_box( 'almazaya_program', __( 'Detail Program', 'almazaya' ), 'almazaya_program_box', 'program', 'normal', 'high' );
+}
+add_action( 'add_meta_boxes', 'almazaya_add_meta_boxes' );
+
+function almazaya_slide_box( $post ) {
+	wp_nonce_field( 'almazaya_meta', 'almazaya_nonce' );
+	$get = function ( $k ) use ( $post ) {
+		return esc_attr( get_post_meta( $post->ID, $k, true ) );
+	};
+	$heading = get_post_meta( $post->ID, '_almazaya_heading', true );
+	echo '<p><label><strong>Kicker</strong></label><br><input type="text" name="_almazaya_kicker" value="' . $get( '_almazaya_kicker' ) . '" style="width:100%"></p>';
+	echo '<p><label><strong>Judul (boleh HTML &lt;span class="tone"&gt;)</strong></label><br><textarea name="_almazaya_heading" rows="2" style="width:100%">' . esc_textarea( $heading ) . '</textarea></p>';
+	echo '<p><label><strong>Tombol 1: teks &amp; URL (URL boleh "page:ppdb")</strong></label><br><input type="text" name="_almazaya_btn1_label" value="' . $get( '_almazaya_btn1_label' ) . '" style="width:48%"> <input type="text" name="_almazaya_btn1_url" value="' . $get( '_almazaya_btn1_url' ) . '" style="width:48%"></p>';
+	echo '<p><label><strong>Tombol 2: teks &amp; URL (kosongkan bila tak perlu)</strong></label><br><input type="text" name="_almazaya_btn2_label" value="' . $get( '_almazaya_btn2_label' ) . '" style="width:48%"> <input type="text" name="_almazaya_btn2_url" value="' . $get( '_almazaya_btn2_url' ) . '" style="width:48%"></p>';
+	echo '<p><label><strong>Badge: judul &amp; teks (kosongkan bila tak perlu)</strong></label><br><input type="text" name="_almazaya_badge_title" value="' . $get( '_almazaya_badge_title' ) . '" style="width:48%"> <input type="text" name="_almazaya_badge_text" value="' . $get( '_almazaya_badge_text' ) . '" style="width:48%"></p>';
+	echo '<p>Deskripsi = isi editor utama. Gambar latar = Featured image. Urutan = Page Attributes → Order.</p>';
+}
+
+function almazaya_mitra_box( $post ) {
+	wp_nonce_field( 'almazaya_meta', 'almazaya_nonce' );
+	$url = esc_attr( get_post_meta( $post->ID, '_almazaya_url', true ) );
+	echo '<p><label><strong>URL website mitra</strong></label><br><input type="url" name="_almazaya_url" value="' . $url . '" style="width:100%"></p>';
+	echo '<p>Nama = Title. Negara = Excerpt. Logo = Featured image.</p>';
+}
+
+function almazaya_program_box( $post ) {
+	wp_nonce_field( 'almazaya_meta', 'almazaya_nonce' );
+	$heading = get_post_meta( $post->ID, '_almazaya_heading', true );
+	$items   = get_post_meta( $post->ID, '_almazaya_items', true );
+	echo '<p><label><strong>Judul panel (boleh HTML &lt;span class="tone"&gt;)</strong></label><br><textarea name="_almazaya_heading" rows="2" style="width:100%">' . esc_textarea( $heading ) . '</textarea></p>';
+	echo '<p><label><strong>Daftar poin (satu &lt;li&gt; per baris, HTML sederhana)</strong></label><br><textarea name="_almazaya_items" rows="5" style="width:100%">' . esc_textarea( $items ) . '</textarea></p>';
+	echo '<p>Label tab &amp; badge = Title. Deskripsi = isi editor. Foto = Featured image. Key data = slug post.</p>';
+}
+
+function almazaya_save_meta( $post_id ) {
+	if ( ! isset( $_POST['almazaya_nonce'] ) || ! wp_verify_nonce( $_POST['almazaya_nonce'], 'almazaya_meta' ) ) {
+		return;
+	}
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+	if ( ! current_user_can( 'edit_post', $post_id ) ) {
+		return;
+	}
+	$text_fields = array( '_almazaya_kicker', '_almazaya_btn1_label', '_almazaya_btn2_label', '_almazaya_badge_title', '_almazaya_badge_text' );
+	foreach ( $text_fields as $f ) {
+		if ( isset( $_POST[ $f ] ) ) {
+			update_post_meta( $post_id, $f, sanitize_text_field( $_POST[ $f ] ) );
+		}
+	}
+	$url_fields = array( '_almazaya_btn1_url', '_almazaya_btn2_url', '_almazaya_url' );
+	foreach ( $url_fields as $f ) {
+		if ( isset( $_POST[ $f ] ) ) {
+			update_post_meta( $post_id, $f, esc_url_raw( $_POST[ $f ] ) );
+		}
+	}
+	if ( isset( $_POST['_almazaya_heading'] ) ) {
+		update_post_meta( $post_id, '_almazaya_heading', wp_kses_post( $_POST['_almazaya_heading'] ) );
+	}
+	if ( isset( $_POST['_almazaya_items'] ) ) {
+		update_post_meta( $post_id, '_almazaya_items', wp_kses_post( $_POST['_almazaya_items'] ) );
+	}
+}
+add_action( 'save_post', 'almazaya_save_meta' );
+
+/* ----- Berita helpers ----- */
+
+/** Known category slugs in display order, per locale. */
+function almazaya_news_cat_slugs() {
+	return almazaya_is_en()
+		? array( 'achievement', 'event', 'announcement' )
+		: array( 'prestasi', 'kegiatan', 'pengumuman' );
+}
+
+/** Existing news categories (slug => [name, link]), Semua/All handled by caller. */
+function almazaya_news_cats() {
+	$out = array();
+	foreach ( almazaya_news_cat_slugs() as $slug ) {
+		$cat = get_category_by_slug( $slug );
+		if ( $cat ) {
+			$out[ $slug ] = array( $cat->name, get_category_link( $cat ) );
+		}
+	}
+	return $out;
+}
+
+/** Pagination with theme classes. Pass a custom WP_Query or null for main query. */
+function almazaya_pagination( $query = null, $current = 1, $add_args = array() ) {
+	$q     = $query ? $query : $GLOBALS['wp_query'];
+	$pages = (int) $q->max_num_pages;
+	if ( $pages < 2 ) {
+		return;
+	}
+	if ( ! $query ) {
+		$current = max( 1, (int) get_query_var( 'paged', 1 ) );
+	}
+	$links = paginate_links(
+		array(
+			'total'     => $pages,
+			'current'   => $current,
+			'type'      => 'array',
+			'prev_text' => '←',
+			'next_text' => '→',
+			'add_args'  => $add_args,
+		)
+	);
+	if ( empty( $links ) ) {
+		return;
+	}
+	echo '<nav class="pagination reveal" aria-label="Navigasi halaman">';
+	foreach ( $links as $link ) {
+		$cls = strpos( $link, 'current' ) !== false ? 'page-btn current' : 'page-btn';
+		$link = preg_replace( '/class="[^"]*"/', 'class="' . $cls . '"', $link, 1 );
+		if ( strpos( $link, 'class=' ) === false ) {
+			$link = str_replace( '<a ', '<a class="' . $cls . '" ', $link );
+		}
+		echo $link;
+	}
+	echo '</nav>';
+}

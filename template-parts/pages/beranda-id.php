@@ -1,108 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Al Mazaya Islamic School Banjarmasin — Excellent &amp; Noble Islamic Education</title>
-<meta name="description" content="Al Mazaya Islamic School Banjarmasin — accredited A JHS &amp; SHS. Qur'an memorization, Certified Cambridge English School, technology, and overseas programs.">
-  <link rel="alternate" hreflang="en" href="/en/">
-  <link rel="alternate" hreflang="id" href="/">
-  <link rel="alternate" hreflang="x-default" href="/">
-<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=106">
-</head>
-<body>
+<?php
+/**
+ * Template part: beranda (ID) — converted from static index.html.
+ * Loaded by page templates via almazaya_lang_suffix().
+ */
+?>
+<!-- ================= HEADER ================= -->
 
-<div class="topbar" role="navigation" aria-label="Link cepat">
-  <div class="container topbar-inner">
-    <div class="topbar-links">
-      <a class="topbar-class" href="https://almazayaislamicschool.sch.id/class" target="_blank" rel="noopener" aria-label="AMZ SHS Virtual Class">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/><path d="M22 10v6"/></svg>
-        <span>SHS Virtual Class</span>
-      </a>
-      <a class="topbar-class" href="https://almazayaislamicschool.my.id/class/login/index.php" target="_blank" rel="noopener" aria-label="AMZ JHS Virtual Class">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/><path d="m7 13 2-2 2 2M7 17l2-2 2 2"/></svg>
-        <span>JHS Virtual Class</span>
-      </a>
-      <span class="topbar-sep" aria-hidden="true"></span>
-      <a class="topbar-social" href="https://www.instagram.com/almazayaislamicschool/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg>
-      <span>Instagram</span>
-      </a>
-      <a class="topbar-social" href="https://wa.me/628115051123" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg>
-      <span>WhatsApp</span>
-      </a>
-    </div>
-  </div>
-</div>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <div class="logo-strip">
-        <img src="../assets/img/logo-yayasan.jpeg" alt="Al Mazaya Pelita Asia Foundation logo">
-        <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
-        <img src="../assets/img/logo-mmi.jpeg" alt="MMI logo" class="logo-mmi">
-      </div>
-      <span class="brand-name"><strong>Al Mazaya Islamic School</strong><span>Banjarmasin</span></span>
-    </a>
-    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="tentang.html">About</a></li>
-        <li><a href="jenjang.html">Our School</a></li>
-        <li><a href="akademik.html">Academics</a></li>
-        <li><a href="berita.html">News</a></li>
-        <li><a href="galeri.html">Student Activities</a></li>
-        <li><a href="ppdb.html">Admission</a></li>
-      </ul>
-    </nav>
-      <span class="lang-toggle" aria-label="Switch language"><a href="../index.html" title="Bahasa Indonesia">ID</a><a class="active" href="index.html" title="English">EN</a></span>
 
-  </div>
-</header>
-
+<!-- ================= HERO ================= -->
 <section data-slider>
   <div class="hero">
+    <!-- Slide 1 -->
     <div class="hero-slide current">
       <div class="container hero-inner">
         <span class="kicker">Assalamu'alaikum warahmatullahi wabarakatuh</span>
-        <h1>Strong in Character, Excellent in <span class="tone">Academics</span></h1>
-        <p>Intellectual excellence must walk hand in hand with noble character. We balance a globally-standard academic curriculum with Islamic character building — ensuring every student is ready to compete while staying true to their identity as devout Muslims.</p>
+        <h1>Kuat dalam Adab, Unggul dalam <span class="tone">Akademik</span></h1>
+        <p>Kecerdasan intelektual harus beriringan dengan keluhuran akhlak. Kami menyeimbangkan kurikulum akademik berstandar global dengan pembentukan karakter Islami — memastikan setiap siswa siap bersaing di masa depan tanpa kehilangan jati dirinya sebagai Muslim yang taat.</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="ppdb.html">Apply Now</a>
-          <a class="btn btn-outline" href="tentang.html">Our Profile</a>
+          <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Daftar Sekarang</a>
+          <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'tentang', '', '' ) ); ?>">Profil Sekolah</a>
         </div>
       </div>
       <div class="hero-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a7 7 0 0 0 7-7c0-1.5-.5-3-1.3-4.2L15 7l-3-3-3 3L6.3 3.8A7 7 0 0 0 5 8a7 7 0 0 0 7 7Z"/><path d="M9 21h6M10 17.5 9.5 21M14 17.5l.5 3.5M12 15v2.5"/></svg>
-        <div><strong>Accredited A</strong><span>Merdeka Curriculum · JHS &amp; SHS</span></div>
+        <div>
+          <strong>Akreditasi A</strong>
+          <span>Kurikulum Merdeka · SMP &amp; SMA</span>
+        </div>
       </div>
     </div>
 
+    <!-- Slide 2 -->
     <div class="hero-slide alt">
       <div class="container hero-inner">
-        <span class="kicker">A School with Global Vision</span>
-        <h1>Global <span class="tone">Vision</span></h1>
-        <p>We equip students with intensive English learning and direct study-abroad experiences (Overseas Program). We design boundless classrooms so Al Mazaya graduates are ready to compete nationally and internationally.</p>
-        <div class="hero-actions"><a class="btn btn-gold" href="jenjang.html">Explore Programs</a></div>
+        <span class="kicker">Sekolah Berwawasan Global</span>
+        <h1>Berwawasan <span class="tone">Global</span></h1>
+        <p>Membekali siswa dengan pembelajaran Bahasa Inggris intensif dan pengalaman belajar langsung ke luar negeri (Overseas Program). Kami merancang ruang kelas tanpa batas agar lulusan Al Mazaya siap bersaing level nasional dan internasional.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'jenjang', '', '' ) ); ?>">Lihat Program</a>
+        </div>
       </div>
     </div>
 
+    <!-- Slide 3 -->
     <div class="hero-slide gold">
       <div class="container hero-inner">
-        <span class="kicker">Enrollment Open</span>
-        <h1>Join the Al Mazaya Family</h1>
-        <p>New student admission for JHS &amp; SHS is now open. Achieve your dreams of becoming intellectual and religious individuals with us.</p>
+        <span class="kicker">PPDB Dibuka</span>
+        <h1>Bergabunglah dengan Keluarga Besar Al Mazaya</h1>
+        <p>Pendaftaran siswa baru SMP &amp; SMA tahun ajaran baru telah dibuka. Wujudkan mimpi menjadi intelektual dan religius bersama kami.</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="https://psb.almazayaislamicschool.sch.id" target="_blank" rel="noopener">Register Online</a>
-          <a class="btn btn-outline" href="ppdb.html">Admission Info</a>
+          <a class="btn btn-gold" href="<?php echo esc_url( almazaya_link( 'psb' ) ); ?>" target="_blank" rel="noopener">Daftar Online</a>
+          <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Info PPDB</a>
         </div>
       </div>
     </div>
@@ -111,31 +59,33 @@
   </div>
 </section>
 
+<!-- ================= STATS ================= -->
 <div class="stats-strip on-dark">
   <div class="container">
     <div class="stats-split">
       <div class="stats-lead reveal">
-        <span class="kicker">Why Al Mazaya</span>
-        <h2>Numbers That <span class="tone">Speak</span></h2>
-        <p>Measured, accredited quality — from Qur'an memorization to international recognition.</p>
+        <span class="kicker">Mengapa Al Mazaya</span>
+        <h2>Angka yang <span class="tone">Bicara</span></h2>
+        <p>Standar mutu yang terukur dan terakreditasi — dari hafalan Al-Qur'an hingga pengakuan internasional.</p>
       </div>
       <div class="stats-list">
-        <div class="stat reveal"><strong>400+</strong><span>Active Students</span></div>
-        <div class="stat reveal d1"><strong>500+</strong><span>Academic &amp; Non-Academic Achievements</span></div>
-        <div class="stat reveal d2"><strong>A</strong><span>Accreditation (JHS &amp; SHS)</span></div>
-        <div class="stat reveal d3"><strong>8+</strong><span>Countries in Overseas Program</span></div>
-        <div class="stat reveal d4"><strong>Top Universities</strong><span>Graduates accepted by leading national &amp; international universities</span></div>
+        <div class="stat reveal"><strong>400+</strong><span>Siswa Aktif</span></div>
+        <div class="stat reveal d1"><strong>500+</strong><span>Prestasi Akademik &amp; Non Akademik</span></div>
+        <div class="stat reveal d2"><strong>A</strong><span>Akreditasi (SMP &amp; SMA)</span></div>
+        <div class="stat reveal d3"><strong>8+</strong><span>Negara Tujuan Program Overseas</span></div>
+        <div class="stat reveal d4"><strong>PTN/PTS &amp; PTLN</strong><span>Lulusan diterima di perguruan tinggi ternama</span></div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- ================= OUR PROGRAMS ================= -->
 <section class="section" id="programs">
   <div class="container">
     <div class="section-head center reveal">
-      <span class="kicker">Flagship Programs</span>
+      <span class="kicker">Program Unggulan</span>
       <h2>Our <span class="tone">Programs</span></h2>
-      <p>Modern classrooms and facilities delivering the most memorable learning experience for every student.</p>
+      <p>Fasilitas dan kelas modern yang menghadirkan pengalaman belajar paling berkesan bagi siswa.</p>
     </div>
 
                 <div class="modclass">
@@ -146,76 +96,76 @@
 
         <div class="mc-scene active" data-scene="fnd">
           <span class="modclass-badge">Foundation Class</span>
-          <img class="mc-photo" src="../assets/img/classroom-r0003050.jpg" alt="Foundation Class">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003050.jpg" alt="Foundation Class">
         </div>
         <div class="mc-scene " data-scene="ovs">
           <span class="modclass-badge">Overseas Program</span>
-          <img class="mc-photo" src="../assets/img/overseas-dsc09507.jpg" alt="Overseas Program">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09507.jpg" alt="Overseas Program">
         </div>
         <div class="mc-scene " data-scene="tfd">
-          <span class="modclass-badge">Qur'an Memorization</span>
-          <img class="mc-photo" src="../assets/img/quran-academy-r0003011.jpg" alt="Qur'an Memorization">
+          <span class="modclass-badge">Program Tahfidz</span>
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0003011.jpg" alt="Program Tahfidz">
         </div>
         <div class="mc-scene " data-scene="clb">
           <span class="modclass-badge">Club & Enrichment</span>
-          <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt="Club & Enrichment">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt="Club & Enrichment">
         </div>
         <div class="mc-scene " data-scene="lsk">
-          <span class="modclass-badge">Life Skills</span>
-          <img class="mc-photo" src="../assets/img/home-img-1509.jpg" alt="Life Skills">
+          <span class="modclass-badge">Life Skill</span>
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-1509.jpg" alt="Life Skill">
         </div>
         <div class="mc-scene " data-scene="uji">
-          <span class="modclass-badge">Graduate Quality Test</span>
-          <img class="mc-photo" src="../assets/img/senior-high-school-a-capture.jpg" alt="Graduate Quality Test">
+          <span class="modclass-badge">Uji Mutu Lulusan</span>
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-a-capture.jpg" alt="Uji Mutu Lulusan">
         </div>
         <div class="mc-scene " data-scene="utb">
           <span class="modclass-badge">TKA & UTBK Intensive</span>
-          <img class="mc-photo" src="../assets/img/2527-z1.jpg" alt="TKA & UTBK Intensive">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-z1.jpg" alt="TKA & UTBK Intensive">
         </div>
         <div class="mc-scene " data-scene="otg">
           <span class="modclass-badge">Outing Class</span>
-          <img class="mc-photo" src="../assets/img/overseas-dsc09466.jpg" alt="Outing Class">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09466.jpg" alt="Outing Class">
         </div>
         <div class="mc-scene " data-scene="utc">
           <span class="modclass-badge">TKA & UTBK Camp</span>
-          <img class="mc-photo" src="../assets/img/2750-r0003169.jpg" alt="TKA & UTBK Camp">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2750-r0003169.jpg" alt="TKA & UTBK Camp">
         </div>
         <div class="mc-scene " data-scene="msc">
           <span class="modclass-badge">Math & Science Camp</span>
-          <img class="mc-photo" src="../assets/img/laboratory-r0003017.jpg" alt="Math & Science Camp">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003017.jpg" alt="Math & Science Camp">
         </div>
         <div class="mc-scene " data-scene="enc">
           <span class="modclass-badge">English Camp</span>
-          <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt="English Camp">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt="English Camp">
         </div>
         <div class="mc-scene " data-scene="tfc">
           <span class="modclass-badge">Tahfidz Camp</span>
-          <img class="mc-photo" src="../assets/img/2527-3.jpg" alt="Tahfidz Camp">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-3.jpg" alt="Tahfidz Camp">
         </div>
         <div class="mc-scene " data-scene="mkd">
           <span class="modclass-badge">Market Day</span>
-          <img class="mc-photo" src="../assets/img/market-day-20221215085811-img-7341.jpg" alt="Market Day">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085811-img-7341.jpg" alt="Market Day">
         </div>
         <div class="mc-scene " data-scene="abl">
-          <span class="modclass-badge">Annual ABUELA Event</span>
-          <img class="mc-photo" src="../assets/img/home-20221214074906-img-6966.jpg" alt="Annual ABUELA Event">
+          <span class="modclass-badge">Event Tahunan ABUELA</span>
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-20221214074906-img-6966.jpg" alt="Event Tahunan ABUELA">
         </div>
         <div class="mc-scene " data-scene="ets">
           <span class="modclass-badge">English Talent Show</span>
-          <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="English Talent Show">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="English Talent Show">
         </div>
       </div>
 
       <div class="modclass-panel reveal d1">
         <span class="kicker" id="mc-label">Foundation Class</span>
-        <h3 id="mc-heading">A <span class="tone">Strong</span> Start</h3>
-        <p id="mc-desc">Opening-level program that builds character, etiquette, and core study skills with a child-friendly, step-by-step approach.</p>
+        <h3 id="mc-heading">Mulai dengan <span class="tone">Fondasi</span> yang Kuat</h3>
+        <p id="mc-desc">Program pembuka jenjang untuk membangun adab, karakter, dan keterampilan dasar belajar dengan pendekatan yang ramah anak dan bertahap.</p>
 
         <ul class="modclass-list" id="mc-list">
-          <li><span class="mc-dot"></span><b>Montessori & Basics</b> — a proven first method</li><li><span class="mc-dot gold"></span><b>Character & Etiquette</b> — practiced from day one</li><li><span class="mc-dot teal"></span><b>Core Skills</b> — ready before the next step</li>
+          <li><span class="mc-dot"></span><b>Montessori & Fondasi</b> — metode pertama yang ramah anak</li><li><span class="mc-dot gold"></span><b>Adab & Karakter</b> — dibiasakan sejak hari pertama</li><li><span class="mc-dot teal"></span><b>Keterampilan Dasar</b> — siap sebelum beranjak naik</li>
         </ul>
 
-        <a class="btn btn-gold" href="akademik.html#program" id="mc-cta">Lihat Semua Program →</a>
+        <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'akademik', '', '#program' ) ); ?>" id="mc-cta">Lihat Semua Program →</a>
       </div>
     </div>
 
@@ -223,63 +173,63 @@
       <button class="prog-arrow prev" aria-label="Program sebelumnya" onclick="progMove(-1)">‹</button>
       <div class="prog-track" id="prog-track">
         <button class="mc-peek active" data-target="fnd" onclick="mcSwitch('fnd',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/classroom-r0003050.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003050.jpg" alt=""></div>
           <span>Foundation Class</span>
         </button>
         <button class="mc-peek " data-target="ovs" onclick="mcSwitch('ovs',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/overseas-dsc09507.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09507.jpg" alt=""></div>
           <span>Overseas Program</span>
         </button>
         <button class="mc-peek " data-target="tfd" onclick="mcSwitch('tfd',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/quran-academy-r0003011.jpg" alt=""></div>
-          <span>Qur'an Memorization</span>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0003011.jpg" alt=""></div>
+          <span>Program Tahfidz</span>
         </button>
         <button class="mc-peek " data-target="clb" onclick="mcSwitch('clb',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt=""></div>
           <span>Club & Enrichment</span>
         </button>
         <button class="mc-peek " data-target="lsk" onclick="mcSwitch('lsk',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/home-img-1509.jpg" alt=""></div>
-          <span>Life Skills</span>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-1509.jpg" alt=""></div>
+          <span>Life Skill</span>
         </button>
         <button class="mc-peek " data-target="uji" onclick="mcSwitch('uji',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/senior-high-school-a-capture.jpg" alt=""></div>
-          <span>Graduate Quality Test</span>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-a-capture.jpg" alt=""></div>
+          <span>Uji Mutu Lulusan</span>
         </button>
         <button class="mc-peek " data-target="utb" onclick="mcSwitch('utb',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/2527-z1.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-z1.jpg" alt=""></div>
           <span>TKA & UTBK Intensive</span>
         </button>
         <button class="mc-peek " data-target="otg" onclick="mcSwitch('otg',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/overseas-dsc09466.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09466.jpg" alt=""></div>
           <span>Outing Class</span>
         </button>
         <button class="mc-peek " data-target="utc" onclick="mcSwitch('utc',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/2750-r0003169.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2750-r0003169.jpg" alt=""></div>
           <span>TKA & UTBK Camp</span>
         </button>
         <button class="mc-peek " data-target="msc" onclick="mcSwitch('msc',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/laboratory-r0003017.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003017.jpg" alt=""></div>
           <span>Math & Science Camp</span>
         </button>
         <button class="mc-peek " data-target="enc" onclick="mcSwitch('enc',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt=""></div>
           <span>English Camp</span>
         </button>
         <button class="mc-peek " data-target="tfc" onclick="mcSwitch('tfc',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/2527-3.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-3.jpg" alt=""></div>
           <span>Tahfidz Camp</span>
         </button>
         <button class="mc-peek " data-target="mkd" onclick="mcSwitch('mkd',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/market-day-20221215085811-img-7341.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085811-img-7341.jpg" alt=""></div>
           <span>Market Day</span>
         </button>
         <button class="mc-peek " data-target="abl" onclick="mcSwitch('abl',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/home-20221214074906-img-6966.jpg" alt=""></div>
-          <span>Annual ABUELA Event</span>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-20221214074906-img-6966.jpg" alt=""></div>
+          <span>Event Tahunan ABUELA</span>
         </button>
         <button class="mc-peek " data-target="ets" onclick="mcSwitch('ets',this)">
-          <div class="mc-peek-scene"><img src="../assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt=""></div>
           <span>English Talent Show</span>
         </button>
       </div>
@@ -292,9 +242,9 @@
 <section class="section on-dark overseas" id="overseas">
   <div class="container">
     <div class="section-head center reveal">
-      <span class="kicker">Global Footprint</span>
-      <h2>Our <span class="tone">Overseas Destinations</span></h2>
-      <p>Four continents, five countries. Al Mazaya students travel to our partner schools abroad — cultural immersion, student exchange, and an international study pathway. Click a marker on the map for details.</p>
+      <span class="kicker">Jejak Global</span>
+      <h2>Our Overseas <span class="tone">Destinations</span></h2>
+      <p>Empat benua, lima negara. Siswa Al Mazaya berangkat ke sekolah mitra di luar negeri — imersi budaya, pertukaran pelajar, dan jalur studi internasional. Klik titik di peta untuk melihat detailnya.</p>
     </div>
     <div class="map-shell reveal" id="overseas-map">
       <svg class="world-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" role="img" aria-label="World map of our overseas destinations">
@@ -487,7 +437,7 @@
         <g class="map-dest" data-country="singapore" role="button" tabindex="0" aria-label="singapore"><circle cx="788.3" cy="283.4" r="16" class="map-hit"/><circle cx="788.3" cy="283.4" r="6" class="map-marker"/><text x="768.3" y="271.4" class="map-label" text-anchor="end">singapore</text></g>
         <g class="map-dest" data-country="australia" role="button" tabindex="0" aria-label="australia"><circle cx="872.8" cy="374.0" r="16" class="map-hit"/><circle cx="872.8" cy="374.0" r="6" class="map-marker"/><text x="872.8" y="392.0" class="map-label" text-anchor="middle">australia</text></g>
       </svg>
-      <div class="map-legend"><span class="lg-dot gold"></span>Partner destinations</div>
+      <div class="map-legend"><span class="lg-dot gold"></span>Destinasi mitra</div>
     </div>
     <div class="overseas-chips reveal">
       <button class="ov-chip" data-country="singapore">🇸🇬 Singapore</button> <button class="ov-chip" data-country="japan">🇯🇵 Japan</button> <button class="ov-chip" data-country="malaysia">🇲🇾 Malaysia</button> <button class="ov-chip" data-country="australia">🇦🇺 Australia</button> <button class="ov-chip" data-country="turkey">🇹🇷 Turkey</button>
@@ -501,38 +451,38 @@
         <button class="map-nav-btn" data-dir="-1" aria-label="Previous">‹</button>
         <h3 class="map-modal-country" id="overseasModalCountry">Singapore</h3>
         <button class="map-nav-btn" data-dir="1" aria-label="Next">›</button>
-        <button class="map-modal-close" id="overseasModalClose" aria-label="Close">×</button>
+        <button class="map-modal-close" id="overseasModalClose" aria-label="Tutup">×</button>
       </div>
 
         <article class="map-modal-card" id="mc-singapore">
           <header class="map-modal-head"><span class="map-modal-flag">🇸🇬</span><div><span class="map-modal-tag">Montessori Authentic</span><h4>Modern Montessori International (MMI)</h4></div></header>
-          <img class="map-modal-logo" src="../assets/img/logo-mmi-site.png" alt="Modern Montessori International (MMI)" loading="lazy">
-          <p class="map-modal-desc">Our main KB-TK partnership. MMI Singapore is the authority on authentic Montessori — daily English and child-led learning for ages 6 months to 6 years.</p>
-          <a class="btn btn-gold map-link" href="https://modern-montessori.com" target="_blank" rel="noopener">Visit Website →</a>
+          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.png" alt="Modern Montessori International (MMI)" loading="lazy">
+          <p class="map-modal-desc">Kemitraan utama jenjang KB-TK. MMI Singapore adalah otoritas Montessori autentik — Bahasa Inggris harian dan belajar dipandu anak untuk usia 6 bulan–6 tahun.</p>
+          <a class="btn btn-gold map-link" href="https://modern-montessori.com" target="_blank" rel="noopener">Kunjungi Website →</a>
         </article>
         <article class="map-modal-card" id="mc-japan">
           <header class="map-modal-head"><span class="map-modal-flag">🇯🇵</span><div><span class="map-modal-tag">Science & Technology</span><h4>MITA International School of Science</h4></div></header>
-          <img class="map-modal-logo" src="../assets/img/logo-mita.svg" alt="MITA International School of Science" loading="lazy">
-          <p class="map-modal-desc">An international science school in Chiba, Japan. Short immersion exposes students to Japan’s discipline, research, and technology culture.</p>
-          <a class="btn btn-gold map-link" href="https://www.mita-is.ed.jp" target="_blank" rel="noopener">Visit Website →</a>
+          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mita.svg" alt="MITA International School of Science" loading="lazy">
+          <p class="map-modal-desc">Sekolah sains internasional di Chiba, Jepang. Imersi singkat mengenalkan siswa pada budaya disiplin, riset, dan teknologi Jepang.</p>
+          <a class="btn btn-gold map-link" href="https://www.mita-is.ed.jp" target="_blank" rel="noopener">Kunjungi Website →</a>
         </article>
         <article class="map-modal-card" id="mc-malaysia">
           <header class="map-modal-head"><span class="map-modal-flag">🇲🇾</span><div><span class="map-modal-tag">University Pathway</span><h4>Lincoln University College (LUC)</h4></div></header>
-          <img class="map-modal-logo" src="../assets/img/logo-luc.webp" alt="Lincoln University College (LUC)" loading="lazy">
-          <p class="map-modal-desc">An accredited university in Malaysia for further study and student exchange — an international higher-education pathway.</p>
-          <a class="btn btn-gold map-link" href="https://www.lincoln.edu.my" target="_blank" rel="noopener">Visit Website →</a>
+          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-luc.webp" alt="Lincoln University College (LUC)" loading="lazy">
+          <p class="map-modal-desc">Universitas terakreditasi di Malaysia untuk studi lanjut dan pertukaran pelajar — membuka jalur pendidikan tinggi internasional.</p>
+          <a class="btn btn-gold map-link" href="https://www.lincoln.edu.my" target="_blank" rel="noopener">Kunjungi Website →</a>
         </article>
         <article class="map-modal-card" id="mc-australia">
           <header class="map-modal-head"><span class="map-modal-flag">🇦🇺</span><div><span class="map-modal-tag">Islamic Education</span><h4>Minaret College</h4></div></header>
-          <img class="map-modal-logo" src="../assets/img/logo-minaret.png" alt="Minaret College" loading="lazy">
-          <p class="map-modal-desc">A leading Islamic college in Melbourne, Australia. Learn English in an English-speaking country while strengthening Islamic identity.</p>
-          <a class="btn btn-gold map-link" href="https://minaret.vic.edu.au" target="_blank" rel="noopener">Visit Website →</a>
+          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-minaret.png" alt="Minaret College" loading="lazy">
+          <p class="map-modal-desc">Sekolah Islam terkemuka di Melbourne, Australia. Belajar Bahasa Inggris di negara berbahasa Inggris sambil memperkuat identitas Islami.</p>
+          <a class="btn btn-gold map-link" href="https://minaret.vic.edu.au" target="_blank" rel="noopener">Kunjungi Website →</a>
         </article>
         <article class="map-modal-card" id="mc-turkey">
           <header class="map-modal-head"><span class="map-modal-flag">🇹🇷</span><div><span class="map-modal-tag">Multilingual & Culture</span><h4>Harvest International School</h4></div></header>
-          <img class="map-modal-logo" src="../assets/img/logo-harvest.avif" alt="Harvest International School" loading="lazy">
-          <p class="map-modal-desc">An international school in Istanbul, Turkey. Eurasian cultural insight and a multilingual learning environment broaden students’ horizons.</p>
-          <span class="map-nolink">Official site coming soon</span>
+          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-harvest.avif" alt="Harvest International School" loading="lazy">
+          <p class="map-modal-desc">Sekolah internasional di Istanbul, Turki. Wawasan budaya Eurasia dan lingkungan belajar multibahasa memperluas cara pandang siswa.</p>
+          <span class="map-nolink">Website resmi belum tersedia</span>
         </article>
     </div>
   </div>
@@ -578,39 +528,40 @@
     document.addEventListener('keydown', function(e){{ if (e.key==='Escape' && modal.classList.contains('open')) hide(); }});
   }})();
   </script>
-  </section>
+</section>
 
-<section class="section" id="partnerships">
+<!-- ================= KEMITRAAN GLOBAL ================= -->
+<section class="section" id="kemitraan">
   <div class="container">
     <div class="section-head center reveal">
-      <span class="kicker">Global Partnerships</span>
-      <h2>International <span class="tone">Reach</span></h2>
-      <p>Collaboration with educational institutions across countries to broaden our students' horizons and learning opportunities.</p>
+      <span class="kicker">Kemitraan Global</span>
+      <h2>Jangkauan <span class="tone">Internasional</span></h2>
+      <p>Kolaborasi dengan institusi pendidikan dari berbagai negara untuk memperluas wawasan dan kesempatan belajar siswa.</p>
     </div>
 
     <div class="partner-grid">
       <a class="partner-card reveal" href="https://modern-montessori.com" target="_blank" rel="noopener">
-        <img class="partner-logo" src="../assets/img/logo-mmi-site.png" alt="Modern Montessori International">
+        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.png" alt="Modern Montessori International">
         <h3>Modern Montessori International (MMI)</h3>
         <p>Singapore</p>
       </a>
       <a class="partner-card reveal d1" href="https://www.mita-is.ed.jp" target="_blank" rel="noopener">
-        <img class="partner-logo" src="../assets/img/logo-mita.svg" alt="MITA International School of Science">
+        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mita.svg" alt="MITA International School of Science">
         <h3>MITA International School of Science</h3>
-        <p>Japan</p>
+        <p>Jepang</p>
       </a>
       <a class="partner-card reveal d2" href="https://minaret.vic.edu.au" target="_blank" rel="noopener">
-        <img class="partner-logo" src="../assets/img/logo-minaret.png" alt="Minaret College">
+        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-minaret.png" alt="Minaret College">
         <h3>Minaret College</h3>
         <p>Australia</p>
       </a>
       <a class="partner-card reveal" href="https://www.lincoln.edu.my" target="_blank" rel="noopener">
-        <img class="partner-logo" src="../assets/img/logo-luc.webp" alt="Lincoln University College (LUC)">
+        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-luc.webp" alt="Lincoln University College (LUC)">
         <h3>Lincoln University College (LUC)</h3>
         <p>Malaysia</p>
       </a>
       <div class="partner-card reveal d1">
-        <img class="partner-logo" src="../assets/img/logo-harvest.avif" alt="Harvest International School">
+        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-harvest.avif" alt="Harvest International School">
         <h3>Harvest International School</h3>
         <p>Turkey</p>
       </div>
@@ -618,89 +569,95 @@
   </div>
 </section>
 
+<!-- ================= BERITA & GALERI ================= -->
 <section class="section bg-mist">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">Latest Updates</span>
-      <h2>News &amp; <span class="tone">Events</span></h2>
-      <p><a class="more-link" href="berita.html">View all news &amp; events →</a></p>
+      <span class="kicker">Kabar Terbaru</span>
+      <h2>Berita &amp; <span class="tone">Kegiatan</span></h2>
+      <p><a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita', '', '' ) ); ?>">Lihat semua berita &amp; kegiatan →</a></p>
     </div>
+
     <div class="posts-featured">
       <article class="post-card reveal">
-        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="../assets/img/overseas-img-8635-min.jpg" alt="Achievement Photo">Achievement Photo</div>
+        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8635-min.jpg" alt="Foto Prestasi">Foto Prestasi</div>
         <div class="post-body">
-          <span class="chip gold">Achievement</span>
-          <h3><a href="#">4 JHS Students Won National Olympiad Medals</a></h3>
-          <p>Another brilliant national-level achievement proving our academic coaching quality.</p>
-          <a class="more-link" href="#">Read more →</a>
+          <span class="chip gold">Prestasi</span>
+          <h3><a href="#">4 Siswi SMP Al Mazaya Raih Medali Olimpiade Nasional</a></h3>
+          <p>Prestasi membanggakan di kancah nasional yang kembali membuktikan mutu pembinaan akademik Al Mazaya.</p>
+          <a class="more-link" href="#">Baca selengkapnya →</a>
         </div>
       </article>
+
       <article class="post-card reveal d1">
-        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="../assets/img/school-debate-competition-aq1.jpg" alt="Debate Photo">Debate Photo</div>
+        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/school-debate-competition-aq1.jpg" alt="Foto Debat">Foto Debat</div>
         <div class="post-body">
-          <span class="chip gold">Achievement</span>
-          <h3><a href="#">2nd Place, "International Events" Debate at UIN Antasari</a></h3>
-          <p>Our SHS female debate team secured second place in a university-level championship.</p>
-          <a class="more-link" href="#">Read more →</a>
+          <span class="chip gold">Prestasi</span>
+          <h3><a href="#">Juara 2 Debat "International Events" UIN Antasari Banjarmasin</a></h3>
+          <p>Siswi SMA Al Mazaya sukses meraih posisi kedua dalam kompetisi debat tingkat perguruan tinggi.</p>
+          <a class="more-link" href="#">Baca selengkapnya →</a>
         </div>
       </article>
+
       <article class="post-card reveal d2">
-        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="../assets/img/overseas-img-8679-min.jpg" alt="Event Photo">Event Photo</div>
+        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8679-min.jpg" alt="Foto Kegiatan">Foto Kegiatan</div>
         <div class="post-body">
-          <span class="chip">Event</span>
-          <h3><a href="#">Monthly English Talent Show: A Stage for Every Talent</a></h3>
-          <p>Singing, traditional dance, drama, speech, storytelling, and Qur'an recitation performances.</p>
-          <a class="more-link" href="#">Read more →</a>
+          <span class="chip">Kegiatan</span>
+          <h3><a href="#">English Talent Show: Panggung Bakat Siswa Setiap Bulan</a></h3>
+          <p>Nyanyian, tari tradisional, drama, pidato, hingga tilawah Al-Qur'an ditampilkan dalam acara bulanan sekolah.</p>
+          <a class="more-link" href="#">Baca selengkapnya →</a>
         </div>
       </article>
     </div>
 
     <div class="section-head center reveal stack">
-      <span class="kicker">Gallery</span>
-      <h2>Momentous <span class="tone">Memories</span></h2>
-      <p><a class="more-link" href="galeri.html">View full gallery →</a></p>
+      <span class="kicker">Galeri</span>
+      <h2>Momen <span class="tone">Berkesan</span></h2>
+      <p><a class="more-link" href="<?php echo esc_url( almazaya_url( 'galeri', '', '' ) ); ?>">Lihat semua galeri →</a></p>
     </div>
+
     <div class="gallery-grid tall-feature reveal">
-      <div class="has-photo img-slot"><img class="slot-photo" src="../assets/img/english-talent-show-screenshot-20230829-135505.jpg" alt="English Talent Show"><span class="gal-label">English Talent Show</span></div>
-      <div class="has-photo img-slot warm"><img class="slot-photo" src="../assets/img/market-day-20221214073641-img-6924.jpg" alt="Market Day"><span class="gal-label">Market Day</span></div>
-      <div class="has-photo img-slot light"><img class="slot-photo" src="../assets/img/overseas-img-8730-min.jpg" alt="Overseas Program"><span class="gal-label">Overseas Program</span></div>
-      <div class="has-photo img-slot"><img class="slot-photo" src="../assets/img/ramadhan-charity-day-img-5416-1.jpg" alt="Ramadhan Charity Day"><span class="gal-label">Ramadhan Charity Day</span></div>
-      <div class="has-photo img-slot warm"><img class="slot-photo" src="../assets/img/overseas-img-8756-min.jpg" alt="Graduation Ceremony"><span class="gal-label">Graduation Ceremony</span></div>
-      <div class="has-photo img-slot light"><img class="slot-photo" src="../assets/img/overseas-img-8809-min.jpg" alt="Independence Day"><span class="gal-label">Independence Day</span></div>
-      <div class="has-photo img-slot"><img class="slot-photo" src="../assets/img/overseas-img-8816-min.jpg" alt="Science Olympiad"><span class="gal-label">Science Olympiad</span></div>
-      <div class="has-photo img-slot warm"><img class="slot-photo" src="../assets/img/english-talent-show-screenshot-20230825-132045-1.jpg" alt="English Camp"><span class="gal-label">English Camp</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-135505.jpg" alt="English Talent Show"><span class="gal-label">English Talent Show</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221214073641-img-6924.jpg" alt="Market Day"><span class="gal-label">Market Day</span></div>
+      <div class="has-photo img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8730-min.jpg" alt="Overseas Program"><span class="gal-label">Overseas Program</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/ramadhan-charity-day-img-5416-1.jpg" alt="Ramadhan Charity Day"><span class="gal-label">Ramadhan Charity Day</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8756-min.jpg" alt="Wisuda &amp; Haflah"><span class="gal-label">Wisuda &amp; Haflah</span></div>
+      <div class="has-photo img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8809-min.jpg" alt="HUT Kemerdekaan RI"><span class="gal-label">HUT Kemerdekaan RI</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8816-min.jpg" alt="Olimpiade Sains"><span class="gal-label">Olimpiade Sains</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230825-132045-1.jpg" alt="English Camp"><span class="gal-label">English Camp</span></div>
     </div>
   </div>
 </section>
 
+<!-- ================= CTA PPDB ================= -->
 <section class="cta-band on-dark">
   <div class="container">
-    <span class="kicker">New Student Admission</span>
-    <h2>Become Part of an Excellent Generation</h2>
-    <p>"Register your beloved child now and help them achieve their dreams of becoming intellectual and religious individuals."</p>
+    <span class="kicker">Penerimaan Peserta Didik Baru</span>
+    <h2>Jadilah Bagian dari Generasi Unggul</h2>
+    <p>"Daftarkan putra-putri Anda sekarang dan bantu mereka mewujudkan mimpi menjadi generasi yang cerdas, berilmu, dan religius."</p>
     <div class="hero-actions" style="justify-content:center;">
-      <a class="btn btn-gold" href="https://psb.almazayaislamicschool.sch.id" target="_blank" rel="noopener">Register Online Now</a>
-      <a class="btn btn-outline" href="ppdb.html">Process &amp; Requirements</a>
+      <a class="btn btn-gold" href="<?php echo esc_url( almazaya_link( 'psb' ) ); ?>" target="_blank" rel="noopener">Daftar Online Sekarang</a>
+      <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Alur &amp; Persyaratan</a>
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- ================= KONTAK ================= -->
 <section class="section on-dark" style="padding-top:0;" id="kontak-info">
   <div class="container">
     <div class="contact-cards">
       <div class="contact-card reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         <div>
-          <strong>Address</strong>
-          <p>Jl. Cempaka Besar No. 57, Kel. Mawar, Central Banjarmasin, Banjarmasin City, South Kalimantan</p>
+          <strong>Alamat</strong>
+          <p>Jl. Cempaka Besar No. 57, Kel. Mawar, Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan</p>
         </div>
       </div>
       <div class="contact-card reveal d1">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.6 2Z"/></svg>
         <div>
           <strong>WhatsApp</strong>
-          <p><a href="https://wa.me/628115051123" target="_blank" rel="noopener">+62 811-5051-123</a></p>
+          <p><a href="<?php echo esc_url( almazaya_link( 'whatsapp' ) ); ?>" target="_blank" rel="noopener">+62 811-5051-123</a></p>
         </div>
       </div>
       <div class="contact-card reveal d2">
@@ -714,68 +671,11 @@
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="logo-strip">
-        <img src="../assets/img/logo-yayasan.jpeg" alt="Al Mazaya Pelita Asia Foundation logo">
-        <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
-        <img src="../assets/img/logo-mmi.jpeg" alt="MMI logo" class="logo-mmi">
-      </div>
-      <h4>AL MAZAYA ISLAMIC SCHOOL</h4>
-      <p>Your Islamic School in Banjarmasin — shaping an excellent, noble Islamic generation.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/almazayaislamicschool/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg></a>
-        <a href="https://www.youtube.com/@almazayaislamicschool1244" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></a>
-        <a href="https://wa.me/628115051123" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg></a>
-      </div>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="tentang.html">About Us</a></li>
-        <li><a href="jenjang.html">Our School</a></li>
-        <li><a href="akademik.html">Academics</a></li>
-        <li><a href="berita.html">News &amp; Achievements</a></li>
-        <li><a href="galeri.html">Student Activities</a></li>
-        <li><a href="ppdb.html">Admission</a></li>
-        <li><a href="https://psb.almazayaislamicschool.sch.id" target="_blank" rel="noopener">Online Admission Portal</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Virtual Class</h4>
-      <ul class="footer-links">
-        <li><a href="https://almazayaislamicschool.sch.id/class" target="_blank" rel="noopener">SHS Virtual Class</a></li>
-        <li><a href="https://almazayaislamicschool.my.id/class/login/index.php" target="_blank" rel="noopener">JHS Virtual Class</a></li>
-      </ul>
-      <h4 style="margin-top:1.6rem;">Office Hours</h4>
-      <p>Monday – Saturday<br>07.00 – 16.00 WITA (GMT+8)</p>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>© <span data-year>2026</span> Al Mazaya Islamic School Banjarmasin. All rights reserved.</span>
-    <span>Al Mazaya Pelita Asia Foundation</span>
-  </div>
-</footer>
+<!-- ================= FOOTER ================= -->
 
-<a class="wa-float" href="https://wa.me/628115051123?text=Assalamualaikum" target="_blank" rel="noopener" aria-label="WhatsApp chat">
-  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg>
-</a>
 
-<div class="mobile-nav">
-  <button class="nav-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-  <div class="mobile-nav-inner">
-        <a href="index.html" class="active">Home</a>
-        <a href="tentang.html">About</a>
-        <a href="jenjang.html">Our School</a>
-        <a href="akademik.html">Academics</a>
-        <a href="berita.html">News</a>
-        <a href="galeri.html">Student Activities</a>
-        <a href="ppdb.html">Admission</a>
-        <div class="lang-toggle mobile-lang" aria-label="Switch language"><a href="../index.html" title="Bahasa Indonesia">ID</a><a class="active" href="index.html" title="English">EN</a></div>
-  </div>
-</div>
-<script src="../assets/js/main.js?v=64"></script>
+
+
 <script>
 function mcSwitch(scene,btn){
   var stage=document.getElementById('mc-stage'),peeks=document.querySelectorAll('.mc-peek');
@@ -786,7 +686,7 @@ function mcSwitch(scene,btn){
   var lb=document.getElementById('mc-lightbox');
   lb.querySelectorAll('.mc-scene').forEach(function(s){s.classList.remove('active')});
   lb.querySelector('[data-scene="'+scene+'"]').classList.add('active');
-  var descs={fnd:{label:"Foundation Class",head:"A <span class=\"tone\">Strong</span> Start",desc:"Opening-level program that builds character, etiquette, and core study skills with a child-friendly, step-by-step approach.",items:"<li><span class=\"mc-dot\"></span><b>Montessori & Basics</b> — a proven first method</li><li><span class=\"mc-dot gold\"></span><b>Character & Etiquette</b> — practiced from day one</li><li><span class=\"mc-dot teal\"></span><b>Core Skills</b> — ready before the next step</li>"},ovs:{label:"Overseas Program",head:"Learning <span class=\"tone\">Beyond Borders</span>",desc:"Short immersions at partner schools overseas to grow global awareness, independence, and an international network.",items:"<li><span class=\"mc-dot\"></span><b>Global Partnerships</b> — MMI, MITA, Minaret, LUC, Harvest</li><li><span class=\"mc-dot gold\"></span><b>Cultural Immersion</b> — live & learn abroad</li><li><span class=\"mc-dot teal\"></span><b>Global Network</b> — friends from many countries</li>"},tfd:{label:"Qur'an Memorization",head:"Guarding the <span class=\"tone\">Qur'an</span>",desc:"Structured tahfidz coaching with regular halaqah, scheduled revision, and full mentoring from dedicated teachers.",items:"<li><span class=\"mc-dot\"></span><b>Daily Halaqah</b> — scheduled memorization</li><li><span class=\"mc-dot gold\"></span><b>Clear Targets</b> — paced to each student</li><li><span class=\"mc-dot teal\"></span><b>Kept Revision</b> — strong, lasting memorization</li>"},clb:{label:"Club & Enrichment",head:"Sharpened <span class=\"tone\">Talents</span>",desc:"Clubs and enrichment across science, arts, sports, and language to channel students' interests and potential.",items:"<li><span class=\"mc-dot\"></span><b>Club Choices</b> — matched to interests</li><li><span class=\"mc-dot gold\"></span><b>Olympiad Training</b> — aimed at competitions</li><li><span class=\"mc-dot teal\"></span><b>Soft Skills</b> — communication & leadership</li>"},lsk:{label:"Life Skills",head:"Practical <span class=\"tone\">Life Skills</span>",desc:"Practical life training that builds independence: managing yourself, collaborating, and facing the real world.",items:"<li><span class=\"mc-dot\"></span><b>Independence</b> — self-manage daily life</li><li><span class=\"mc-dot gold\"></span><b>Plan & Manage</b> — wise living habits</li><li><span class=\"mc-dot teal\"></span><b>Collaboration</b> — working well in teams</li>"},uji:{label:"Graduate Quality Test",head:"A <span class=\"tone\">Guaranteed</span> Standard",desc:"Measurable graduate competency standards with periodic assessment so every graduate is truly ready to continue studying.",items:"<li><span class=\"mc-dot\"></span><b>Competency Standards</b> — clear & measurable</li><li><span class=\"mc-dot gold\"></span><b>Periodic Assessment</b> — tracked development</li><li><span class=\"mc-dot teal\"></span><b>Achievement Records</b> — proof of quality</li>"},utb:{label:"TKA & UTBK Intensive",head:"Winning a Spot at <span class=\"tone\">Top Universities</span>",desc:"Focused prep for university entrance: TKA, UTBK, and regular try outs so graduates reach their chosen universities.",items:"<li><span class=\"mc-dot\"></span><b>Regular Try Outs</b> — weekly readiness checks</li><li><span class=\"mc-dot gold\"></span><b>Complete Coverage</b> — master every subtest</li><li><span class=\"mc-dot teal\"></span><b>UTBK Simulation</b> — used to the real format</li>"},otg:{label:"Outing Class",head:"Learning <span class=\"tone\">Outside</span>",desc:"Contextual learning outdoors that connects theory with real experience — nature, museums, industry, and community.",items:"<li><span class=\"mc-dot\"></span><b>Field Study</b> — learn from the real world</li><li><span class=\"mc-dot gold\"></span><b>Contextual</b> — theory meets practice</li><li><span class=\"mc-dot teal\"></span><b>Togetherness</b> — great memories built</li>"},utc:{label:"TKA & UTBK Camp",head:"Focused & <span class=\"tone\">Intensive</span>",desc:"Intensive camp before university entrance exams with a boarding atmosphere, full mentoring, and targeted drills.",items:"<li><span class=\"mc-dot\"></span><b>Boarding Vibe</b> — focus without distraction</li><li><span class=\"mc-dot gold\"></span><b>Drills</b> — practice question by question</li><li><span class=\"mc-dot teal\"></span><b>Target Schools</b> — challenged per university</li>"},msc:{label:"Math & Science Camp",head:"Exploring <span class=\"tone\">Science</span> & Numbers",desc:"Camp based on experiments and problem solving to grow logic, curiosity, and a love for science and math.",items:"<li><span class=\"mc-dot\"></span><b>Hands-on Experiments</b> — practice in the lab</li><li><span class=\"mc-dot gold\"></span><b>Creative Math</b> — think outside the box</li><li><span class=\"mc-dot teal\"></span><b>Olympiad Training</b> — science & math</li>"},enc:{label:"English Camp",head:"<span class=\"tone\">English</span> Immersion",desc:"Full English immersion: speaking zones, vocabulary building, and activities that grow confidence in using English.",items:"<li><span class=\"mc-dot\"></span><b>Speaking Zones</b> — speak English often</li><li><span class=\"mc-dot gold\"></span><b>Vocabulary Drills</b> — a rich word bank</li><li><span class=\"mc-dot teal\"></span><b>Confidence</b> — ready to perform</li>"},tfc:{label:"Tahfidz Camp",head:"Memorization <span class=\"tone\">Camp</span>",desc:"Intensive tahfidz camp with morning memorization, revision, and character coaching in a togetherness atmosphere.",items:"<li><span class=\"mc-dot\"></span><b>Morning Memorization</b> — fresh start daily</li><li><span class=\"mc-dot gold\"></span><b>Intensive Revision</b> — kept memory strong</li><li><span class=\"mc-dot teal\"></span><b>Guardian Ethics</b> — character of Qur'an lovers</li>"},mkd:{label:"Market Day",head:"The <span class=\"tone\">Entrepreneur</span> Spirit",desc:"Students run real stalls: preparing products, managing capital, serving buyers, and learning from their own business.",items:"<li><span class=\"mc-dot\"></span><b>Real Selling</b> — running stalls at school</li><li><span class=\"mc-dot gold\"></span><b>Manage Capital</b> — count profit & loss</li><li><span class=\"mc-dot teal\"></span><b>Teamwork</b> — clear division of roles</li>"},abl:{label:"Annual ABUELA Event",head:"A <span class=\"tone\">Celebration</span> Together",desc:"Al Mazaya's annual family event: performances, achievement awards, and bonding among parents and students.",items:"<li><span class=\"mc-dot\"></span><b>Performances</b> — student talents on stage</li><li><span class=\"mc-dot gold\"></span><b>Awards</b> — celebrate achievements</li><li><span class=\"mc-dot teal\"></span><b>Bonding</b> — as one big family</li>"},ets:{label:"English Talent Show",head:"The <span class=\"tone\">Talent</span> Stage",desc:"An English stage for speeches, drama, and songs to build courage, confidence, and public speaking skills.",items:"<li><span class=\"mc-dot\"></span><b>Drama & Speech</b> — perform with confidence</li><li><span class=\"mc-dot gold\"></span><b>Public Speaking</b> — comfortable in public</li><li><span class=\"mc-dot teal\"></span><b>Talent Award</b> — one stage for everyone</li>"}};  var d=descs[scene]||descs.desk;
+  var descs={fnd:{label:"Foundation Class",head:"Mulai dengan <span class=\"tone\">Fondasi</span> yang Kuat",desc:"Program pembuka jenjang untuk membangun adab, karakter, dan keterampilan dasar belajar dengan pendekatan yang ramah anak dan bertahap.",items:"<li><span class=\"mc-dot\"></span><b>Montessori & Fondasi</b> — metode pertama yang ramah anak</li><li><span class=\"mc-dot gold\"></span><b>Adab & Karakter</b> — dibiasakan sejak hari pertama</li><li><span class=\"mc-dot teal\"></span><b>Keterampilan Dasar</b> — siap sebelum beranjak naik</li>"},ovs:{label:"Overseas Program",head:"Belajar <span class=\"tone\">Lintas Negara</span>",desc:"Imersi singkat di sekolah mitra luar negeri untuk menumbuhkan wawasan global, kemandirian, dan jejaring internasional.",items:"<li><span class=\"mc-dot\"></span><b>Kemitraan Global</b> — MMI, MITA, Minaret, LUC, Harvest</li><li><span class=\"mc-dot gold\"></span><b>Imersi Budaya</b> — hidup & belajar di luar negeri</li><li><span class=\"mc-dot teal\"></span><b>Jaringan Internasional</b> — teman dari berbagai negara</li>"},tfd:{label:"Program Tahfidz",head:"Hafalan <span class=\"tone\">Al-Qur'an</span>",desc:"Pembinaan tahfidz berjenjang dengan halaqah rutin, murajaah terjadwal, dan pendampingan penuh dari ustadz pembimbing.",items:"<li><span class=\"mc-dot\"></span><b>Halaqah Rutin</b> — setoran hafalan terjadwal</li><li><span class=\"mc-dot gold\"></span><b>Target Berjenjang</b> — sesuai kemampuan siswa</li><li><span class=\"mc-dot teal\"></span><b>Murajaah Terjaga</b> — hafalan tetap kuat</li>"},clb:{label:"Club & Enrichment",head:"Bakat <span class=\"tone\">Diasah</span>",desc:"Klub dan pengayaan lintas bidang — sains, seni, olahraga, bahasa — untuk menyalurkan minat dan potensi siswa.",items:"<li><span class=\"mc-dot\"></span><b>Pilihan Klub</b> — sesuai minat & bakat</li><li><span class=\"mc-dot gold\"></span><b>Pembinaan Olimpiade</b> — rapi menuju kompetisi</li><li><span class=\"mc-dot teal\"></span><b>Soft Skill</b> — komunikasi & kepemimpinan</li>"},lsk:{label:"Life Skill",head:"Kecakapan <span class=\"tone\">Hidup</span>",desc:"Keterampilan hidup praktis yang membentuk kemandirian siswa: mengelola diri, berkolaborasi, dan menghadapi kehidupan nyata.",items:"<li><span class=\"mc-dot\"></span><b>Kemandirian</b> — mengurus diri sehari-hari</li><li><span class=\"mc-dot gold\"></span><b>Kelola & Rencana</b> — bekal hidup mandiri</li><li><span class=\"mc-dot teal\"></span><b>Kolaborasi</b> — bekerja dalam tim</li>"},uji:{label:"Uji Mutu Lulusan",head:"Mutu <span class=\"tone\">Terjamin</span>",desc:"Standar kompetensi lulusan yang terukur melalui asesmen berkala agar setiap lulusan benar-benar siap melanjutkan studi.",items:"<li><span class=\"mc-dot\"></span><b>Standar Kompetensi</b> — capaian jelas & terukur</li><li><span class=\"mc-dot gold\"></span><b>Asesmen Berkala</b> — pantauan perkembangan</li><li><span class=\"mc-dot teal\"></span><b>Sertifikat Capaian</b> — bukti kualitas lulusan</li>"},utb:{label:"TKA & UTBK Intensive",head:"Tembus <span class=\"tone\">PTN</span> Favorit",desc:"Pendalaman padat untuk tes masuk perguruan tinggi: TKA, UTBK, dan try out berkala agar lulusan diterima di PTN pilihan.",items:"<li><span class=\"mc-dot\"></span><b>Try Out Berkala</b> — ukur kesiapan tiap pekan</li><li><span class=\"mc-dot gold\"></span><b>Pembahasan Tuntas</b> — semua subtes dikuasai</li><li><span class=\"mc-dot teal\"></span><b>Simulasi UTBK</b> — terbiasa dengan format asli</li>"},otg:{label:"Outing Class",head:"Belajar di <span class=\"tone\">Luar Kelas</span>",desc:"Pembelajaran kontekstual di luar ruangan yang menghubungkan teori dengan pengalaman nyata — alam, museum, industri, dan komunitas.",items:"<li><span class=\"mc-dot\"></span><b>Studi Lapangan</b> — belajar dari dunia nyata</li><li><span class=\"mc-dot gold\"></span><b>Kontekstual</b> — teori & praktik bertemu</li><li><span class=\"mc-dot teal\"></span><b>Kebersamaan</b> — rekam jejak terbaik</li>"},utc:{label:"TKA & UTBK Camp",head:"Fokus <span class=\"tone\">Intensif</span>",desc:"Camp belajar intensif menjelang ujian masuk PTN dengan suasana asrama, pendampingan penuh, dan drill soal terarah.",items:"<li><span class=\"mc-dot\"></span><b>Suasana Asrama</b> — fokus tanpa distraksi</li><li><span class=\"mc-dot gold\"></span><b>Drill Soal</b> — latihan kata demi kata</li><li><span class=\"mc-dot teal\"></span><b>Target Sekolah</b> — tantangan sesuai kampus</li>"},msc:{label:"Math & Science Camp",head:"Eksplorasi <span class=\"tone\">Sains</span> & Angka",desc:"Camp sains dan matematika berbasis eksperimen dan pemecahan masalah untuk menumbuhkan logika serta rasa ingin tahu.",items:"<li><span class=\"mc-dot\"></span><b>Eksperimen Langsung</b> — praktik di lab</li><li><span class=\"mc-dot gold\"></span><b>Matematika Kreatif</b> — berpikir di luar kotak</li><li><span class=\"mc-dot teal\"></span><b>Pembinaan Olimpiade</b> — sains & matematika</li>"},enc:{label:"English Camp",head:"Imersi <span class=\"tone\">Bahasa Inggris</span>",desc:"Program perendaman bahasa Inggris: speaking zone, vocabulary building, dan aktivitas penuh yang membangun percaya diri.",items:"<li><span class=\"mc-dot\"></span><b>Speaking Zone</b> — sering bicara berbahasa Inggris</li><li><span class=\"mc-dot gold\"></span><b>Vocabulary Drills</b> — kosakata melimpah</li><li><span class=\"mc-dot teal\"></span><b>Percaya Diri</b> — berani tampil</li>"},tfc:{label:"Tahfidz Camp",head:"Camp <span class=\"tone\">Hafalan</span>",desc:"Camp intensif tahfidz dengan setoran pagi, murajaah, dan pembinaan adab untuk memperkuat hafalan dalam suasana kebersamaan.",items:"<li><span class=\"mc-dot\"></span><b>Setoran Pagi</b> — semangat baru tiap hari</li><li><span class=\"mc-dot gold\"></span><b>Murajaah Intensif</b> — hafalan tetap terjaga</li><li><span class=\"mc-dot teal\"></span><b>Adab Penghafal</b> — akhlak para pencinta Al-Qur'an</li>"},mkd:{label:"Market Day",head:"Jiwa <span class=\"tone\">Wirausaha</span>",desc:"Siswa berlatih berjualan sungguhan: menyiapkan produk, mengelola modal, melayani pembeli, dan belajar dari hasil usahanya.",items:"<li><span class=\"mc-dot\"></span><b>Jual-Beli Langsung</b> — jualan sungguhan di sekolah</li><li><span class=\"mc-dot gold\"></span><b>Kelola Modal</b> — hitung untung & rugi</li><li><span class=\"mc-dot teal\"></span><b>Kerja Tim</b> — bagi peran yang rapi</li>"},abl:{label:"Event Tahunan ABUELA",head:"Pesta <span class=\"tone\">Kebersamaan</span>",desc:"Event tahunan keluarga besar Al Mazaya: pentas seni, apresiasi prestasi, dan silaturahmi bersama orang tua serta siswa.",items:"<li><span class=\"mc-dot\"></span><b>Pentas Seni</b> — bakat siswa ditampilkan</li><li><span class=\"mc-dot gold\"></span><b>Apresiasi Prestasi</b> — rayakan pencapaian</li><li><span class=\"mc-dot teal\"></span><b>Silaturahmi</b> — bersama keluarga besar</li>"},ets:{label:"English Talent Show",head:"Panggung <span class=\"tone\">Bakat</span>",desc:"Panggung bakat berbahasa Inggris — pidato, drama, nyanyi — untuk melatih keberanian tampil dan publik speaking.",items:"<li><span class=\"mc-dot\"></span><b>Drama & Pidato</b> — tampil penuh percaya diri</li><li><span class=\"mc-dot gold\"></span><b>Public Speaking</b> — terbiasa di depan umum</li><li><span class=\"mc-dot teal\"></span><b>Apresiasi Bakat</b> — satu panggung untuk semua</li>"}};  var d=descs[scene]||descs.desk;
   document.getElementById('mc-label').innerHTML=d.label;
   document.getElementById('mc-heading').innerHTML=d.head;
   document.getElementById('mc-desc').innerHTML=d.desc;
@@ -807,66 +707,64 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')mcCloseLB()}
   <div class="mc-lightbox-inner">
         <div class="mc-scene active" data-scene="fnd">
       <span class="modclass-badge">Foundation Class</span>
-      <img class="mc-photo" src="../assets/img/classroom-r0003050.jpg" alt="Foundation Class">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003050.jpg" alt="Foundation Class">
     </div>
     <div class="mc-scene " data-scene="ovs">
       <span class="modclass-badge">Overseas Program</span>
-      <img class="mc-photo" src="../assets/img/overseas-dsc09507.jpg" alt="Overseas Program">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09507.jpg" alt="Overseas Program">
     </div>
     <div class="mc-scene " data-scene="tfd">
-      <span class="modclass-badge">Qur'an Memorization</span>
-      <img class="mc-photo" src="../assets/img/quran-academy-r0003011.jpg" alt="Qur'an Memorization">
+      <span class="modclass-badge">Program Tahfidz</span>
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0003011.jpg" alt="Program Tahfidz">
     </div>
     <div class="mc-scene " data-scene="clb">
       <span class="modclass-badge">Club & Enrichment</span>
-      <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt="Club & Enrichment">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt="Club & Enrichment">
     </div>
     <div class="mc-scene " data-scene="lsk">
-      <span class="modclass-badge">Life Skills</span>
-      <img class="mc-photo" src="../assets/img/home-img-1509.jpg" alt="Life Skills">
+      <span class="modclass-badge">Life Skill</span>
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-1509.jpg" alt="Life Skill">
     </div>
     <div class="mc-scene " data-scene="uji">
-      <span class="modclass-badge">Graduate Quality Test</span>
-      <img class="mc-photo" src="../assets/img/senior-high-school-a-capture.jpg" alt="Graduate Quality Test">
+      <span class="modclass-badge">Uji Mutu Lulusan</span>
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-a-capture.jpg" alt="Uji Mutu Lulusan">
     </div>
     <div class="mc-scene " data-scene="utb">
       <span class="modclass-badge">TKA & UTBK Intensive</span>
-      <img class="mc-photo" src="../assets/img/2527-z1.jpg" alt="TKA & UTBK Intensive">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-z1.jpg" alt="TKA & UTBK Intensive">
     </div>
     <div class="mc-scene " data-scene="otg">
       <span class="modclass-badge">Outing Class</span>
-      <img class="mc-photo" src="../assets/img/overseas-dsc09466.jpg" alt="Outing Class">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09466.jpg" alt="Outing Class">
     </div>
     <div class="mc-scene " data-scene="utc">
       <span class="modclass-badge">TKA & UTBK Camp</span>
-      <img class="mc-photo" src="../assets/img/2750-r0003169.jpg" alt="TKA & UTBK Camp">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2750-r0003169.jpg" alt="TKA & UTBK Camp">
     </div>
     <div class="mc-scene " data-scene="msc">
       <span class="modclass-badge">Math & Science Camp</span>
-      <img class="mc-photo" src="../assets/img/laboratory-r0003017.jpg" alt="Math & Science Camp">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003017.jpg" alt="Math & Science Camp">
     </div>
     <div class="mc-scene " data-scene="enc">
       <span class="modclass-badge">English Camp</span>
-      <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt="English Camp">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt="English Camp">
     </div>
     <div class="mc-scene " data-scene="tfc">
       <span class="modclass-badge">Tahfidz Camp</span>
-      <img class="mc-photo" src="../assets/img/2527-3.jpg" alt="Tahfidz Camp">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-3.jpg" alt="Tahfidz Camp">
     </div>
     <div class="mc-scene " data-scene="mkd">
       <span class="modclass-badge">Market Day</span>
-      <img class="mc-photo" src="../assets/img/market-day-20221215085811-img-7341.jpg" alt="Market Day">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085811-img-7341.jpg" alt="Market Day">
     </div>
     <div class="mc-scene " data-scene="abl">
-      <span class="modclass-badge">Annual ABUELA Event</span>
-      <img class="mc-photo" src="../assets/img/home-20221214074906-img-6966.jpg" alt="Annual ABUELA Event">
+      <span class="modclass-badge">Event Tahunan ABUELA</span>
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-20221214074906-img-6966.jpg" alt="Event Tahunan ABUELA">
     </div>
     <div class="mc-scene " data-scene="ets">
       <span class="modclass-badge">English Talent Show</span>
-      <img class="mc-photo" src="../assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="English Talent Show">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="English Talent Show">
     </div>
   </div>
   <button class="mc-lb-close" onclick="mcCloseLB()" aria-label="Tutup">×</button>
 </div>
-</body>
-</html>

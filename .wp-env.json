@@ -1,0 +1,15 @@
+{
+  "core": "WordPress/WordPress#7.0",
+  "phpVersion": "8.1",
+  "plugins": ["polylang"],
+  "mappings": {
+    "wp-content/themes/almazaya": "./"
+  },
+  "lifecycleScripts": {
+    "afterStart": "wp option update permalink_structure '/%postname%/' && wp rewrite flush"
+  },
+  "config": {
+    "WP_DEBUG": true,
+    "SCRIPT_DEBUG": true
+  }
+}

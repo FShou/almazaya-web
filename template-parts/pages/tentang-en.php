@@ -1,75 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us — Al Mazaya Islamic School Banjarmasin</title>
-<meta name="description" content="About Al Mazaya Islamic School Banjarmasin: foundation, history, vision, mission, values, culture, and facilities. An adab-based Islamic school with technology.">
-  <link rel="alternate" hreflang="en" href="/en/tentang.html">
-  <link rel="alternate" hreflang="id" href="/tentang.html">
-  <link rel="alternate" hreflang="x-default" href="/tentang.html">
-<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=106">
-</head>
-<body class="about">
-
-<div class="topbar" role="navigation" aria-label="Link cepat">
-  <div class="container topbar-inner">
-    <div class="topbar-links">
-      <a class="topbar-class" href="https://almazayaislamicschool.sch.id/class" target="_blank" rel="noopener" aria-label="AMZ SHS Virtual Class">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/><path d="M22 10v6"/></svg>
-        <span>SHS Virtual Class</span>
-      </a>
-      <a class="topbar-class" href="https://almazayaislamicschool.my.id/class/login/index.php" target="_blank" rel="noopener" aria-label="AMZ JHS Virtual Class">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/><path d="m7 13 2-2 2 2M7 17l2-2 2 2"/></svg>
-        <span>JHS Virtual Class</span>
-      </a>
-      <span class="topbar-sep" aria-hidden="true"></span>
-      <a class="topbar-social" href="https://www.instagram.com/almazayaislamicschool/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg>
-      <span>Instagram</span>
-      </a>
-      <a class="topbar-social" href="https://wa.me/628115051123" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg>
-      <span>WhatsApp</span>
-      </a>
-    </div>
-  </div>
-</div>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <div class="logo-strip">
-        <img src="../assets/img/logo-yayasan.jpeg" alt="Al Mazaya Pelita Asia Foundation logo">
-        <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
-        <img src="../assets/img/logo-mmi.jpeg" alt="MMI logo" class="logo-mmi">
-      </div>
-      <span class="brand-name"><strong>Al Mazaya Islamic School</strong><span>Banjarmasin</span></span>
-    </a>
-    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tentang.html" class="active">About</a></li>
-        <li><a href="jenjang.html">Our School</a></li>
-        <li><a href="akademik.html">Academics</a></li>
-        <li><a href="berita.html">News</a></li>
-        <li><a href="galeri.html">Student Activities</a></li>
-        <li><a href="ppdb.html">Admission</a></li>
-      </ul>
-    </nav>
-    <span class="lang-toggle" aria-label="Switch language"><a href="../tentang.html" title="Bahasa Indonesia">ID</a><a class="active" href="tentang.html" title="English">EN</a></span>
-  </div>
-</header>
-
+<?php
+/**
+ * Template part: tentang (EN) — converted from static tentang.html.
+ * Loaded by page templates via almazaya_lang_suffix().
+ */
+?>
 <section class="page-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> / About Us</p>
+    <p class="breadcrumb"><a href="<?php echo esc_url( almazaya_url( 'index', '', '' ) ); ?>">Home</a> / About Us</p>
     <h1>About <span class="tone">Al Mazaya</span></h1>
     <p>"Al Mazaya" means excellence. An adab school shaping an excellent and noble Islamic generation.</p>
   </div>
@@ -84,7 +21,7 @@
       </div>
       <h2>An Islamic Institution Committed to <span class="tone">Shaping an Excellent Generation</span></h2>
       <p>Al Mazaya shapes an Islamic generation that excels in character and intellect — under the <strong>Al Mazaya Pelita Asia Foundation (YAPA)</strong> with a one-stop education services concept, from early childhood through to secondary.</p>
-      <p><a class="btn btn-gold" href="jenjang.html">Explore Our Programs</a></p>
+      <p><a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'jenjang', '', '' ) ); ?>">Explore Our Programs</a></p>
     </div>
     <div class="intro-stats reveal d1">
       <div class="fd"><strong><i>01</i>Islamic Values</strong><span>The foundation of life in every process.</span></div>
@@ -118,7 +55,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Foundation of tahfidz and language development</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="../assets/img/junior-high-school-r0003026.jpg" alt="Junior High First Cohort Photo"><span class="gal-label">Junior High First Cohort Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/junior-high-school-r0003026.jpg" alt="Junior High First Cohort Photo"><span class="gal-label">Junior High First Cohort Photo</span></div>
         </div>
       </div>
 
@@ -134,7 +71,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Focus on university preparation and achievement</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="../assets/img/senior-high-school-p.jpg" alt="Senior High Students Photo"><span class="gal-label">Senior High Students Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-p.jpg" alt="Senior High Students Photo"><span class="gal-label">Senior High Students Photo</span></div>
         </div>
       </div>
 
@@ -150,7 +87,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Milestone of the one-stop education services vision</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="../assets/img/2527-img-20230215-wa0042.jpg" alt="Foundation Office Photo"><span class="gal-label">Foundation Office Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-img-20230215-wa0042.jpg" alt="Foundation Office Photo"><span class="gal-label">Foundation Office Photo</span></div>
         </div>
       </div>
 
@@ -166,7 +103,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Mum &amp; Me, Playgroup, and Kinderworld programs</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="../assets/img/overseas-img-8661-min.jpg" alt="KB-TK MMI Al Mazaya Photo"><span class="gal-label">KB-TK MMI Al Mazaya Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="KB-TK MMI Al Mazaya Photo"><span class="gal-label">KB-TK MMI Al Mazaya Photo</span></div>
         </div>
       </div>
 
@@ -182,7 +119,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Realises a complete educational ecosystem</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="../assets/img/overseas-img-8712-min.jpg" alt="SD Al Mazaya Illustration"><span class="gal-label">SD Al Mazaya Illustration</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8712-min.jpg" alt="SD Al Mazaya Illustration"><span class="gal-label">SD Al Mazaya Illustration</span></div>
         </div>
       </div>
 
@@ -232,7 +169,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">01</span>
         <span class="story-ghost" aria-hidden="true">01</span>
-        <div class="has-photo story-img"><img class="slot-photo" src="../assets/img/overseas-img-8648-min.jpg" alt="Islamic Studies"><span class="gal-label">Islamic Studies</span></div>
+        <div class="has-photo story-img"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8648-min.jpg" alt="Islamic Studies"><span class="gal-label">Islamic Studies</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 01</span>
           <h3>Islamic Studies</h3>
@@ -243,7 +180,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">02</span>
         <span class="story-ghost" aria-hidden="true">02</span>
-        <div class="has-photo story-img warm"><img class="slot-photo" src="../assets/img/overseas-img-8652-min.jpg" alt="Character Building"><span class="gal-label">Character Building</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8652-min.jpg" alt="Character Building"><span class="gal-label">Character Building</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 02</span>
           <h3>Character Building</h3>
@@ -259,7 +196,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">03</span>
         <span class="story-ghost" aria-hidden="true">03</span>
-        <div class="has-photo story-img light"><img class="slot-photo" src="../assets/img/home-img-8658-min.jpg" alt="Academic Excellence"><span class="gal-label">Academic Excellence</span></div>
+        <div class="has-photo story-img light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-8658-min.jpg" alt="Academic Excellence"><span class="gal-label">Academic Excellence</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 03</span>
           <h3>Academic Excellence</h3>
@@ -270,7 +207,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">04</span>
         <span class="story-ghost" aria-hidden="true">04</span>
-        <div class="has-photo story-img warm"><img class="slot-photo" src="../assets/img/overseas-img-8661-min.jpg" alt="English Development"><span class="gal-label">English Development</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="English Development"><span class="gal-label">English Development</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 04</span>
           <h3>English Development</h3>
@@ -323,8 +260,8 @@
 
     <div class="culture-visual reveal" style="margin-top:2.2rem;">
       <div class="cv-media reveal">
-        <div class="has-photo img-slot warm" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="../assets/img/home-img-8658-min.jpg" alt="Smile &amp; Greet — welcoming each morning"><span class="gal-label">Smile &amp; Greet — welcoming each morning</span></div>
-        <div class="has-photo img-slot cool" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="../assets/img/overseas-img-8661-min.jpg" alt="Polite &amp; Courteous — manners in everyday life"><span class="gal-label">Polite &amp; Courteous — manners in everyday life</span></div>
+        <div class="has-photo img-slot warm" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-8658-min.jpg" alt="Smile &amp; Greet — welcoming each morning"><span class="gal-label">Smile &amp; Greet — welcoming each morning</span></div>
+        <div class="has-photo img-slot cool" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="Polite &amp; Courteous — manners in everyday life"><span class="gal-label">Polite &amp; Courteous — manners in everyday life</span></div>
       </div>
       <div class="cv-panel">
         <span class="culture-label">School Culture</span>
@@ -353,68 +290,3 @@
   </div>
 </div>
 </section>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="logo-strip">
-        <img src="../assets/img/logo-yayasan.jpeg" alt="Al Mazaya Pelita Asia Foundation logo">
-        <img src="../assets/img/logo.jpeg" alt="Al Mazaya Islamic School logo">
-        <img src="../assets/img/logo-mmi.jpeg" alt="MMI logo" class="logo-mmi">
-      </div>
-      <h4>AL MAZAYA ISLAMIC SCHOOL</h4>
-      <p>Your Islamic School in Banjarmasin — shaping an excellent, noble Islamic generation.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/almazayaislamicschool/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg></a>
-        <a href="https://www.youtube.com/@almazayaislamicschool1244" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></a>
-        <a href="https://wa.me/628115051123" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg></a>
-      </div>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul class="footer-links">
-        <li><a href="tentang.html">About Us</a></li>
-        <li><a href="jenjang.html">Our School</a></li>
-        <li><a href="akademik.html">Academics</a></li>
-        <li><a href="berita.html">News &amp; Achievements</a></li>
-        <li><a href="galeri.html">Student Activities</a></li>
-        <li><a href="ppdb.html">Admission</a></li>
-        <li><a href="https://psb.almazayaislamicschool.sch.id" target="_blank" rel="noopener">Online Admission Portal</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Virtual Class</h4>
-      <ul class="footer-links">
-        <li><a href="https://almazayaislamicschool.sch.id/class" target="_blank" rel="noopener">SHS Virtual Class</a></li>
-        <li><a href="https://almazayaislamicschool.my.id/class/login/index.php" target="_blank" rel="noopener">JHS Virtual Class</a></li>
-      </ul>
-      <h4 style="margin-top:1.6rem;">Office Hours</h4>
-      <p>Monday – Saturday<br>07.00 – 16.00 WITA (GMT+8)</p>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>© <span data-year>2026</span> Al Mazaya Islamic School Banjarmasin. All rights reserved.</span>
-    <span>Al Mazaya Pelita Asia Foundation</span>
-  </div>
-</footer>
-
-<a class="wa-float" href="https://wa.me/628115051123?text=Assalamualaikum" target="_blank" rel="noopener" aria-label="WhatsApp chat">
-  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg>
-</a>
-
-<div class="mobile-nav">
-  <button class="nav-close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-  <div class="mobile-nav-inner">
-        <a href="index.html">Home</a>
-        <a href="tentang.html" class="active">About</a>
-        <a href="jenjang.html">Our School</a>
-        <a href="akademik.html">Academics</a>
-        <a href="berita.html">News</a>
-        <a href="galeri.html">Student Activities</a>
-        <a href="ppdb.html">Admission</a>
-        <div class="lang-toggle mobile-lang" aria-label="Switch language"><a href="../tentang.html" title="Bahasa Indonesia">ID</a><a class="active" href="tentang.html" title="English">EN</a></div>
-  </div>
-</div>
-<script src="../assets/js/main.js?v=64"></script>
-</body>
-</html>

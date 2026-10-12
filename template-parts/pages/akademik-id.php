@@ -1,76 +1,12 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akademik — Al Mazaya Islamic School Banjarmasin</title>
-<meta name="description" content="Akademik Al Mazaya Islamic School Banjarmasin: pilar pendidikan, kurikulum, virtual class, kelas modern, dan program pembelajaran per jenjang.">
-  <link rel="alternate" hreflang="id" href="/akademik.html">
-  <link rel="alternate" hreflang="en" href="/en/akademik.html">
-  <link rel="alternate" hreflang="x-default" href="/akademik.html">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=106">
-</head>
-<body>
-
-<div class="topbar" role="navigation" aria-label="Link cepat">
-  <div class="container topbar-inner">
-    <div class="topbar-links">
-      <a class="topbar-class" href="https://almazayaislamicschool.sch.id/class" target="_blank" rel="noopener" aria-label="AMZ SHS Virtual Class">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/><path d="M22 10v6"/></svg>
-        <span>SHS Virtual Class</span>
-      </a>
-      <a class="topbar-class" href="https://almazayaislamicschool.my.id/class/login/index.php" target="_blank" rel="noopener" aria-label="AMZ JHS Virtual Class">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/><path d="m7 13 2-2 2 2M7 17l2-2 2 2"/></svg>
-        <span>JHS Virtual Class</span>
-      </a>
-      <span class="topbar-sep" aria-hidden="true"></span>
-      <a class="topbar-social" href="https://www.instagram.com/almazayaislamicschool/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg>
-      <span>Instagram</span>
-      </a>
-      <a class="topbar-social" href="https://wa.me/628115051123" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg>
-      <span>WhatsApp</span>
-      </a>
-    </div>
-  </div>
-</div>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <div class="logo-strip">
-        <img src="assets/img/logo-yayasan.jpeg" alt="Logo Yayasan Al Mazaya Pelita Asia">
-        <img src="assets/img/logo.jpeg" alt="Logo Al Mazaya Islamic School">
-        <img src="assets/img/logo-mmi.jpeg" alt="Logo MMI" class="logo-mmi">
-      </div>
-      <span class="brand-name"><strong>Al Mazaya Islamic School</strong><span>Banjarmasin</span></span>
-    </a>
-    <button class="nav-burger" aria-label="Buka menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="jenjang.html">Sekolah Kami</a></li>
-        <li><a href="akademik.html" class="active">Akademik</a></li>
-        <li><a href="berita.html">Berita</a></li>
-        <li><a href="galeri.html">Aktivitas Siswa</a></li>
-        <li><a href="ppdb.html">PPDB</a></li>
-      </ul>
-    </nav>
-      <span class="lang-toggle" aria-label="Ganti bahasa"><a class="active" href="akademik.html" title="Bahasa Indonesia">ID</a><a href="en/akademik.html" title="English">EN</a></span>
-
-  </div>
-</header>
-
+<?php
+/**
+ * Template part: akademik (ID) — converted from static akademik.html.
+ * Loaded by page templates via almazaya_lang_suffix().
+ */
+?>
 <section class="page-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Beranda</a> / Akademik</p>
+    <p class="breadcrumb"><a href="<?php echo esc_url( almazaya_url( 'index', '', '' ) ); ?>">Beranda</a> / Akademik</p>
     <h1>Akademik <span class="tone">Al Mazaya</span></h1>
     <p>Membangun kecerdasan, karakter, dan kesiapan global melalui kurikulum terpadu.</p>
   </div>
@@ -121,42 +57,42 @@
 
         <div class="mc-scene active" data-scene="desk">
           <span class="modclass-badge">Ruang Kelas Digital</span>
-          <img class="mc-photo" src="assets/img/classroom-r0003044.jpg" alt="Ruang Kelas Digital">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003044.jpg" alt="Ruang Kelas Digital">
         </div>
 
         <div class="mc-scene" data-scene="lab">
           <span class="modclass-badge">Lab Komputer &amp; IT</span>
-          <img class="mc-photo" src="assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt="Lab Komputer &amp; IT">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt="Lab Komputer &amp; IT">
         </div>
 
         <div class="mc-scene" data-scene="sci">
           <span class="modclass-badge">Lab IPA · Fisika &amp; Kimia</span>
-          <img class="mc-photo" src="assets/img/laboratory-r0003095.jpg" alt="Lab IPA · Fisika &amp; Kimia">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003095.jpg" alt="Lab IPA · Fisika &amp; Kimia">
         </div>
 
         <div class="mc-scene" data-scene="bio">
           <span class="modclass-badge">Lab Biologi</span>
-          <img class="mc-photo" src="assets/img/laboratory-r0003078.jpg" alt="Lab Biologi">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003078.jpg" alt="Lab Biologi">
         </div>
 
         <div class="mc-scene" data-scene="lib">
           <span class="modclass-badge">Perpustakaan</span>
-          <img class="mc-photo" src="assets/img/hello-world-wis.jpg" alt="Perpustakaan">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hello-world-wis.jpg" alt="Perpustakaan">
         </div>
 
         <div class="mc-scene" data-scene="eng">
           <span class="modclass-badge">English Zone</span>
-          <img class="mc-photo" src="assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt="English Zone">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt="English Zone">
         </div>
 
         <div class="mc-scene" data-scene="mus">
           <span class="modclass-badge">Musala</span>
-          <img class="mc-photo" src="assets/img/quran-academy-r0002997.jpg" alt="Musala">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0002997.jpg" alt="Musala">
         </div>
 
         <div class="mc-scene" data-scene="hall">
           <span class="modclass-badge">Lapangan Indoor</span>
-          <img class="mc-photo" src="assets/img/hall-r0003030.jpg" alt="Lapangan Indoor">
+          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hall-r0003030.jpg" alt="Lapangan Indoor">
         </div>
       </div>
 
@@ -171,41 +107,41 @@
           <li><span class="mc-dot teal"></span><b>Virtual Class</b> — belajar kapan &amp; di mana saja</li>
         </ul>
 
-        <a class="btn btn-gold" href="ppdb.html">Gabung Sekarang →</a>
+        <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Gabung Sekarang →</a>
       </div>
     </div>
 
     <div class="modclass-more">
       <button class="mc-peek active reveal" data-target="desk" onclick="mcSwitch('desk',this)">
-        <div class="mc-peek-scene desk-scene"><img src="assets/img/classroom-r0003044.jpg" alt=""></div>
+        <div class="mc-peek-scene desk-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003044.jpg" alt=""></div>
         <span>Ruang Kelas Digital</span>
       </button>
       <button class="mc-peek reveal d1" data-target="lab" onclick="mcSwitch('lab',this)">
-        <div class="mc-peek-scene lab-scene"><img src="assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt=""></div>
+        <div class="mc-peek-scene lab-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt=""></div>
         <span>Lab Komputer &amp; IT</span>
       </button>
       <button class="mc-peek reveal d2" data-target="sci" onclick="mcSwitch('sci',this)">
-        <div class="mc-peek-scene sci-scene"><img src="assets/img/laboratory-r0003095.jpg" alt=""></div>
+        <div class="mc-peek-scene sci-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003095.jpg" alt=""></div>
         <span>Lab IPA (Fisika–Kimia)</span>
       </button>
       <button class="mc-peek reveal" data-target="bio" onclick="mcSwitch('bio',this)">
-        <div class="mc-peek-scene"><img src="assets/img/laboratory-r0003078.jpg" alt=""></div>
+        <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003078.jpg" alt=""></div>
         <span>Lab Biologi</span>
       </button>
       <button class="mc-peek reveal" data-target="lib" onclick="mcSwitch('lib',this)">
-        <div class="mc-peek-scene"><img src="assets/img/hello-world-wis.jpg" alt=""></div>
+        <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hello-world-wis.jpg" alt=""></div>
         <span>Perpustakaan</span>
       </button>
       <button class="mc-peek reveal" data-target="eng" onclick="mcSwitch('eng',this)">
-        <div class="mc-peek-scene"><img src="assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt=""></div>
+        <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt=""></div>
         <span>English Zone</span>
       </button>
       <button class="mc-peek reveal" data-target="mus" onclick="mcSwitch('mus',this)">
-        <div class="mc-peek-scene"><img src="assets/img/quran-academy-r0002997.jpg" alt=""></div>
+        <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0002997.jpg" alt=""></div>
         <span>Musala</span>
       </button>
       <button class="mc-peek reveal" data-target="hall" onclick="mcSwitch('hall',this)">
-        <div class="mc-peek-scene"><img src="assets/img/hall-r0003030.jpg" alt=""></div>
+        <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hall-r0003030.jpg" alt=""></div>
         <span>Lapangan Indoor</span>
       </button>
     </div>
@@ -223,17 +159,17 @@
       <article class="feature-card facility-card reveal">
         <h3>KB-TK MMI</h3>
         <p>Montessori authentic: Mum &amp; Me, Playgroup, dan Kinderworld untuk usia 6 bulan–6 tahun.</p>
-        <a class="more-link" href="jenjang.html#mmi">Lihat jenjang →</a>
+        <a class="more-link" href="<?php echo esc_url( almazaya_url( 'jenjang', '', '#mmi' ) ); ?>">Lihat jenjang →</a>
       </article>
       <article class="feature-card facility-card reveal d1">
         <h3>SMP</h3>
         <p>Foundation, English Quarantine, English Camp, Science Camp, dan pembinaan olimpiade.</p>
-        <a class="more-link" href="jenjang.html">Lihat jenjang →</a>
+        <a class="more-link" href="<?php echo esc_url( almazaya_url( 'jenjang', '', '' ) ); ?>">Lihat jenjang →</a>
       </article>
       <article class="feature-card facility-card reveal d2">
         <h3>SMA</h3>
         <p>Super Camp, Students Club, Enrichment, serta persiapan UTBK dan beasiswa.</p>
-        <a class="more-link" href="jenjang.html">Lihat jenjang →</a>
+        <a class="more-link" href="<?php echo esc_url( almazaya_url( 'jenjang', '', '' ) ); ?>">Lihat jenjang →</a>
       </article>
       <article class="feature-card facility-card reveal d3">
         <h3>Virtual Class</h3>
@@ -272,68 +208,10 @@
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="logo-strip">
-        <img src="assets/img/logo-yayasan.jpeg" alt="Logo Yayasan Al Mazaya Pelita Asia">
-        <img src="assets/img/logo.jpeg" alt="Logo Al Mazaya Islamic School">
-        <img src="assets/img/logo-mmi.jpeg" alt="Logo MMI" class="logo-mmi">
-      </div>
-      <h4>AL MAZAYA ISLAMIC SCHOOL</h4>
-      <p>Mewujudkan generasi Islam unggul dan berakhlak mulia melalui pendidikan Islami, bahasa, dan teknologi.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/almazayaislamicschool/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg></a>
-        <a href="https://www.youtube.com/@almazayaislamicschool1244" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></a>
-        <a href="https://wa.me/628115051123" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg></a>
-      </div>
-    </div>
-    <div>
-      <h4>Tautan Cepat</h4>
-      <ul class="footer-links">
-        <li><a href="tentang.html">Tentang Kami</a></li>
-        <li><a href="jenjang.html">Sekolah Kami</a></li>
-        <li><a href="akademik.html">Akademik</a></li>
-        <li><a href="berita.html">Berita &amp; Prestasi</a></li>
-        <li><a href="galeri.html">Aktivitas Siswa</a></li>
-        <li><a href="ppdb.html">PPDB</a></li>
-        <li><a href="https://psb.almazayaislamicschool.sch.id" target="_blank" rel="noopener">Portal PSB Online</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Virtual Class</h4>
-      <ul class="footer-links">
-        <li><a href="https://almazayaislamicschool.sch.id/class" target="_blank" rel="noopener">SHS Virtual Class</a></li>
-        <li><a href="https://almazayaislamicschool.my.id/class/login/index.php" target="_blank" rel="noopener">JHS Virtual Class</a></li>
-      </ul>
-      <h4 style="margin-top:1.6rem;">Jam Layanan</h4>
-      <p>Senin – Sabtu<br>07.00 – 16.00 WITA</p>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>© <span data-year>2026</span> Al Mazaya Islamic School Banjarmasin. All rights reserved.</span>
-    <span>Yayasan Al Mazaya Pelita Asia</span>
-  </div>
-</footer>
 
-<a class="wa-float" href="https://wa.me/628115051123?text=Assalamualaikum" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5L9 7c-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3ZM12 21.8a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.3 4.7ZM12 0A11.9 11.9 0 0 0 1.7 18l-1.6 6 6.1-1.6A12 12 0 1 0 12 0Z"/></svg>
-</a>
 
-<div class="mobile-nav">
-  <button class="nav-close" aria-label="Tutup menu"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-  <div class="mobile-nav-inner">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="jenjang.html">Sekolah Kami</a>
-        <a href="akademik.html" class="active">Akademik</a>
-        <a href="berita.html">Berita</a>
-        <a href="galeri.html">Aktivitas Siswa</a>
-        <a href="ppdb.html">PPDB</a>
-        <div class="lang-toggle mobile-lang" aria-label="Ganti bahasa"><a class="active" href="akademik.html" title="Bahasa Indonesia">ID</a><a href="en/akademik.html" title="English">EN</a></div>
-  </div>
-</div>
-<script src="assets/js/main.js?v=64"></script>
+
+
 <script>
 function mcSwitch(scene,btn){
   var stage=document.getElementById('mc-stage'),peeks=document.querySelectorAll('.mc-peek');
@@ -366,38 +244,36 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')mcCloseLB()}
   <div class="mc-lightbox-inner">
     <div class="mc-scene active" data-scene="desk">
       <span class="modclass-badge">Ruang Kelas Digital</span>
-      <img class="mc-photo" src="assets/img/classroom-r0003044.jpg" alt="Ruang Kelas Digital">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003044.jpg" alt="Ruang Kelas Digital">
     </div>
     <div class="mc-scene" data-scene="lab">
       <span class="modclass-badge">Lab Komputer &amp; IT</span>
-      <img class="mc-photo" src="assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt="Lab Komputer &amp; IT">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-whats-app-image-2023-07-31-at-20-29-23.jpg" alt="Lab Komputer &amp; IT">
     </div>
     <div class="mc-scene" data-scene="sci">
       <span class="modclass-badge">Lab IPA · Fisika &amp; Kimia</span>
-      <img class="mc-photo" src="assets/img/laboratory-r0003095.jpg" alt="Lab IPA · Fisika &amp; Kimia">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003095.jpg" alt="Lab IPA · Fisika &amp; Kimia">
     </div>
     <div class="mc-scene" data-scene="bio">
       <span class="modclass-badge">Lab Biologi</span>
-      <img class="mc-photo" src="assets/img/laboratory-r0003078.jpg" alt="Lab Biologi">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003078.jpg" alt="Lab Biologi">
     </div>
     <div class="mc-scene" data-scene="lib">
       <span class="modclass-badge">Perpustakaan</span>
-      <img class="mc-photo" src="assets/img/hello-world-wis.jpg" alt="Perpustakaan">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hello-world-wis.jpg" alt="Perpustakaan">
     </div>
     <div class="mc-scene" data-scene="eng">
       <span class="modclass-badge">English Zone</span>
-      <img class="mc-photo" src="assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt="English Zone">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-131851.jpg" alt="English Zone">
     </div>
     <div class="mc-scene" data-scene="mus">
       <span class="modclass-badge">Musala</span>
-      <img class="mc-photo" src="assets/img/quran-academy-r0002997.jpg" alt="Musala">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0002997.jpg" alt="Musala">
     </div>
     <div class="mc-scene" data-scene="hall">
       <span class="modclass-badge">Lapangan Indoor</span>
-      <img class="mc-photo" src="assets/img/hall-r0003030.jpg" alt="Lapangan Indoor">
+      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hall-r0003030.jpg" alt="Lapangan Indoor">
     </div>
   </div>
   <button class="mc-lb-close" onclick="mcCloseLB()" aria-label="Tutup">×</button>
 </div>
-</body>
-</html>

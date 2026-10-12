@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-12 09:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: functions.php:37
+msgid "Menu Utama"
+msgstr ""
+
+#: functions.php:38
+msgid "Menu Footer"
+msgstr ""
+
+#: functions.php:127
+msgid "Tautan Al Mazaya"
+msgstr ""
+
+#: functions.php:132
+msgid "SHS Virtual Class URL"
+msgstr ""
+
+#: functions.php:133
+msgid "JHS Virtual Class URL"
+msgstr ""
+
+#: functions.php:134
+msgid "Instagram URL"
+msgstr ""
+
+#: functions.php:135
+msgid "WhatsApp URL"
+msgstr ""
+
+#: functions.php:136
+msgid "WhatsApp mengambang URL"
+msgstr ""
+
+#: functions.php:137
+msgid "YouTube URL"
+msgstr ""
+
+#: functions.php:138
+msgid "Portal PSB URL"
+msgstr ""
+
+#: index.php:23
+msgid "Belum ada tulisan."
+msgstr ""

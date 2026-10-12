@@ -12,16 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=106">
-<style>
-  .jenjang-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.6rem; align-items: center; }
-  .jenjang-detail.flip { direction: rtl; }
-  .jenjang-detail.flip > * { direction: ltr; }
-  .prog-list li { display: flex; gap: .7rem; padding: .5rem 0; border-bottom: 1px dashed var(--line); }
-  .prog-list li:last-child { border: 0; }
-  .prog-list svg { width: 20px; height: 20px; stroke: var(--gold-deep); flex-shrink: 0; margin-top: 3px; }
-  @media (max-width: 860px) { .jenjang-detail { grid-template-columns: 1fr; } }
-</style>
+<link rel="stylesheet" href="assets/css/style.css?v=107">
 </head>
 <body>
 
@@ -65,7 +56,13 @@
       <ul>
         <li><a href="index.html">Beranda</a></li>
         <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="jenjang.html" class="active">Sekolah Kami</a></li>
+        <li class="has-sub"><a href="jenjang.html" class="active">Sekolah Kami</a>
+          <ul class="sub-nav">
+            <li><a href="mmi.html">KB-TK MMI</a></li>
+            <li><a href="smp.html">SMP</a></li>
+            <li><a href="sma.html">SMA</a></li>
+          </ul>
+        </li>
         <li><a href="akademik.html">Akademik</a></li>
         <li><a href="berita.html">Berita</a></li>
         <li><a href="galeri.html">Aktivitas Siswa</a></li>
@@ -100,7 +97,7 @@
           <span>MMI Preschool · Montessori Authentic</span>
           <h3>Preschool &amp; Playgroup</h3>
           <p>Program Montessori autentik satu-satunya di Kalimantan — partnership MMI Singapore. Usia 6 bulan sampai 6 tahun dengan pendekatan child-led learning.</p>
-          <a class="btn btn-outline" href="#mmi">Selengkapnya</a>
+          <a class="btn btn-outline" href="mmi.html">Selengkapnya</a>
         </div>
       </article>
 
@@ -109,7 +106,7 @@
           <span>SMP · Terakreditasi A</span>
           <h3>Junior High School</h3>
           <p>Fondasi kuat akademik &amp; karakter: English Camp kelas 7, tahfidz bertahap, serta pembiasaan Bahasa Inggris dan Arab setiap hari.</p>
-          <a class="btn btn-outline" href="#smp">Selengkapnya</a>
+          <a class="btn btn-outline" href="smp.html">Selengkapnya</a>
         </div>
       </article>
 
@@ -118,71 +115,13 @@
           <span>SMA · Terakreditasi A</span>
           <h3>Senior High School</h3>
           <p>Persiapan lanjut studi ke PTN ternama (UI, ULM, ITS, ITB) dengan pembinaan olimpiade sains, debat, dan pendalaman tahfidz.</p>
-          <a class="btn btn-outline" href="#sma">Selengkapnya</a>
+          <a class="btn btn-outline" href="sma.html">Selengkapnya</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- MMI PRESCHOOL -->
-<section class="section" id="mmi">
-  <div class="container jenjang-detail">
-    <div class="reveal">
-      <span class="kicker">Preschool · Modern Montessori International</span>
-      <h2>MMI Al Mazaya <span class="tone">Preschool</span></h2>
-      <p style="margin-top:.9rem;">Bersama <strong>MMI Singapore</strong>, Al Mazaya menghadirkan pendidikan Montessori autentik pertama di Kalimantan. Kurikulum dirancang untuk menumbuhkan kemandirian, rasa ingin tahu, dan kecintaan belajar sejak usia dini.</p>
-      <ul class="prog-list" style="margin-top:1.2rem;">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Mum &amp; Me (usia 6–24 bulan) — stimulasi awal bersama orang tua</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Playgroup (usia 2–3 tahun) — bermain terstruktur ala Montessori</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Montessori Kinderworld (usia 3–6 tahun) — kurikulum lengkap</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Lingkungan belajar hands-on dengan material Montessori autentik</li>
-      </ul>
-      <p style="margin-top:1.2rem; font-size:.88rem; color:var(--slate-light); display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;"><span style="display:inline-flex; align-items:center; gap:.4rem;"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;stroke:var(--gold-deep);"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.6 2Z"/></svg>0811-465-4040</span> <span style="display:inline-flex; align-items:center; gap:.4rem;"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;stroke:var(--gold-deep);"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/><circle cx="12" cy="13" r="4"/></svg><a href="https://www.instagram.com/modernmontessoribanjarmasin/" target="_blank" rel="noopener" style="color:var(--gold-deep);">@modernmontessoribanjarmasin</a></span></p>
-    </div>
-    <div class="has-photo img-slot reveal d1" style="min-height:360px;"><img class="slot-photo" src="assets/img/overseas-img-8661-min.jpg" alt="Foto MMI Preschool Al Mazaya">Foto MMI Preschool Al Mazaya</div>
-  </div>
-</section>
-
-<!-- SMP -->
-<section class="section" id="smp">
-  <div class="container jenjang-detail">
-    <div class="reveal">
-      <span class="kicker">SMP · Terakreditasi A</span>
-      <h2>Junior <span class="tone">High School</span></h2>
-      <p style="margin-top:.9rem;">Fondasi masa depan siswa dibangun sejak kelas 7: <strong>Program Foundation</strong> di awal tahun ajaran — 2 bulan matrikulasi pembiasaan budaya (5S, tahfizh, mapel umum) dilanjutkan <strong>English Quarantine</strong> intensif, lalu <strong>English Camp</strong> tahunan yang menginap di sekolah.</p>
-      <ul class="prog-list" style="margin-top:1.2rem;">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Program Foundation 3 bulan: matrikulasi budaya + English Quarantine</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>English Camp — tutor dari Kampung Inggris Pare, Kediri</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Tahfidz Al-Qur'an bertahap dengan target per semester</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Science Camp — projek sains nyata (budidaya lobster)</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Pembinaan olimpiade sains sejak dini (4 medali nasional 2024)</li>
-      </ul>
-    </div>
-    <div class="has-photo img-slot reveal d1" style="min-height:360px;"><img class="slot-photo" src="assets/img/junior-high-school-r0003026.jpg" alt="Foto Siswa SMP Al Mazaya">Foto Siswa SMP Al Mazaya</div>
-  </div>
-</section>
-
-<!-- SMA -->
-<section class="section bg-mist" id="sma">
-  <div class="container jenjang-detail flip">
-    <div class="reveal">
-      <span class="kicker">SMA · Terakreditasi A</span>
-      <h2>Senior <span class="tone">High School</span></h2>
-      <p style="margin-top:.9rem;">Persiapan maksimal menuju perguruan tinggi negeri ternama. Lulusan Al Mazaya telah diterima di <strong>UI, ULM, ITS, dan ITB</strong> — termasuk fakultas kedokteran umum &amp; gigi, serta jurusan Komputer UI.</p>
-      <ul class="prog-list" style="margin-top:1.2rem;">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Super Camp — belajar berbasis projek: Matematika, Fisika, Kimia</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Students Club &amp; Enrichment — pembinaan bakat + mentoring individu</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Bimbingan intensif UTBK &amp; jalur undangan PTN</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Pendalaman tahfidz &amp; penghargaan hafizh 30 juz</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Sertifikasi Cambridge English untuk kelulusan berstandar dunia</li>
-      </ul>
-    </div>
-    <div class="has-photo img-slot reveal d1 warm" style="min-height:360px;"><img class="slot-photo" src="assets/img/senior-high-school-p.jpg" alt="Foto Siswa SMA Al Mazaya">Foto Siswa SMA Al Mazaya</div>
-  </div>
-</section>
-
-<!-- EKSKUL -->
 <section class="section">
   <div class="container">
     <div class="section-head center reveal">
@@ -293,14 +232,17 @@
 <div class="mobile-nav">
   <button class="nav-close" aria-label="Tutup menu"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
   <div class="mobile-nav-inner">
-        <a href="index.html">Beranda</a>
+                <a href="index.html">Beranda</a>
         <a href="tentang.html">Tentang</a>
         <a href="jenjang.html" class="active">Sekolah Kami</a>
+        <a href="mmi.html" class="mobile-sub">KB-TK MMI</a>
+        <a href="smp.html" class="mobile-sub">SMP</a>
+        <a href="sma.html" class="mobile-sub">SMA</a>
         <a href="akademik.html">Akademik</a>
         <a href="berita.html">Berita</a>
         <a href="galeri.html">Aktivitas Siswa</a>
         <a href="ppdb.html">PPDB</a>
-        <div class="lang-toggle mobile-lang" aria-label="Ganti bahasa"><a class="active" href="jenjang.html" title="Bahasa Indonesia">ID</a><a href="en/jenjang.html" title="English">EN</a></div>
+<div class="lang-toggle mobile-lang" aria-label="Ganti bahasa"><a class="active" href="jenjang.html" title="Bahasa Indonesia">ID</a><a href="en/jenjang.html" title="English">EN</a></div>
   </div>
 </div>
 <script src="assets/js/main.js?v=64"></script>

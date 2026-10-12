@@ -750,7 +750,38 @@ a.partner-card { display: block; text-decoration: none; color: inherit; }
 @media (max-width: 640px) { .cta-inline { flex-direction: column; align-items: flex-start; } }
 
 
-/* ---------- Page hero (inner pages) ---------- */
+/* ---------- Jenjang detail + dropdown nav ---------- */
+.jenjang-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.6rem; align-items: center; }
+.jenjang-detail.flip { direction: rtl; }
+.jenjang-detail.flip > * { direction: ltr; }
+.prog-list li { display: flex; gap: .7rem; padding: .5rem 0; border-bottom: 1px dashed var(--line); }
+.prog-list li:last-child { border: 0; }
+.prog-list svg { width: 20px; height: 20px; stroke: var(--gold-deep); flex-shrink: 0; margin-top: 3px; }
+@media (max-width: 860px) { .jenjang-detail { grid-template-columns: 1fr; } }
+
+/* desktop dropdown under "Sekolah Kami" */
+.main-nav .has-sub { position: relative; }
+.main-nav .sub-nav {
+  position: absolute; top: 100%; left: 50%;
+  transform: translate(-50%, 8px);
+  display: block;
+  min-width: 210px;
+  margin: 0; padding: .5rem;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  z-index: 60;
+}
+.main-nav .has-sub:hover > .sub-nav,
+.main-nav .has-sub:focus-within > .sub-nav { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.main-nav .sub-nav a { display: block; padding: .6rem .8rem; border-radius: 8px; white-space: nowrap; }
+.main-nav .sub-nav a:hover { background: var(--mist); }
+/* mobile nested sub-links */
+.mobile-nav .mobile-sub { padding-left: 1.1rem; font-size: .92em; opacity: .92; }
 .page-hero {
   position: relative;
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);

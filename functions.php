@@ -542,7 +542,7 @@ function almazaya_register_cpts() {
 			),
 			'public'       => true,
 			'has_archive'  => false,
-			'show_in_rest' => true,
+			'show_in_rest' => false,
 			'menu_icon'    => 'dashicons-images-alt2',
 			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 		)
@@ -557,7 +557,7 @@ function almazaya_register_cpts() {
 			),
 			'public'       => true,
 			'has_archive'  => false,
-			'show_in_rest' => true,
+			'show_in_rest' => false,
 			'menu_icon'    => 'dashicons-networking',
 			'supports'     => array( 'title', 'thumbnail', 'excerpt', 'page-attributes' ),
 		)
@@ -572,7 +572,7 @@ function almazaya_register_cpts() {
 			),
 			'public'       => true,
 			'has_archive'  => false,
-			'show_in_rest' => true,
+			'show_in_rest' => false,
 			'menu_icon'    => 'dashicons-welcome-learn-more',
 			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 		)

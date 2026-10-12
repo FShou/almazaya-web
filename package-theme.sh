@@ -8,7 +8,8 @@ python3 - <<'EOF'
 import os, zipfile
 out = 'almazaya.zip'
 skip_dirs = {'.git', '.github'}
-skip_files = {'.wp-env.json', 'package-theme.sh', 'almazaya.zip'}
+skip_files = {'.wp-env.json', 'package-theme.sh', 'almazaya.zip',
+              'ABOUT_US.md', 'FACT_CHECK.md', 'PLAN.md', 'STATUS.md'}
 if os.path.exists(out):
     os.remove(out)
 n = 0

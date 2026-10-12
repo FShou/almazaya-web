@@ -17,7 +17,7 @@ with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
     for root, dirs, files in os.walk('.'):
         dirs[:] = [d for d in dirs if d not in skip_dirs and not d.startswith('.git')]
         for f in files:
-            if f in skip_files or f.endswith('.zip'):
+            if f in skip_files or f.endswith(('.zip', '.docx')):
                 continue
             p = os.path.join(root, f)
             z.write(p, os.path.join('almazaya', os.path.relpath(p, '.')))

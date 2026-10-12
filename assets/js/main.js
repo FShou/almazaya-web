@@ -114,6 +114,72 @@
     }
   });
 
+  /* Filter chips — berita & galeri (items carry data-cat) */
+  document.querySelectorAll('.filter-row').forEach(function (row) {
+    var chips = row.querySelectorAll('.filter-chip');
+    var section = row.closest('section');
+    if (!section) return;
+    var items = section.querySelectorAll('[data-cat]');
+    var empty = section.querySelector('[data-filter-empty]');
+    if (!items.length) return;
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        var showAll = /semua|all/i.test(chip.textContent);
+        var n = 0;
+        items.forEach(function (it) {
+          var hit = showAll || it.getAttribute('data-cat') === chip.textContent.trim();
+          it.style.display = hit ? '' : 'none';
+          if (hit) n++;
+        });
+        if (empty) empty.hidden = n > 0;
+      });
+    });
+  });
+
+  /* Gallery lightbox — click any gallery-bento photo */
+  (function galleryLightbox() {
+    var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-bento .img-slot'));
+    if (!items.length) return;
+    var ov = document.createElement('div');
+    ov.className = 'gal-lightbox';
+    ov.innerHTML = '<button class="gal-lb-close" aria-label="Tutup">\u00D7</button>' +
+      '<button class="gal-lb-prev" aria-label="Sebelumnya">\u2039</button>' +
+      '<figure><img alt=""><figcaption></figcaption></figure>' +
+      '<button class="gal-lb-next" aria-label="Berikutnya">\u203A</button>';
+    document.body.appendChild(ov);
+    var img = ov.querySelector('img'), cap = ov.querySelector('figcaption'), idx = 0;
+    function show(i) {
+      idx = (i + items.length) % items.length;
+      var im = items[idx].querySelector('img');
+      img.src = im.currentSrc || im.src;
+      img.alt = im.alt || '';
+      var label = items[idx].querySelector('.gal-label');
+      cap.textContent = label ? label.textContent : (im.alt || '');
+      ov.classList.add('open');
+      document.body.classList.add('modal-open');
+    }
+    function hide() {
+      ov.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+    items.forEach(function (it, i) {
+      it.style.cursor = 'zoom-in';
+      it.addEventListener('click', function () { show(i); });
+    });
+    ov.querySelector('.gal-lb-close').addEventListener('click', hide);
+    ov.querySelector('.gal-lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+    ov.querySelector('.gal-lb-next').addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+    ov.addEventListener('click', function (e) { if (e.target === ov) hide(); });
+    document.addEventListener('keydown', function (e) {
+      if (!ov.classList.contains('open')) return;
+      if (e.key === 'Escape') hide();
+      if (e.key === 'ArrowLeft') show(idx - 1);
+      if (e.key === 'ArrowRight') show(idx + 1);
+    });
+  })();
+
   /* Pillar cards — toggle open on click */
   var pillars = document.querySelectorAll('[data-pillar]');
   pillars.forEach(function (pillar) {

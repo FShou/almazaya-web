@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.0.0' );
-define( 'ALMAZAYA_JS_VERSION', '1.0.0' );
+define( 'ALMAZAYA_VERSION', '1.0.1' );
+define( 'ALMAZAYA_JS_VERSION', '1.0.1' );
 
 /* ---------- Setup ---------- */
 
@@ -87,7 +87,7 @@ function almazaya_lang_suffix() {
 /* ---------- Internal URLs ---------- */
 
 /**
- * URL to a theme page. $slug is one of index|tentang|akademik|jenjang|berita|galeri|ppdb.
+ * URL to a theme page. $slug is one of index|tentang|jenjang|mmi|smp|sma|berita|galeri|ppdb.
  * $lang_prefix is 'en/' for the English tree (Polylang default), '' otherwise.
  * Requires pages with matching slugs + "Post name" permalinks (see README).
  */
@@ -177,7 +177,6 @@ function almazaya_primary_links() {
 			array( 'index', 'Home' ),
 			array( 'tentang', 'About' ),
 			array( 'jenjang', 'Our School', $school_sub ),
-			array( 'akademik', 'Academics' ),
 			array( 'berita', 'News' ),
 			array( 'galeri', 'Student Activities' ),
 			array( 'ppdb', 'Admission' ),
@@ -186,9 +185,8 @@ function almazaya_primary_links() {
 	return array(
 		array( 'index', 'Beranda' ),
 		array( 'tentang', 'Tentang' ),
-		array( 'jenjang', 'Sekolah Kami', $school_sub ),
-		array( 'akademik', 'Akademik' ),
-		array( 'berita', 'Berita' ),
+			array( 'jenjang', 'Sekolah Kami', $school_sub ),
+			array( 'berita', 'Berita' ),
 		array( 'galeri', 'Aktivitas Siswa' ),
 		array( 'ppdb', 'PPDB' ),
 	);
@@ -199,7 +197,6 @@ function almazaya_footer_links() {
 		return array(
 			array( 'tentang', 'About Us' ),
 			array( 'jenjang', 'Our School' ),
-			array( 'akademik', 'Academics' ),
 			array( 'berita', 'News & Achievements' ),
 			array( 'galeri', 'Student Activities' ),
 			array( 'ppdb', 'Admission' ),

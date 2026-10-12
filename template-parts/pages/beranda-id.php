@@ -165,7 +165,7 @@
           <li><span class="mc-dot"></span><b>Montessori & Fondasi</b> — metode pertama yang ramah anak</li><li><span class="mc-dot gold"></span><b>Adab & Karakter</b> — dibiasakan sejak hari pertama</li><li><span class="mc-dot teal"></span><b>Keterampilan Dasar</b> — siap sebelum beranjak naik</li>
         </ul>
 
-        <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'akademik', '', '#program' ) ); ?>" id="mc-cta">Lihat Semua Program →</a>
+        <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'jenjang', '', '' ) ); ?>" id="mc-cta">Lihat Semua Program →</a>
       </div>
     </div>
 

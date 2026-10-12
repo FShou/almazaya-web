@@ -151,7 +151,7 @@
           <li><span class="mc-dot"></span><b>Montessori & Basics</b> — a proven first method</li><li><span class="mc-dot gold"></span><b>Character & Etiquette</b> — practiced from day one</li><li><span class="mc-dot teal"></span><b>Core Skills</b> — ready before the next step</li>
         </ul>
 
-        <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'akademik', '', '#program' ) ); ?>" id="mc-cta">Lihat Semua Program →</a>
+        <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'jenjang', '', '' ) ); ?>" id="mc-cta">Lihat Semua Program →</a>
       </div>
     </div>
 

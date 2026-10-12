@@ -33,9 +33,17 @@ Bilingual ID/EN, tested-up-to WordPress 7.0, requires PHP 7.4+.
    MMI/SMP/SMA di bawah Sekolah Kami, tiap bahasa) assign ke *Menu Utama*; buat menu footer assign ke *Menu Footer*.
    Tanpa menu pun jalan (fallback otomatis = link bawaan ID/EN).
 7. **Appearance → Customize → Tautan Al Mazaya**: isi URL SHS/JHS Virtual Class,
-   Instagram, WhatsApp, YouTube, Portal PSB (default sudah terisi URL produksi).
+   Instagram (+ Instagram MMI), WhatsApp, YouTube, Portal PSB (default sudah terisi URL produksi).
 8. **Appearance → Customize → Site Identity**: upload logo (opsional; fallback
    memakai logo bawaan theme) + Site Icon (pengganti favicon statis).
+9. **Edit gambar & teks dari dashboard** (tanpa utak-atik file):
+   - **Gambar: Beranda/Tentang/Sekolah/Jenjang/Berita/Galeri** — klik ganti
+     51 foto konten (default = foto bawaan theme). Alt text tetap dari template.
+   - **Teks: Footer/Kontak/CTA Pendaftaran** — tagline, jam layanan, nama
+     yayasan, telepon & IG MMI, teks CTA PPDB MMI/SMP/SMA (varian ID & EN).
+   - Berita/artikel dikelola via **Posts** (featured image = foto sampul).
+   Tambah item baru: 1 baris di `almazaya_content_images()` /
+   `almazaya_content_texts()` (functions.php) + 1 pemanggilan helper di template.
 
 ## Struktur
 

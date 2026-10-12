@@ -13,7 +13,7 @@ $en = almazaya_is_en();
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi.jpeg" alt="<?php echo esc_attr( $en ? 'MMI logo' : 'Logo MMI' ); ?>" class="logo-mmi">
       </div>
       <h4>AL MAZAYA ISLAMIC SCHOOL</h4>
-      <p><?php echo esc_html( $en ? 'Your Islamic School in Banjarmasin — shaping an excellent, noble Islamic generation.' : 'Mewujudkan generasi Islam unggul dan berakhlak mulia melalui pendidikan Islami, bahasa, dan teknologi.' ); ?></p>
+      <p><?php echo esc_html( almazaya_text( 'footer_tagline' ) ); ?></p>
       <div class="socials">
         <a href="<?php echo esc_url( almazaya_link( 'instagram' ) ); ?>" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2Zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4Zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-10.5a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></svg></a>
         <a href="<?php echo esc_url( almazaya_link( 'youtube' ) ); ?>" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></a>
@@ -21,7 +21,7 @@ $en = almazaya_is_en();
       </div>
     </div>
     <div>
-      <h4><?php echo esc_html( $en ? 'Quick Links' : 'Tautan Cepat' ); ?></h4>
+      <h4><?php echo esc_html( almazaya_text( 'footer_head_links' ) ); ?></h4>
       <?php
       if ( has_nav_menu( 'footer' ) ) {
         wp_nav_menu(
@@ -43,13 +43,13 @@ $en = almazaya_is_en();
         <li><a href="<?php echo esc_url( almazaya_link( 'shs_class' ) ); ?>" target="_blank" rel="noopener">SHS Virtual Class</a></li>
         <li><a href="<?php echo esc_url( almazaya_link( 'jhs_class' ) ); ?>" target="_blank" rel="noopener">JHS Virtual Class</a></li>
       </ul>
-      <h4 style="margin-top:1.6rem;"><?php echo esc_html( $en ? 'Office Hours' : 'Jam Layanan' ); ?></h4>
-      <p><?php echo $en ? 'Monday – Saturday<br>07.00 – 16.00 WITA (GMT+8)' : 'Senin – Sabtu<br>07.00 – 16.00 WITA'; ?></p>
+      <h4 style="margin-top:1.6rem;"><?php echo esc_html( almazaya_text( 'footer_head_hours' ) ); ?></h4>
+      <p><?php echo almazaya_html( 'office_hours' ); ?></p>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© <?php echo esc_html( gmdate( 'Y' ) ); ?> Al Mazaya Islamic School Banjarmasin. All rights reserved.</span>
-    <span><?php echo esc_html( $en ? 'Al Mazaya Pelita Asia Foundation' : 'Yayasan Al Mazaya Pelita Asia' ); ?></span>
+    <span>© <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( almazaya_text( 'footer_org' ) ); ?>. <?php echo esc_html( almazaya_text( 'footer_rights' ) ); ?></span>
+    <span><?php echo esc_html( almazaya_text( 'foundation_name' ) ); ?></span>
   </div>
 </footer>
 

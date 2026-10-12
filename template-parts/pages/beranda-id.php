@@ -96,63 +96,63 @@
 
         <div class="mc-scene active" data-scene="fnd">
           <span class="modclass-badge">Foundation Class</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003050.jpg" alt="Foundation Class">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'classroom_r0003050' ) ); ?>" alt="Foundation Class">
         </div>
         <div class="mc-scene " data-scene="ovs">
           <span class="modclass-badge">Overseas Program</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09507.jpg" alt="Overseas Program">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'overseas_dsc09507' ) ); ?>" alt="Overseas Program">
         </div>
         <div class="mc-scene " data-scene="tfd">
           <span class="modclass-badge">Program Tahfidz</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0003011.jpg" alt="Program Tahfidz">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'quran_academy_r0003011' ) ); ?>" alt="Program Tahfidz">
         </div>
         <div class="mc-scene " data-scene="clb">
           <span class="modclass-badge">Club & Enrichment</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt="Club & Enrichment">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_140122' ) ); ?>" alt="Club & Enrichment">
         </div>
         <div class="mc-scene " data-scene="lsk">
           <span class="modclass-badge">Life Skill</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-1509.jpg" alt="Life Skill">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'home_img_1509' ) ); ?>" alt="Life Skill">
         </div>
         <div class="mc-scene " data-scene="uji">
           <span class="modclass-badge">Uji Mutu Lulusan</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-a-capture.jpg" alt="Uji Mutu Lulusan">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'senior_high_school_a_capture' ) ); ?>" alt="Uji Mutu Lulusan">
         </div>
         <div class="mc-scene " data-scene="utb">
           <span class="modclass-badge">TKA & UTBK Intensive</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-z1.jpg" alt="TKA & UTBK Intensive">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( '2527_z1' ) ); ?>" alt="TKA & UTBK Intensive">
         </div>
         <div class="mc-scene " data-scene="otg">
           <span class="modclass-badge">Outing Class</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09466.jpg" alt="Outing Class">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'overseas_dsc09466' ) ); ?>" alt="Outing Class">
         </div>
         <div class="mc-scene " data-scene="utc">
           <span class="modclass-badge">TKA & UTBK Camp</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2750-r0003169.jpg" alt="TKA & UTBK Camp">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( '2750_r0003169' ) ); ?>" alt="TKA & UTBK Camp">
         </div>
         <div class="mc-scene " data-scene="msc">
           <span class="modclass-badge">Math & Science Camp</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003017.jpg" alt="Math & Science Camp">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'laboratory_r0003017' ) ); ?>" alt="Math & Science Camp">
         </div>
         <div class="mc-scene " data-scene="enc">
           <span class="modclass-badge">English Camp</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt="English Camp">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_145220' ) ); ?>" alt="English Camp">
         </div>
         <div class="mc-scene " data-scene="tfc">
           <span class="modclass-badge">Tahfidz Camp</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-3.jpg" alt="Tahfidz Camp">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( '2527_3' ) ); ?>" alt="Tahfidz Camp">
         </div>
         <div class="mc-scene " data-scene="mkd">
           <span class="modclass-badge">Market Day</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085811-img-7341.jpg" alt="Market Day">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221215085811_img_7341' ) ); ?>" alt="Market Day">
         </div>
         <div class="mc-scene " data-scene="abl">
           <span class="modclass-badge">Event Tahunan ABUELA</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-20221214074906-img-6966.jpg" alt="Event Tahunan ABUELA">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'home_20221214074906_img_6966' ) ); ?>" alt="Event Tahunan ABUELA">
         </div>
         <div class="mc-scene " data-scene="ets">
           <span class="modclass-badge">English Talent Show</span>
-          <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="English Talent Show">
+          <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_145717' ) ); ?>" alt="English Talent Show">
         </div>
       </div>
 
@@ -173,63 +173,63 @@
       <button class="prog-arrow prev" aria-label="Program sebelumnya" onclick="progMove(-1)">‹</button>
       <div class="prog-track" id="prog-track">
         <button class="mc-peek active" data-target="fnd" onclick="mcSwitch('fnd',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003050.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'classroom_r0003050' ) ); ?>" alt=""></div>
           <span>Foundation Class</span>
         </button>
         <button class="mc-peek " data-target="ovs" onclick="mcSwitch('ovs',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09507.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'overseas_dsc09507' ) ); ?>" alt=""></div>
           <span>Overseas Program</span>
         </button>
         <button class="mc-peek " data-target="tfd" onclick="mcSwitch('tfd',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0003011.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'quran_academy_r0003011' ) ); ?>" alt=""></div>
           <span>Program Tahfidz</span>
         </button>
         <button class="mc-peek " data-target="clb" onclick="mcSwitch('clb',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_140122' ) ); ?>" alt=""></div>
           <span>Club & Enrichment</span>
         </button>
         <button class="mc-peek " data-target="lsk" onclick="mcSwitch('lsk',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-1509.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'home_img_1509' ) ); ?>" alt=""></div>
           <span>Life Skill</span>
         </button>
         <button class="mc-peek " data-target="uji" onclick="mcSwitch('uji',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-a-capture.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'senior_high_school_a_capture' ) ); ?>" alt=""></div>
           <span>Uji Mutu Lulusan</span>
         </button>
         <button class="mc-peek " data-target="utb" onclick="mcSwitch('utb',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-z1.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( '2527_z1' ) ); ?>" alt=""></div>
           <span>TKA & UTBK Intensive</span>
         </button>
         <button class="mc-peek " data-target="otg" onclick="mcSwitch('otg',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09466.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'overseas_dsc09466' ) ); ?>" alt=""></div>
           <span>Outing Class</span>
         </button>
         <button class="mc-peek " data-target="utc" onclick="mcSwitch('utc',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2750-r0003169.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( '2750_r0003169' ) ); ?>" alt=""></div>
           <span>TKA & UTBK Camp</span>
         </button>
         <button class="mc-peek " data-target="msc" onclick="mcSwitch('msc',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003017.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'laboratory_r0003017' ) ); ?>" alt=""></div>
           <span>Math & Science Camp</span>
         </button>
         <button class="mc-peek " data-target="enc" onclick="mcSwitch('enc',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_145220' ) ); ?>" alt=""></div>
           <span>English Camp</span>
         </button>
         <button class="mc-peek " data-target="tfc" onclick="mcSwitch('tfc',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-3.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( '2527_3' ) ); ?>" alt=""></div>
           <span>Tahfidz Camp</span>
         </button>
         <button class="mc-peek " data-target="mkd" onclick="mcSwitch('mkd',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085811-img-7341.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'market_day_20221215085811_img_7341' ) ); ?>" alt=""></div>
           <span>Market Day</span>
         </button>
         <button class="mc-peek " data-target="abl" onclick="mcSwitch('abl',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-20221214074906-img-6966.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'home_20221214074906_img_6966' ) ); ?>" alt=""></div>
           <span>Event Tahunan ABUELA</span>
         </button>
         <button class="mc-peek " data-target="ets" onclick="mcSwitch('ets',this)">
-          <div class="mc-peek-scene"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt=""></div>
+          <div class="mc-peek-scene"><img src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_145717' ) ); ?>" alt=""></div>
           <span>English Talent Show</span>
         </button>
       </div>
@@ -580,7 +580,7 @@
 
     <div class="posts-featured">
       <article class="post-card reveal">
-        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8635-min.jpg" alt="Foto Prestasi">Foto Prestasi</div>
+        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8635_min' ) ); ?>" alt="Foto Prestasi">Foto Prestasi</div>
         <div class="post-body">
           <span class="chip gold">Prestasi</span>
           <h3><a href="#">4 Siswi SMP Al Mazaya Raih Medali Olimpiade Nasional</a></h3>
@@ -590,7 +590,7 @@
       </article>
 
       <article class="post-card reveal d1">
-        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/school-debate-competition-aq1.jpg" alt="Foto Debat">Foto Debat</div>
+        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'school_debate_competition_aq1' ) ); ?>" alt="Foto Debat">Foto Debat</div>
         <div class="post-body">
           <span class="chip gold">Prestasi</span>
           <h3><a href="#">Juara 2 Debat "International Events" UIN Antasari Banjarmasin</a></h3>
@@ -600,7 +600,7 @@
       </article>
 
       <article class="post-card reveal d2">
-        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8679-min.jpg" alt="Foto Kegiatan">Foto Kegiatan</div>
+        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8679_min' ) ); ?>" alt="Foto Kegiatan">Foto Kegiatan</div>
         <div class="post-body">
           <span class="chip">Kegiatan</span>
           <h3><a href="#">English Talent Show: Panggung Bakat Siswa Setiap Bulan</a></h3>
@@ -617,14 +617,14 @@
     </div>
 
     <div class="gallery-grid tall-feature reveal">
-      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-135505.jpg" alt="English Talent Show"><span class="gal-label">English Talent Show</span></div>
-      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221214073641-img-6924.jpg" alt="Market Day"><span class="gal-label">Market Day</span></div>
-      <div class="has-photo img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8730-min.jpg" alt="Overseas Program"><span class="gal-label">Overseas Program</span></div>
-      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/ramadhan-charity-day-img-5416-1.jpg" alt="Ramadhan Charity Day"><span class="gal-label">Ramadhan Charity Day</span></div>
-      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8756-min.jpg" alt="Wisuda &amp; Haflah"><span class="gal-label">Wisuda &amp; Haflah</span></div>
-      <div class="has-photo img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8809-min.jpg" alt="HUT Kemerdekaan RI"><span class="gal-label">HUT Kemerdekaan RI</span></div>
-      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8816-min.jpg" alt="Olimpiade Sains"><span class="gal-label">Olimpiade Sains</span></div>
-      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230825-132045-1.jpg" alt="English Camp"><span class="gal-label">English Camp</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_135505' ) ); ?>" alt="English Talent Show"><span class="gal-label">English Talent Show</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221214073641_img_6924' ) ); ?>" alt="Market Day"><span class="gal-label">Market Day</span></div>
+      <div class="has-photo img-slot light"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8730_min' ) ); ?>" alt="Overseas Program"><span class="gal-label">Overseas Program</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'ramadhan_charity_day_img_5416_1' ) ); ?>" alt="Ramadhan Charity Day"><span class="gal-label">Ramadhan Charity Day</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8756_min' ) ); ?>" alt="Wisuda &amp; Haflah"><span class="gal-label">Wisuda &amp; Haflah</span></div>
+      <div class="has-photo img-slot light"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8809_min' ) ); ?>" alt="HUT Kemerdekaan RI"><span class="gal-label">HUT Kemerdekaan RI</span></div>
+      <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8816_min' ) ); ?>" alt="Olimpiade Sains"><span class="gal-label">Olimpiade Sains</span></div>
+      <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230825_132045_1' ) ); ?>" alt="English Camp"><span class="gal-label">English Camp</span></div>
     </div>
   </div>
 </section>
@@ -707,63 +707,63 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')mcCloseLB()}
   <div class="mc-lightbox-inner">
         <div class="mc-scene active" data-scene="fnd">
       <span class="modclass-badge">Foundation Class</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/classroom-r0003050.jpg" alt="Foundation Class">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'classroom_r0003050' ) ); ?>" alt="Foundation Class">
     </div>
     <div class="mc-scene " data-scene="ovs">
       <span class="modclass-badge">Overseas Program</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09507.jpg" alt="Overseas Program">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'overseas_dsc09507' ) ); ?>" alt="Overseas Program">
     </div>
     <div class="mc-scene " data-scene="tfd">
       <span class="modclass-badge">Program Tahfidz</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/quran-academy-r0003011.jpg" alt="Program Tahfidz">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'quran_academy_r0003011' ) ); ?>" alt="Program Tahfidz">
     </div>
     <div class="mc-scene " data-scene="clb">
       <span class="modclass-badge">Club & Enrichment</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-140122.jpg" alt="Club & Enrichment">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_140122' ) ); ?>" alt="Club & Enrichment">
     </div>
     <div class="mc-scene " data-scene="lsk">
       <span class="modclass-badge">Life Skill</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-1509.jpg" alt="Life Skill">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'home_img_1509' ) ); ?>" alt="Life Skill">
     </div>
     <div class="mc-scene " data-scene="uji">
       <span class="modclass-badge">Uji Mutu Lulusan</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-a-capture.jpg" alt="Uji Mutu Lulusan">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'senior_high_school_a_capture' ) ); ?>" alt="Uji Mutu Lulusan">
     </div>
     <div class="mc-scene " data-scene="utb">
       <span class="modclass-badge">TKA & UTBK Intensive</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-z1.jpg" alt="TKA & UTBK Intensive">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( '2527_z1' ) ); ?>" alt="TKA & UTBK Intensive">
     </div>
     <div class="mc-scene " data-scene="otg">
       <span class="modclass-badge">Outing Class</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-dsc09466.jpg" alt="Outing Class">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'overseas_dsc09466' ) ); ?>" alt="Outing Class">
     </div>
     <div class="mc-scene " data-scene="utc">
       <span class="modclass-badge">TKA & UTBK Camp</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2750-r0003169.jpg" alt="TKA & UTBK Camp">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( '2750_r0003169' ) ); ?>" alt="TKA & UTBK Camp">
     </div>
     <div class="mc-scene " data-scene="msc">
       <span class="modclass-badge">Math & Science Camp</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/laboratory-r0003017.jpg" alt="Math & Science Camp">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'laboratory_r0003017' ) ); ?>" alt="Math & Science Camp">
     </div>
     <div class="mc-scene " data-scene="enc">
       <span class="modclass-badge">English Camp</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145220.jpg" alt="English Camp">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_145220' ) ); ?>" alt="English Camp">
     </div>
     <div class="mc-scene " data-scene="tfc">
       <span class="modclass-badge">Tahfidz Camp</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-3.jpg" alt="Tahfidz Camp">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( '2527_3' ) ); ?>" alt="Tahfidz Camp">
     </div>
     <div class="mc-scene " data-scene="mkd">
       <span class="modclass-badge">Market Day</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085811-img-7341.jpg" alt="Market Day">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221215085811_img_7341' ) ); ?>" alt="Market Day">
     </div>
     <div class="mc-scene " data-scene="abl">
       <span class="modclass-badge">Event Tahunan ABUELA</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-20221214074906-img-6966.jpg" alt="Event Tahunan ABUELA">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'home_20221214074906_img_6966' ) ); ?>" alt="Event Tahunan ABUELA">
     </div>
     <div class="mc-scene " data-scene="ets">
       <span class="modclass-badge">English Talent Show</span>
-      <img class="mc-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="English Talent Show">
+      <img class="mc-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_145717' ) ); ?>" alt="English Talent Show">
     </div>
   </div>
   <button class="mc-lb-close" onclick="mcCloseLB()" aria-label="Tutup">×</button>

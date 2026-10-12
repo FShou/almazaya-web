@@ -26,15 +26,15 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Cambridge English certification for world-standard graduation</li>
       </ul>
     </div>
-    <div class="has-photo img-slot reveal d1 warm" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-p.jpg" alt="SHS Students Photo">SHS Students Photo</div>
+    <div class="has-photo img-slot reveal d1 warm" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'senior_high_school_p' ) ); ?>" alt="SHS Students Photo">SHS Students Photo</div>
   </div>
 </section>
 
 <section class="cta-band on-dark">
   <div class="container">
-    <span class="kicker">SHS Admission</span>
-    <h2>Reach Your <span class="tone">Dream University</span></h2>
-    <p>"Our graduates are now at UI, ULM, ITS, and ITB — you could be next."</p>
+    <span class="kicker"><?php echo esc_html( almazaya_text( 'cta_sma_kicker' ) ); ?></span>
+    <h2><?php echo almazaya_html( 'cta_sma_h2' ); ?></h2>
+    <p>"<?php echo esc_html( almazaya_text( 'cta_sma_p' ) ); ?>"</p>
     <div class="hero-actions" style="justify-content:center;">
       <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Join via Admission</a>
       <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Flow & Requirements</a>

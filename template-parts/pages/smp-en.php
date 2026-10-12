@@ -26,15 +26,15 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Early science olympiad coaching (4 national medals in 2024)</li>
       </ul>
     </div>
-    <div class="has-photo img-slot reveal d1" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/junior-high-school-r0003026.jpg" alt="JHS Students Photo">JHS Students Photo</div>
+    <div class="has-photo img-slot reveal d1" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'junior_high_school_r0003026' ) ); ?>" alt="JHS Students Photo">JHS Students Photo</div>
   </div>
 </section>
 
 <section class="cta-band on-dark">
   <div class="container">
-    <span class="kicker">JHS Admission</span>
-    <h2>Strong Foundations <span class="tone">from Grade 7</span></h2>
-    <p>"Join the Al Mazaya JHS cohort — seats are limited each academic year."</p>
+    <span class="kicker"><?php echo esc_html( almazaya_text( 'cta_smp_kicker' ) ); ?></span>
+    <h2><?php echo almazaya_html( 'cta_smp_h2' ); ?></h2>
+    <p>"<?php echo esc_html( almazaya_text( 'cta_smp_p' ) ); ?>"</p>
     <div class="hero-actions" style="justify-content:center;">
       <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Join via Admission</a>
       <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Flow & Requirements</a>

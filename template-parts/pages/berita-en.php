@@ -27,7 +27,7 @@
         <h3>Student <span class="tone">Achievement</span></h3>
       </div>
       <article data-cat="Achievement" class="post-card reveal">
-        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/category-news-whats-app-image-2023-11-23-at-11-52-59-am.jpg" alt="Sep 6, 2024">Achievement Photo</div>
+        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'category_news_whats_app_image_2023_11_23_at_11_52_59_am' ) ); ?>" alt="Sep 6, 2024">Achievement Photo</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Achievement</span> Sep 6, 2024</div>
           <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=emas-onsa' ) ); ?>">Gold Medal in ONSA Medicine &amp; English Etanider — SHS Al Mazaya</a></h3>
@@ -37,7 +37,7 @@
       </article>
 
       <article data-cat="Achievement" class="post-card reveal d1">
-        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/category-news-whats-app-image-2023-11-23-at-11-52-59-am-124.jpg" alt="Sep 6, 2024">Achievement Photo</div>
+        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'category_news_whats_app_image_2023_11_23_at_11_52_59_am_124' ) ); ?>" alt="Sep 6, 2024">Achievement Photo</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Achievement</span> Sep 6, 2024</div>
           <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=olimpiade-smp' ) ); ?>">4 JHS Students Shine at National Olympiads</a></h3>
@@ -47,7 +47,7 @@
       </article>
 
       <article data-cat="Achievement" class="post-card reveal d2">
-        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8648-min.jpg" alt="Sep 6, 2024">Students Photo</div>
+        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8648_min' ) ); ?>" alt="Sep 6, 2024">Students Photo</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Achievement</span> Sep 6, 2024</div>
           <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=juara-olimpiade' ) ); ?>">Brilliant! 4 JHS Students Won the National Olympics!</a></h3>
@@ -57,7 +57,7 @@
       </article>
 
       <article data-cat="Achievement" class="post-card reveal">
-        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/school-debate-competition-aq2.jpg" alt="Dec 2, 2023">Debate Photo</div>
+        <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'school_debate_competition_aq2' ) ); ?>" alt="Dec 2, 2023">Debate Photo</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Achievement</span> Dec 2, 2023</div>
           <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=debat-uin' ) ); ?>">2nd Place, UIN Antasari "International Events 2023" Debate</a></h3>
@@ -71,7 +71,7 @@
         <h3>Activities &amp; <span class="tone">Creativity</span></h3>
       </div>
       <article data-cat="Event" class="post-card reveal d1" style="grid-column: 1 / -1;">
-        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="Aug 25, 2023">Stage Photo</div>
+        <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_145717' ) ); ?>" alt="Aug 25, 2023">Stage Photo</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip">Event</span> Aug 25, 2023</div>
           <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=english-talent-show' ) ); ?>">Monthly English Talent Show: A Stage for Creativity</a></h3>
@@ -81,7 +81,7 @@
       </article>
 
       <article data-cat="Event" class="post-card reveal d2" style="grid-column: 1 / -1;">
-        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085818-img-7342.jpg" alt="Aug 27, 2023">Bazaar Photo</div>
+        <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221215085818_img_7342' ) ); ?>" alt="Aug 27, 2023">Bazaar Photo</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip">Event</span> Aug 27, 2023</div>
           <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=market-day' ) ); ?>">Market Day: Learning Entrepreneurship at School</a></h3>

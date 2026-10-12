@@ -26,15 +26,15 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Sertifikasi Cambridge English untuk kelulusan berstandar dunia</li>
       </ul>
     </div>
-    <div class="has-photo img-slot reveal d1 warm" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-p.jpg" alt="Foto Siswa SMA Al Mazaya">Foto Siswa SMA Al Mazaya</div>
+    <div class="has-photo img-slot reveal d1 warm" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'senior_high_school_p' ) ); ?>" alt="Foto Siswa SMA Al Mazaya">Foto Siswa SMA Al Mazaya</div>
   </div>
 </section>
 
 <section class="cta-band on-dark">
   <div class="container">
-    <span class="kicker">Pendaftaran SMA</span>
-    <h2>Raih <span class="tone">PTN Impian</span></h2>
-    <p>"Lulusan kami telah diterima di UI, ULM, ITS, dan ITB — giliran Anda berikutnya."</p>
+    <span class="kicker"><?php echo esc_html( almazaya_text( 'cta_sma_kicker' ) ); ?></span>
+    <h2><?php echo almazaya_html( 'cta_sma_h2' ); ?></h2>
+    <p>"<?php echo esc_html( almazaya_text( 'cta_sma_p' ) ); ?>"</p>
     <div class="hero-actions" style="justify-content:center;">
       <a class="btn btn-gold" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Gabung via PPDB</a>
       <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'ppdb', '', '' ) ); ?>">Alur & Persyaratan</a>

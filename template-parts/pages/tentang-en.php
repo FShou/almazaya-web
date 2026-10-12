@@ -55,7 +55,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Foundation of tahfidz and language development</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/junior-high-school-r0003026.jpg" alt="Junior High First Cohort Photo"><span class="gal-label">Junior High First Cohort Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'junior_high_school_r0003026' ) ); ?>" alt="Junior High First Cohort Photo"><span class="gal-label">Junior High First Cohort Photo</span></div>
         </div>
       </div>
 
@@ -71,7 +71,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Focus on university preparation and achievement</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-p.jpg" alt="Senior High Students Photo"><span class="gal-label">Senior High Students Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'senior_high_school_p' ) ); ?>" alt="Senior High Students Photo"><span class="gal-label">Senior High Students Photo</span></div>
         </div>
       </div>
 
@@ -87,7 +87,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Milestone of the one-stop education services vision</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-img-20230215-wa0042.jpg" alt="Foundation Office Photo"><span class="gal-label">Foundation Office Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( '2527_img_20230215_wa0042' ) ); ?>" alt="Foundation Office Photo"><span class="gal-label">Foundation Office Photo</span></div>
         </div>
       </div>
 
@@ -103,7 +103,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Mum &amp; Me, Playgroup, and Kinderworld programs</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="KB-TK MMI Al Mazaya Photo"><span class="gal-label">KB-TK MMI Al Mazaya Photo</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8661_min' ) ); ?>" alt="KB-TK MMI Al Mazaya Photo"><span class="gal-label">KB-TK MMI Al Mazaya Photo</span></div>
         </div>
       </div>
 
@@ -119,7 +119,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Realises a complete educational ecosystem</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8712-min.jpg" alt="SD Al Mazaya Illustration"><span class="gal-label">SD Al Mazaya Illustration</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8712_min' ) ); ?>" alt="SD Al Mazaya Illustration"><span class="gal-label">SD Al Mazaya Illustration</span></div>
         </div>
       </div>
 
@@ -169,7 +169,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">01</span>
         <span class="story-ghost" aria-hidden="true">01</span>
-        <div class="has-photo story-img"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8648-min.jpg" alt="Islamic Studies"><span class="gal-label">Islamic Studies</span></div>
+        <div class="has-photo story-img"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8648_min' ) ); ?>" alt="Islamic Studies"><span class="gal-label">Islamic Studies</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 01</span>
           <h3>Islamic Studies</h3>
@@ -180,7 +180,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">02</span>
         <span class="story-ghost" aria-hidden="true">02</span>
-        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8652-min.jpg" alt="Character Building"><span class="gal-label">Character Building</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8652_min' ) ); ?>" alt="Character Building"><span class="gal-label">Character Building</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 02</span>
           <h3>Character Building</h3>
@@ -196,7 +196,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">03</span>
         <span class="story-ghost" aria-hidden="true">03</span>
-        <div class="has-photo story-img light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-8658-min.jpg" alt="Academic Excellence"><span class="gal-label">Academic Excellence</span></div>
+        <div class="has-photo story-img light"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'home_img_8658_min' ) ); ?>" alt="Academic Excellence"><span class="gal-label">Academic Excellence</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 03</span>
           <h3>Academic Excellence</h3>
@@ -207,7 +207,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">04</span>
         <span class="story-ghost" aria-hidden="true">04</span>
-        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="English Development"><span class="gal-label">English Development</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8661_min' ) ); ?>" alt="English Development"><span class="gal-label">English Development</span></div>
         <div class="story-text">
           <span class="story-marker">Pillar 04</span>
           <h3>English Development</h3>
@@ -260,8 +260,8 @@
 
     <div class="culture-visual reveal" style="margin-top:2.2rem;">
       <div class="cv-media reveal">
-        <div class="has-photo img-slot warm" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-8658-min.jpg" alt="Smile &amp; Greet — welcoming each morning"><span class="gal-label">Smile &amp; Greet — welcoming each morning</span></div>
-        <div class="has-photo img-slot cool" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="Polite &amp; Courteous — manners in everyday life"><span class="gal-label">Polite &amp; Courteous — manners in everyday life</span></div>
+        <div class="has-photo img-slot warm" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'home_img_8658_min' ) ); ?>" alt="Smile &amp; Greet — welcoming each morning"><span class="gal-label">Smile &amp; Greet — welcoming each morning</span></div>
+        <div class="has-photo img-slot cool" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8661_min' ) ); ?>" alt="Polite &amp; Courteous — manners in everyday life"><span class="gal-label">Polite &amp; Courteous — manners in everyday life</span></div>
       </div>
       <div class="cv-panel">
         <span class="culture-label">School Culture</span>

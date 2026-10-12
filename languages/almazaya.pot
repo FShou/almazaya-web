@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-12 09:31+0800\n"
+"POT-Creation-Date: 2026-10-12 11:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,36 +25,50 @@ msgstr ""
 msgid "Menu Footer"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:128
 msgid "Tautan Al Mazaya"
 msgstr ""
 
-#: functions.php:132
+#: functions.php:133
 msgid "SHS Virtual Class URL"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:134
 msgid "JHS Virtual Class URL"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:135
 msgid "Instagram URL"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:136
 msgid "WhatsApp URL"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:137
 msgid "WhatsApp mengambang URL"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:138
 msgid "YouTube URL"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:139
 msgid "Portal PSB URL"
+msgstr ""
+
+#: functions.php:140
+msgid "Instagram MMI URL"
+msgstr ""
+
+#: functions.php:169
+#, php-format
+msgid "Gambar: %s"
+msgstr ""
+
+#: functions.php:202
+#, php-format
+msgid "Teks: %s"
 msgstr ""
 
 #: index.php:23

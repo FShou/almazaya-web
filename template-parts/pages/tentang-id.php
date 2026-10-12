@@ -55,7 +55,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Fondasi pembinaan tahfidz dan bahasa sejak dini</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/junior-high-school-r0003026.jpg" alt="Foto Angkatan Pertama SMP"><span class="gal-label">Foto Angkatan Pertama SMP</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'junior_high_school_r0003026' ) ); ?>" alt="Foto Angkatan Pertama SMP"><span class="gal-label">Foto Angkatan Pertama SMP</span></div>
         </div>
       </div>
 
@@ -71,7 +71,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Fokus persiapan lanjut studi dan pembinaan prestasi</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-p.jpg" alt="Foto Siswa SMA"><span class="gal-label">Foto Siswa SMA</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'senior_high_school_p' ) ); ?>" alt="Foto Siswa SMA"><span class="gal-label">Foto Siswa SMA</span></div>
         </div>
       </div>
 
@@ -87,7 +87,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Tonggak visi one-stop education services</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/2527-img-20230215-wa0042.jpg" alt="Foto Kantor Yayasan"><span class="gal-label">Foto Kantor Yayasan</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( '2527_img_20230215_wa0042' ) ); ?>" alt="Foto Kantor Yayasan"><span class="gal-label">Foto Kantor Yayasan</span></div>
         </div>
       </div>
 
@@ -103,7 +103,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Program Mum &amp; Me, Playgroup, dan Kinderworld</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="Foto KB-TK MMI Al Mazaya"><span class="gal-label">Foto KB-TK MMI Al Mazaya</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8661_min' ) ); ?>" alt="Foto KB-TK MMI Al Mazaya"><span class="gal-label">Foto KB-TK MMI Al Mazaya</span></div>
         </div>
       </div>
 
@@ -119,7 +119,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Mewujudkan ekosistem pendidikan yang utuh</li>
           </ul>
           </div>
-          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8712-min.jpg" alt="Ilustrasi SD Al Mazaya"><span class="gal-label">Ilustrasi SD Al Mazaya</span></div>
+          <div class="has-photo hist-photo"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8712_min' ) ); ?>" alt="Ilustrasi SD Al Mazaya"><span class="gal-label">Ilustrasi SD Al Mazaya</span></div>
         </div>
       </div>
 
@@ -169,7 +169,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">01</span>
         <span class="story-ghost" aria-hidden="true">01</span>
-        <div class="has-photo story-img"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8648-min.jpg" alt="Islamic Studies"><span class="gal-label">Islamic Studies</span></div>
+        <div class="has-photo story-img"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8648_min' ) ); ?>" alt="Islamic Studies"><span class="gal-label">Islamic Studies</span></div>
         <div class="story-text">
           <span class="story-marker">Pilar 01</span>
           <h3>Islamic Studies</h3>
@@ -180,7 +180,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">02</span>
         <span class="story-ghost" aria-hidden="true">02</span>
-        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8652-min.jpg" alt="Character Building"><span class="gal-label">Character Building</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8652_min' ) ); ?>" alt="Character Building"><span class="gal-label">Character Building</span></div>
         <div class="story-text">
           <span class="story-marker">Pilar 02</span>
           <h3>Character Building</h3>
@@ -196,7 +196,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">03</span>
         <span class="story-ghost" aria-hidden="true">03</span>
-        <div class="has-photo story-img light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-8658-min.jpg" alt="Academic Excellence"><span class="gal-label">Academic Excellence</span></div>
+        <div class="has-photo story-img light"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'home_img_8658_min' ) ); ?>" alt="Academic Excellence"><span class="gal-label">Academic Excellence</span></div>
         <div class="story-text">
           <span class="story-marker">Pilar 03</span>
           <h3>Academic Excellence</h3>
@@ -207,7 +207,7 @@
       <article class="story-chapter reveal">
         <span class="story-medallion" aria-hidden="true">04</span>
         <span class="story-ghost" aria-hidden="true">04</span>
-        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="English Development"><span class="gal-label">English Development</span></div>
+        <div class="has-photo story-img warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8661_min' ) ); ?>" alt="English Development"><span class="gal-label">English Development</span></div>
         <div class="story-text">
           <span class="story-marker">Pilar 04</span>
           <h3>English Development</h3>
@@ -260,8 +260,8 @@
 
     <div class="culture-visual reveal" style="margin-top:2.2rem;">
       <div class="cv-media reveal">
-        <div class="has-photo img-slot warm" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/home-img-8658-min.jpg" alt="Senyum &amp; Salam — menyambut pagi"><span class="gal-label">Senyum &amp; Salam — menyambut pagi</span></div>
-        <div class="has-photo img-slot cool" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="Sopan &amp; Santun — adab dalam keseharian"><span class="gal-label">Sopan &amp; Santun — adab dalam keseharian</span></div>
+        <div class="has-photo img-slot warm" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'home_img_8658_min' ) ); ?>" alt="Senyum &amp; Salam — menyambut pagi"><span class="gal-label">Senyum &amp; Salam — menyambut pagi</span></div>
+        <div class="has-photo img-slot cool" style="aspect-ratio:1/1.05; min-height:0;"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8661_min' ) ); ?>" alt="Sopan &amp; Santun — adab dalam keseharian"><span class="gal-label">Sopan &amp; Santun — adab dalam keseharian</span></div>
       </div>
       <div class="cv-panel">
         <span class="culture-label">Budaya Sekolah</span>

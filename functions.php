@@ -110,6 +110,7 @@ function almazaya_default_links() {
 		'whatsapp_float' => 'https://wa.me/628115051123?text=Assalamualaikum',
 		'youtube'        => 'https://www.youtube.com/@almazayaislamicschool1244',
 		'psb'            => 'https://psb.almazayaislamicschool.sch.id',
+		'mmi_instagram'  => 'https://www.instagram.com/modernmontessoribanjarmasin/',
 	);
 }
 
@@ -136,6 +137,7 @@ function almazaya_customize_register( $wp_customize ) {
 		'whatsapp_float' => __( 'WhatsApp mengambang URL', 'almazaya' ),
 		'youtube'        => __( 'YouTube URL', 'almazaya' ),
 		'psb'            => __( 'Portal PSB URL', 'almazaya' ),
+		'mmi_instagram'  => __( 'Instagram MMI URL', 'almazaya' ),
 	);
 	foreach ( almazaya_default_links() as $key => $default ) {
 		$wp_customize->add_setting(
@@ -153,6 +155,74 @@ function almazaya_customize_register( $wp_customize ) {
 				'type'    => 'url',
 			)
 		);
+	}
+
+	/* Content images, grouped per page section. */
+	$img_sections = array();
+	foreach ( almazaya_content_images() as $key => $info ) {
+		$sec_id = 'almazaya_imgs_' . sanitize_key( $info['section'] );
+		if ( ! isset( $img_sections[ $sec_id ] ) ) {
+			$wp_customize->add_section(
+				$sec_id,
+				array(
+					/* translators: %s: page group, e.g. Beranda */
+					'title'    => sprintf( __( 'Gambar: %s', 'almazaya' ), $info['section'] ),
+					'priority' => 40,
+				)
+			);
+			$img_sections[ $sec_id ] = true;
+		}
+		$wp_customize->add_setting(
+			'almazaya_img_' . $key,
+			array(
+				'default'           => get_template_directory_uri() . '/assets/img/' . $info['file'],
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Image_Control(
+				$wp_customize,
+				'almazaya_img_' . $key,
+				array(
+					'label'   => $info['label'],
+					'section' => $sec_id,
+				)
+			)
+		);
+	}
+
+	/* Content texts (ID + EN variants). */
+	$txt_sections = array();
+	foreach ( almazaya_content_texts() as $key => $info ) {
+		$sec_id = 'almazaya_txt_' . sanitize_key( $info['section'] );
+		if ( ! isset( $txt_sections[ $sec_id ] ) ) {
+			$wp_customize->add_section(
+				$sec_id,
+				array(
+					'title'    => sprintf( __( 'Teks: %s', 'almazaya' ), $info['section'] ),
+					'priority' => 41,
+				)
+			);
+			$txt_sections[ $sec_id ] = true;
+		}
+		foreach ( array( 'id' => 'ID', 'en' => 'EN' ) as $lang => $lang_label ) {
+			$setting_id = 'almazaya_txt_' . $key . '_' . $lang;
+			$wp_customize->add_setting(
+				$setting_id,
+				array(
+					'default'           => $info[ $lang ],
+					'sanitize_callback' => ( $info['type'] === 'html' ) ? 'wp_kses_post' : 'sanitize_text_field',
+				)
+			);
+			$wp_customize->add_control(
+				$setting_id,
+				array(
+					'label'   => $info['label'] . ' (' . $lang_label . ')',
+					'section' => $sec_id,
+					'type'    => ( $info['type'] === 'html' ) ? 'textarea' : 'text',
+				)
+			);
+		}
 	}
 }
 add_action( 'customize_register', 'almazaya_customize_register' );
@@ -310,4 +380,146 @@ function almazaya_lang_toggle( $extra_class = '' ) {
 		$en ? ' class="active"' : '',
 		esc_url( home_url( '/en/' ) )
 	);
+}
+
+/* ---------- Dashboard-editable content: images ----------
+ * Every content photo (51) is replaceable via Customizer, grouped per page.
+ * To add a new one: append a row to almazaya_content_images() and use
+ *   <?php echo esc_url( almazaya_img( 'key' ) ); ?>
+ * in the template. Alt texts stay in the markup (edit alongside).
+ */
+function almazaya_content_images() {
+	return array(
+		'2527_3' => array( 'file' => '2527-3.jpg', 'label' => 'Tahfidz Camp', 'section' => 'Beranda' ),
+		'2527_img_20230215_wa0042' => array( 'file' => '2527-img-20230215-wa0042.jpg', 'label' => 'Foto Kantor Yayasan', 'section' => 'Tentang' ),
+		'2527_z1' => array( 'file' => '2527-z1.jpg', 'label' => 'TKA & UTBK Intensive', 'section' => 'Beranda' ),
+		'2750_r0003169' => array( 'file' => '2750-r0003169.jpg', 'label' => 'TKA & UTBK Camp', 'section' => 'Beranda' ),
+		'category_news_whats_app_image_2023_11_23_at_11_52_59_am_124' => array( 'file' => 'category-news-whats-app-image-2023-11-23-at-11-52-59-am-124.jpg', 'label' => 'Foto berita olimpiade SMP', 'section' => 'Berita' ),
+		'category_news_whats_app_image_2023_11_23_at_11_52_59_am' => array( 'file' => 'category-news-whats-app-image-2023-11-23-at-11-52-59-am.jpg', 'label' => 'Achievement Photo', 'section' => 'Berita' ),
+		'classroom_r0003044' => array( 'file' => 'classroom-r0003044.jpg', 'label' => 'Computer & IT Lab · Coding & digital literacy', 'section' => 'Sekolah' ),
+		'classroom_r0003050' => array( 'file' => 'classroom-r0003050.jpg', 'label' => 'Foundation Class', 'section' => 'Beranda' ),
+		'english_talent_show_screenshot_20230825_132045_1' => array( 'file' => 'english-talent-show-screenshot-20230825-132045-1.jpg', 'label' => 'English Camp', 'section' => 'Beranda' ),
+		'english_talent_show_screenshot_20230825_132133_1' => array( 'file' => 'english-talent-show-screenshot-20230825-132133-1.jpg', 'label' => 'English Camp · Grade-7 language immersion', 'section' => 'Galeri' ),
+		'english_talent_show_screenshot_20230829_131851' => array( 'file' => 'english-talent-show-screenshot-20230829-131851.jpg', 'label' => 'English Zone · Cambridge immersion', 'section' => 'Sekolah' ),
+		'english_talent_show_screenshot_20230829_135505' => array( 'file' => 'english-talent-show-screenshot-20230829-135505.jpg', 'label' => 'English Talent Show', 'section' => 'Beranda' ),
+		'english_talent_show_screenshot_20230829_140122' => array( 'file' => 'english-talent-show-screenshot-20230829-140122.jpg', 'label' => 'Club & Enrichment', 'section' => 'Beranda' ),
+		'english_talent_show_screenshot_20230829_145220' => array( 'file' => 'english-talent-show-screenshot-20230829-145220.jpg', 'label' => 'English Camp', 'section' => 'Beranda' ),
+		'english_talent_show_screenshot_20230829_145717' => array( 'file' => 'english-talent-show-screenshot-20230829-145717.jpg', 'label' => 'English Talent Show', 'section' => 'Beranda' ),
+		'english_talent_show_screenshot_20230829_151444' => array( 'file' => 'english-talent-show-screenshot-20230829-151444.jpg', 'label' => 'English Talent Show · Monthly student talent stage', 'section' => 'Galeri' ),
+		'hall_r0003030' => array( 'file' => 'hall-r0003030.jpg', 'label' => 'Indoor Field · Sports & ceremonies', 'section' => 'Sekolah' ),
+		'hello_world_wis' => array( 'file' => 'hello-world-wis.jpg', 'label' => 'Library · References & Islamic literature', 'section' => 'Sekolah' ),
+		'home_0011' => array( 'file' => 'home-0011.jpg', 'label' => 'Lapangan Outdoor · Aktivitas & turnamen', 'section' => 'Sekolah' ),
+		'home_20221214074906_img_6966' => array( 'file' => 'home-20221214074906-img-6966.jpg', 'label' => 'Annual ABUELA Event', 'section' => 'Beranda' ),
+		'home_img_1509' => array( 'file' => 'home-img-1509.jpg', 'label' => 'Life Skill', 'section' => 'Beranda' ),
+		'home_img_8658_min' => array( 'file' => 'home-img-8658-min.jpg', 'label' => 'Academic Excellence', 'section' => 'Tentang' ),
+		'junior_high_school_r0003026' => array( 'file' => 'junior-high-school-r0003026.jpg', 'label' => 'Foto Angkatan Pertama SMP', 'section' => 'Tentang' ),
+		'laboratory_r0003017' => array( 'file' => 'laboratory-r0003017.jpg', 'label' => 'Math & Science Camp', 'section' => 'Beranda' ),
+		'laboratory_r0003078' => array( 'file' => 'laboratory-r0003078.jpg', 'label' => 'Biology Lab · Hands-on science', 'section' => 'Sekolah' ),
+		'laboratory_r0003095' => array( 'file' => 'laboratory-r0003095.jpg', 'label' => 'Lab Fisika & Kimia · Percobaan saintifik', 'section' => 'Sekolah' ),
+		'market_day_20221214073641_img_6924' => array( 'file' => 'market-day-20221214073641-img-6924.jpg', 'label' => 'Market Day booth', 'section' => 'Beranda' ),
+		'market_day_20221214111711_img_7128' => array( 'file' => 'market-day-20221214111711-img-7128.jpg', 'label' => 'Market Day · Belajar wirausaha', 'section' => 'Galeri' ),
+		'market_day_20221215085811_img_7341' => array( 'file' => 'market-day-20221215085811-img-7341.jpg', 'label' => 'Market Day suasana', 'section' => 'Beranda' ),
+		'market_day_20221215085818_img_7342' => array( 'file' => 'market-day-20221215085818-img-7342.jpg', 'label' => 'Foto Market Day', 'section' => 'Berita' ),
+		'overseas_dsc09466' => array( 'file' => 'overseas-dsc09466.jpg', 'label' => 'Outing Class', 'section' => 'Beranda' ),
+		'overseas_dsc09507' => array( 'file' => 'overseas-dsc09507.jpg', 'label' => 'Overseas Program', 'section' => 'Beranda' ),
+		'overseas_img_8635_min' => array( 'file' => 'overseas-img-8635-min.jpg', 'label' => 'Achievement Photo', 'section' => 'Beranda' ),
+		'overseas_img_8648_min' => array( 'file' => 'overseas-img-8648-min.jpg', 'label' => 'Islamic Studies', 'section' => 'Tentang' ),
+		'overseas_img_8652_min' => array( 'file' => 'overseas-img-8652-min.jpg', 'label' => 'Character Building', 'section' => 'Tentang' ),
+		'overseas_img_8661_min' => array( 'file' => 'overseas-img-8661-min.jpg', 'label' => 'English Development', 'section' => 'Tentang' ),
+		'overseas_img_8679_min' => array( 'file' => 'overseas-img-8679-min.jpg', 'label' => 'Event Photo', 'section' => 'Beranda' ),
+		'overseas_img_8712_min' => array( 'file' => 'overseas-img-8712-min.jpg', 'label' => 'Ilustrasi SD Al Mazaya', 'section' => 'Tentang' ),
+		'overseas_img_8730_min' => array( 'file' => 'overseas-img-8730-min.jpg', 'label' => 'Overseas Program', 'section' => 'Beranda' ),
+		'overseas_img_8756_min' => array( 'file' => 'overseas-img-8756-min.jpg', 'label' => 'Graduation Ceremony', 'section' => 'Beranda' ),
+		'overseas_img_8809_min' => array( 'file' => 'overseas-img-8809-min.jpg', 'label' => 'HUT Kemerdekaan RI', 'section' => 'Beranda' ),
+		'overseas_img_8816_min' => array( 'file' => 'overseas-img-8816-min.jpg', 'label' => 'Olimpiade Sains', 'section' => 'Beranda' ),
+		'quran_academy_r0002997' => array( 'file' => 'quran-academy-r0002997.jpg', 'label' => 'Musala · Heart of worship & din', 'section' => 'Sekolah' ),
+		'quran_academy_r0003011' => array( 'file' => 'quran-academy-r0003011.jpg', 'label' => "Haflah Khatmil Qur'an · Tahfidz graduation", 'section' => 'Beranda' ),
+		'ramadhan_charity_day_img_5416_1' => array( 'file' => 'ramadhan-charity-day-img-5416-1.jpg', 'label' => 'Ramadhan Charity Day', 'section' => 'Beranda' ),
+		'ramadhan_charity_day_img_5423' => array( 'file' => 'ramadhan-charity-day-img-5423.jpg', 'label' => 'Ramadhan Charity Day · Berbagi ke sesama', 'section' => 'Galeri' ),
+		'school_debate_competition_aq1' => array( 'file' => 'school-debate-competition-aq1.jpg', 'label' => 'Debate Photo', 'section' => 'Beranda' ),
+		'school_debate_competition_aq2' => array( 'file' => 'school-debate-competition-aq2.jpg', 'label' => 'Foto debat UIN Antasari', 'section' => 'Berita' ),
+		'school_debate_competition_aq3' => array( 'file' => 'school-debate-competition-aq3.jpg', 'label' => 'Bilingual Debate · 2nd Place UIN Antasari', 'section' => 'Galeri' ),
+		'senior_high_school_a_capture' => array( 'file' => 'senior-high-school-a-capture.jpg', 'label' => 'Graduate Quality Test', 'section' => 'Beranda' ),
+		'senior_high_school_p' => array( 'file' => 'senior-high-school-p.jpg', 'label' => 'Foto Siswa SMA', 'section' => 'Tentang' ),
+	);
+}
+
+/**
+ * Content image URL (Customizer-overridable, theme asset fallback).
+ */
+function almazaya_img( $key ) {
+	$all = almazaya_content_images();
+	if ( ! isset( $all[ $key ] ) ) {
+		return get_template_directory_uri() . '/assets/img/';
+	}
+	return get_theme_mod( 'almazaya_img_' . $key, get_template_directory_uri() . '/assets/img/' . $all[ $key ]['file'] );
+}
+
+/* ---------- Dashboard-editable content: texts ----------
+ * Site-wide copy (footer, kontak, CTA pendaftaran), ID + EN variants.
+ * type "text" = plain (escaped on output), "html" = limited tags allowed,
+ * "url" = link. Same extension pattern as images above.
+ */
+function almazaya_content_texts() {
+	return array(
+		'footer_tagline' => array( 'label' => 'Footer: tagline', 'type' => 'text', 'section' => 'Footer',
+			'id' => 'Mewujudkan generasi Islam unggul dan berakhlak mulia melalui pendidikan Islami, bahasa, dan teknologi.',
+			'en' => 'Your Islamic School in Banjarmasin — shaping an excellent, noble Islamic generation.' ),
+		'footer_head_links' => array( 'label' => 'Footer: judul Tautan', 'type' => 'text', 'section' => 'Footer',
+			'id' => 'Tautan Cepat', 'en' => 'Quick Links' ),
+		'footer_head_hours' => array( 'label' => 'Footer: judul Jam layanan', 'type' => 'text', 'section' => 'Footer',
+			'id' => 'Jam Layanan', 'en' => 'Office Hours' ),
+		'office_hours' => array( 'label' => 'Footer: jam layanan', 'type' => 'html', 'section' => 'Footer',
+			'id' => 'Senin – Sabtu<br>07.00 – 16.00 WITA',
+			'en' => 'Monday – Saturday<br>07.00 – 16.00 WITA (GMT+8)' ),
+		'footer_org' => array( 'label' => 'Footer: nama sekolah (copyright)', 'type' => 'text', 'section' => 'Footer',
+			'id' => 'Al Mazaya Islamic School Banjarmasin', 'en' => 'Al Mazaya Islamic School Banjarmasin' ),
+		'footer_rights' => array( 'label' => 'Footer: teks hak cipta', 'type' => 'text', 'section' => 'Footer',
+			'id' => 'All rights reserved.', 'en' => 'All rights reserved.' ),
+		'foundation_name' => array( 'label' => 'Footer: nama yayasan', 'type' => 'text', 'section' => 'Footer',
+			'id' => 'Yayasan Al Mazaya Pelita Asia', 'en' => 'Al Mazaya Pelita Asia Foundation' ),
+		'mmi_phone' => array( 'label' => 'MMI: nomor telepon', 'type' => 'text', 'section' => 'Kontak',
+			'id' => '0811-465-4040', 'en' => '0811-465-4040' ),
+		'mmi_ig_handle' => array( 'label' => 'MMI: handle Instagram', 'type' => 'text', 'section' => 'Kontak',
+			'id' => '@modernmontessoribanjarmasin', 'en' => '@modernmontessoribanjarmasin' ),
+		'cta_mmi_kicker' => array( 'label' => 'CTA MMI: kicker', 'type' => 'text', 'section' => 'CTA Pendaftaran',
+			'id' => 'Pendaftaran MMI Preschool', 'en' => 'MMI Preschool Admission' ),
+		'cta_mmi_h2' => array( 'label' => 'CTA MMI: judul', 'type' => 'html', 'section' => 'CTA Pendaftaran',
+			'id' => 'Mulai dari <span class="tone">Usia Dini</span>',
+			'en' => 'Start from <span class="tone">Early Age</span>' ),
+		'cta_mmi_p' => array( 'label' => 'CTA MMI: deskripsi', 'type' => 'text', 'section' => 'CTA Pendaftaran',
+			'id' => 'Jadwalkan observasi kelas dan konsultasi tumbuh kembang buah hati bersama tim MMI Al Mazaya.',
+			'en' => 'Schedule a classroom observation and consultation with the MMI Al Mazaya team.' ),
+		'cta_smp_kicker' => array( 'label' => 'CTA SMP: kicker', 'type' => 'text', 'section' => 'CTA Pendaftaran',
+			'id' => 'Pendaftaran SMP', 'en' => 'JHS Admission' ),
+		'cta_smp_h2' => array( 'label' => 'CTA SMP: judul', 'type' => 'html', 'section' => 'CTA Pendaftaran',
+			'id' => 'Fondasi Kuat <span class="tone">Sejak Kelas 7</span>',
+			'en' => 'Strong Foundations <span class="tone">from Grade 7</span>' ),
+		'cta_smp_p' => array( 'label' => 'CTA SMP: deskripsi', 'type' => 'text', 'section' => 'CTA Pendaftaran',
+			'id' => 'Bergabunglah dengan angkatan SMP Al Mazaya — kuota tiap tahun ajaran terbatas.',
+			'en' => 'Join the Al Mazaya JHS cohort — seats are limited each academic year.' ),
+		'cta_sma_kicker' => array( 'label' => 'CTA SMA: kicker', 'type' => 'text', 'section' => 'CTA Pendaftaran',
+			'id' => 'Pendaftaran SMA', 'en' => 'SHS Admission' ),
+		'cta_sma_h2' => array( 'label' => 'CTA SMA: judul', 'type' => 'html', 'section' => 'CTA Pendaftaran',
+			'id' => 'Raih <span class="tone">PTN Impian</span>',
+			'en' => 'Reach Your <span class="tone">Dream University</span>' ),
+		'cta_sma_p' => array( 'label' => 'CTA SMA: deskripsi', 'type' => 'text', 'section' => 'CTA Pendaftaran',
+			'id' => 'Lulusan kami telah diterima di UI, ULM, ITS, dan ITB — giliran Anda berikutnya.',
+			'en' => 'Our graduates are now at UI, ULM, ITS, and ITB — you could be next.' ),
+	);
+}
+
+/** Dashboard text (ID/EN aware). Pair with esc_html() unless type is html. */
+function almazaya_text( $key ) {
+	$all = almazaya_content_texts();
+	if ( ! isset( $all[ $key ] ) ) {
+		return '';
+	}
+	$def = almazaya_is_en() ? $all[ $key ]['en'] : $all[ $key ]['id'];
+	return get_theme_mod( 'almazaya_txt_' . $key . '_' . almazaya_lang_suffix(), $def );
+}
+
+/** Dashboard rich text (limited HTML allowed, sanitized on save). Echo raw. */
+function almazaya_html( $key ) {
+	return almazaya_text( $key );
 }

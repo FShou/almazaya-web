@@ -3,6 +3,25 @@
 Custom theme ported 1:1 from the static site (`rehaul` branch, cache v106).
 Bilingual ID/EN, tested-up-to WordPress 7.0, requires PHP 7.4+.
 
+## Deploy langsung ke produksi (tanpa staging)
+
+Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
+
+1. **Backup penuh** WP produksi (file + database) — via hosting panel / plugin
+   (UpdraftPlus, Duplicator). Simpan backup di luar server.
+2. (Opsional tapi disarankan) Nyalakan **maintenance mode** 15–30 menit
+   (plugin Maintenance / .maintenance) agar pengunjung tidak melihat proses setup.
+3. Upload `almazaya.zip` (dari `./package-theme.sh`) → Appearance → Themes →
+   **jangan Activate dulu** — klik **Live Preview** untuk cek tampilan dengan
+   konten produksi (hanya admin yang melihat).
+4. Kalau preview oke → **Activate**. Lalu setup: permalink *Post name* (cek),
+   Polylang + bahasa, 10 page + template, menu, homepage, Customizer
+   (tautan, gambar, teks, logo).
+5. Verifikasi: buka 10 halaman ID + EN, tes menu/dropdown, form/kontak, HP view.
+   Matikan maintenance mode.
+6. **Rollback bila gagal**: restore backup langkah 1 (atau switch theme lama
+   kembali — theme lama jangan dihapus sebelum stabil).
+
 ## Deploy ke staging (new.almazaya.com)
 
 1. `./package-theme.sh` → hasil `almazaya.zip` (jangan commit file zip).

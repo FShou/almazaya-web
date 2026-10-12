@@ -89,6 +89,31 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
+  /* Desktop dropdown nav — click to open (touch/tablet friendly).
+     First click opens the submenu, second click follows the parent link. */
+  var dropTriggers = document.querySelectorAll('.main-nav .has-sub > a');
+  dropTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function (e) {
+      var item = trigger.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.main-nav .has-sub.open').forEach(function (o) { o.classList.remove('open'); });
+      if (!wasOpen) {
+        e.preventDefault();
+        item.classList.add('open');
+      }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.main-nav .has-sub')) {
+      document.querySelectorAll('.main-nav .has-sub.open').forEach(function (o) { o.classList.remove('open'); });
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.main-nav .has-sub.open').forEach(function (o) { o.classList.remove('open'); });
+    }
+  });
+
   /* Pillar cards — toggle open on click */
   var pillars = document.querySelectorAll('[data-pillar]');
   pillars.forEach(function (pillar) {

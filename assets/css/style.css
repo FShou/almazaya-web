@@ -776,7 +776,7 @@ a.partner-card { display: block; text-decoration: none; color: inherit; }
   transition: opacity .18s ease, transform .18s ease, visibility .18s;
   z-index: 60;
 }
-.main-nav .has-sub:hover > .sub-nav,
+.main-nav .has-sub.open > .sub-nav,
 .main-nav .has-sub:focus-within > .sub-nav { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
 .main-nav .sub-nav a { display: block; padding: .6rem .8rem; border-radius: 8px; white-space: nowrap; }
 .main-nav .sub-nav a:hover { background: var(--mist); }

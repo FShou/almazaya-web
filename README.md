@@ -76,3 +76,36 @@ wp-env start   # http://localhost:8888 (admin: admin/password)
 
 `.wp-env.json` sudah diset: tema ter-mount, permalink postname, Polylang
 ter-install otomatis, homepage = halaman `beranda`.
+
+## Tes lokal tanpa Docker (terverifikasi 2026-10-12)
+
+Stack: MariaDB lokal + PHP built-in server + wp-cli, WordPress 7.0.7, PHP 7.4:
+
+```bash
+sudo service mariadb start
+sudo mysql -e "CREATE DATABASE wptest; CREATE USER 'wptest'@'localhost' IDENTIFIED BY 'wptest123'; GRANT ALL ON wptest.* TO 'wptest'@'localhost';"
+# download + extract WP 7.0.x ke /tmp/wpsite, lalu:
+ln -s /path/ke/repo-branch-wordpress /tmp/wpsite/wp-content/themes/almazaya
+# wp-config.php: DB wptest/wptest/wptest123 + salts + WP_DEBUG true
+wp core install --url='http://127.0.0.1:9000' --title='Al Mazaya Test' \
+  --admin_user=admin --admin_password='...' --admin_email='a@b.c' --skip-email
+wp theme activate almazaya
+wp option update permalink_structure '/%postname%/' && wp rewrite flush
+wp plugin install polylang --activate
+# 10 page (slug: beranda,tentang,jenjang,mmi,smp,sma,berita,berita-detail,galeri,ppdb),
+# assign template *-nya, homepage = beranda, buat menu bila perlu
+cd /tmp/wpsite && php -S 127.0.0.1:9000 router.php  # lihat router.php di bawah
+```
+
+`router.php` (taruh di root WP, hanya untuk dev):
+
+```php
+<?php
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+if ($path !== '/' && is_file(__DIR__ . $path)) { return false; }
+require __DIR__ . '/index.php';
+```
+
+Hasil tes: 10/10 halaman 200 ID & EN (locale `wp site switch-language`),
+dropdown klik, lightbox, filter, router `?a=`, mobile nav, 0 PHP error —
+plus override `set_theme_mod()` terbukti mengganti output render.

@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.0.1' );
-define( 'ALMAZAYA_JS_VERSION', '1.0.1' );
+define( 'ALMAZAYA_VERSION', '1.0.2' );
+define( 'ALMAZAYA_JS_VERSION', '1.0.2' );
 
 /* ---------- Setup ---------- */
 
@@ -87,7 +87,7 @@ function almazaya_lang_suffix() {
 /* ---------- Internal URLs ---------- */
 
 /**
- * URL to a theme page. $slug is one of index|tentang|jenjang|mmi|smp|sma|berita|galeri|ppdb.
+ * URL to a theme page. $slug is one of index|tentang|jenjang|mmi|smp|sma|berita|berita-detail|galeri|ppdb.
  * $lang_prefix is 'en/' for the English tree (Polylang default), '' otherwise.
  * Requires pages with matching slugs + "Post name" permalinks (see README).
  */

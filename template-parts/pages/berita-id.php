@@ -27,43 +27,43 @@
         <span class="kicker">Kehidupan Siswa · Prestasi</span>
         <h3>Student <span class="tone">Achievements</span></h3>
       </div>
-      <article class="post-card reveal">
+      <article data-cat="Prestasi" class="post-card reveal">
         <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/category-news-whats-app-image-2023-11-23-at-11-52-59-am.jpg" alt="6 Sep 2024">Foto Prestasi</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Prestasi</span> 6 Sep 2024</div>
-          <h3><a href="#">Medali Emas Kedokteran ONSA &amp; English Etanider — SMA Al Mazaya</a></h3>
+          <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=emas-onsa' ) ); ?>">Medali Emas Kedokteran ONSA &amp; English Etanider — SMA Al Mazaya</a></h3>
           <p>Windy Zhafira Maheswari meraih medali emas Kompetisi Kedokteran ONSA, dan Sylla Almira Syarif juara 1 English Competition Etanider tingkat provinsi.</p>
-          <a class="more-link" href="#">Baca selengkapnya →</a>
+          <a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=emas-onsa' ) ); ?>">Baca selengkapnya →</a>
         </div>
       </article>
 
-      <article class="post-card reveal d1">
+      <article data-cat="Prestasi" class="post-card reveal d1">
         <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/category-news-whats-app-image-2023-11-23-at-11-52-59-am-124.jpg" alt="6 Sep 2024">Foto Prestasi</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Prestasi</span> 6 Sep 2024</div>
-          <h3><a href="#">4 Siswi SMP Al Mazaya Raih Prestasi di Olimpiade Nasional</a></h3>
+          <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=olimpiade-smp' ) ); ?>">4 Siswi SMP Al Mazaya Raih Prestasi di Olimpiade Nasional</a></h3>
           <p>Rahma Kamila (emas), Aliya Saputri (perak), Gusti Naifa &amp; Havira Cintania sukses di Festival Olimpiade Islami Nasional dan Olimpiade Sains.</p>
-          <a class="more-link" href="#">Baca selengkapnya →</a>
+          <a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=olimpiade-smp' ) ); ?>">Baca selengkapnya →</a>
         </div>
       </article>
 
-      <article class="post-card reveal d2">
+      <article data-cat="Prestasi" class="post-card reveal d2">
         <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8648-min.jpg" alt="6 Sep 2024">Foto Siswa</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Prestasi</span> 6 Sep 2024</div>
-          <h3><a href="#">4 Siswi SMP Al Mazaya Juara Olimpiade Nasional!</a></h3>
+          <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=juara-olimpiade' ) ); ?>">4 Siswi SMP Al Mazaya Juara Olimpiade Nasional!</a></h3>
           <p>Medali emas bidang English (Rahma Kamila) dan perak Bahasa Indonesia (Aliya Saputri) di kancah olimpiade nasional sains &amp; bahasa.</p>
-          <a class="more-link" href="#">Baca selengkapnya →</a>
+          <a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=juara-olimpiade' ) ); ?>">Baca selengkapnya →</a>
         </div>
       </article>
 
-      <article class="post-card reveal">
+      <article data-cat="Prestasi" class="post-card reveal">
         <div class="has-photo post-thumb img-slot"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/school-debate-competition-aq2.jpg" alt="2 Des 2023">Foto Debat</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip gold">Prestasi</span> 2 Des 2023</div>
-          <h3><a href="#">Juara 2 Debat UIN Antasari "International Events 2023"</a></h3>
+          <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=debat-uin' ) ); ?>">Juara 2 Debat UIN Antasari "International Events 2023"</a></h3>
           <p>Tim debat putri SMA Al Mazaya meraih juara kedua kompetisi debat tingkat mahasiswa.</p>
-          <a class="more-link" href="#">Baca selengkapnya →</a>
+          <a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=debat-uin' ) ); ?>">Baca selengkapnya →</a>
         </div>
       </article>
 
@@ -71,31 +71,27 @@
         <span class="kicker">Kehidupan Siswa · Kegiatan</span>
         <h3>Activities &amp; <span class="tone">Daya Kreasi</span></h3>
       </div>
-      <article class="post-card reveal d1" style="grid-column: 1 / -1;">
+      <article data-cat="Kegiatan" class="post-card reveal d1" style="grid-column: 1 / -1;">
         <div class="has-photo post-thumb img-slot warm"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/english-talent-show-screenshot-20230829-145717.jpg" alt="25 Agu 2023">Foto Panggung</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip">Kegiatan</span> 25 Agu 2023</div>
-          <h3><a href="#">English Talent Show Bulanan: Panggung Kreativitas Siswa</a></h3>
+          <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=english-talent-show' ) ); ?>">English Talent Show Bulanan: Panggung Kreativitas Siswa</a></h3>
           <p>Nyanyian, tari tradisional, drama, speech, storytelling, hingga tilawah Al-Qur'an.</p>
-          <a class="more-link" href="#">Baca selengkapnya →</a>
+          <a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=english-talent-show' ) ); ?>">Baca selengkapnya →</a>
         </div>
       </article>
 
-      <article class="post-card reveal d2" style="grid-column: 1 / -1;">
+      <article data-cat="Kegiatan" class="post-card reveal d2" style="grid-column: 1 / -1;">
         <div class="has-photo post-thumb img-slot light"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/market-day-20221215085818-img-7342.jpg" alt="27 Agu 2023">Foto Bazar</div>
         <div class="post-body">
           <div class="post-meta"><span class="chip">Kegiatan</span> 27 Agu 2023</div>
-          <h3><a href="#">Market Day: Belajar Wirausaha Sejak Sekolah</a></h3>
+          <h3><a href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=market-day' ) ); ?>">Market Day: Belajar Wirausaha Sejak Sekolah</a></h3>
           <p>Booth beraneka makanan &amp; minuman ciptaan siswa memeriahkan akhir semester ganjil.</p>
-          <a class="more-link" href="#">Baca selengkapnya →</a>
+          <a class="more-link" href="<?php echo esc_url( almazaya_url( 'berita-detail', '', '?a=market-day' ) ); ?>">Baca selengkapnya →</a>
         </div>
       </article>
     </div>
 
-    <nav class="pagination reveal" aria-label="Navigasi halaman">
-      <button class="page-btn current">1</button>
-      <button class="page-btn">2</button>
-      <button class="page-btn">→</button>
-    </nav>
+    <p data-filter-empty hidden style="text-align:center;color:var(--slate-light);">Belum ada konten pada kategori ini.</p>
   </div>
 </section>

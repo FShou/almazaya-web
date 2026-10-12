@@ -160,11 +160,23 @@ add_action( 'customize_register', 'almazaya_customize_register' );
 /* ---------- Nav data (shared by header fallback + mobile nav) ---------- */
 
 function almazaya_primary_links() {
-	if ( almazaya_is_en() ) {
+	$en = almazaya_is_en();
+	$school_sub = $en
+		? array(
+			array( 'mmi', 'MMI Preschool' ),
+			array( 'smp', 'Junior High' ),
+			array( 'sma', 'Senior High' ),
+		)
+		: array(
+			array( 'mmi', 'KB-TK MMI' ),
+			array( 'smp', 'SMP' ),
+			array( 'sma', 'SMA' ),
+		);
+	if ( $en ) {
 		return array(
 			array( 'index', 'Home' ),
 			array( 'tentang', 'About' ),
-			array( 'jenjang', 'Our School' ),
+			array( 'jenjang', 'Our School', $school_sub ),
 			array( 'akademik', 'Academics' ),
 			array( 'berita', 'News' ),
 			array( 'galeri', 'Student Activities' ),
@@ -174,7 +186,7 @@ function almazaya_primary_links() {
 	return array(
 		array( 'index', 'Beranda' ),
 		array( 'tentang', 'Tentang' ),
-		array( 'jenjang', 'Sekolah Kami' ),
+		array( 'jenjang', 'Sekolah Kami', $school_sub ),
 		array( 'akademik', 'Akademik' ),
 		array( 'berita', 'Berita' ),
 		array( 'galeri', 'Aktivitas Siswa' ),
@@ -215,17 +227,38 @@ function almazaya_current_slug() {
 }
 
 function almazaya_fallback_primary_nav() {
-	$cur = almazaya_current_slug();
+	$cur  = almazaya_current_slug();
+	$pfx  = almazaya_is_en() ? 'en/' : '';
+	$inschool = in_array( $cur, array( 'jenjang', 'mmi', 'smp', 'sma' ), true );
 	echo '<nav class="main-nav"><ul>';
 	foreach ( almazaya_primary_links() as $item ) {
-		list( $slug, $label ) = $item;
-		$active = ( $cur === $slug ) ? ' class="active"' : '';
-		printf(
-			'<li><a href="%s"%s>%s</a></li>',
-			esc_url( almazaya_url( $slug, almazaya_is_en() ? 'en/' : '' ) ),
-			$active,
-			esc_html( $label )
-		);
+		$slug  = $item[0];
+		$label = $item[1];
+		$sub   = isset( $item[2] ) ? $item[2] : null;
+		if ( $sub ) {
+			printf(
+				'<li class="has-sub"><a href="%s"%s>%s</a><ul class="sub-nav">',
+				esc_url( almazaya_url( $slug, $pfx ) ),
+				$inschool ? ' class="active"' : '',
+				esc_html( $label )
+			);
+			foreach ( $sub as $child ) {
+				printf(
+					'<li><a href="%s"%s>%s</a></li>',
+					esc_url( almazaya_url( $child[0], $pfx ) ),
+					( $cur === $child[0] ) ? ' class="active"' : '',
+					esc_html( $child[1] )
+				);
+			}
+			echo '</ul></li>';
+		} else {
+			printf(
+				'<li><a href="%s"%s>%s</a></li>',
+				esc_url( almazaya_url( $slug, $pfx ) ),
+				( $cur === $slug ) ? ' class="active"' : '',
+				esc_html( $label )
+			);
+		}
 	}
 	echo '</ul></nav>';
 }

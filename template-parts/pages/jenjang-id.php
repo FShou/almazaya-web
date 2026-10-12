@@ -27,7 +27,7 @@
           <span>MMI Preschool · Montessori Authentic</span>
           <h3>Preschool &amp; Playgroup</h3>
           <p>Program Montessori autentik satu-satunya di Kalimantan — partnership MMI Singapore. Usia 6 bulan sampai 6 tahun dengan pendekatan child-led learning.</p>
-          <a class="btn btn-outline" href="#mmi">Selengkapnya</a>
+          <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'mmi', '', '' ) ); ?>">Selengkapnya</a>
         </div>
       </article>
 
@@ -36,7 +36,7 @@
           <span>SMP · Terakreditasi A</span>
           <h3>Junior High School</h3>
           <p>Fondasi kuat akademik &amp; karakter: English Camp kelas 7, tahfidz bertahap, serta pembiasaan Bahasa Inggris dan Arab setiap hari.</p>
-          <a class="btn btn-outline" href="#smp">Selengkapnya</a>
+          <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'smp', '', '' ) ); ?>">Selengkapnya</a>
         </div>
       </article>
 
@@ -45,71 +45,13 @@
           <span>SMA · Terakreditasi A</span>
           <h3>Senior High School</h3>
           <p>Persiapan lanjut studi ke PTN ternama (UI, ULM, ITS, ITB) dengan pembinaan olimpiade sains, debat, dan pendalaman tahfidz.</p>
-          <a class="btn btn-outline" href="#sma">Selengkapnya</a>
+          <a class="btn btn-outline" href="<?php echo esc_url( almazaya_url( 'sma', '', '' ) ); ?>">Selengkapnya</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- MMI PRESCHOOL -->
-<section class="section" id="mmi">
-  <div class="container jenjang-detail">
-    <div class="reveal">
-      <span class="kicker">Preschool · Modern Montessori International</span>
-      <h2>MMI Al Mazaya <span class="tone">Preschool</span></h2>
-      <p style="margin-top:.9rem;">Bersama <strong>MMI Singapore</strong>, Al Mazaya menghadirkan pendidikan Montessori autentik pertama di Kalimantan. Kurikulum dirancang untuk menumbuhkan kemandirian, rasa ingin tahu, dan kecintaan belajar sejak usia dini.</p>
-      <ul class="prog-list" style="margin-top:1.2rem;">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Mum &amp; Me (usia 6–24 bulan) — stimulasi awal bersama orang tua</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Playgroup (usia 2–3 tahun) — bermain terstruktur ala Montessori</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Montessori Kinderworld (usia 3–6 tahun) — kurikulum lengkap</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Lingkungan belajar hands-on dengan material Montessori autentik</li>
-      </ul>
-      <p style="margin-top:1.2rem; font-size:.88rem; color:var(--slate-light); display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;"><span style="display:inline-flex; align-items:center; gap:.4rem;"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;stroke:var(--gold-deep);"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.6 2Z"/></svg>0811-465-4040</span> <span style="display:inline-flex; align-items:center; gap:.4rem;"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;stroke:var(--gold-deep);"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/><circle cx="12" cy="13" r="4"/></svg><a href="https://www.instagram.com/modernmontessoribanjarmasin/" target="_blank" rel="noopener" style="color:var(--gold-deep);">@modernmontessoribanjarmasin</a></span></p>
-    </div>
-    <div class="has-photo img-slot reveal d1" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/overseas-img-8661-min.jpg" alt="Foto MMI Preschool Al Mazaya">Foto MMI Preschool Al Mazaya</div>
-  </div>
-</section>
-
-<!-- SMP -->
-<section class="section" id="smp">
-  <div class="container jenjang-detail">
-    <div class="reveal">
-      <span class="kicker">SMP · Terakreditasi A</span>
-      <h2>Junior <span class="tone">High School</span></h2>
-      <p style="margin-top:.9rem;">Fondasi masa depan siswa dibangun sejak kelas 7: <strong>Program Foundation</strong> di awal tahun ajaran — 2 bulan matrikulasi pembiasaan budaya (5S, tahfizh, mapel umum) dilanjutkan <strong>English Quarantine</strong> intensif, lalu <strong>English Camp</strong> tahunan yang menginap di sekolah.</p>
-      <ul class="prog-list" style="margin-top:1.2rem;">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Program Foundation 3 bulan: matrikulasi budaya + English Quarantine</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>English Camp — tutor dari Kampung Inggris Pare, Kediri</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Tahfidz Al-Qur'an bertahap dengan target per semester</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Science Camp — projek sains nyata (budidaya lobster)</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Pembinaan olimpiade sains sejak dini (4 medali nasional 2024)</li>
-      </ul>
-    </div>
-    <div class="has-photo img-slot reveal d1" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/junior-high-school-r0003026.jpg" alt="Foto Siswa SMP Al Mazaya">Foto Siswa SMP Al Mazaya</div>
-  </div>
-</section>
-
-<!-- SMA -->
-<section class="section bg-mist" id="sma">
-  <div class="container jenjang-detail flip">
-    <div class="reveal">
-      <span class="kicker">SMA · Terakreditasi A</span>
-      <h2>Senior <span class="tone">High School</span></h2>
-      <p style="margin-top:.9rem;">Persiapan maksimal menuju perguruan tinggi negeri ternama. Lulusan Al Mazaya telah diterima di <strong>UI, ULM, ITS, dan ITB</strong> — termasuk fakultas kedokteran umum &amp; gigi, serta jurusan Komputer UI.</p>
-      <ul class="prog-list" style="margin-top:1.2rem;">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Super Camp — belajar berbasis projek: Matematika, Fisika, Kimia</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Students Club &amp; Enrichment — pembinaan bakat + mentoring individu</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Bimbingan intensif UTBK &amp; jalur undangan PTN</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Pendalaman tahfidz &amp; penghargaan hafizh 30 juz</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Sertifikasi Cambridge English untuk kelulusan berstandar dunia</li>
-      </ul>
-    </div>
-    <div class="has-photo img-slot reveal d1 warm" style="min-height:360px;"><img class="slot-photo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/senior-high-school-p.jpg" alt="Foto Siswa SMA Al Mazaya">Foto Siswa SMA Al Mazaya</div>
-  </div>
-</section>
-
-<!-- EKSKUL -->
 <section class="section">
   <div class="container">
     <div class="section-head center reveal">

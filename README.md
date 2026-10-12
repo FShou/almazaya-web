@@ -9,13 +9,15 @@ Bilingual ID/EN, tested-up-to WordPress 7.0, requires PHP 7.4+.
    Atau copy ke `wp-content/themes/almazaya/`, lalu Activate.
 2. **Settings → Permalinks → Post name** (wajib — URL internal theme memakai pretty permalink).
 3. Install + aktifkan plugin **Polylang**, buat 2 bahasa: `id` (default) dan `en`.
-4. Buat 7 Page dengan slug persis ini (isi boleh kosong — konten dari template):
+4. Buat 10 Page dengan slug persis ini (isi boleh kosong — konten dari template):
    `beranda` (jadikan **Homepage** di Settings → Reading), `tentang`, `akademik`,
-   `jenjang`, `berita`, `galeri`, `ppdb` — lalu terjemahkan ke EN via Polylang (+ ikon).
+   `jenjang` (hub Sekolah Kami), `mmi`, `smp`, `sma`, `berita`, `galeri`, `ppdb`
+   — lalu terjemahkan ke EN via Polylang (+ ikon).
 5. Di tiap Page → **Template**: pilih `… — Al Mazaya` yang sesuai
-   (Tentang wajib pakai template *Tentang* agar class `about` aktif).
-6. **Appearance → Menus**: buat menu *Primary* (7 halaman, tiap bahasa) assign ke
-   *Menu Utama*; buat menu footer assign ke *Menu Footer*.
+   (Tentang wajib pakai template *Tentang* agar class `about` aktif;
+   MMI/SMP/SMA pakai template masing-masing).
+6. **Appearance → Menus**: buat menu *Primary* (7 item utama + submenu
+   MMI/SMP/SMA di bawah Sekolah Kami, tiap bahasa) assign ke *Menu Utama*; buat menu footer assign ke *Menu Footer*.
    Tanpa menu pun jalan (fallback otomatis = link bawaan ID/EN).
 7. **Appearance → Customize → Tautan Al Mazaya**: isi URL SHS/JHS Virtual Class,
    Instagram, WhatsApp, YouTube, Portal PSB (default sudah terisi URL produksi).

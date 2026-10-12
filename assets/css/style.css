@@ -825,6 +825,12 @@ a.partner-card { display: block; text-decoration: none; color: inherit; }
 .article-hero { min-height: 320px; margin-bottom: 1.4rem; }
 .article-body .art-p { line-height: 1.8; margin: 0 0 1.1rem; }
 .art-paras p { line-height: 1.8; margin: 0 0 1.1rem; }
+.art-paras figure { margin: 1.6rem 0; }
+.art-paras figure img { border-radius: var(--radius-sm); }
+.art-paras figcaption { font-size: .82rem; color: var(--slate-light); margin-top: .5rem; }
+.art-paras blockquote { border-left: 3px solid var(--gold); margin: 1.6rem 0; padding: .4rem 0 .4rem 1.2rem; font-size: 1.05rem; color: var(--navy); }
+.art-paras blockquote cite { display: block; font-size: .85rem; color: var(--slate-light); margin-top: .4rem; font-style: normal; }
+.art-paras ul, .art-paras ol { margin: 0 0 1.1rem 1.2rem; line-height: 1.8; }
 .related-block { margin-top: 2.4rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
 .related-block h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: .7rem; }
 .related-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }

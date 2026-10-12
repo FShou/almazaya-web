@@ -442,7 +442,7 @@
 
         <article class="map-modal-card" id="mc-singapore">
           <header class="map-modal-head"><span class="map-modal-flag">🇸🇬</span><div><span class="map-modal-tag">Montessori Authentic</span><h4>Modern Montessori International (MMI)</h4></div></header>
-          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.png" alt="Modern Montessori International (MMI)" loading="lazy">
+          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.webp" alt="Modern Montessori International (MMI)" loading="lazy">
           <p class="map-modal-desc">Our main KB-TK partnership. MMI Singapore is the authority on authentic Montessori — daily English and child-led learning for ages 6 months to 6 years.</p>
           <a class="btn btn-gold map-link" href="https://modern-montessori.com" target="_blank" rel="noopener">Visit Website →</a>
         </article>
@@ -460,7 +460,7 @@
         </article>
         <article class="map-modal-card" id="mc-australia">
           <header class="map-modal-head"><span class="map-modal-flag">🇦🇺</span><div><span class="map-modal-tag">Islamic Education</span><h4>Minaret College</h4></div></header>
-          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-minaret.png" alt="Minaret College" loading="lazy">
+          <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-minaret.webp" alt="Minaret College" loading="lazy">
           <p class="map-modal-desc">A leading Islamic college in Melbourne, Australia. Learn English in an English-speaking country while strengthening Islamic identity.</p>
           <a class="btn btn-gold map-link" href="https://minaret.vic.edu.au" target="_blank" rel="noopener">Visit Website →</a>
         </article>
@@ -526,7 +526,7 @@
 
     <div class="partner-grid">
       <a class="partner-card reveal" href="https://modern-montessori.com" target="_blank" rel="noopener">
-        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.png" alt="Modern Montessori International">
+        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.webp" alt="Modern Montessori International">
         <h3>Modern Montessori International (MMI)</h3>
         <p>Singapore</p>
       </a>
@@ -536,7 +536,7 @@
         <p>Japan</p>
       </a>
       <a class="partner-card reveal d2" href="https://minaret.vic.edu.au" target="_blank" rel="noopener">
-        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-minaret.png" alt="Minaret College">
+        <img class="partner-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-minaret.webp" alt="Minaret College">
         <h3>Minaret College</h3>
         <p>Australia</p>
       </a>

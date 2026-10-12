@@ -3,6 +3,17 @@
 Custom theme ported 1:1 from the static site (`rehaul` branch, cache v106).
 Bilingual ID/EN, tested-up-to WordPress 7.0, requires PHP 7.4+.
 
+## Rilis zip otomatis (GitHub Actions)
+
+```bash
+git tag v1.0.3 && git push origin v1.0.3
+```
+
+Push tag `v*` menjalankan workflow **Release theme zip**: versi theme
+disamakan dengan tag → `almazaya.zip` di-build → dilampirkan ke
+**GitHub Release** (lihat tab Releases). Unduh zip dari sana untuk upload ke WP.
+Rilis ulang manual: Actions → Release theme zip → Run workflow → isi tag.
+
 ## Deploy langsung ke produksi (tanpa staging)
 
 Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:

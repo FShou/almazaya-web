@@ -1,0 +1,51 @@
+name: Release theme zip
+
+# Cara rilis: git tag v1.0.3 && git push origin v1.0.3
+# (atau manual via Actions → Run workflow → isi tag).
+# Workflow: samakan versi theme dengan tag → build almazaya.zip
+# (folder almazaya/ di root zip) → lampirkan ke GitHub Release.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag rilis (mis. v1.0.3, harus sudah ada di repo)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Samakan versi theme dengan tag
+        run: |
+          TAG="${{ inputs.tag }}"
+          [ -z "$TAG" ] && TAG="$GITHUB_REF_NAME"
+          VER="${TAG#v}"
+          echo "Release $TAG (versi theme $VER)"
+          sed -i "s/^Version: .*/Version: $VER/" style.css
+          sed -i "s/define( 'ALMAZAYA_VERSION', '.*' );/define( 'ALMAZAYA_VERSION', '$VER' );/" functions.php
+          sed -i "s/define( 'ALMAZAYA_JS_VERSION', '.*' );/define( 'ALMAZAYA_JS_VERSION', '$VER' );/" functions.php
+          grep -E '^Version:' style.css
+          php -l functions.php
+
+      - name: Build almazaya.zip
+        run: ./package-theme.sh
+
+      - name: Lampirkan ke GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ inputs.tag }}"
+          [ -z "$TAG" ] && TAG="$GITHUB_REF_NAME"
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --title "Al Mazaya $TAG" --generate-notes
+          fi
+          gh release upload "$TAG" almazaya.zip --clobber

@@ -55,7 +55,10 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
    `beranda` (jadikan **Homepage** di Settings → Reading), `tentang`,
    `jenjang` (hub Sekolah Kami), `mmi`, `smp`, `sma`, `berita`, `berita-detail`
    (template Detail Berita — dibaca via `?a=slug`), `galeri`, `ppdb`
-   — lalu terjemahkan ke EN via Polylang (+ ikon).
+   — lalu terjemahkan ke EN via Polylang (+ ikon). Slug terjemahan boleh beda
+   (mis. `tentang` → `about`, URL `/en/about/`) — switcher bahasa mengikuti
+   relasi terjemahan, bukan slug. Jangan lupa Settings → Permalinks → Save
+   ulang tiap tambah bahasa.
 5. Di tiap Page → **Template**: pilih `… — Al Mazaya` yang sesuai
    (Tentang wajib pakai template *Tentang* agar class `about` aktif;
    MMI/SMP/SMA pakai template masing-masing).

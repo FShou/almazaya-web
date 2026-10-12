@@ -831,6 +831,25 @@ a.partner-card { display: block; text-decoration: none; color: inherit; }
 .art-paras blockquote { border-left: 3px solid var(--gold); margin: 1.6rem 0; padding: .4rem 0 .4rem 1.2rem; font-size: 1.05rem; color: var(--navy); }
 .art-paras blockquote cite { display: block; font-size: .85rem; color: var(--slate-light); margin-top: .4rem; font-style: normal; }
 .art-paras ul, .art-paras ol { margin: 0 0 1.1rem 1.2rem; line-height: 1.8; }
+.art-paras h2, #art-paras h2 { scroll-margin-top: 96px; }
+
+/* article table of contents */
+.art-toc {
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--mist); padding: 1rem 1.2rem; margin: 0 0 1.6rem;
+}
+.art-toc strong {
+  display: block; font-size: .78rem; font-weight: 800;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--navy); margin-bottom: .55rem;
+}
+.art-toc ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; }
+.art-toc a { color: var(--slate-light); font-size: .92rem; }
+.art-toc a:hover { color: var(--gold-deep); }
+@media (max-width: 640px) {
+  .art-toc { padding: .8rem .9rem; margin-bottom: 1.2rem; }
+  .art-toc a { font-size: .85rem; }
+}
 .related-block { margin-top: 2.4rem; border-top: 1px solid var(--line); padding-top: 1.4rem; }
 .related-block h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: .7rem; }
 .related-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }

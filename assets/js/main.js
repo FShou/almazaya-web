@@ -180,6 +180,37 @@
     });
   })();
 
+  /* Article table of contents — built from h2s, works on any article */
+  (function articleToc() {
+    var box = document.querySelector('.art-paras, #art-paras');
+    if (!box) return;
+    var heads = box.querySelectorAll('h2');
+    if (heads.length < 2) return;
+    var isId = (document.documentElement.lang || 'id').toLowerCase().indexOf('id') === 0;
+    function slug(s, i) {
+      s = s.toLowerCase().trim().replace(/[^a-z0-9\u00C0-\u024F\u1E00-\u1EFF\s-]/g, '').replace(/[\s-]+/g, '-').replace(/^-+|-+$/g, '');
+      return (s || 'bagian') + '-' + (i + 1);
+    }
+    var nav = document.createElement('nav');
+    nav.className = 'art-toc';
+    nav.setAttribute('aria-label', isId ? 'Daftar isi' : 'Contents');
+    var title = document.createElement('strong');
+    title.textContent = isId ? 'Daftar Isi' : 'Contents';
+    var ul = document.createElement('ul');
+    heads.forEach(function (h, i) {
+      if (!h.id) h.id = slug(h.textContent, i);
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    nav.appendChild(title);
+    nav.appendChild(ul);
+    box.insertBefore(nav, box.firstChild);
+  })();
+
   /* Pillar cards — toggle open on click */
   var pillars = document.querySelectorAll('[data-pillar]');
   pillars.forEach(function (pillar) {

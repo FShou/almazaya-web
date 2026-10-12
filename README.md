@@ -3,6 +3,18 @@
 Custom theme ported 1:1 from the static site (`rehaul` branch, cache v106).
 Bilingual ID/EN, tested-up-to WordPress 7.0, requires PHP 7.4+.
 
+## Deploy ke staging (new.almazaya.com)
+
+1. `./package-theme.sh` → hasil `almazaya.zip` (jangan commit file zip).
+   Alternatif tanpa zip: upload isi folder ini via SFTP ke
+   `wp-content/themes/almazaya/` (butuh `style.css` di root folder theme).
+2. Di hosting: buat subdomain `new` (document root terpisah dari domain utama),
+   aktifkan SSL (AutoSSL/Let's Encrypt), install WordPress 7.0 + database baru.
+3. Di WP staging: Appearance → Themes → Upload `almazaya.zip` → Activate,
+   lalu ikut bagian **Install** di bawah.
+4. Kunci staging: Settings → Reading → *Discourage search engines* (+ opsional
+   plugin Password Protected agar hanya internal yang bisa lihat).
+
 ## Install
 
 1. Zip folder ini (`style.css` harus di root zip) → **Appearance → Themes → Add New → Upload**.

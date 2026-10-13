@@ -1820,7 +1820,9 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
 body.modal-open { overflow: hidden; }
 
 @media (max-width: 640px) {
-  .map-shell { padding: .3rem .3rem .4rem; }
+  .map-shell { padding: .3rem .3rem .4rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .map-shell .world-map { min-width: 620px; max-width: none; }
+  .map-shell .map-hit { r: 26px; }
   .map-legend { display: none; }
   .map-label { font-size: 9px; letter-spacing: .3px; }
   .map-marker { stroke-width: 1.2; }

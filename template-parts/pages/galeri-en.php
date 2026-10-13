@@ -14,6 +14,10 @@
 
 <section class="section">
   <div class="container">
+    <?php $almazaya_feed_html = almazaya_galeri_feed_html(); ?>
+<?php if ( '' !== $almazaya_feed_html ) : ?>
+<div class="galeri-feed"><?php echo $almazaya_feed_html; ?></div>
+<?php else : ?>
     <div class="filter-row reveal">
       <button class="filter-chip active">All Events</button>
       <button class="filter-chip">Academic</button>
@@ -22,10 +26,6 @@
       <button class="filter-chip">Graduation</button>
     </div>
 
-    <?php $almazaya_feed_html = almazaya_galeri_feed_html(); ?>
-<?php if ( '' !== $almazaya_feed_html ) : ?>
-<div class="galeri-feed"><?php echo $almazaya_feed_html; ?></div>
-<?php else : ?>
 <div class="gallery-bento">
       <div data-cat="Academic" class="has-photo img-slot reveal"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_151444' ) ); ?>" alt="English Talent Show · Monthly student talent stage"><span class="gal-label">English Talent Show · Monthly student talent stage</span></div>
       <div data-cat="Academic" class="has-photo img-slot warm tall reveal d1"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221214111711_img_7128' ) ); ?>" alt="Market Day · Entrepreneurship practice"><span class="gal-label">Market Day · Entrepreneurship practice</span></div>

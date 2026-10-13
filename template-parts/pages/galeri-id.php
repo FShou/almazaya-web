@@ -14,6 +14,10 @@
 
 <section class="section">
   <div class="container">
+    <?php $almazaya_feed_html = almazaya_galeri_feed_html(); ?>
+<?php if ( '' !== $almazaya_feed_html ) : ?>
+<div class="galeri-feed"><?php echo $almazaya_feed_html; ?></div>
+<?php else : ?>
     <div class="filter-row reveal">
       <button class="filter-chip active">Semua Event</button>
       <button class="filter-chip">Akademik</button>
@@ -23,10 +27,6 @@
     </div>
 
     <!-- TODO WP: digantikan galeri/album WordPress -->
-    <?php $almazaya_feed_html = almazaya_galeri_feed_html(); ?>
-<?php if ( '' !== $almazaya_feed_html ) : ?>
-<div class="galeri-feed"><?php echo $almazaya_feed_html; ?></div>
-<?php else : ?>
 <div class="gallery-bento">
       <div data-cat="Akademik" class="has-photo img-slot reveal"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_151444' ) ); ?>" alt="English Talent Show · Panggung bulanan bakat siswa"><span class="gal-label">English Talent Show · Panggung bulanan bakat siswa</span></div>
       <div data-cat="Akademik" class="has-photo img-slot warm tall reveal d1"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221214111711_img_7128' ) ); ?>" alt="Market Day · Belajar wirausaha"><span class="gal-label">Market Day · Belajar wirausaha</span></div>

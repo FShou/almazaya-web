@@ -11,7 +11,7 @@ $almazaya_dests = almazaya_get_ordered_posts( 'destination' );
 $almazaya_en   = almazaya_is_en();
 
 if ( 'dots' === $almazaya_part ) :
-	$almazaya_di = 0;
+	$almazaya_placed = array();
 	foreach ( $almazaya_dests as $almazaya_d ) :
 		$almazaya_slug = $almazaya_d->post_name;
 		$almazaya_lat  = get_post_meta( $almazaya_d->ID, '_almazaya_lat', true );
@@ -24,8 +24,14 @@ if ( 'dots' === $almazaya_part ) :
 		if ( '' === $almazaya_cname ) {
 			$almazaya_cname = $almazaya_slug;
 		}
-		$almazaya_ly = ( 0 === $almazaya_di % 2 ) ? $almazaya_cy - 20 : $almazaya_cy + 32;
-		$almazaya_di++;
+		$almazaya_ly = $almazaya_cy - 20;
+		foreach ( $almazaya_placed as $almazaya_p ) {
+			if ( abs( $almazaya_cx - $almazaya_p[0] ) < 75 && abs( $almazaya_ly - $almazaya_p[1] ) < 22 ) {
+				$almazaya_ly = $almazaya_cy + 32;
+				break;
+			}
+		}
+		$almazaya_placed[] = array( $almazaya_cx, $almazaya_ly );
 		?>
 		<g class="map-dest" data-country="<?php echo esc_attr( $almazaya_slug ); ?>" role="button" tabindex="0" aria-label="<?php echo esc_attr( $almazaya_cname ); ?>"><circle cx="<?php echo esc_attr( $almazaya_cx ); ?>" cy="<?php echo esc_attr( $almazaya_cy ); ?>" r="16" class="map-hit"/><circle cx="<?php echo esc_attr( $almazaya_cx ); ?>" cy="<?php echo esc_attr( $almazaya_cy ); ?>" r="6" class="map-marker"/><text x="<?php echo esc_attr( $almazaya_cx ); ?>" y="<?php echo esc_attr( $almazaya_ly ); ?>" class="map-label" text-anchor="middle"><?php echo esc_html( $almazaya_cname ); ?></text></g>
 		<?php

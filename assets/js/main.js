@@ -211,6 +211,36 @@
     box.insertBefore(nav, box.firstChild);
   })();
 
+  /* Overseas map: auto-fit viewBox to dots on mobile (all visible, bigger) */
+  (function mapFit() {
+    function fit() {
+      if (!window.matchMedia('(max-width: 640px)').matches) return;
+      var svg = document.querySelector('svg.world-map');
+      if (!svg) return;
+      var dots = svg.querySelectorAll('.map-dest');
+      if (!dots.length) return;
+      var minX = 1e9, minY = 1e9, maxX = -1e9, maxY = -1e9;
+      dots.forEach(function (g) {
+        var c = g.querySelector('circle.map-marker') || g.querySelector('circle');
+        if (!c) return;
+        var cx = parseFloat(c.getAttribute('cx')), cy = parseFloat(c.getAttribute('cy'));
+        if (isNaN(cx) || isNaN(cy)) return;
+        minX = Math.min(minX, cx); maxX = Math.max(maxX, cx);
+        minY = Math.min(minY, cy); maxY = Math.max(maxY, cy);
+      });
+      if (minX > maxX) return;
+      var pad = 90;
+      minX -= pad; minY -= pad; maxX += pad; maxY += pad;
+      var w = Math.max(maxX - minX, 320), h = Math.max(maxY - minY, 300);
+      minX = Math.max(0, Math.min(minX, 1000 - w));
+      minY = Math.max(0, Math.min(minY, 480 - h));
+      svg.setAttribute('viewBox', minX + ' ' + minY + ' ' + w + ' ' + h);
+    }
+    fit();
+    var t;
+    window.addEventListener('orientationchange', function () { clearTimeout(t); t = setTimeout(fit, 300); });
+  })();
+
   /* Pillar cards — toggle open on click */
   var pillars = document.querySelectorAll('[data-pillar]');
   pillars.forEach(function (pillar) {

@@ -1,8 +1,8 @@
 <?php
 /**
  * Dynamic overseas destinations (CPT destination), modes via $args['part']:
- * map (Leaflet container) | chips | cards (modal) | mapscript (DATA +
- * handlers + Leaflet init). Falls back to bundled static SVG markup
+ * dots (SVG markers, lat/lng projected) | chips | cards (modal) |
+ * script (DATA + handlers). Falls back to bundled static SVG markup
  * when empty (caller handles fallback).
  */
 $almazaya_args = isset( $args ) && is_array( $args ) ? $args : array();
@@ -10,10 +10,26 @@ $almazaya_part = isset( $almazaya_args['part'] ) ? $almazaya_args['part'] : 'map
 $almazaya_dests = almazaya_get_ordered_posts( 'destination' );
 $almazaya_en   = almazaya_is_en();
 
-if ( 'map' === $almazaya_part ) :
-	?>
-	<div id="ov-map" class="ov-map" role="application" aria-label="<?php echo esc_attr( $almazaya_en ? 'Map of overseas destinations' : 'Peta destinasi overseas' ); ?>"></div>
-	<?php
+if ( 'dots' === $almazaya_part ) :
+	$almazaya_di = 0;
+	foreach ( $almazaya_dests as $almazaya_d ) :
+		$almazaya_slug = $almazaya_d->post_name;
+		$almazaya_lat  = get_post_meta( $almazaya_d->ID, '_almazaya_lat', true );
+		$almazaya_lng  = get_post_meta( $almazaya_d->ID, '_almazaya_lng', true );
+		if ( '' === $almazaya_lat || '' === $almazaya_lng ) {
+			continue;
+		}
+		list( $almazaya_cx, $almazaya_cy ) = almazaya_latlng_to_svg( $almazaya_lat, $almazaya_lng );
+		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
+		if ( '' === $almazaya_cname ) {
+			$almazaya_cname = $almazaya_slug;
+		}
+		$almazaya_ly = ( 0 === $almazaya_di % 2 ) ? $almazaya_cy - 20 : $almazaya_cy + 32;
+		$almazaya_di++;
+		?>
+		<g class="map-dest" data-country="<?php echo esc_attr( $almazaya_slug ); ?>" role="button" tabindex="0" aria-label="<?php echo esc_attr( $almazaya_cname ); ?>"><circle cx="<?php echo esc_attr( $almazaya_cx ); ?>" cy="<?php echo esc_attr( $almazaya_cy ); ?>" r="16" class="map-hit"/><circle cx="<?php echo esc_attr( $almazaya_cx ); ?>" cy="<?php echo esc_attr( $almazaya_cy ); ?>" r="6" class="map-marker"/><text x="<?php echo esc_attr( $almazaya_cx ); ?>" y="<?php echo esc_attr( $almazaya_ly ); ?>" class="map-label" text-anchor="middle"><?php echo esc_html( $almazaya_cname ); ?></text></g>
+		<?php
+	endforeach;
 
 elseif ( 'chips' === $almazaya_part ) :
 	echo '<div class="overseas-chips reveal">';
@@ -64,10 +80,9 @@ elseif ( 'cards' === $almazaya_part ) :
 		<?php
 	endforeach;
 
-elseif ( 'mapscript' === $almazaya_part ) :
+elseif ( 'script' === $almazaya_part ) :
 	$almazaya_data  = array();
 	$almazaya_order = array();
-	$almazaya_pts   = array();
 	foreach ( $almazaya_dests as $almazaya_d ) :
 		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
 		if ( '' === $almazaya_cname ) {
@@ -79,16 +94,6 @@ elseif ( 'mapscript' === $almazaya_part ) :
 			'e' => get_post_meta( $almazaya_d->ID, '_almazaya_flag', true ),
 		);
 		$almazaya_order[] = $almazaya_d->post_name;
-		$almazaya_lat = get_post_meta( $almazaya_d->ID, '_almazaya_lat', true );
-		$almazaya_lng = get_post_meta( $almazaya_d->ID, '_almazaya_lng', true );
-		if ( '' !== $almazaya_lat && '' !== $almazaya_lng ) {
-			$almazaya_pts[] = array(
-				'slug' => $almazaya_d->post_name,
-				'lat'  => (float) $almazaya_lat,
-				'lng'  => (float) $almazaya_lng,
-				'name' => $almazaya_cname,
-			);
-		}
 	endforeach;
 	$almazaya_json = str_replace( '</', '<\/', wp_json_encode( $almazaya_data ) );
 	?>
@@ -96,19 +101,10 @@ elseif ( 'mapscript' === $almazaya_part ) :
 	(function(){{
 		var DATA = <?php echo $almazaya_json; ?>;
 		var ORDER = <?php echo wp_json_encode( $almazaya_order ); ?>;
-		var PTS = <?php echo wp_json_encode( $almazaya_pts ); ?>;
 		var modal = document.getElementById('overseas-modal');
 		var country = document.getElementById('overseasModalCountry');
 		var idx = 0;
 		var active = null;
-		var marks = {};
-		function markActive(k) {{
-			document.querySelectorAll('.ov-pin span.active').forEach(function(s){{ s.classList.remove('active'); }});
-			if (k && marks[k] && marks[k].getElement()) {{
-				var sp = marks[k].getElement().querySelector('span');
-				if (sp) {{ sp.classList.add('active'); }}
-			}}
-		}}
 		function show(k, focus) {{
 			idx = ORDER.indexOf(k);
 			for (var i=0;i<ORDER.length;i++) document.getElementById('mc-'+ORDER[i]).classList.toggle('active', ORDER[i]===k);
@@ -119,14 +115,12 @@ elseif ( 'mapscript' === $almazaya_part ) :
 			if (active) active.classList.remove('active');
 			var m = document.querySelector('.map-dest[data-country="'+k+'"] .map-marker');
 			if (m) {{ m.classList.add('active'); active = m; }}
-			markActive(k);
 			if (focus) document.getElementById('overseasModalClose').focus();
 		}}
 		function hide() {{
 			modal.classList.remove('open');
 			document.body.classList.remove('modal-open');
 			if (active) {{ active.classList.remove('active'); active = null; }}
-			markActive(null);
 		}}
 		function nav(d) {{ show(ORDER[(idx + d + ORDER.length) % ORDER.length]); }}
 		document.querySelectorAll('.map-dest').forEach(function(el){{
@@ -142,18 +136,6 @@ elseif ( 'mapscript' === $almazaya_part ) :
 		document.getElementById('overseasModalClose').addEventListener('click', hide);
 		modal.addEventListener('click', function(e){{ if (e.target===modal) hide(); }});
 		document.addEventListener('keydown', function(e){{ if (e.key==='Escape' && modal.classList.contains('open')) hide(); }});
-		if (typeof L !== 'undefined' && PTS.length) {
-			var map = L.map('ov-map', { scrollWheelZoom: false, attributionControl: true }).setView([20, 30], 2);
-			var icon = L.divIcon({ className: 'ov-pin', html: '<span></span>', iconSize: [20, 20], iconAnchor: [10, 10] });
-			PTS.forEach(function(pt){
-				var mk = L.marker([pt.lat, pt.lng], { icon: icon, title: pt.name, keyboard: true }).addTo(map);
-				mk.on('click', function(){ show(pt.slug, true); });
-				marks[pt.slug] = mk;
-			});
-			var bnds = L.latLngBounds(PTS.map(function(pt){ return [pt.lat, pt.lng]; }));
-			map.fitBounds(bnds, { padding: [36, 36] });
-			if (map.getZoom() > 4) { map.setZoom(4); }
-		}
 	}})();
 	</script>
 	<?php

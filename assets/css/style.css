@@ -1711,39 +1711,6 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   padding: 1rem 1rem .9rem;
 }
 .world-map { display: block; width: 100%; height: auto; }
-
-/* Leaflet live map (destinations exist): same footprint as the static SVG */
-.ov-map {
-  position: relative; z-index: 0;
-  height: clamp(320px, 55vh, 480px);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background-color: var(--navy-deep);
-  background-image:
-    radial-gradient(ellipse at 50% 40%, rgba(38,69,108,.55) 0%, rgba(13,33,62,0) 70%),
-    linear-gradient(rgba(122,162,204,.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(122,162,204,.10) 1px, transparent 1px);
-  background-size: auto, 44px 44px, 44px 44px;
-}
-.ov-map .leaflet-container { background: transparent; font: inherit; }
-.ov-map.leaflet-container { background-color: var(--navy-deep); }
-.ov-pin { background: none; border: 0; }
-.ov-pin span {
-  display: block; width: 14px; height: 14px; margin: 3px;
-  border-radius: 50%;
-  background: var(--gold);
-  border: 1.5px solid #fff;
-  box-shadow: 0 0 0 5px rgba(201,162,39,.22), 0 2px 8px rgba(0,0,0,.5);
-  cursor: pointer;
-  transition: transform .18s ease, background .18s ease;
-}
-.ov-pin:hover span { transform: scale(1.25); }
-.ov-pin span.active { background: #F2D777; transform: scale(1.3); }
-.ov-pin:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
-.ov-map .leaflet-control-attribution { background: rgba(10,25,45,.72); color: #8FA3C0; font-size: 10px; }
-.ov-map .leaflet-control-attribution a { color: var(--gold-soft); }
-.ov-map .leaflet-bar a { color: var(--navy-deep); }
-@media (max-width: 640px) { .ov-map { height: 300px; } }
 .map-land   { fill: #26456C; stroke: #4A6F9C; stroke-width: .7; stroke-linejoin: round; }
 .map-partner{ fill: #54789F; stroke: #7FA3C7; stroke-width: .7; }
 .map-dest { cursor: pointer; }

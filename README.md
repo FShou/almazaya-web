@@ -108,9 +108,8 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
     tag + URL website + **koordinat real Latitude/Longitude desimal**
     (meta box; mis. Singapore 1.3521, 103.8198 — klik kanan peta di
     Google Maps → salin koordinat), deskripsi (editor), logo (featured),
-    key = slug (huruf kecil). Peta pakai Leaflet (tanpa API key, tanpa tile
-    server — titik emas di atas grid navy, auto-frame semua titik).
-    Label nama otomatis di atas titik.
+    key = slug (huruf kecil). Titik diproyeksikan ke peta SVG dunia
+    (tanpa library/API key; posisi akurat ±20px, label zigzag anti-tabrakan).
   - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
     bawaan theme (fallback statis, tidak kosong).
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`

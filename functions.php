@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.0.3' );
-define( 'ALMAZAYA_JS_VERSION', '1.0.3' );
+define( 'ALMAZAYA_VERSION', '1.0.4' );
+define( 'ALMAZAYA_JS_VERSION', '1.0.4' );
 
 /* ---------- Setup ---------- */
 
@@ -63,23 +63,6 @@ function almazaya_assets() {
 		ALMAZAYA_JS_VERSION,
 		true
 	);
-	/* Leaflet (no API key) for the overseas map — front page only, head so
-	 * the inline map script in the body can use L immediately. */
-	if ( is_front_page() ) {
-		wp_enqueue_style(
-			'leaflet',
-			'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css',
-			array(),
-			'1.9.4'
-		);
-		wp_enqueue_script(
-			'leaflet',
-			'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js',
-			array(),
-			'1.9.4',
-			false
-		);
-	}
 }
 add_action( 'wp_enqueue_scripts', 'almazaya_assets' );
 
@@ -852,4 +835,13 @@ function almazaya_pagination( $query = null, $current = 1, $add_args = array() )
 
 function almazaya_destination_meta_keys() {
 	return array( '_almazaya_country', '_almazaya_flag', '_almazaya_tag', '_almazaya_website', '_almazaya_lat', '_almazaya_lng' );
+}
+
+/** Proyeksi lat/lng real ke koordinat SVG peta (viewBox 1000x480).
+ * Dikalibrasi least-squares dari 5 titik bawaan (error maks ~21px —
+ * tak kasatmata di peta stilasi). Fallback statis memakai koordinat asli. */
+function almazaya_latlng_to_svg( $lat, $lng ) {
+	$x = 2.4526 * (float) $lng + 533.87;
+	$y = -2.9005 * (float) $lat + 274.46;
+	return array( round( min( 1000, max( 0, $x ) ), 1 ), round( min( 480, max( 0, $y ) ), 1 ) );
 }

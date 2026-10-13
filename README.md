@@ -14,6 +14,26 @@ disamakan dengan tag → `almazaya.zip` di-build → dilampirkan ke
 **GitHub Release** (lihat tab Releases). Unduh zip dari sana untuk upload ke WP.
 Rilis ulang manual: Actions → Release theme zip → Run workflow → isi tag.
 
+## Update theme di produksi (aman)
+
+Aman — konten (post, page, menu, media, user) dan setting (Customizer,
+Polylang) tersimpan di **database**, terpisah dari file theme. Selama nama
+folder theme tetap `almazaya`, update file **tidak menghapus** apapun:
+
+1. Backup dulu (UpdraftPlus/Duplicator atau panel hosting).
+2. Unduh `almazaya.zip` dari rilis baru → Appearance → Themes → Add New →
+   Upload → WordPress menawari **penggantian versi** → konfirmasi.
+   (Alternatif 1-klik: plugin gratis **Git Updater** — WP menampilkan
+   notifikasi update dari GitHub Releases.)
+3. Cek homepage + 2-3 halaman + clear cache (plugin cache/CDN bila ada).
+4. Gagal? Upload ulang zip versi lama dari tab Releases (= rollback),
+   atau restore backup.
+
+Jangan edit file theme langsung di produksi (hilang saat update) — pakai
+Customizer → Additional CSS, atau child theme untuk kustom berat. Key
+setting (`almazaya_*`) dijaga stabil antar rilis; bila ada perubahan
+skema, dicatat di release notes.
+
 ## Deploy langsung ke produksi (tanpa staging)
 
 Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:

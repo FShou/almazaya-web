@@ -104,12 +104,11 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
     Logo SVG tidak bisa di-upload WP — pakai PNG/WebP/JPG.
   - Program: label (title), judul panel + poin (meta box), deskripsi (editor),
     foto, key data = slug (unik, tanpa spasi).
-  - Destinasi (peta overseas): nama sekolah (title), negara + emoji bendera +
-    tag + URL website + **koordinat real Latitude/Longitude desimal**
-    (meta box; mis. Singapore 1.3521, 103.8198 — klik kanan peta di
-    Google Maps → salin koordinat), deskripsi (editor), logo (featured),
-    key = slug (huruf kecil). Titik diproyeksikan ke peta SVG dunia
-    (tanpa library/API key; posisi akurat ±20px, label zigzag anti-tabrakan).
+  - Destinasi (peta overseas): **pilih negara dari dropdown** (249 negara —
+    otomatis isi nama ID/EN, emoji bendera & koordinat; tetap bisa edit manual
+    untuk tempat khusus), nama sekolah (title), tag, URL website, deskripsi
+    (editor), logo (featured), key = slug (huruf kecil). Koordinat real
+    (lat/lng) diproyeksikan ke peta SVG dunia; label anti-tabrakan otomatis.
   - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
     bawaan theme (fallback statis, tidak kosong).
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`

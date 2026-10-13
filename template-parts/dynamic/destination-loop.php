@@ -20,10 +20,7 @@ if ( 'dots' === $almazaya_part ) :
 			continue;
 		}
 		list( $almazaya_cx, $almazaya_cy ) = almazaya_latlng_to_svg( $almazaya_lat, $almazaya_lng );
-		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
-		if ( '' === $almazaya_cname ) {
-			$almazaya_cname = $almazaya_slug;
-		}
+		$almazaya_cname = almazaya_dest_country( $almazaya_d->ID, $almazaya_slug );
 		$almazaya_ly = $almazaya_cy - 20;
 		foreach ( $almazaya_placed as $almazaya_p ) {
 			if ( abs( $almazaya_cx - $almazaya_p[0] ) < 75 && abs( $almazaya_ly - $almazaya_p[1] ) < 22 ) {
@@ -41,10 +38,7 @@ elseif ( 'chips' === $almazaya_part ) :
 	echo '<div class="overseas-chips reveal">';
 	$almazaya_first = true;
 	foreach ( $almazaya_dests as $almazaya_d ) :
-		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
-		if ( '' === $almazaya_cname ) {
-			$almazaya_cname = $almazaya_d->post_name;
-		}
+		$almazaya_cname = almazaya_dest_country( $almazaya_d->ID, $almazaya_d->post_name );
 		$almazaya_flag = get_post_meta( $almazaya_d->ID, '_almazaya_flag', true );
 		if ( ! $almazaya_first ) {
 			echo ' ';
@@ -61,10 +55,7 @@ elseif ( 'chips' === $almazaya_part ) :
 
 elseif ( 'cards' === $almazaya_part ) :
 	foreach ( $almazaya_dests as $almazaya_d ) :
-		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
-		if ( '' === $almazaya_cname ) {
-			$almazaya_cname = $almazaya_d->post_name;
-		}
+		$almazaya_cname = almazaya_dest_country( $almazaya_d->ID, $almazaya_d->post_name );
 		$almazaya_flag = get_post_meta( $almazaya_d->ID, '_almazaya_flag', true );
 		$almazaya_tag  = get_post_meta( $almazaya_d->ID, '_almazaya_tag', true );
 		$almazaya_web  = get_post_meta( $almazaya_d->ID, '_almazaya_website', true );
@@ -90,10 +81,7 @@ elseif ( 'script' === $almazaya_part ) :
 	$almazaya_data  = array();
 	$almazaya_order = array();
 	foreach ( $almazaya_dests as $almazaya_d ) :
-		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
-		if ( '' === $almazaya_cname ) {
-			$almazaya_cname = $almazaya_d->post_name;
-		}
+		$almazaya_cname = almazaya_dest_country( $almazaya_d->ID, $almazaya_d->post_name );
 		$almazaya_data[ $almazaya_d->post_name ] = array(
 			'c' => $almazaya_cname,
 			'n' => $almazaya_d->post_title,

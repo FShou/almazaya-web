@@ -22,7 +22,11 @@
       <button class="filter-chip">Graduation</button>
     </div>
 
-    <div class="gallery-bento">
+    <?php $almazaya_feed = trim( get_theme_mod( 'almazaya_galeri_feed', '' ) ); ?>
+<?php if ( '' !== $almazaya_feed ) : ?>
+<div class="galeri-feed"><?php echo do_shortcode( $almazaya_feed ); ?></div>
+<?php else : ?>
+<div class="gallery-bento">
       <div data-cat="Academic" class="has-photo img-slot reveal"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_151444' ) ); ?>" alt="English Talent Show · Monthly student talent stage"><span class="gal-label">English Talent Show · Monthly student talent stage</span></div>
       <div data-cat="Academic" class="has-photo img-slot warm tall reveal d1"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221214111711_img_7128' ) ); ?>" alt="Market Day · Entrepreneurship practice"><span class="gal-label">Market Day · Entrepreneurship practice</span></div>
       <div data-cat="Overseas" class="has-photo img-slot light reveal d2"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8730_min' ) ); ?>" alt="Overseas Program · Singapore &amp; Malaysia"><span class="gal-label">Overseas Program · Singapore &amp; Malaysia</span></div>
@@ -33,6 +37,7 @@
       <div data-cat="Academic" class="has-photo img-slot reveal d1"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230825_132133_1' ) ); ?>" alt="English Camp · Grade-7 language immersion"><span class="gal-label">English Camp · Grade-7 language immersion</span></div>
       <div data-cat="Academic" class="has-photo img-slot light tall reveal d2"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'school_debate_competition_aq3' ) ); ?>" alt="Bilingual Debate · 2nd Place UIN Antasari"><span class="gal-label">Bilingual Debate · 2nd Place UIN Antasari</span></div>
     </div>
+<?php endif; ?>
 
     <p data-filter-empty hidden style="text-align:center;color:var(--slate-light);">No photos in this category yet.</p>
 

@@ -23,7 +23,11 @@
     </div>
 
     <!-- TODO WP: digantikan galeri/album WordPress -->
-    <div class="gallery-bento">
+    <?php $almazaya_feed = trim( get_theme_mod( 'almazaya_galeri_feed', '' ) ); ?>
+<?php if ( '' !== $almazaya_feed ) : ?>
+<div class="galeri-feed"><?php echo do_shortcode( $almazaya_feed ); ?></div>
+<?php else : ?>
+<div class="gallery-bento">
       <div data-cat="Akademik" class="has-photo img-slot reveal"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_151444' ) ); ?>" alt="English Talent Show · Panggung bulanan bakat siswa"><span class="gal-label">English Talent Show · Panggung bulanan bakat siswa</span></div>
       <div data-cat="Akademik" class="has-photo img-slot warm tall reveal d1"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221214111711_img_7128' ) ); ?>" alt="Market Day · Belajar wirausaha"><span class="gal-label">Market Day · Belajar wirausaha</span></div>
       <div data-cat="Overseas" class="has-photo img-slot light reveal d2"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8730_min' ) ); ?>" alt="Overseas Program · Singapura &amp; Malaysia"><span class="gal-label">Overseas Program · Singapura &amp; Malaysia</span></div>
@@ -34,6 +38,7 @@
       <div data-cat="Akademik" class="has-photo img-slot reveal d1"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230825_132133_1' ) ); ?>" alt="English Camp · Imersi bahasa kelas 7"><span class="gal-label">English Camp · Imersi bahasa kelas 7</span></div>
       <div data-cat="Akademik" class="has-photo img-slot light tall reveal d2"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'school_debate_competition_aq3' ) ); ?>" alt="Debat Bilingual · Juara 2 UIN Antasari"><span class="gal-label">Debat Bilingual · Juara 2 UIN Antasari</span></div>
     </div>
+<?php endif; ?>
 
     <p data-filter-empty hidden style="text-align:center;color:var(--slate-light);">Belum ada foto pada kategori ini.</p>
 

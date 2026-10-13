@@ -109,6 +109,11 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`
   (kategori, 3 post, 3 slide, 4 mitra, 3 program + foto dari theme).
   Isi artikel lengkap: salin dari halaman detail statis (`rehaul`).
+- **Galeri dari Instagram**: install plugin feed (mis. Smash Balloon Social
+  Photo Feed gratis) → hubungkan akun IG bisnis/kreator → salin shortcode-nya
+  (mis. `[instagram-feed]`) → tempel di Customize → Galeri Instagram.
+  Selama kosong, halaman Galeri memakai grid foto bawaan (bisa diganti
+  per foto via Gambar: Galeri).
 
 ## Catatan porting (v1)
 

@@ -235,6 +235,10 @@
       minX = Math.max(0, Math.min(minX, 1000 - w));
       minY = Math.max(0, Math.min(minY, 480 - h));
       svg.setAttribute('viewBox', minX + ' ' + minY + ' ' + w + ' ' + h);
+      var shell = svg.closest('.map-shell');
+      if (shell && shell.scrollWidth > shell.clientWidth + 4) {
+        shell.scrollLeft = (shell.scrollWidth - shell.clientWidth) / 2;
+      }
     }
     fit();
     var t;

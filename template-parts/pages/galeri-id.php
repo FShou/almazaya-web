@@ -23,9 +23,9 @@
     </div>
 
     <!-- TODO WP: digantikan galeri/album WordPress -->
-    <?php $almazaya_feed = trim( get_theme_mod( 'almazaya_galeri_feed', '' ) ); ?>
-<?php if ( '' !== $almazaya_feed ) : ?>
-<div class="galeri-feed"><?php echo do_shortcode( $almazaya_feed ); ?></div>
+    <?php $almazaya_feed_html = almazaya_galeri_feed_html(); ?>
+<?php if ( '' !== $almazaya_feed_html ) : ?>
+<div class="galeri-feed"><?php echo $almazaya_feed_html; ?></div>
 <?php else : ?>
 <div class="gallery-bento">
       <div data-cat="Akademik" class="has-photo img-slot reveal"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_151444' ) ); ?>" alt="English Talent Show · Panggung bulanan bakat siswa"><span class="gal-label">English Talent Show · Panggung bulanan bakat siswa</span></div>

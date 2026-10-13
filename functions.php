@@ -226,33 +226,55 @@ function almazaya_customize_register( $wp_customize ) {
 	}
 
 	/* Instagram feed (optional): shortcode from a gallery plugin
-	 * (e.g. Smash Balloon Social Photo Feed). When filled, the Galeri
-	 * page shows the IG feed instead of the bundled photo grid. */
+	 * (e.g. Smash Balloon) OR raw embed HTML from a username widget
+	 * (e.g. SociableKIT, Stormlikes, Fouita — generate from @username,
+	 * paste the code here). When filled, the Galeri page shows the IG
+	 * feed instead of the bundled photo grid. */
 	$wp_customize->add_section(
 		'almazaya_galeri',
 		array(
 			'title'       => __( 'Galeri Instagram', 'almazaya' ),
 			'priority'    => 42,
-			'description' => __( 'Tempel shortcode feed Instagram (mis. [instagram-feed]). Kosongkan untuk memakai grid foto bawaan.', 'almazaya' ),
+			'description' => __( 'Tempel shortcode (mis. [instagram-feed]) ATAU kode embed dari widget username IG. Kosongkan untuk memakai grid foto bawaan.', 'almazaya' ),
 		)
 	);
 	$wp_customize->add_setting(
 		'almazaya_galeri_feed',
 		array(
 			'default'           => '',
-			'sanitize_callback' => 'sanitize_text_field',
+			'sanitize_callback' => 'almazaya_sanitize_embed',
 		)
 	);
 	$wp_customize->add_control(
 		'almazaya_galeri_feed',
 		array(
-			'label'   => __( 'Shortcode feed Instagram', 'almazaya' ),
+			'label'   => __( 'Shortcode / kode embed Instagram', 'almazaya' ),
 			'section' => 'almazaya_galeri',
-			'type'    => 'text',
+			'type'    => 'textarea',
 		)
 	);
 }
 add_action( 'customize_register', 'almazaya_customize_register' );
+
+/** Render Instagram feed: shortcode or raw embed HTML (empty = bundled grid). */
+function almazaya_galeri_feed_html() {
+	$feed = trim( get_theme_mod( 'almazaya_galeri_feed', '' ) );
+	if ( '' === $feed ) {
+		return '';
+	}
+	if ( strpos( $feed, '[' ) !== false && strpos( $feed, ']' ) !== false ) {
+		return do_shortcode( $feed );
+	}
+	return $feed;
+}
+
+/** Embed-code sanitizer: raw for trusted admins, kses otherwise. */
+function almazaya_sanitize_embed( $v ) {
+	if ( current_user_can( 'unfiltered_html' ) ) {
+		return $v;
+	}
+	return wp_kses_post( $v );
+}
 
 /* ---------- Nav data (shared by header fallback + mobile nav) ---------- */
 

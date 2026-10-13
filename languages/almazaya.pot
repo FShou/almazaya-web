@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-12 11:00+0800\n"
+"POT-Creation-Date: 2026-10-13 08:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,6 +69,60 @@ msgstr ""
 #: functions.php:202
 #, php-format
 msgid "Teks: %s"
+msgstr ""
+
+#: functions.php:236
+msgid "Galeri Instagram"
+msgstr ""
+
+#: functions.php:238
+msgid ""
+"Tempel shortcode (mis. [instagram-feed]) ATAU kode embed dari widget "
+"username IG. Kosongkan untuk memakai grid foto bawaan."
+msgstr ""
+
+#: functions.php:251
+msgid "Shortcode / kode embed Instagram"
+msgstr ""
+
+#: functions.php:588
+msgid "Slide Hero"
+msgstr ""
+
+#: functions.php:589
+msgid "Slide"
+msgstr ""
+
+#: functions.php:590
+msgid "Tambah Slide"
+msgstr ""
+
+#: functions.php:603 functions.php:604
+msgid "Mitra"
+msgstr ""
+
+#: functions.php:605
+msgid "Tambah Mitra"
+msgstr ""
+
+#: functions.php:618 functions.php:619
+msgid "Program"
+msgstr ""
+
+#: functions.php:620
+msgid "Tambah Program"
+msgstr ""
+
+#: functions.php:670
+msgid "Konten Slide"
+msgstr ""
+
+#: functions.php:671
+msgid "Tautan Mitra"
+msgstr ""
+
+#: functions.php:672
+msgid "Detail Program"
 msgstr ""
 
 #: index.php:23

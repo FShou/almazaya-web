@@ -104,8 +104,10 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
   `assets/js/main.js`), 2 lokasi menu, Customizer 7 URL, helper
   `almazaya_url()` / `almazaya_link()` / `almazaya_lang_suffix()`.
 - `header.php` / `footer.php` — topbar, header+nav, mobile-nav, footer, tombol WA.
-- `front-page.php`, `template-{tentang,akademik,jenjang,berita,galeri,ppdb}.php`
-  — template tipis; konten di `template-parts/pages/{slug}-{id,en}.php`.
+- `front-page.php`, `page-{tentang,jenjang,mmi,smp,sma,berita,berita-detail,galeri,ppdb}.php`
+  — template tipis yang nempel otomatis ke slug halaman (tetap bisa dipilih
+  manual di dropdown Template); konten di `template-parts/pages/{slug}-{id,en}.php`
+  + `template-parts/dynamic/` (loop CPT).
 - `page.php`, `single.php`, `index.php`, `404.php` — fallback WP standar.
 - `languages/almazaya.pot` — katalog string theme (11 string chrome/admin).
 - Versi asset mengikuti `ALMAZAYA_VERSION` (ganti tiap rilis agar cache pecah).

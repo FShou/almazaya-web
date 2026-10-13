@@ -425,17 +425,25 @@
         <path class="map-partner" data-country="Australia" d="M910 428L912 432L908 438L902 428L910 428Z M850 398L843 404L833 404L828 408L820 405L822 398L815 379L817 363L836 355L850 336L860 339L868 326L880 330L876 339L889 349L894 340L896 325L900 338L904 339L907 353L925 375L925 396L917 416L906 422L903 418L895 420L884 410L884 406L880 409L883 401L878 408L873 400L865 396L850 398Z"/>
         <path class="map-partner" data-country="Malaysia" d="M778 266L786 269L790 284L782 279L778 266Z M827 274L822 273L816 284L805 283L817 272L820 273L824 264L831 269L827 274Z"/>
         <path class="map-partner" data-country="Turkey" d="M624 161L606 161L600 165L600 162L582 164L577 162L573 153L576 149L593 144L607 148L618 145L624 152L624 161Z M573 145L581 146L573 150L573 145Z"/>
-        <g class="map-dest" data-country="turkey" role="button" tabindex="0" aria-label="turkey"><circle cx="596.9" cy="154.4" r="16" class="map-hit"/><circle cx="596.9" cy="154.4" r="6" class="map-marker"/><text x="596.9" y="134.4" class="map-label" text-anchor="middle">turkey</text></g>
+        <?php if ( almazaya_has_posts( 'destination' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/destination-loop', null, array( 'part' => 'dots' ) ); ?>
+<?php else : ?>
+<g class="map-dest" data-country="turkey" role="button" tabindex="0" aria-label="turkey"><circle cx="596.9" cy="154.4" r="16" class="map-hit"/><circle cx="596.9" cy="154.4" r="6" class="map-marker"/><text x="596.9" y="134.4" class="map-label" text-anchor="middle">turkey</text></g>
         <g class="map-dest" data-country="japan" role="button" tabindex="0" aria-label="japan"><circle cx="881.0" cy="160.4" r="16" class="map-hit"/><circle cx="881.0" cy="160.4" r="6" class="map-marker"/><text x="865.0" y="147.4" class="map-label" text-anchor="end">japan</text></g>
         <g class="map-dest" data-country="malaysia" role="button" tabindex="0" aria-label="malaysia"><circle cx="804.6" cy="274.5" r="16" class="map-hit"/><circle cx="804.6" cy="274.5" r="6" class="map-marker"/><text x="820.6" y="258.5" class="map-label" text-anchor="middle">malaysia</text></g>
         <g class="map-dest" data-country="singapore" role="button" tabindex="0" aria-label="singapore"><circle cx="788.3" cy="283.4" r="16" class="map-hit"/><circle cx="788.3" cy="283.4" r="6" class="map-marker"/><text x="768.3" y="271.4" class="map-label" text-anchor="end">singapore</text></g>
         <g class="map-dest" data-country="australia" role="button" tabindex="0" aria-label="australia"><circle cx="872.8" cy="374.0" r="16" class="map-hit"/><circle cx="872.8" cy="374.0" r="6" class="map-marker"/><text x="872.8" y="392.0" class="map-label" text-anchor="middle">australia</text></g>
+<?php endif; ?>
       </svg>
       <div class="map-legend"><span class="lg-dot gold"></span>Partner destinations</div>
     </div>
-    <div class="overseas-chips reveal">
+    <?php if ( almazaya_has_posts( 'destination' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/destination-loop', null, array( 'part' => 'chips' ) ); ?>
+<?php else : ?>
+<div class="overseas-chips reveal">
       <button class="ov-chip" data-country="singapore">🇸🇬 Singapore</button> <button class="ov-chip" data-country="japan">🇯🇵 Japan</button> <button class="ov-chip" data-country="malaysia">🇲🇾 Malaysia</button> <button class="ov-chip" data-country="australia">🇦🇺 Australia</button> <button class="ov-chip" data-country="turkey">🇹🇷 Turkey</button>
     </div>
+<?php endif; ?>
   </div>
 
   <div class="map-modal" id="overseas-modal" role="dialog" aria-modal="true" aria-label="Overseas destination">
@@ -448,7 +456,10 @@
         <button class="map-modal-close" id="overseasModalClose" aria-label="Close">×</button>
       </div>
 
-        <article class="map-modal-card" id="mc-singapore">
+        <?php if ( almazaya_has_posts( 'destination' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/destination-loop', null, array( 'part' => 'cards' ) ); ?>
+<?php else : ?>
+<article class="map-modal-card" id="mc-singapore">
           <header class="map-modal-head"><span class="map-modal-flag">🇸🇬</span><div><span class="map-modal-tag">Montessori Authentic</span><h4>Modern Montessori International (MMI)</h4></div></header>
           <img class="map-modal-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-mmi-site.webp" alt="Modern Montessori International (MMI)" loading="lazy">
           <p class="map-modal-desc">Our main KB-TK partnership. MMI Singapore is the authority on authentic Montessori — daily English and child-led learning for ages 6 months to 6 years.</p>
@@ -478,10 +489,14 @@
           <p class="map-modal-desc">An international school in Istanbul, Turkey. Eurasian cultural insight and a multilingual learning environment broaden students’ horizons.</p>
           <span class="map-nolink">Official site coming soon</span>
         </article>
+<?php endif; ?>
     </div>
   </div>
 
-  <script>
+  <?php if ( almazaya_has_posts( 'destination' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/destination-loop', null, array( 'part' => 'script' ) ); ?>
+<?php else : ?>
+<script>
   (function(){{
     var DATA = {"singapore": {"c": "Singapore", "n": "Modern Montessori International (MMI)", "e": "\ud83c\uddf8\ud83c\uddec"}, "japan": {"c": "Japan", "n": "MITA International School of Science", "e": "\ud83c\uddef\ud83c\uddf5"}, "australia": {"c": "Australia", "n": "Minaret College", "e": "\ud83c\udde6\ud83c\uddfa"}, "malaysia": {"c": "Malaysia", "n": "Lincoln University College (LUC)", "e": "\ud83c\uddf2\ud83c\uddfe"}, "turkey": {"c": "Turkey", "n": "Harvest International School", "e": "\ud83c\uddf9\ud83c\uddf7"}};
     var ORDER = ['singapore','japan','malaysia','australia','turkey'];
@@ -522,6 +537,7 @@
     document.addEventListener('keydown', function(e){{ if (e.key==='Escape' && modal.classList.contains('open')) hide(); }});
   }})();
   </script>
+<?php endif; ?>
   </section>
 
 <section class="section" id="partnerships">

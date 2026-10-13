@@ -626,6 +626,21 @@ function almazaya_register_cpts() {
 			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 		)
 	);
+	register_post_type(
+		'destination',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Destinasi', 'almazaya' ),
+				'singular_name' => __( 'Destinasi', 'almazaya' ),
+				'add_new_item'  => __( 'Tambah Negara', 'almazaya' ),
+			),
+			'public'       => true,
+			'has_archive'  => false,
+			'show_in_rest' => false,
+			'menu_icon'    => 'dashicons-location-alt',
+			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+		)
+	);
 }
 add_action( 'init', 'almazaya_register_cpts' );
 
@@ -670,6 +685,7 @@ function almazaya_add_meta_boxes() {
 	add_meta_box( 'almazaya_slide', __( 'Konten Slide', 'almazaya' ), 'almazaya_slide_box', 'slide', 'normal', 'high' );
 	add_meta_box( 'almazaya_mitra', __( 'Tautan Mitra', 'almazaya' ), 'almazaya_mitra_box', 'mitra', 'side', 'default' );
 	add_meta_box( 'almazaya_program', __( 'Detail Program', 'almazaya' ), 'almazaya_program_box', 'program', 'normal', 'high' );
+	add_meta_box( 'almazaya_destination', __( 'Detail Destinasi & Titik Peta', 'almazaya' ), 'almazaya_destination_box', 'destination', 'normal', 'high' );
 }
 add_action( 'add_meta_boxes', 'almazaya_add_meta_boxes' );
 
@@ -703,6 +719,19 @@ function almazaya_program_box( $post ) {
 	echo '<p>Label tab &amp; badge = Title. Deskripsi = isi editor. Foto = Featured image. Key data = slug post.</p>';
 }
 
+function almazaya_destination_box( $post ) {
+	wp_nonce_field( 'almazaya_meta', 'almazaya_nonce' );
+	$get = function ( $k ) use ( $post ) {
+		return esc_attr( get_post_meta( $post->ID, $k, true ) );
+	};
+	echo '<p><label><strong>Nama negara (mis. Singapore)</strong></label><br><input type="text" name="_almazaya_country" value="' . $get( '_almazaya_country' ) . '" style="width:100%"></p>';
+	echo '<p><label><strong>Emoji bendera (mis. 🇸🇬)</strong></label><br><input type="text" name="_almazaya_flag" value="' . $get( '_almazaya_flag' ) . '" style="width:100%"></p>';
+	echo '<p><label><strong>Tag (mis. Montessori Authentic)</strong></label><br><input type="text" name="_almazaya_tag" value="' . $get( '_almazaya_tag' ) . '" style="width:100%"></p>';
+	echo '<p><label><strong>URL website sekolah (kosongkan bila tak ada)</strong></label><br><input type="url" name="_almazaya_website" value="' . $get( '_almazaya_website' ) . '" style="width:100%"></p>';
+	echo '<p><label><strong>Titik peta: X (0–1000) &amp; Y (0–480)</strong></label><br><input type="number" name="_almazaya_map_x" value="' . $get( '_almazaya_map_x' ) . '" min="0" max="1000" style="width:32%"> <input type="number" name="_almazaya_map_y" value="' . $get( '_almazaya_map_y' ) . '" min="0" max="480" style="width:32%"></p>';
+	echo '<p>Nama sekolah = Title. Deskripsi = isi editor. Logo/foto = Featured image. Key = slug post (huruf kecil, tanpa spasi).</p>';
+}
+
 function almazaya_save_meta( $post_id ) {
 	if ( ! isset( $_POST['almazaya_nonce'] ) || ! wp_verify_nonce( $_POST['almazaya_nonce'], 'almazaya_meta' ) ) {
 		return;
@@ -713,13 +742,13 @@ function almazaya_save_meta( $post_id ) {
 	if ( ! current_user_can( 'edit_post', $post_id ) ) {
 		return;
 	}
-	$text_fields = array( '_almazaya_kicker', '_almazaya_btn1_label', '_almazaya_btn2_label', '_almazaya_badge_title', '_almazaya_badge_text' );
+	$text_fields = array( '_almazaya_kicker', '_almazaya_btn1_label', '_almazaya_btn2_label', '_almazaya_badge_title', '_almazaya_badge_text', '_almazaya_country', '_almazaya_flag', '_almazaya_tag' );
 	foreach ( $text_fields as $f ) {
 		if ( isset( $_POST[ $f ] ) ) {
 			update_post_meta( $post_id, $f, sanitize_text_field( $_POST[ $f ] ) );
 		}
 	}
-	$url_fields = array( '_almazaya_btn1_url', '_almazaya_btn2_url', '_almazaya_url' );
+	$url_fields = array( '_almazaya_btn1_url', '_almazaya_btn2_url', '_almazaya_url', '_almazaya_website' );
 	foreach ( $url_fields as $f ) {
 		if ( isset( $_POST[ $f ] ) ) {
 			update_post_meta( $post_id, $f, esc_url_raw( $_POST[ $f ] ) );
@@ -730,6 +759,11 @@ function almazaya_save_meta( $post_id ) {
 	}
 	if ( isset( $_POST['_almazaya_items'] ) ) {
 		update_post_meta( $post_id, '_almazaya_items', wp_kses_post( $_POST['_almazaya_items'] ) );
+	}
+	foreach ( array( '_almazaya_map_x' => 1000, '_almazaya_map_y' => 480 ) as $f => $max ) {
+		if ( isset( $_POST[ $f ] ) && '' !== $_POST[ $f ] ) {
+			update_post_meta( $post_id, $f, min( $max, max( 0, (int) $_POST[ $f ] ) ) );
+		}
 	}
 }
 add_action( 'save_post', 'almazaya_save_meta' );
@@ -788,4 +822,16 @@ function almazaya_pagination( $query = null, $current = 1, $add_args = array() )
 		echo $link;
 	}
 	echo '</nav>';
+}
+
+/* ---------- Manageable content: CPT Destination (peta overseas) ----------
+ * Tiap negara = 1 post: nama sekolah (title), deskripsi (editor),
+ * foto/logo (featured image), slug = key data (huruf kecil, tanpa spasi,
+ * mis. "turkey"). Titik peta dari koordinat X (0-1000) / Y (0-480)
+ * sesuai viewBox peta — klik kanan peta tidak tersedia, isi angka:
+ * titik baru bisa dikira-kira dari negara tetangga yang sudah ada.
+ */
+
+function almazaya_destination_meta_keys() {
+	return array( '_almazaya_country', '_almazaya_flag', '_almazaya_tag', '_almazaya_website', '_almazaya_map_x', '_almazaya_map_y' );
 }

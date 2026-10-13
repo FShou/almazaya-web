@@ -104,6 +104,11 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
     Logo SVG tidak bisa di-upload WP — pakai PNG/WebP/JPG.
   - Program: label (title), judul panel + poin (meta box), deskripsi (editor),
     foto, key data = slug (unik, tanpa spasi).
+  - Destinasi (peta overseas): nama sekolah (title), negara + emoji bendera +
+    tag + URL website + **titik peta X (0–1000) / Y (0–480)** (meta box),
+    deskripsi (editor), logo (featured), key = slug (huruf kecil).
+    Koordinat dikira-kira dari negara tetangga di peta; labelnama otomatis
+    di atas titik.
   - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
     bawaan theme (fallback statis, tidak kosong).
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`

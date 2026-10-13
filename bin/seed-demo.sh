@@ -28,6 +28,7 @@ wp term create category Announcement --slug=announcement >/dev/null || true
 
 img() { wp media import "$A/$1" --porcelain --title="$2"; }
 
+if [ "$(wp post list --post_type=post --format=count 2>/dev/null)" -eq 0 ]; then
 echo "== posts (3) =="
 P1IMG=$(img overseas-img-8635-min.webp "Prestasi Olimpiade")
 P1=$(wp post create --post_type=post --post_title="4 Siswi SMP Al Mazaya Raih Medali Olimpiade Nasional" --post_excerpt="Prestasi membanggakan di kancah nasional yang kembali membuktikan mutu pembinaan akademik Al Mazaya." --post_content="Prestasi membanggakan di kancah nasional yang kembali membuktikan mutu pembinaan akademik Al Mazaya. (Isi lengkap menyusul dari redaksi.)"  --post_status=publish --porcelain)
@@ -43,6 +44,8 @@ wp post meta update "$P3" _thumbnail_id "$P3IMG" >/dev/null
 wp post term add "$P3" category kegiatan >/dev/null
 echo "posts: $P1 $P2 $P3"
 
+fi
+if [ "$(wp post list --post_type=slide --format=count 2>/dev/null)" -eq 0 ]; then
 echo "== slides (3) =="
 S1IMG=$(img home-20221214074906-img-6966.webp "Hero ABUELA")
 S1=$(wp post create --post_type=slide --post_title="Slide 1 Adab Akademik" --post_content="Kecerdasan intelektual harus beriringan dengan keluhuran akhlak." --post_status=publish --menu_order=1 --porcelain)
@@ -73,6 +76,8 @@ wp post meta update "$S3" _almazaya_btn2_label "Info PPDB" >/dev/null
 wp post meta update "$S3" _almazaya_btn2_url "page:ppdb" >/dev/null
 echo "slides: $S1 $S2 $S3"
 
+fi
+if [ "$(wp post list --post_type=mitra --format=count 2>/dev/null)" -eq 0 ]; then
 echo "== mitra (4; MITA menyusul manual karena logo SVG) =="
 M1IMG=$(img logo-mmi-site.webp "Logo MMI")
 M1=$(wp post create --post_type=mitra --post_title="Modern Montessori International (MMI)" --post_excerpt="Singapore" --post_status=publish --menu_order=1 --porcelain)
@@ -91,6 +96,8 @@ M4=$(wp post create --post_type=mitra --post_title="Harvest International School
 wp post meta update "$M4" _thumbnail_id "$M4IMG" >/dev/null
 echo "mitra: $M1 $M2 $M3 $M4 (tanpa URL = kartu non-link)"
 
+fi
+if [ "$(wp post list --post_type=program --format=count 2>/dev/null)" -eq 0 ]; then
 echo "== programs (3) =="
 G1IMG=$(img classroom-r0003050.webp "Foundation Class")
 G1=$(wp post create --post_type=program --post_name=fnd --post_title="Foundation Class" --post_content="Program pembuka jenjang untuk membangun adab, karakter, dan keterampilan dasar belajar." --post_excerpt="Program pembuka jenjang untuk membangun adab dan karakter." --post_status=publish --menu_order=1 --porcelain)
@@ -108,6 +115,32 @@ wp post meta update "$G3" _thumbnail_id "$G3IMG" >/dev/null
 wp post meta update "$G3" _almazaya_heading 'Hafalan <span class="tone">Al-Qur'"'"'an</span>' >/dev/null
 wp post meta update "$G3" _almazaya_items '<li><span class="mc-dot"></span><b>Halaqah Rutin</b> — setoran terjadwal</li>' >/dev/null
 echo "programs: $G1 $G2 $G3"
+
+fi
+if [ "$(wp post list --post_type=destination --format=count 2>/dev/null)" -eq 0 ]; then
+echo "== destinations (5; logo MITA menyusul manual karena SVG) =="
+mkdest() { # slug title country flag tag url x y img desc order
+  local D
+  D=$(wp post create --post_type=destination --post_name="$1" --post_title="$2" --post_content="${10}" --post_status=publish --menu_order="${11}" --porcelain)
+  wp post meta update "$D" _almazaya_country "$3" >/dev/null
+  wp post meta update "$D" _almazaya_flag "$4" >/dev/null
+  wp post meta update "$D" _almazaya_tag "$5" >/dev/null
+  [ -n "$6" ] && wp post meta update "$D" _almazaya_website "$6" >/dev/null
+  wp post meta update "$D" _almazaya_map_x "$7" >/dev/null
+  wp post meta update "$D" _almazaya_map_y "$8" >/dev/null
+  if [ -n "$9" ]; then
+    local IM
+    IM=$(img "$9" "$2" 2>/dev/null) && wp post meta update "$D" _thumbnail_id "$IM" >/dev/null || echo "(logo $1 dilewati)"
+  fi
+  echo "$D"
+}
+D1=$(mkdest singapore "Modern Montessori International (MMI)" Singapore "🇸🇬" "Montessori Authentic" "https://modern-montessori.com" 788 283 "logo-mmi-site.webp" "Kemitraan utama jenjang KB-TK. MMI Singapore adalah otoritas Montessori autentik." 1)
+D2=$(mkdest japan "MITA International School of Science" Japan "🇯🇵" "Science & Technology" "https://www.mita-is.ed.jp" 881 160 "" "Sekolah sains internasional di Chiba, Jepang." 2)
+D3=$(mkdest malaysia "Lincoln University College (LUC)" Malaysia "🇲🇾" "University Pathway" "https://www.lincoln.edu.my" 805 275 "logo-luc.webp" "Universitas terakreditasi di Malaysia untuk studi lanjut." 3)
+D4=$(mkdest australia "Minaret College" Australia "🇦🇺" "Islamic Education" "https://minaret.vic.edu.au" 873 374 "logo-minaret.webp" "Sekolah Islam terkemuka di Melbourne, Australia." 4)
+D5=$(mkdest turkey "Harvest International School" Turkey "🇹🇷" "Multilingual & Culture" "" 597 154 "logo-harvest.avif" "Sekolah internasional di Istanbul, Turki." 5)
+echo "destinations: $D1 $D2 $D3 $D4 $D5"
+fi
 wp rewrite flush >/dev/null
 echo "== tetapkan bahasa ID bila Polylang aktif =="
 wp eval 'if (function_exists("pll_set_post_language")) { $ids=get_posts(array("post_type"=>"any","post_status"=>"any","posts_per_page"=>-1,"fields"=>"ids")); foreach($ids as $id){ if(!pll_get_post_language($id)) pll_set_post_language($id,"id"); } $terms=get_terms(array("taxonomy"=>array("category"),"hide_empty"=>false,"fields"=>"ids")); foreach($terms as $t){ if(!pll_get_term_language($t)) pll_set_term_language($t,"id"); } echo "lang assigned\n"; } else { echo "polylang off, skip\n"; }'

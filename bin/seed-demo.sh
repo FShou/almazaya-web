@@ -98,24 +98,83 @@ echo "mitra: $M1 $M2 $M3 $M4 (tanpa URL = kartu non-link)"
 
 fi
 if [ "$(wp post list --post_type=program --format=count 2>/dev/null)" -eq 0 ]; then
-echo "== programs (3) =="
-G1IMG=$(img classroom-r0003050.webp "Foundation Class")
-G1=$(wp post create --post_type=program --post_name=fnd --post_title="Foundation Class" --post_content="Program pembuka jenjang untuk membangun adab, karakter, dan keterampilan dasar belajar." --post_excerpt="Program pembuka jenjang untuk membangun adab dan karakter." --post_status=publish --menu_order=1 --porcelain)
-wp post meta update "$G1" _thumbnail_id "$G1IMG" >/dev/null
+echo "== programs (15, full) =="
+G1IMG=$(img classroom-r0003050.webp 'Foundation Class' 2>/dev/null) || true
+G1=$(wp post create --post_type=program --post_name=fnd --post_title='Foundation Class' --post_content='Program pembuka jenjang untuk membangun adab, karakter, dan keterampilan dasar belajar dengan pendekatan yang ramah anak dan bertahap.' --post_excerpt='Program pembuka jenjang untuk membangun adab, karakter, dan keterampilan dasar belajar dengan pendekatan yang ramah anak dan bertahap.' --post_status=publish --menu_order=1 --porcelain)
+[ -n "$G1IMG" ] && wp post meta update "$G1" _thumbnail_id "$G1IMG" >/dev/null || true
 wp post meta update "$G1" _almazaya_heading 'Mulai dengan <span class="tone">Fondasi</span> yang Kuat' >/dev/null
-wp post meta update "$G1" _almazaya_items '<li><span class="mc-dot"></span><b>Montessori & Fondasi</b> — ramah anak</li><li><span class="mc-dot gold"></span><b>Adab & Karakter</b> — sejak hari pertama</li>' >/dev/null
-G2IMG=$(img overseas-dsc09507.webp "Overseas Program")
-G2=$(wp post create --post_type=program --post_name=ovs --post_title="Overseas Program" --post_content="Imersi singkat di sekolah mitra luar negeri." --post_excerpt="Imersi singkat di sekolah mitra luar negeri." --post_status=publish --menu_order=2 --porcelain)
-wp post meta update "$G2" _thumbnail_id "$G2IMG" >/dev/null
+wp post meta update "$G1" _almazaya_items '<li><span class="mc-dot"></span><b>Montessori & Fondasi</b> — metode pertama yang ramah anak</li><li><span class="mc-dot gold"></span><b>Adab & Karakter</b> — dibiasakan sejak hari pertama</li><li><span class="mc-dot teal"></span><b>Keterampilan Dasar</b> — siap sebelum beranjak naik</li>' >/dev/null
+G2IMG=$(img overseas-dsc09507.webp 'Overseas Program' 2>/dev/null) || true
+G2=$(wp post create --post_type=program --post_name=ovs --post_title='Overseas Program' --post_content='Imersi singkat di sekolah mitra luar negeri untuk menumbuhkan wawasan global, kemandirian, dan jejaring internasional.' --post_excerpt='Imersi singkat di sekolah mitra luar negeri untuk menumbuhkan wawasan global, kemandirian, dan jejaring internasional.' --post_status=publish --menu_order=2 --porcelain)
+[ -n "$G2IMG" ] && wp post meta update "$G2" _thumbnail_id "$G2IMG" >/dev/null || true
 wp post meta update "$G2" _almazaya_heading 'Belajar <span class="tone">Lintas Negara</span>' >/dev/null
-wp post meta update "$G2" _almazaya_items '<li><span class="mc-dot"></span><b>Kemitraan Global</b> — MMI, MITA, Minaret, LUC, Harvest</li>' >/dev/null
-G3IMG=$(img quran-academy-r0003011.webp "Program Tahfidz")
-G3=$(wp post create --post_type=program --post_name=tfd --post_title="Program Tahfidz" --post_content="Pembinaan tahfidz berjenjang dengan halaqah rutin." --post_excerpt="Pembinaan tahfidz berjenjang dengan halaqah rutin." --post_status=publish --menu_order=3 --porcelain)
-wp post meta update "$G3" _thumbnail_id "$G3IMG" >/dev/null
+wp post meta update "$G2" _almazaya_items '<li><span class="mc-dot"></span><b>Kemitraan Global</b> — MMI, MITA, Minaret, LUC, Harvest</li><li><span class="mc-dot gold"></span><b>Imersi Budaya</b> — hidup & belajar di luar negeri</li><li><span class="mc-dot teal"></span><b>Jaringan Internasional</b> — teman dari berbagai negara</li>' >/dev/null
+G3IMG=$(img quran-academy-r0003011.webp 'Program Tahfidz' 2>/dev/null) || true
+G3=$(wp post create --post_type=program --post_name=tfd --post_title='Program Tahfidz' --post_content='Pembinaan tahfidz berjenjang dengan halaqah rutin, murajaah terjadwal, dan pendampingan penuh dari ustadz pembimbing.' --post_excerpt='Pembinaan tahfidz berjenjang dengan halaqah rutin, murajaah terjadwal, dan pendampingan penuh dari ustadz pembimbing.' --post_status=publish --menu_order=3 --porcelain)
+[ -n "$G3IMG" ] && wp post meta update "$G3" _thumbnail_id "$G3IMG" >/dev/null || true
 wp post meta update "$G3" _almazaya_heading 'Hafalan <span class="tone">Al-Qur'"'"'an</span>' >/dev/null
-wp post meta update "$G3" _almazaya_items '<li><span class="mc-dot"></span><b>Halaqah Rutin</b> — setoran terjadwal</li>' >/dev/null
-echo "programs: $G1 $G2 $G3"
-
+wp post meta update "$G3" _almazaya_items '<li><span class="mc-dot"></span><b>Halaqah Rutin</b> — setoran hafalan terjadwal</li><li><span class="mc-dot gold"></span><b>Target Berjenjang</b> — sesuai kemampuan siswa</li><li><span class="mc-dot teal"></span><b>Murajaah Terjaga</b> — hafalan tetap kuat</li>' >/dev/null
+G4IMG=$(img english-talent-show-screenshot-20230829-140122.webp 'Club & Enrichment' 2>/dev/null) || true
+G4=$(wp post create --post_type=program --post_name=clb --post_title='Club & Enrichment' --post_content='Klub dan pengayaan lintas bidang — sains, seni, olahraga, bahasa — untuk menyalurkan minat dan potensi siswa.' --post_excerpt='Klub dan pengayaan lintas bidang — sains, seni, olahraga, bahasa — untuk menyalurkan minat dan potensi siswa.' --post_status=publish --menu_order=4 --porcelain)
+[ -n "$G4IMG" ] && wp post meta update "$G4" _thumbnail_id "$G4IMG" >/dev/null || true
+wp post meta update "$G4" _almazaya_heading 'Bakat <span class="tone">Diasah</span>' >/dev/null
+wp post meta update "$G4" _almazaya_items '<li><span class="mc-dot"></span><b>Pilihan Klub</b> — sesuai minat & bakat</li><li><span class="mc-dot gold"></span><b>Pembinaan Olimpiade</b> — rapi menuju kompetisi</li><li><span class="mc-dot teal"></span><b>Soft Skill</b> — komunikasi & kepemimpinan</li>' >/dev/null
+G5IMG=$(img home-img-1509.webp 'Life Skill' 2>/dev/null) || true
+G5=$(wp post create --post_type=program --post_name=lsk --post_title='Life Skill' --post_content='Keterampilan hidup praktis yang membentuk kemandirian siswa: mengelola diri, berkolaborasi, dan menghadapi kehidupan nyata.' --post_excerpt='Keterampilan hidup praktis yang membentuk kemandirian siswa: mengelola diri, berkolaborasi, dan menghadapi kehidupan nyata.' --post_status=publish --menu_order=5 --porcelain)
+[ -n "$G5IMG" ] && wp post meta update "$G5" _thumbnail_id "$G5IMG" >/dev/null || true
+wp post meta update "$G5" _almazaya_heading 'Kecakapan <span class="tone">Hidup</span>' >/dev/null
+wp post meta update "$G5" _almazaya_items '<li><span class="mc-dot"></span><b>Kemandirian</b> — mengurus diri sehari-hari</li><li><span class="mc-dot gold"></span><b>Kelola & Rencana</b> — bekal hidup mandiri</li><li><span class="mc-dot teal"></span><b>Kolaborasi</b> — bekerja dalam tim</li>' >/dev/null
+G6IMG=$(img senior-high-school-a-capture.webp 'Uji Mutu Lulusan' 2>/dev/null) || true
+G6=$(wp post create --post_type=program --post_name=uji --post_title='Uji Mutu Lulusan' --post_content='Standar kompetensi lulusan yang terukur melalui asesmen berkala agar setiap lulusan benar-benar siap melanjutkan studi.' --post_excerpt='Standar kompetensi lulusan yang terukur melalui asesmen berkala agar setiap lulusan benar-benar siap melanjutkan studi.' --post_status=publish --menu_order=6 --porcelain)
+[ -n "$G6IMG" ] && wp post meta update "$G6" _thumbnail_id "$G6IMG" >/dev/null || true
+wp post meta update "$G6" _almazaya_heading 'Mutu <span class="tone">Terjamin</span>' >/dev/null
+wp post meta update "$G6" _almazaya_items '<li><span class="mc-dot"></span><b>Standar Kompetensi</b> — capaian jelas & terukur</li><li><span class="mc-dot gold"></span><b>Asesmen Berkala</b> — pantauan perkembangan</li><li><span class="mc-dot teal"></span><b>Sertifikat Capaian</b> — bukti kualitas lulusan</li>' >/dev/null
+G7IMG=$(img 2527-z1.webp 'TKA & UTBK Intensive' 2>/dev/null) || true
+G7=$(wp post create --post_type=program --post_name=utb --post_title='TKA & UTBK Intensive' --post_content='Pendalaman padat untuk tes masuk perguruan tinggi: TKA, UTBK, dan try out berkala agar lulusan diterima di PTN pilihan.' --post_excerpt='Pendalaman padat untuk tes masuk perguruan tinggi: TKA, UTBK, dan try out berkala agar lulusan diterima di PTN pilihan.' --post_status=publish --menu_order=7 --porcelain)
+[ -n "$G7IMG" ] && wp post meta update "$G7" _thumbnail_id "$G7IMG" >/dev/null || true
+wp post meta update "$G7" _almazaya_heading 'Tembus <span class="tone">PTN</span> Favorit' >/dev/null
+wp post meta update "$G7" _almazaya_items '<li><span class="mc-dot"></span><b>Try Out Berkala</b> — ukur kesiapan tiap pekan</li><li><span class="mc-dot gold"></span><b>Pembahasan Tuntas</b> — semua subtes dikuasai</li><li><span class="mc-dot teal"></span><b>Simulasi UTBK</b> — terbiasa dengan format asli</li>' >/dev/null
+G8IMG=$(img overseas-dsc09466.webp 'Outing Class' 2>/dev/null) || true
+G8=$(wp post create --post_type=program --post_name=otg --post_title='Outing Class' --post_content='Pembelajaran kontekstual di luar ruangan yang menghubungkan teori dengan pengalaman nyata — alam, museum, industri, dan komunitas.' --post_excerpt='Pembelajaran kontekstual di luar ruangan yang menghubungkan teori dengan pengalaman nyata — alam, museum, industri, dan komunitas.' --post_status=publish --menu_order=8 --porcelain)
+[ -n "$G8IMG" ] && wp post meta update "$G8" _thumbnail_id "$G8IMG" >/dev/null || true
+wp post meta update "$G8" _almazaya_heading 'Belajar di <span class="tone">Luar Kelas</span>' >/dev/null
+wp post meta update "$G8" _almazaya_items '<li><span class="mc-dot"></span><b>Studi Lapangan</b> — belajar dari dunia nyata</li><li><span class="mc-dot gold"></span><b>Kontekstual</b> — teori & praktik bertemu</li><li><span class="mc-dot teal"></span><b>Kebersamaan</b> — rekam jejak terbaik</li>' >/dev/null
+G9IMG=$(img 2750-r0003169.webp 'TKA & UTBK Camp' 2>/dev/null) || true
+G9=$(wp post create --post_type=program --post_name=utc --post_title='TKA & UTBK Camp' --post_content='Camp belajar intensif menjelang ujian masuk PTN dengan suasana asrama, pendampingan penuh, dan drill soal terarah.' --post_excerpt='Camp belajar intensif menjelang ujian masuk PTN dengan suasana asrama, pendampingan penuh, dan drill soal terarah.' --post_status=publish --menu_order=9 --porcelain)
+[ -n "$G9IMG" ] && wp post meta update "$G9" _thumbnail_id "$G9IMG" >/dev/null || true
+wp post meta update "$G9" _almazaya_heading 'Fokus <span class="tone">Intensif</span>' >/dev/null
+wp post meta update "$G9" _almazaya_items '<li><span class="mc-dot"></span><b>Suasana Asrama</b> — fokus tanpa distraksi</li><li><span class="mc-dot gold"></span><b>Drill Soal</b> — latihan kata demi kata</li><li><span class="mc-dot teal"></span><b>Target Sekolah</b> — tantangan sesuai kampus</li>' >/dev/null
+G10IMG=$(img laboratory-r0003017.webp 'Math & Science Camp' 2>/dev/null) || true
+G10=$(wp post create --post_type=program --post_name=msc --post_title='Math & Science Camp' --post_content='Camp sains dan matematika berbasis eksperimen dan pemecahan masalah untuk menumbuhkan logika serta rasa ingin tahu.' --post_excerpt='Camp sains dan matematika berbasis eksperimen dan pemecahan masalah untuk menumbuhkan logika serta rasa ingin tahu.' --post_status=publish --menu_order=10 --porcelain)
+[ -n "$G10IMG" ] && wp post meta update "$G10" _thumbnail_id "$G10IMG" >/dev/null || true
+wp post meta update "$G10" _almazaya_heading 'Eksplorasi <span class="tone">Sains</span> & Angka' >/dev/null
+wp post meta update "$G10" _almazaya_items '<li><span class="mc-dot"></span><b>Eksperimen Langsung</b> — praktik di lab</li><li><span class="mc-dot gold"></span><b>Matematika Kreatif</b> — berpikir di luar kotak</li><li><span class="mc-dot teal"></span><b>Pembinaan Olimpiade</b> — sains & matematika</li>' >/dev/null
+G11IMG=$(img english-talent-show-screenshot-20230829-145220.webp 'English Camp' 2>/dev/null) || true
+G11=$(wp post create --post_type=program --post_name=enc --post_title='English Camp' --post_content='Program perendaman bahasa Inggris: speaking zone, vocabulary building, dan aktivitas penuh yang membangun percaya diri.' --post_excerpt='Program perendaman bahasa Inggris: speaking zone, vocabulary building, dan aktivitas penuh yang membangun percaya diri.' --post_status=publish --menu_order=11 --porcelain)
+[ -n "$G11IMG" ] && wp post meta update "$G11" _thumbnail_id "$G11IMG" >/dev/null || true
+wp post meta update "$G11" _almazaya_heading 'Imersi <span class="tone">Bahasa Inggris</span>' >/dev/null
+wp post meta update "$G11" _almazaya_items '<li><span class="mc-dot"></span><b>Speaking Zone</b> — sering bicara berbahasa Inggris</li><li><span class="mc-dot gold"></span><b>Vocabulary Drills</b> — kosakata melimpah</li><li><span class="mc-dot teal"></span><b>Percaya Diri</b> — berani tampil</li>' >/dev/null
+G12IMG=$(img 2527-3.webp 'Tahfidz Camp' 2>/dev/null) || true
+G12=$(wp post create --post_type=program --post_name=tfc --post_title='Tahfidz Camp' --post_content='Camp intensif tahfidz dengan setoran pagi, murajaah, dan pembinaan adab untuk memperkuat hafalan dalam suasana kebersamaan.' --post_excerpt='Camp intensif tahfidz dengan setoran pagi, murajaah, dan pembinaan adab untuk memperkuat hafalan dalam suasana kebersamaan.' --post_status=publish --menu_order=12 --porcelain)
+[ -n "$G12IMG" ] && wp post meta update "$G12" _thumbnail_id "$G12IMG" >/dev/null || true
+wp post meta update "$G12" _almazaya_heading 'Camp <span class="tone">Hafalan</span>' >/dev/null
+wp post meta update "$G12" _almazaya_items '<li><span class="mc-dot"></span><b>Setoran Pagi</b> — semangat baru tiap hari</li><li><span class="mc-dot gold"></span><b>Murajaah Intensif</b> — hafalan tetap terjaga</li><li><span class="mc-dot teal"></span><b>Adab Penghafal</b> — akhlak para pencinta Al-Qur'"'"'an</li>' >/dev/null
+G13IMG=$(img market-day-20221215085811-img-7341.webp 'Market Day' 2>/dev/null) || true
+G13=$(wp post create --post_type=program --post_name=mkd --post_title='Market Day' --post_content='Siswa berlatih berjualan sungguhan: menyiapkan produk, mengelola modal, melayani pembeli, dan belajar dari hasil usahanya.' --post_excerpt='Siswa berlatih berjualan sungguhan: menyiapkan produk, mengelola modal, melayani pembeli, dan belajar dari hasil usahanya.' --post_status=publish --menu_order=13 --porcelain)
+[ -n "$G13IMG" ] && wp post meta update "$G13" _thumbnail_id "$G13IMG" >/dev/null || true
+wp post meta update "$G13" _almazaya_heading 'Jiwa <span class="tone">Wirausaha</span>' >/dev/null
+wp post meta update "$G13" _almazaya_items '<li><span class="mc-dot"></span><b>Jual-Beli Langsung</b> — jualan sungguhan di sekolah</li><li><span class="mc-dot gold"></span><b>Kelola Modal</b> — hitung untung & rugi</li><li><span class="mc-dot teal"></span><b>Kerja Tim</b> — bagi peran yang rapi</li>' >/dev/null
+G14IMG=$(img home-20221214074906-img-6966.webp 'Event Tahunan ABUELA' 2>/dev/null) || true
+G14=$(wp post create --post_type=program --post_name=abl --post_title='Event Tahunan ABUELA' --post_content='Event tahunan keluarga besar Al Mazaya: pentas seni, apresiasi prestasi, dan silaturahmi bersama orang tua serta siswa.' --post_excerpt='Event tahunan keluarga besar Al Mazaya: pentas seni, apresiasi prestasi, dan silaturahmi bersama orang tua serta siswa.' --post_status=publish --menu_order=14 --porcelain)
+[ -n "$G14IMG" ] && wp post meta update "$G14" _thumbnail_id "$G14IMG" >/dev/null || true
+wp post meta update "$G14" _almazaya_heading 'Pesta <span class="tone">Kebersamaan</span>' >/dev/null
+wp post meta update "$G14" _almazaya_items '<li><span class="mc-dot"></span><b>Pentas Seni</b> — bakat siswa ditampilkan</li><li><span class="mc-dot gold"></span><b>Apresiasi Prestasi</b> — rayakan pencapaian</li><li><span class="mc-dot teal"></span><b>Silaturahmi</b> — bersama keluarga besar</li>' >/dev/null
+G15IMG=$(img english-talent-show-screenshot-20230829-145717.webp 'English Talent Show' 2>/dev/null) || true
+G15=$(wp post create --post_type=program --post_name=ets --post_title='English Talent Show' --post_content='Panggung bakat berbahasa Inggris — pidato, drama, nyanyi — untuk melatih keberanian tampil dan publik speaking.' --post_excerpt='Panggung bakat berbahasa Inggris — pidato, drama, nyanyi — untuk melatih keberanian tampil dan publik speaking.' --post_status=publish --menu_order=15 --porcelain)
+[ -n "$G15IMG" ] && wp post meta update "$G15" _thumbnail_id "$G15IMG" >/dev/null || true
+wp post meta update "$G15" _almazaya_heading 'Panggung <span class="tone">Bakat</span>' >/dev/null
+wp post meta update "$G15" _almazaya_items '<li><span class="mc-dot"></span><b>Drama & Pidato</b> — tampil penuh percaya diri</li><li><span class="mc-dot gold"></span><b>Public Speaking</b> — terbiasa di depan umum</li><li><span class="mc-dot teal"></span><b>Apresiasi Bakat</b> — satu panggung untuk semua</li>' >/dev/null
+echo "programs seeded"
 fi
 if [ "$(wp post list --post_type=destination --format=count 2>/dev/null)" -eq 0 ]; then
 echo "== destinations (5; logo MITA menyusul manual karena SVG) =="

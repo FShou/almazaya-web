@@ -511,6 +511,7 @@ a.page-btn:hover { border-color: var(--gold); color: var(--gold-deep); }
   -webkit-overflow-scrolling: touch;
   padding: .6rem .2rem 1rem;
   scrollbar-width: none;
+  justify-content: safe center;
 }
 .prog-track::-webkit-scrollbar { display: none; }
 .prog-track .mc-peek {
@@ -528,7 +529,7 @@ a.page-btn:hover { border-color: var(--gold); color: var(--gold-deep); }
 .prog-arrow:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
 
 /* Global partnerships — partner logo cards */
-.partner-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.1rem; align-items: stretch; }
+.partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); justify-content: center; gap: 1.1rem; align-items: stretch; }
 .partner-card {
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 1.7rem 1.2rem; text-align: center;

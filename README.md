@@ -112,7 +112,8 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
   - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
     bawaan theme (fallback statis, tidak kosong).
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`
-  (kategori, 3 post, 3 slide, 4 mitra, 3 program + foto dari theme).
+  (kategori, 3 post, 3 slide, 4 mitra, **15 program lengkap**, 5 destinasi
+  + foto dari theme). Idempoten (bagian yang sudah ada di-skip).
   Isi artikel lengkap: salin dari halaman detail statis (`rehaul`).
 - **Galeri dari Instagram**: dua cara (salah satu).
   Username doang tanpa token resmi Meta **tidak bisa** (akses publik ditutup

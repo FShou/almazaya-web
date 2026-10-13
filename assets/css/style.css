@@ -1711,8 +1711,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
   padding: 1rem 1rem .9rem;
 }
 .world-map { display: block; width: 100%; height: auto; }
-.map-land   { fill: #26456C; stroke: #4A6F9C; stroke-width: .7; stroke-linejoin: round; }
-.map-partner{ fill: #54789F; stroke: #7FA3C7; stroke-width: .7; }
+.map-land, .map-partner { fill: #26456C; stroke: #4A6F9C; stroke-width: .7; stroke-linejoin: round; }
 .map-dest { cursor: pointer; }
 .map-hit  { fill: transparent; }
 .map-marker {

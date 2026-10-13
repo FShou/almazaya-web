@@ -1,29 +1,22 @@
 <?php
 /**
- * Dynamic overseas destinations (CPT destination), 4 modes via $args['part']:
- * dots (SVG markers) | chips | cards (modal) | script (DATA + handlers).
- * Falls back to bundled static markup when empty (caller handles fallback).
+ * Dynamic overseas destinations (CPT destination), modes via $args['part']:
+ * map (Leaflet container) | chips | cards (modal) | mapscript (DATA +
+ * handlers + Leaflet init). Falls back to bundled static SVG markup
+ * when empty (caller handles fallback).
  */
 $almazaya_args = isset( $args ) && is_array( $args ) ? $args : array();
-$almazaya_part = isset( $almazaya_args['part'] ) ? $almazaya_args['part'] : 'dots';
+$almazaya_part = isset( $almazaya_args['part'] ) ? $almazaya_args['part'] : 'map';
 $almazaya_dests = almazaya_get_ordered_posts( 'destination' );
 $almazaya_en   = almazaya_is_en();
 
-if ( 'dots' === $almazaya_part ) :
-	foreach ( $almazaya_dests as $almazaya_d ) :
-		$almazaya_slug = $almazaya_d->post_name;
-		$almazaya_cx   = (int) get_post_meta( $almazaya_d->ID, '_almazaya_map_x', true );
-		$almazaya_cy   = (int) get_post_meta( $almazaya_d->ID, '_almazaya_map_y', true );
-		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
-		if ( '' === $almazaya_cname ) {
-			$almazaya_cname = $almazaya_slug;
-		}
-		?>
-		<g class="map-dest" data-country="<?php echo esc_attr( $almazaya_slug ); ?>" role="button" tabindex="0" aria-label="<?php echo esc_attr( $almazaya_cname ); ?>"><circle cx="<?php echo esc_attr( $almazaya_cx ); ?>" cy="<?php echo esc_attr( $almazaya_cy ); ?>" r="16" class="map-hit"/><circle cx="<?php echo esc_attr( $almazaya_cx ); ?>" cy="<?php echo esc_attr( $almazaya_cy ); ?>" r="6" class="map-marker"/><text x="<?php echo esc_attr( $almazaya_cx ); ?>" y="<?php echo esc_attr( $almazaya_cy - 20 ); ?>" class="map-label" text-anchor="middle"><?php echo esc_html( $almazaya_cname ); ?></text></g>
-		<?php
-	endforeach;
+if ( 'map' === $almazaya_part ) :
+	?>
+	<div id="ov-map" class="ov-map" role="application" aria-label="<?php echo esc_attr( $almazaya_en ? 'Map of overseas destinations' : 'Peta destinasi overseas' ); ?>"></div>
+	<?php
 
 elseif ( 'chips' === $almazaya_part ) :
+	echo '<div class="overseas-chips reveal">';
 	$almazaya_first = true;
 	foreach ( $almazaya_dests as $almazaya_d ) :
 		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
@@ -42,6 +35,7 @@ elseif ( 'chips' === $almazaya_part ) :
 			esc_html( $almazaya_cname )
 		);
 	endforeach;
+	echo '</div>';
 
 elseif ( 'cards' === $almazaya_part ) :
 	foreach ( $almazaya_dests as $almazaya_d ) :
@@ -70,9 +64,10 @@ elseif ( 'cards' === $almazaya_part ) :
 		<?php
 	endforeach;
 
-elseif ( 'script' === $almazaya_part ) :
+elseif ( 'mapscript' === $almazaya_part ) :
 	$almazaya_data  = array();
 	$almazaya_order = array();
+	$almazaya_pts   = array();
 	foreach ( $almazaya_dests as $almazaya_d ) :
 		$almazaya_cname = get_post_meta( $almazaya_d->ID, '_almazaya_country', true );
 		if ( '' === $almazaya_cname ) {
@@ -84,22 +79,36 @@ elseif ( 'script' === $almazaya_part ) :
 			'e' => get_post_meta( $almazaya_d->ID, '_almazaya_flag', true ),
 		);
 		$almazaya_order[] = $almazaya_d->post_name;
+		$almazaya_lat = get_post_meta( $almazaya_d->ID, '_almazaya_lat', true );
+		$almazaya_lng = get_post_meta( $almazaya_d->ID, '_almazaya_lng', true );
+		if ( '' !== $almazaya_lat && '' !== $almazaya_lng ) {
+			$almazaya_pts[] = array(
+				'slug' => $almazaya_d->post_name,
+				'lat'  => (float) $almazaya_lat,
+				'lng'  => (float) $almazaya_lng,
+				'name' => $almazaya_cname,
+			);
+		}
 	endforeach;
-	$almazaya_first = reset( $almazaya_dests );
-	$almazaya_fcname = get_post_meta( $almazaya_first->ID, '_almazaya_country', true );
-	if ( '' === $almazaya_fcname ) {
-		$almazaya_fcname = $almazaya_first->post_name;
-	}
 	$almazaya_json = str_replace( '</', '<\/', wp_json_encode( $almazaya_data ) );
 	?>
 	<script>
 	(function(){{
 		var DATA = <?php echo $almazaya_json; ?>;
 		var ORDER = <?php echo wp_json_encode( $almazaya_order ); ?>;
+		var PTS = <?php echo wp_json_encode( $almazaya_pts ); ?>;
 		var modal = document.getElementById('overseas-modal');
 		var country = document.getElementById('overseasModalCountry');
 		var idx = 0;
 		var active = null;
+		var marks = {};
+		function markActive(k) {{
+			document.querySelectorAll('.ov-pin span.active').forEach(function(s){{ s.classList.remove('active'); }});
+			if (k && marks[k] && marks[k].getElement()) {{
+				var sp = marks[k].getElement().querySelector('span');
+				if (sp) {{ sp.classList.add('active'); }}
+			}}
+		}}
 		function show(k, focus) {{
 			idx = ORDER.indexOf(k);
 			for (var i=0;i<ORDER.length;i++) document.getElementById('mc-'+ORDER[i]).classList.toggle('active', ORDER[i]===k);
@@ -110,12 +119,14 @@ elseif ( 'script' === $almazaya_part ) :
 			if (active) active.classList.remove('active');
 			var m = document.querySelector('.map-dest[data-country="'+k+'"] .map-marker');
 			if (m) {{ m.classList.add('active'); active = m; }}
+			markActive(k);
 			if (focus) document.getElementById('overseasModalClose').focus();
 		}}
 		function hide() {{
 			modal.classList.remove('open');
 			document.body.classList.remove('modal-open');
 			if (active) {{ active.classList.remove('active'); active = null; }}
+			markActive(null);
 		}}
 		function nav(d) {{ show(ORDER[(idx + d + ORDER.length) % ORDER.length]); }}
 		document.querySelectorAll('.map-dest').forEach(function(el){{
@@ -131,6 +142,18 @@ elseif ( 'script' === $almazaya_part ) :
 		document.getElementById('overseasModalClose').addEventListener('click', hide);
 		modal.addEventListener('click', function(e){{ if (e.target===modal) hide(); }});
 		document.addEventListener('keydown', function(e){{ if (e.key==='Escape' && modal.classList.contains('open')) hide(); }});
+		if (typeof L !== 'undefined' && PTS.length) {
+			var map = L.map('ov-map', { scrollWheelZoom: false, attributionControl: true }).setView([20, 30], 2);
+			var icon = L.divIcon({ className: 'ov-pin', html: '<span></span>', iconSize: [20, 20], iconAnchor: [10, 10] });
+			PTS.forEach(function(pt){
+				var mk = L.marker([pt.lat, pt.lng], { icon: icon, title: pt.name, keyboard: true }).addTo(map);
+				mk.on('click', function(){ show(pt.slug, true); });
+				marks[pt.slug] = mk;
+			});
+			var bnds = L.latLngBounds(PTS.map(function(pt){ return [pt.lat, pt.lng]; }));
+			map.fitBounds(bnds, { padding: [36, 36] });
+			if (map.getZoom() > 4) { map.setZoom(4); }
+		}
 	}})();
 	</script>
 	<?php

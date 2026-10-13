@@ -119,26 +119,26 @@ echo "programs: $G1 $G2 $G3"
 fi
 if [ "$(wp post list --post_type=destination --format=count 2>/dev/null)" -eq 0 ]; then
 echo "== destinations (5; logo MITA menyusul manual karena SVG) =="
-mkdest() { # slug title country flag tag url x y img desc order
+mkdest() { # slug title country flag tag url lat lng img desc order
   local D
   D=$(wp post create --post_type=destination --post_name="$1" --post_title="$2" --post_content="${10}" --post_status=publish --menu_order="${11}" --porcelain)
   wp post meta update "$D" _almazaya_country "$3" >/dev/null
   wp post meta update "$D" _almazaya_flag "$4" >/dev/null
   wp post meta update "$D" _almazaya_tag "$5" >/dev/null
   [ -n "$6" ] && wp post meta update "$D" _almazaya_website "$6" >/dev/null
-  wp post meta update "$D" _almazaya_map_x "$7" >/dev/null
-  wp post meta update "$D" _almazaya_map_y "$8" >/dev/null
+  wp post meta update "$D" _almazaya_lat "$7" >/dev/null
+  wp post meta update "$D" _almazaya_lng "$8" >/dev/null
   if [ -n "$9" ]; then
     local IM
     IM=$(img "$9" "$2" 2>/dev/null) && wp post meta update "$D" _thumbnail_id "$IM" >/dev/null || echo "(logo $1 dilewati)"
   fi
   echo "$D"
 }
-D1=$(mkdest singapore "Modern Montessori International (MMI)" Singapore "🇸🇬" "Montessori Authentic" "https://modern-montessori.com" 788 283 "logo-mmi-site.webp" "Kemitraan utama jenjang KB-TK. MMI Singapore adalah otoritas Montessori autentik." 1)
-D2=$(mkdest japan "MITA International School of Science" Japan "🇯🇵" "Science & Technology" "https://www.mita-is.ed.jp" 881 160 "" "Sekolah sains internasional di Chiba, Jepang." 2)
-D3=$(mkdest malaysia "Lincoln University College (LUC)" Malaysia "🇲🇾" "University Pathway" "https://www.lincoln.edu.my" 805 275 "logo-luc.webp" "Universitas terakreditasi di Malaysia untuk studi lanjut." 3)
-D4=$(mkdest australia "Minaret College" Australia "🇦🇺" "Islamic Education" "https://minaret.vic.edu.au" 873 374 "logo-minaret.webp" "Sekolah Islam terkemuka di Melbourne, Australia." 4)
-D5=$(mkdest turkey "Harvest International School" Turkey "🇹🇷" "Multilingual & Culture" "" 597 154 "logo-harvest.avif" "Sekolah internasional di Istanbul, Turki." 5)
+D1=$(mkdest singapore "Modern Montessori International (MMI)" Singapore "🇸🇬" "Montessori Authentic" "https://modern-montessori.com" 1.3521 103.8198 "logo-mmi-site.webp" "Kemitraan utama jenjang KB-TK. MMI Singapore adalah otoritas Montessori autentik." 1)
+D2=$(mkdest japan "MITA International School of Science" Japan "🇯🇵" "Science & Technology" "https://www.mita-is.ed.jp" 35.6074 140.1065 "" "Sekolah sains internasional di Chiba, Jepang." 2)
+D3=$(mkdest malaysia "Lincoln University College (LUC)" Malaysia "🇲🇾" "University Pathway" "https://www.lincoln.edu.my" 3.1390 101.6869 "logo-luc.webp" "Universitas terakreditasi di Malaysia untuk studi lanjut." 3)
+D4=$(mkdest australia "Minaret College" Australia "🇦🇺" "Islamic Education" "https://minaret.vic.edu.au" -37.8136 144.9631 "logo-minaret.webp" "Sekolah Islam terkemuka di Melbourne, Australia." 4)
+D5=$(mkdest turkey "Harvest International School" Turkey "🇹🇷" "Multilingual & Culture" "" 41.0082 28.9784 "logo-harvest.avif" "Sekolah internasional di Istanbul, Turki." 5)
 echo "destinations: $D1 $D2 $D3 $D4 $D5"
 fi
 wp rewrite flush >/dev/null

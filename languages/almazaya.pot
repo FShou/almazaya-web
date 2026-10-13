@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-13 08:24+0800\n"
+"POT-Creation-Date: 2026-10-13 09:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,104 +25,116 @@ msgstr ""
 msgid "Menu Footer"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:145
 msgid "Tautan Al Mazaya"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:150
 msgid "SHS Virtual Class URL"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:151
 msgid "JHS Virtual Class URL"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:152
 msgid "Instagram URL"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:153
 msgid "WhatsApp URL"
 msgstr ""
 
-#: functions.php:137
+#: functions.php:154
 msgid "WhatsApp mengambang URL"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:155
 msgid "YouTube URL"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:156
 msgid "Portal PSB URL"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:157
 msgid "Instagram MMI URL"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:186
 #, php-format
 msgid "Gambar: %s"
 msgstr ""
 
-#: functions.php:202
+#: functions.php:219
 #, php-format
 msgid "Teks: %s"
 msgstr ""
 
-#: functions.php:236
+#: functions.php:253
 msgid "Galeri Instagram"
 msgstr ""
 
-#: functions.php:238
+#: functions.php:255
 msgid ""
 "Tempel shortcode (mis. [instagram-feed]) ATAU kode embed dari widget "
 "username IG. Kosongkan untuk memakai grid foto bawaan."
 msgstr ""
 
-#: functions.php:251
+#: functions.php:268
 msgid "Shortcode / kode embed Instagram"
 msgstr ""
 
-#: functions.php:588
+#: functions.php:605
 msgid "Slide Hero"
 msgstr ""
 
-#: functions.php:589
+#: functions.php:606
 msgid "Slide"
 msgstr ""
 
-#: functions.php:590
+#: functions.php:607
 msgid "Tambah Slide"
 msgstr ""
 
-#: functions.php:603 functions.php:604
+#: functions.php:620 functions.php:621
 msgid "Mitra"
 msgstr ""
 
-#: functions.php:605
+#: functions.php:622
 msgid "Tambah Mitra"
 msgstr ""
 
-#: functions.php:618 functions.php:619
+#: functions.php:635 functions.php:636
 msgid "Program"
 msgstr ""
 
-#: functions.php:620
+#: functions.php:637
 msgid "Tambah Program"
 msgstr ""
 
-#: functions.php:670
+#: functions.php:650 functions.php:651
+msgid "Destinasi"
+msgstr ""
+
+#: functions.php:652
+msgid "Tambah Negara"
+msgstr ""
+
+#: functions.php:702
 msgid "Konten Slide"
 msgstr ""
 
-#: functions.php:671
+#: functions.php:703
 msgid "Tautan Mitra"
 msgstr ""
 
-#: functions.php:672
+#: functions.php:704
 msgid "Detail Program"
+msgstr ""
+
+#: functions.php:705
+msgid "Detail Destinasi & Titik Peta"
 msgstr ""
 
 #: index.php:23

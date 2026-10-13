@@ -105,10 +105,12 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
   - Program: label (title), judul panel + poin (meta box), deskripsi (editor),
     foto, key data = slug (unik, tanpa spasi).
   - Destinasi (peta overseas): nama sekolah (title), negara + emoji bendera +
-    tag + URL website + **titik peta X (0–1000) / Y (0–480)** (meta box),
-    deskripsi (editor), logo (featured), key = slug (huruf kecil).
-    Koordinat dikira-kira dari negara tetangga di peta; labelnama otomatis
-    di atas titik.
+    tag + URL website + **koordinat real Latitude/Longitude desimal**
+    (meta box; mis. Singapore 1.3521, 103.8198 — klik kanan peta di
+    Google Maps → salin koordinat), deskripsi (editor), logo (featured),
+    key = slug (huruf kecil). Peta pakai Leaflet (tanpa API key, tanpa tile
+    server — titik emas di atas grid navy, auto-frame semua titik).
+    Label nama otomatis di atas titik.
   - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
     bawaan theme (fallback statis, tidak kosong).
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`

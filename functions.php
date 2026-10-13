@@ -63,6 +63,23 @@ function almazaya_assets() {
 		ALMAZAYA_JS_VERSION,
 		true
 	);
+	/* Leaflet (no API key) for the overseas map — front page only, head so
+	 * the inline map script in the body can use L immediately. */
+	if ( is_front_page() ) {
+		wp_enqueue_style(
+			'leaflet',
+			'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css',
+			array(),
+			'1.9.4'
+		);
+		wp_enqueue_script(
+			'leaflet',
+			'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js',
+			array(),
+			'1.9.4',
+			false
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'almazaya_assets' );
 
@@ -728,7 +745,7 @@ function almazaya_destination_box( $post ) {
 	echo '<p><label><strong>Emoji bendera (mis. 🇸🇬)</strong></label><br><input type="text" name="_almazaya_flag" value="' . $get( '_almazaya_flag' ) . '" style="width:100%"></p>';
 	echo '<p><label><strong>Tag (mis. Montessori Authentic)</strong></label><br><input type="text" name="_almazaya_tag" value="' . $get( '_almazaya_tag' ) . '" style="width:100%"></p>';
 	echo '<p><label><strong>URL website sekolah (kosongkan bila tak ada)</strong></label><br><input type="url" name="_almazaya_website" value="' . $get( '_almazaya_website' ) . '" style="width:100%"></p>';
-	echo '<p><label><strong>Titik peta: X (0–1000) &amp; Y (0–480)</strong></label><br><input type="number" name="_almazaya_map_x" value="' . $get( '_almazaya_map_x' ) . '" min="0" max="1000" style="width:32%"> <input type="number" name="_almazaya_map_y" value="' . $get( '_almazaya_map_y' ) . '" min="0" max="480" style="width:32%"></p>';
+	echo '<p><label><strong>Titik peta: Latitude &amp; Longitude desimal</strong> (mis. Singapore: 1.3521, 103.8198 — lihat di Google Maps, klik kanan → salin koordinat)</label><br><input type="number" step="any" name="_almazaya_lat" value="' . $get( '_almazaya_lat' ) . '" min="-90" max="90" style="width:32%" placeholder="1.3521"> <input type="number" step="any" name="_almazaya_lng" value="' . $get( '_almazaya_lng' ) . '" min="-180" max="180" style="width:32%" placeholder="103.8198"></p>';
 	echo '<p>Nama sekolah = Title. Deskripsi = isi editor. Logo/foto = Featured image. Key = slug post (huruf kecil, tanpa spasi).</p>';
 }
 
@@ -760,10 +777,11 @@ function almazaya_save_meta( $post_id ) {
 	if ( isset( $_POST['_almazaya_items'] ) ) {
 		update_post_meta( $post_id, '_almazaya_items', wp_kses_post( $_POST['_almazaya_items'] ) );
 	}
-	foreach ( array( '_almazaya_map_x' => 1000, '_almazaya_map_y' => 480 ) as $f => $max ) {
-		if ( isset( $_POST[ $f ] ) && '' !== $_POST[ $f ] ) {
-			update_post_meta( $post_id, $f, min( $max, max( 0, (int) $_POST[ $f ] ) ) );
-		}
+	if ( isset( $_POST['_almazaya_lat'] ) && '' !== $_POST['_almazaya_lat'] ) {
+		update_post_meta( $post_id, '_almazaya_lat', min( 90, max( -90, (float) $_POST['_almazaya_lat'] ) ) );
+	}
+	if ( isset( $_POST['_almazaya_lng'] ) && '' !== $_POST['_almazaya_lng'] ) {
+		update_post_meta( $post_id, '_almazaya_lng', min( 180, max( -180, (float) $_POST['_almazaya_lng'] ) ) );
 	}
 }
 add_action( 'save_post', 'almazaya_save_meta' );
@@ -833,5 +851,5 @@ function almazaya_pagination( $query = null, $current = 1, $add_args = array() )
  */
 
 function almazaya_destination_meta_keys() {
-	return array( '_almazaya_country', '_almazaya_flag', '_almazaya_tag', '_almazaya_website', '_almazaya_map_x', '_almazaya_map_y' );
+	return array( '_almazaya_country', '_almazaya_flag', '_almazaya_tag', '_almazaya_website', '_almazaya_lat', '_almazaya_lng' );
 }

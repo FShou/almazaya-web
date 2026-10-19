@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.0.8' );
-define( 'ALMAZAYA_JS_VERSION', '1.0.8' );
+define( 'ALMAZAYA_VERSION', '1.0.9' );
+define( 'ALMAZAYA_JS_VERSION', '1.0.9' );
 
 /* ---------- Setup ---------- */
 
@@ -541,29 +541,54 @@ function almazaya_create_menu_from_links( $name, $links ) {
 	return $menu_id;
 }
 
-/** One-time: create + assign starter menus so Appearance → Menus isn't empty. */
+/** Register a seeded menu in Polylang's per-language location store so it is
+ *  actually used on the front end (Polylang keeps locations in its own option,
+ *  not in the theme mod). No-op when Polylang is inactive.
+ */
+function almazaya_pll_register_location( $location, $menu_id ) {
+	if ( ! function_exists( 'pll_default_language' ) || ! function_exists( 'pll_set_term_language' ) ) {
+		return;
+	}
+	$lang = pll_default_language();
+	if ( ! $lang ) {
+		return;
+	}
+	pll_set_term_language( $menu_id, $lang );
+	$options = get_option( 'polylang' );
+	if ( ! is_array( $options ) ) {
+		return;
+	}
+	$theme = get_option( 'stylesheet' );
+	$options['nav_menus'][ $theme ][ $location ][ $lang ] = $menu_id;
+	update_option( 'polylang', $options );
+}
+
+/** One-time: create starter menus so Appearance → Menus isn't empty.
+ *  Menus are always created (so editors get a ready "Menu Utama"/"Menu Footer"
+ *  with the right items); they're only auto-assigned to a location when that
+ *  location is still empty, so an existing menu is never overwritten.
+ */
 function almazaya_seed_starter_menus() {
-	if ( get_option( 'almazaya_menus_seeded' ) ) {
+	$seed_version = '1.0.9';
+	if ( get_option( 'almazaya_menus_seeded' ) === $seed_version ) {
 		return;
 	}
 	if ( ! function_exists( 'wp_create_nav_menu' ) ) {
 		return;
 	}
 	$locations = (array) get_theme_mod( 'nav_menu_locations', array() );
-	if ( empty( $locations['primary'] ) ) {
-		$id = almazaya_create_menu_from_links( __( 'Menu Utama', 'almazaya' ), almazaya_primary_links() );
-		if ( $id ) {
-			$locations['primary'] = $id;
-		}
+	$primary   = almazaya_create_menu_from_links( __( 'Menu Utama', 'almazaya' ), almazaya_primary_links() );
+	if ( $primary && empty( $locations['primary'] ) ) {
+		$locations['primary'] = $primary;
+		almazaya_pll_register_location( 'primary', $primary );
 	}
-	if ( empty( $locations['footer'] ) ) {
-		$id = almazaya_create_menu_from_links( __( 'Menu Footer', 'almazaya' ), almazaya_footer_links() );
-		if ( $id ) {
-			$locations['footer'] = $id;
-		}
+	$footer = almazaya_create_menu_from_links( __( 'Menu Footer', 'almazaya' ), almazaya_footer_links() );
+	if ( $footer && empty( $locations['footer'] ) ) {
+		$locations['footer'] = $footer;
+		almazaya_pll_register_location( 'footer', $footer );
 	}
 	set_theme_mod( 'nav_menu_locations', $locations );
-	update_option( 'almazaya_menus_seeded', 1 );
+	update_option( 'almazaya_menus_seeded', $seed_version );
 }
 add_action( 'after_switch_theme', 'almazaya_seed_starter_menus' );
 add_action( 'admin_init', 'almazaya_seed_starter_menus' );

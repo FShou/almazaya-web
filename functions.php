@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.0.9' );
-define( 'ALMAZAYA_JS_VERSION', '1.0.9' );
+define( 'ALMAZAYA_VERSION', '1.1.0' );
+define( 'ALMAZAYA_JS_VERSION', '1.1.0' );
 
 /* ---------- Setup ---------- */
 
@@ -837,6 +837,36 @@ function almazaya_register_cpts() {
 			'supports'     => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 		)
 	);
+	register_post_type(
+		'gallery',
+		array(
+			'labels'       => array(
+				'name'          => __( 'Galeri', 'almazaya' ),
+				'singular_name' => __( 'Foto', 'almazaya' ),
+				'add_new_item'  => __( 'Tambah Foto', 'almazaya' ),
+			),
+			'public'       => true,
+			'has_archive'  => false,
+			'show_in_rest' => false,
+			'menu_icon'    => 'dashicons-format-gallery',
+			'supports'     => array( 'title', 'excerpt', 'thumbnail', 'page-attributes' ),
+		)
+	);
+	register_taxonomy(
+		'galeri_cat',
+		array( 'gallery' ),
+		array(
+			'labels'            => array(
+				'name'          => __( 'Kategori Galeri', 'almazaya' ),
+				'singular_name' => __( 'Kategori', 'almazaya' ),
+			),
+			'public'            => true,
+			'show_ui'           => true,
+			'hierarchical'      => false,
+			'show_in_rest'      => false,
+			'show_admin_column' => true,
+		)
+	);
 }
 add_action( 'init', 'almazaya_register_cpts' );
 
@@ -852,6 +882,19 @@ function almazaya_get_ordered_posts( $type, $number = -1 ) {
 		)
 	);
 	return is_array( $posts ) ? $posts : array();
+}
+
+/** True when at least one published entry of a CPT exists (cheap check). */
+function almazaya_has_ordered_posts( $type ) {
+	return (bool) get_posts(
+		array(
+			'post_type'      => $type,
+			'post_status'    => 'publish',
+			'posts_per_page' => 1,
+			'fields'         => 'ids',
+			'no_found_rows'  => true,
+		)
+	);
 }
 
 /** True when the CPT has at least one published post. */

@@ -17,6 +17,8 @@
     <?php $almazaya_feed_html = almazaya_galeri_feed_html(); ?>
 <?php if ( '' !== $almazaya_feed_html ) : ?>
 <div class="galeri-feed"><?php echo $almazaya_feed_html; ?></div>
+<?php elseif ( almazaya_has_ordered_posts( 'gallery' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/gallery-loop' ); ?>
 <?php else : ?>
     <div class="filter-row reveal">
       <button class="filter-chip active">All Events</button>

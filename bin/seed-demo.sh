@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Seed demo content: categories, posts, slides, mitra, programs.
+# Seed demo content: categories, posts, slides, mitra, programs, gallery,
+# destinations.
 # Usage (from theme root on branch wordpress):
 #   WP_PATH=/tmp/opencode/wpsite WP_CLI="php /tmp/opencode/wp-cli.phar" ./bin/seed-demo.sh
 # Re-running duplicates content. EN translations: do via Polylang dashboard
@@ -178,6 +179,50 @@ G15=$(wp post create --post_type=program --post_name=ets --post_title='English T
 wp post meta update "$G15" _almazaya_heading 'Panggung <span class="tone">Bakat</span>' >/dev/null
 wp post meta update "$G15" _almazaya_items '<li><span class="mc-dot"></span><b>Drama & Pidato</b> — tampil penuh percaya diri</li><li><span class="mc-dot gold"></span><b>Public Speaking</b> — terbiasa di depan umum</li><li><span class="mc-dot teal"></span><b>Apresiasi Bakat</b> — satu panggung untuk semua</li>' >/dev/null
 echo "programs seeded"
+fi
+if [ "$(wp post list --post_type=gallery --format=count 2>/dev/null)" -eq 0 ]; then
+echo "== galeri (9 foto) =="
+wp term create galeri_cat 'Akademik' --slug=akademik >/dev/null 2>&1 || true
+wp term create galeri_cat 'Overseas' --slug=overseas >/dev/null 2>&1 || true
+wp term create galeri_cat 'Islami' --slug=islami >/dev/null 2>&1 || true
+wp term create galeri_cat 'Wisuda' --slug=wisuda >/dev/null 2>&1 || true
+GA1IMG=$(img english-talent-show-screenshot-20230829-151444.webp 'English Talent Show · Panggung bulanan bakat siswa' 2>/dev/null) || true
+GA1=$(wp post create --post_type=gallery --post_title='English Talent Show · Panggung bulanan bakat siswa' --post_status=publish --menu_order=1 --porcelain)
+[ -n "$GA1IMG" ] && wp post meta update "$GA1" _thumbnail_id "$GA1IMG" >/dev/null || true
+wp post term set "$GA1" galeri_cat akademik --by=slug >/dev/null 2>&1 || true
+GA2IMG=$(img market-day-20221214111711-img-7128.webp 'Market Day · Belajar wirausaha' 2>/dev/null) || true
+GA2=$(wp post create --post_type=gallery --post_title='Market Day · Belajar wirausaha' --post_status=publish --menu_order=2 --porcelain)
+[ -n "$GA2IMG" ] && wp post meta update "$GA2" _thumbnail_id "$GA2IMG" >/dev/null || true
+wp post term set "$GA2" galeri_cat akademik --by=slug >/dev/null 2>&1 || true
+GA3IMG=$(img overseas-img-8730-min.webp 'Overseas Program · Singapura &amp; Malaysia' 2>/dev/null) || true
+GA3=$(wp post create --post_type=gallery --post_title='Overseas Program · Singapura &amp; Malaysia' --post_status=publish --menu_order=3 --porcelain)
+[ -n "$GA3IMG" ] && wp post meta update "$GA3" _thumbnail_id "$GA3IMG" >/dev/null || true
+wp post term set "$GA3" galeri_cat overseas --by=slug >/dev/null 2>&1 || true
+GA4IMG=$(img overseas-img-8809-min.webp 'HUT Kemerdekaan RI · Lomba seru' 2>/dev/null) || true
+GA4=$(wp post create --post_type=gallery --post_title='HUT Kemerdekaan RI · Lomba seru' --post_status=publish --menu_order=4 --porcelain)
+[ -n "$GA4IMG" ] && wp post meta update "$GA4" _thumbnail_id "$GA4IMG" >/dev/null || true
+wp post term set "$GA4" galeri_cat akademik --by=slug >/dev/null 2>&1 || true
+GA5IMG=$(img ramadhan-charity-day-img-5423.webp 'Ramadhan Charity Day · Berbagi ke sesama' 2>/dev/null) || true
+GA5=$(wp post create --post_type=gallery --post_title='Ramadhan Charity Day · Berbagi ke sesama' --post_status=publish --menu_order=5 --porcelain)
+[ -n "$GA5IMG" ] && wp post meta update "$GA5" _thumbnail_id "$GA5IMG" >/dev/null || true
+wp post term set "$GA5" galeri_cat islami --by=slug >/dev/null 2>&1 || true
+GA6IMG=$(img quran-academy-r0003011.webp 'Haflah Khatmil Qur'"'"'an · Wisuda tahfidz' 2>/dev/null) || true
+GA6=$(wp post create --post_type=gallery --post_title='Haflah Khatmil Qur'"'"'an · Wisuda tahfidz' --post_status=publish --menu_order=6 --porcelain)
+[ -n "$GA6IMG" ] && wp post meta update "$GA6" _thumbnail_id "$GA6IMG" >/dev/null || true
+wp post term set "$GA6" galeri_cat wisuda --by=slug >/dev/null 2>&1 || true
+GA7IMG=$(img overseas-img-8816-min.webp 'Olimpiade Sains · Pembinaan juara nasional' 2>/dev/null) || true
+GA7=$(wp post create --post_type=gallery --post_title='Olimpiade Sains · Pembinaan juara nasional' --post_status=publish --menu_order=7 --porcelain)
+[ -n "$GA7IMG" ] && wp post meta update "$GA7" _thumbnail_id "$GA7IMG" >/dev/null || true
+wp post term set "$GA7" galeri_cat akademik --by=slug >/dev/null 2>&1 || true
+GA8IMG=$(img english-talent-show-screenshot-20230825-132133-1.webp 'English Camp · Imersi bahasa kelas 7' 2>/dev/null) || true
+GA8=$(wp post create --post_type=gallery --post_title='English Camp · Imersi bahasa kelas 7' --post_status=publish --menu_order=8 --porcelain)
+[ -n "$GA8IMG" ] && wp post meta update "$GA8" _thumbnail_id "$GA8IMG" >/dev/null || true
+wp post term set "$GA8" galeri_cat akademik --by=slug >/dev/null 2>&1 || true
+GA9IMG=$(img school-debate-competition-aq3.webp 'Debat Bilingual · Juara 2 UIN Antasari' 2>/dev/null) || true
+GA9=$(wp post create --post_type=gallery --post_title='Debat Bilingual · Juara 2 UIN Antasari' --post_status=publish --menu_order=9 --porcelain)
+[ -n "$GA9IMG" ] && wp post meta update "$GA9" _thumbnail_id "$GA9IMG" >/dev/null || true
+wp post term set "$GA9" galeri_cat akademik --by=slug >/dev/null 2>&1 || true
+echo "galeri seeded"
 fi
 if [ "$(wp post list --post_type=destination --format=count 2>/dev/null)" -eq 0 ]; then
 echo "== destinations (5; logo MITA menyusul manual karena SVG) =="

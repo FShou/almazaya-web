@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.1.0' );
-define( 'ALMAZAYA_JS_VERSION', '1.1.0' );
+define( 'ALMAZAYA_VERSION', '1.1.1' );
+define( 'ALMAZAYA_JS_VERSION', '1.1.1' );
 
 /* ---------- Setup ---------- */
 

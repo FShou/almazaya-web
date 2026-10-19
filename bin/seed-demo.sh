@@ -18,6 +18,9 @@ HELLO=$(wp post list --post_type=post --name=hello-world --format=ids 2>/dev/nul
 SAMPLE=$(wp post list --post_type=page --name=sample-page --format=ids 2>/dev/null || true)
 [ -n "$SAMPLE" ] && wp post delete $SAMPLE --force >/dev/null || true
 
+echo "== judul situs =="
+wp option update blogname "Al Mazaya Islamic School" >/dev/null
+
 echo "== categories =="
 wp term create category Prestasi --slug=prestasi --description="Prestasi siswa" >/dev/null || true
 wp term create category Kegiatan --slug=kegiatan --description="Kegiatan sekolah" >/dev/null || true

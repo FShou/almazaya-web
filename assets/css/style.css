@@ -858,6 +858,41 @@ a.partner-card { display: block; text-decoration: none; color: inherit; }
 .related-list a:hover { color: var(--gold-deep); }
 .related-list span { display: block; font-size: .8rem; color: var(--slate-light); }
 
+/* ---------- Gallery albums (category covers) ---------- */
+.gal-albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 1.1rem;
+}
+.gal-album {
+  display: block; width: 100%; padding: 0; cursor: pointer; text-align: left;
+  font: inherit; color: inherit; overflow: hidden;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.gal-album:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(201,162,39,.45); }
+.gal-album-cover {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  aspect-ratio: 4 / 3; background: var(--mist);
+}
+.gal-album-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gal-album-cover img:only-child { grid-column: 1 / -1; grid-row: 1 / -1; }
+.gal-album-cover img:nth-child(3):last-child { grid-column: 1 / -1; }
+.gal-album-meta { display: block; padding: .85rem 1rem 1rem; }
+.gal-album-name { display: block; font-weight: 700; color: var(--navy); }
+.gal-album-count { display: block; margin-top: .15rem; font-size: .82rem; color: var(--slate-light); }
+.gal-album-head { display: flex; align-items: center; gap: .85rem; flex-wrap: wrap; margin-bottom: 1.3rem; }
+.gal-album-back {
+  font: inherit; font-weight: 600; font-size: .88rem; cursor: pointer;
+  padding: .45rem .95rem; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--white); color: var(--navy);
+  transition: border-color .18s ease, color .18s ease;
+}
+.gal-album-back:hover { border-color: var(--gold); color: var(--gold-deep); }
+.gal-album-title { margin: 0; font-size: 1.3rem; color: var(--navy); }
+.gal-album-head .gal-album-count { margin: 0; }
+
 /* ---------- Gallery lightbox ---------- */
 .gal-lightbox {
   position: fixed; inset: 0; z-index: 200;
@@ -1859,4 +1894,7 @@ body.modal-open { overflow: hidden; }
   .gal-lightbox > button { width: 38px; height: 38px; font-size: 1.2rem; }
   .gal-lb-prev { left: .35rem; }
   .gal-lb-next { right: .35rem; }
+  .gal-albums { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+  .gal-album-meta { padding: .7rem .75rem .8rem; }
+  .gal-album-name { font-size: .95rem; }
 }

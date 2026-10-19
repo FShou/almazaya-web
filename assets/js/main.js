@@ -196,7 +196,8 @@
       if (act && act.scrollIntoView) act.scrollIntoView({ block: 'nearest', inline: 'center' });
     }
     function open(el) {
-      items = all.filter(function (x) { return getComputedStyle(x).display !== 'none'; });
+      var box = el.closest ? el.closest('.gallery-bento') : null;
+      items = box ? Array.prototype.slice.call(box.querySelectorAll('.img-slot')) : all.slice();
       if (!items.length) items = all.slice();
       buildThumbs();
       var i = items.indexOf(el);
@@ -233,6 +234,43 @@
       var dy = e.changedTouches[0].clientY - sy;
       if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) show(idx + (dx < 0 ? 1 : -1));
     }, { passive: true });
+  })();
+
+  /* Gallery albums — the page lists categories (with photo previews); opening
+     one swaps in that album's grid. Clicking a photo still opens the lightbox. */
+  (function galleryAlbums() {
+    var grid = document.querySelector('.gal-albums');
+    if (!grid) return;
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.gal-album-panel'));
+    function top(el) {
+      return el.getBoundingClientRect().top + window.pageYOffset - 88;
+    }
+    function showAlbum(slug) {
+      var target = null;
+      panels.forEach(function (p) {
+        var on = p.getAttribute('data-album') === slug;
+        p.hidden = !on;
+        if (on) target = p;
+      });
+      grid.hidden = true;
+      if (target) {
+        Array.prototype.forEach.call(target.querySelectorAll('.reveal'), function (el) {
+          el.classList.add('in-view');
+        });
+        window.scrollTo({ top: top(target), behavior: 'smooth' });
+      }
+    }
+    function showGrid() {
+      panels.forEach(function (p) { p.hidden = true; });
+      grid.hidden = false;
+      window.scrollTo({ top: top(grid), behavior: 'smooth' });
+    }
+    Array.prototype.forEach.call(grid.querySelectorAll('.gal-album'), function (card) {
+      card.addEventListener('click', function () { showAlbum(card.getAttribute('data-album')); });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.gal-album-back'), function (btn) {
+      btn.addEventListener('click', showGrid);
+    });
   })();
 
   /* Article table of contents — built from h2s, works on any article */

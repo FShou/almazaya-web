@@ -142,12 +142,13 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
   - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
     bawaan theme (fallback statis, tidak kosong).
 - **Galeri / Aktivitas Siswa** (CPT): satu entri = satu foto (featured image).
-  Judul = caption, **Kategori Galeri** (taxonomy) = tombol filter di halaman
-  (otomatis dari kategori yang dipakai), urutan = Page Attributes → Order.
-  Tanpa entri = grid bawaan theme (fallback statis) yang masih bisa diganti
-  per foto via Customize → Gambar: Galeri. Klik foto = **lightbox layar penuh**
-  (geser/panah/keyboard/swipe, counter, + strip thumbnail pratinjau di bawah;
-  mengikuti hasil filter).
+  Judul = caption, **Kategori Galeri** (taxonomy) = **album** — halaman
+  menampilkan kartu album (cover dari beberapa foto pertama + jumlah foto);
+  klik album = grid foto album itu (tombol "Semua album" buat balik); klik foto
+  = **lightbox layar penuh** (geser/panah/keyboard/swipe, counter, + strip
+  thumbnail pratinjau; cakupannya foto album itu). Urutan foto/cover = Page
+  Attributes → Order. Tanpa entri = grid bawaan theme (fallback statis) yang
+  masih bisa diganti per foto via Customize → Gambar: Galeri.
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`
   (kategori, 3 post, 3 slide, 4 mitra, **15 program lengkap**, **9 foto galeri**,
   5 destinasi + foto dari theme). Idempoten (bagian yang sudah ada di-skip).

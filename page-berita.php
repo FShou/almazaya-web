@@ -60,10 +60,11 @@ $almazaya_q = new WP_Query( $almazaya_args );
 					$almazaya_cats = get_the_category();
 					$almazaya_first = $almazaya_cats ? $almazaya_cats[0] : null;
 					$almazaya_gold = $almazaya_first && in_array( $almazaya_first->slug, array( 'prestasi', 'achievement' ), true ) ? ' gold' : '';
+					$almazaya_thumb = has_post_thumbnail();
 					?>
 					<article class="post-card reveal">
-						<div class="has-photo post-thumb img-slot">
-							<?php if ( has_post_thumbnail() ) : ?>
+						<div class="post-thumb img-slot<?php echo $almazaya_thumb ? ' has-photo' : ' slot-pattern'; ?>">
+							<?php if ( $almazaya_thumb ) : ?>
 								<img class="slot-photo" src="<?php echo esc_url( get_the_post_thumbnail_url( null, 'medium_large' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
 							<?php endif; ?>
 						</div>

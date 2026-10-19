@@ -138,9 +138,13 @@
     });
   });
 
-  /* Gallery lightbox — full screen: slide through photos + thumbnail previews */
+  /* Gallery lightbox — full screen: slide through photos + thumbnail previews.
+     Tiles in .gallery-bento / .gallery-grid either are single photos (static
+     fallback) or an album (dynamic: data-album + a matching hidden photo list
+     in .gal-sources). */
   (function galleryLightbox() {
-    var all = Array.prototype.slice.call(document.querySelectorAll('.gallery-bento .img-slot'));
+    var GRID = '.gallery-bento, .gallery-grid';
+    var all = Array.prototype.slice.call(document.querySelectorAll('.gallery-bento .img-slot, .gallery-grid .img-slot'));
     if (!all.length) return;
     var ov = document.createElement('div');
     ov.className = 'gal-lightbox';
@@ -159,22 +163,21 @@
     var thumbs = ov.querySelector('.gal-lb-thumbs');
     var items = [], idx = 0;
 
-    function src(el) { var im = el.querySelector('img'); return im ? (im.currentSrc || im.src) : ''; }
-    function captionOf(el) {
-      var label = el.querySelector('.gal-label');
+    function tileEntry(el) {
       var im = el.querySelector('img');
-      return label ? label.textContent : (im ? im.alt : '');
+      var label = el.querySelector('.gal-label');
+      return { src: im ? (im.currentSrc || im.src) : '', label: label ? label.textContent : (im ? im.alt : '') };
     }
     function buildThumbs() {
       thumbs.innerHTML = '';
-      items.forEach(function (el, i) {
+      items.forEach(function (it, i) {
         var t = document.createElement('button');
         t.type = 'button';
         t.className = 'gal-lb-thumb';
         t.setAttribute('role', 'tab');
         t.setAttribute('aria-label', 'Foto ' + (i + 1));
         var ti = document.createElement('img');
-        ti.src = src(el);
+        ti.src = it.src;
         ti.alt = '';
         t.appendChild(ti);
         t.addEventListener('click', function (e) { e.stopPropagation(); show(i); });
@@ -184,10 +187,9 @@
     function show(i) {
       if (!items.length) return;
       idx = ((i % items.length) + items.length) % items.length;
-      var el = items[idx];
-      img.src = src(el);
-      img.alt = captionOf(el);
-      cap.textContent = captionOf(el);
+      img.src = items[idx].src;
+      img.alt = items[idx].label;
+      cap.textContent = items[idx].label;
       count.textContent = (idx + 1) + ' / ' + items.length;
       Array.prototype.forEach.call(thumbs.children, function (t, n) {
         t.classList.toggle('active', n === idx);
@@ -196,12 +198,23 @@
       if (act && act.scrollIntoView) act.scrollIntoView({ block: 'nearest', inline: 'center' });
     }
     function open(el) {
-      var box = el.closest ? el.closest('.gallery-bento') : null;
-      items = box ? Array.prototype.slice.call(box.querySelectorAll('.img-slot')) : all.slice();
-      if (!items.length) items = all.slice();
+      var start = 0;
+      var slug = el.getAttribute('data-album');
+      var source = slug ? document.querySelector('.gal-sources [data-album="' + slug + '"]') : null;
+      if (source) {
+        // Album tile: its photos live in the hidden list; cover = first photo.
+        items = Array.prototype.slice.call(source.querySelectorAll('img')).map(function (im) {
+          return { src: im.currentSrc || im.src, label: im.getAttribute('data-label') || im.alt || '' };
+        });
+      } else {
+        var box = el.closest ? el.closest(GRID) : null;
+        var nodes = box ? Array.prototype.slice.call(box.querySelectorAll('.img-slot')) : all.slice();
+        items = nodes.map(tileEntry);
+        start = nodes.indexOf(el);
+      }
+      if (!items.length) items = all.map(tileEntry);
       buildThumbs();
-      var i = items.indexOf(el);
-      show(i < 0 ? 0 : i);
+      show(start < 0 ? 0 : start);
       ov.classList.add('open');
       document.body.classList.add('modal-open');
     }
@@ -212,6 +225,9 @@
     all.forEach(function (it) {
       it.style.cursor = 'zoom-in';
       it.addEventListener('click', function () { open(it); });
+      it.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(it); }
+      });
     });
     ov.querySelector('.gal-lb-close').addEventListener('click', hide);
     ov.querySelector('.gal-lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
@@ -234,43 +250,6 @@
       var dy = e.changedTouches[0].clientY - sy;
       if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) show(idx + (dx < 0 ? 1 : -1));
     }, { passive: true });
-  })();
-
-  /* Gallery albums — the page lists categories (with photo previews); opening
-     one swaps in that album's grid. Clicking a photo still opens the lightbox. */
-  (function galleryAlbums() {
-    var grid = document.querySelector('.gal-albums');
-    if (!grid) return;
-    var panels = Array.prototype.slice.call(document.querySelectorAll('.gal-album-panel'));
-    function top(el) {
-      return el.getBoundingClientRect().top + window.pageYOffset - 88;
-    }
-    function showAlbum(slug) {
-      var target = null;
-      panels.forEach(function (p) {
-        var on = p.getAttribute('data-album') === slug;
-        p.hidden = !on;
-        if (on) target = p;
-      });
-      grid.hidden = true;
-      if (target) {
-        Array.prototype.forEach.call(target.querySelectorAll('.reveal'), function (el) {
-          el.classList.add('in-view');
-        });
-        window.scrollTo({ top: top(target), behavior: 'smooth' });
-      }
-    }
-    function showGrid() {
-      panels.forEach(function (p) { p.hidden = true; });
-      grid.hidden = false;
-      window.scrollTo({ top: top(grid), behavior: 'smooth' });
-    }
-    Array.prototype.forEach.call(grid.querySelectorAll('.gal-album'), function (card) {
-      card.addEventListener('click', function () { showAlbum(card.getAttribute('data-album')); });
-    });
-    Array.prototype.forEach.call(document.querySelectorAll('.gal-album-back'), function (btn) {
-      btn.addEventListener('click', showGrid);
-    });
   })();
 
   /* Article table of contents — built from h2s, works on any article */

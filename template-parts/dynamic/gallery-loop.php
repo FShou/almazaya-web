@@ -1,11 +1,11 @@
 <?php
 /**
- * Template part: galeri dinamis — album per kategori.
- * Satu entri = satu foto (Featured Image = foto, judul = caption, taxonomy
- * `galeri_cat` = album). Halaman menampilkan kartu album (cover dari beberapa
- * foto pertama + jumlah foto); klik album = grid foto album itu; klik foto =
- * lightbox layar penuh (slide + thumbnail). Kosong = template induk memakai
- * markup statis bawaan.
+ * Template part: galeri dinamis — satu tile bento = satu album (kategori).
+ * Layout tetap seperti grid bawaan theme (mosaik bento); bedanya setiap tile
+ * mewakili sebuah album/kategori (cover = foto pertama), dan saat diklik semua
+ * foto album itu dibuka layar penuh (lightbox: slide + thumbnail pratinjau).
+ * Daftar foto tiap album disimpan di wadah tersembunyi `.gal-sources` supaya
+ * JS bisa membaca isinya. Kosong = template induk memakai markup statis bawaan.
  */
 $almazaya_fotos = almazaya_get_ordered_posts( 'gallery' );
 if ( ! $almazaya_fotos ) {
@@ -38,37 +38,25 @@ if ( ! $almazaya_albums ) {
 }
 $almazaya_en = almazaya_is_en();
 ?>
-    <div class="gal-albums" id="gal-albums">
+        <div class="gallery-bento">
 <?php foreach ( $almazaya_albums as $almazaya_slug => $almazaya_album ) : ?>
-<?php $almazaya_cover = array_slice( $almazaya_album['photos'], 0, 4 ); ?>
-      <button type="button" class="gal-album reveal" data-album="<?php echo esc_attr( $almazaya_slug ); ?>">
-        <span class="gal-album-cover" aria-hidden="true">
-<?php foreach ( $almazaya_cover as $almazaya_c ) : ?>
-          <img src="<?php echo esc_url( $almazaya_c['src'] ); ?>" alt="" loading="lazy">
+<?php
+$almazaya_cover = $almazaya_album['photos'][0];
+$almazaya_total = count( $almazaya_album['photos'] );
+$almazaya_meta  = $almazaya_album['name'] . ' &middot; ' . $almazaya_total . ' ' . ( $almazaya_en ? 'photos' : 'foto' );
+?>
+          <div class="has-photo img-slot reveal" data-album="<?php echo esc_attr( $almazaya_slug ); ?>" role="button" tabindex="0" aria-label="<?php echo esc_attr( $almazaya_meta ); ?>">
+            <img class="slot-photo" src="<?php echo esc_url( $almazaya_cover['src'] ); ?>" alt="<?php echo esc_attr( $almazaya_album['name'] ); ?>" loading="lazy">
+            <span class="gal-label"><?php echo esc_html( $almazaya_album['name'] ); ?> &middot; <?php echo (int) $almazaya_total; ?> <?php echo esc_html( $almazaya_en ? 'photos' : 'foto' ); ?></span>
+          </div>
 <?php endforeach; ?>
-        </span>
-        <span class="gal-album-meta">
-          <span class="gal-album-name"><?php echo esc_html( $almazaya_album['name'] ); ?></span>
-          <span class="gal-album-count"><?php echo (int) count( $almazaya_album['photos'] ); ?> <?php echo esc_html( $almazaya_en ? 'photos' : 'foto' ); ?></span>
-        </span>
-      </button>
-<?php endforeach; ?>
-    </div>
-
-<?php foreach ( $almazaya_albums as $almazaya_slug => $almazaya_album ) : ?>
-    <div class="gal-album-panel" data-album="<?php echo esc_attr( $almazaya_slug ); ?>" hidden>
-      <div class="gal-album-head">
-        <button type="button" class="gal-album-back">&larr; <?php echo esc_html( $almazaya_en ? 'All albums' : 'Semua album' ); ?></button>
-        <h3 class="gal-album-title"><?php echo esc_html( $almazaya_album['name'] ); ?></h3>
-        <span class="gal-album-count"><?php echo (int) count( $almazaya_album['photos'] ); ?> <?php echo esc_html( $almazaya_en ? 'photos' : 'foto' ); ?></span>
-      </div>
-      <div class="gallery-bento">
-<?php foreach ( $almazaya_album['photos'] as $almazaya_p ) : ?>
-        <div class="has-photo img-slot">
-          <img class="slot-photo" src="<?php echo esc_url( $almazaya_p['src'] ); ?>" alt="<?php echo esc_attr( $almazaya_p['label'] ); ?>">
-          <span class="gal-label"><?php echo esc_html( $almazaya_p['label'] ); ?></span>
         </div>
+        <div class="gal-sources" hidden>
+<?php foreach ( $almazaya_albums as $almazaya_slug => $almazaya_album ) : ?>
+          <div data-album="<?php echo esc_attr( $almazaya_slug ); ?>">
+<?php foreach ( $almazaya_album['photos'] as $almazaya_p ) : ?>
+            <img src="<?php echo esc_url( $almazaya_p['src'] ); ?>" data-label="<?php echo esc_attr( $almazaya_p['label'] ); ?>" alt="">
 <?php endforeach; ?>
-      </div>
-    </div>
+          </div>
 <?php endforeach; ?>
+        </div>

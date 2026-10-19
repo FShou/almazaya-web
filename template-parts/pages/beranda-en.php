@@ -628,6 +628,9 @@
       <h2>Momentous <span class="tone">Memories</span></h2>
       <p><a class="more-link" href="<?php echo esc_url( almazaya_url( 'galeri', '', '' ) ); ?>">View full gallery →</a></p>
     </div>
+    <?php if ( almazaya_has_ordered_posts( 'gallery' ) ) : ?>
+<?php get_template_part( 'template-parts/dynamic/gallery-loop' ); ?>
+<?php else : ?>
     <div class="gallery-grid tall-feature reveal">
       <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230829_135505' ) ); ?>" alt="English Talent Show"><span class="gal-label">English Talent Show</span></div>
       <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'market_day_20221214073641_img_6924' ) ); ?>" alt="Market Day"><span class="gal-label">Market Day</span></div>
@@ -638,6 +641,7 @@
       <div class="has-photo img-slot"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'overseas_img_8816_min' ) ); ?>" alt="Science Olympiad"><span class="gal-label">Science Olympiad</span></div>
       <div class="has-photo img-slot warm"><img class="slot-photo" src="<?php echo esc_url( almazaya_img( 'english_talent_show_screenshot_20230825_132045_1' ) ); ?>" alt="English Camp"><span class="gal-label">English Camp</span></div>
     </div>
+<?php endif; ?>
   </div>
 </section>
 

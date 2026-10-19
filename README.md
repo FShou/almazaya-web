@@ -92,7 +92,9 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
    buat menu terjemahannya lewat Polylang. (Markup menu dashboard otomatis
    disamakan dengan gaya bawaan: dropdown submenu tetap berfungsi.)
 7. **Appearance → Customize → Tautan Al Mazaya**: isi URL SHS/JHS Virtual Class,
-   Instagram (+ Instagram MMI), WhatsApp, YouTube, Portal PSB (default sudah terisi URL produksi).
+   Instagram, TikTok, WhatsApp (+ WhatsApp mengambang), YouTube, Instagram MMI,
+   Portal PSB (default sudah terisi URL produksi). Ikonnya tampil di bar atas
+   (topbar) dan di footer.
 8. **Settings → General**: Site Title = `Al Mazaya Islamic School` (tampil di
    tab browser + judul SEO; tagline opsional). Lalu
    **Appearance → Customize → Site Identity**: upload logo (opsional; fallback
@@ -106,10 +108,36 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
    Tambah item baru: 1 baris di `almazaya_content_images()` /
    `almazaya_content_texts()` (functions.php) + 1 pemanggilan helper di template.
 
+## Menu (wajib ada)
+
+Theme punya **2 lokasi menu** — lihat Appearance → Menus → *Manage Locations*:
+
+| Lokasi | Nama di theme | Tampil di | Item minimal |
+| --- | --- | --- | --- |
+| `primary` | **Menu Utama** | navbar atas + nav mobile | Beranda, Tentang, Sekolah Kami *(dropdown: KB-TK MMI, SMP, SMA)*, Berita, Aktivitas Siswa, PPDB |
+| `footer` | **Menu Footer** | kolom link di footer | Tentang Kami, Sekolah Kami, Berita & Prestasi, Aktivitas Siswa, PPDB |
+
+- Saat theme **pertama aktif, menu dibuat otomatis** (Menu Utama + Menu Footer)
+  dan langsung dipasang ke lokasinya — tinggal edit/tambah item. Kalau sudah ada
+  menu lama, menu otomatis ini tidak menimpanya.
+- Kalau lokasi menu **kosong**, theme memakai nav bawaan (fallback) — situs tetap
+  jalan, jadi menu boleh dikosongkan.
+- Urutan item di navbar = urutan menu. **Submenu** cukup di-drag menjorok ke
+  kanan; otomatis jadi dropdown (gaya theme disamakan untuk menu buatan
+  dashboard).
+- **Polylang**: menu disimpan per bahasa. Buat menu untuk bahasa kedua lalu
+  pasang ke lokasi yang sama untuk bahasa itu (Appearance → Menus → pilih
+  bahasa di atas), atau lewat kolom Translations di Polylang.
+- **Menambah item baru** (mis. Agenda, Download, Berita): Appearance → Menus →
+  Tambah item / Custom Link → Publish. Tak perlu ubah kode.
+- Di luar menu ini ada link tetap yang diatur lewat Customizer: tombol SHS/JHS
+  Virtual Class serta ikon sosial (Instagram, TikTok, WhatsApp, YouTube) di
+  topbar dan footer.
+
 ## Struktur
 
 - `functions.php` — supports, enqueue (Ubuntu font + `assets/css/style.css` +
-  `assets/js/main.js`), 2 lokasi menu, Customizer 7 URL, helper
+  `assets/js/main.js`), 2 lokasi menu, Customizer URL (Tautan Al Mazaya), helper
   `almazaya_url()` / `almazaya_link()` / `almazaya_lang_suffix()`.
 - `header.php` / `footer.php` — topbar, header+nav, mobile-nav, footer, tombol WA.
 - `front-page.php`, `page-{tentang,jenjang,mmi,smp,sma,berita,berita-detail,galeri,ppdb}.php`
@@ -142,13 +170,15 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
   - EN: duplikat via Polylang (Translations). Tanpa entri = tampil konten
     bawaan theme (fallback statis, tidak kosong).
 - **Galeri / Aktivitas Siswa** (CPT): satu entri = satu foto (featured image).
-  Judul = caption, **Kategori Galeri** (taxonomy) = **album** — halaman
-  menampilkan kartu album (cover dari beberapa foto pertama + jumlah foto);
-  klik album = grid foto album itu (tombol "Semua album" buat balik); klik foto
-  = **lightbox layar penuh** (geser/panah/keyboard/swipe, counter, + strip
-  thumbnail pratinjau; cakupannya foto album itu). Urutan foto/cover = Page
-  Attributes → Order. Tanpa entri = grid bawaan theme (fallback statis) yang
-  masih bisa diganti per foto via Customize → Gambar: Galeri.
+  Judul = caption, **Kategori Galeri** (taxonomy) = **album**. Halaman galeri &
+  bagian galeri di beranda memakai layout mosaik yang sama seperti sebelumnya,
+  tapi **tiap tile = satu album** (cover = foto pertama, label = nama album +
+  jumlah foto). Klik tile = **lightbox layar penuh** berisi semua foto album itu
+  (geser/panah/keyboard/swipe, counter, + strip thumbnail pratinjau). Urutan
+  foto/cover = Page Attributes → Order. Tanpa entri = grid bawaan theme
+  (fallback statis) yang masih bisa diganti per foto via Customize → Gambar:
+  Galeri. Kartu berita tanpa gambar otomatis memakai latar navy berpola (bukan
+  kotak biru polos).
 - **Seed demo**: `WP_PATH=... WP_CLI="php .../wp-cli.phar" ./bin/seed-demo.sh`
   (kategori, 3 post, 3 slide, 4 mitra, **15 program lengkap**, **9 foto galeri**,
   5 destinasi + foto dari theme). Idempoten (bagian yang sudah ada di-skip).

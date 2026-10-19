@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.2.0' );
-define( 'ALMAZAYA_JS_VERSION', '1.2.0' );
+define( 'ALMAZAYA_VERSION', '1.2.1' );
+define( 'ALMAZAYA_JS_VERSION', '1.2.1' );
 
 /* ---------- Setup ---------- */
 
@@ -106,6 +106,7 @@ function almazaya_default_links() {
 		'shs_class'      => 'https://almazayaislamicschool.sch.id/class',
 		'jhs_class'      => 'https://almazayaislamicschool.my.id/class/login/index.php',
 		'instagram'      => 'https://www.instagram.com/almazayaislamicschool/',
+		'tiktok'         => 'https://www.tiktok.com/@almazayaislamicschool',
 		'whatsapp'       => 'https://wa.me/628115051123',
 		'whatsapp_float' => 'https://wa.me/628115051123?text=Assalamualaikum',
 		'youtube'        => 'https://www.youtube.com/@almazayaislamicschool1244',
@@ -133,6 +134,7 @@ function almazaya_customize_register( $wp_customize ) {
 		'shs_class'      => __( 'SHS Virtual Class URL', 'almazaya' ),
 		'jhs_class'      => __( 'JHS Virtual Class URL', 'almazaya' ),
 		'instagram'      => __( 'Instagram URL', 'almazaya' ),
+		'tiktok'         => __( 'TikTok URL', 'almazaya' ),
 		'whatsapp'       => __( 'WhatsApp URL', 'almazaya' ),
 		'whatsapp_float' => __( 'WhatsApp mengambang URL', 'almazaya' ),
 		'youtube'        => __( 'YouTube URL', 'almazaya' ),

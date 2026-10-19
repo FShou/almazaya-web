@@ -22,7 +22,10 @@ folder theme tetap `almazaya`, update file **tidak menghapus** apapun:
 
 1. Backup dulu (UpdraftPlus/Duplicator atau panel hosting).
 2. Unduh `almazaya.zip` dari rilis baru → Appearance → Themes → Add New →
-   Upload → WordPress menawari **penggantian versi** → konfirmasi.
+   Upload. Karena folder `almazaya` sudah ada, WP menampilkan perbandingan
+   versi + tombol biru **"Replace installed with uploaded"** (versi lama =
+   "Replace current with uploaded") — klik itu untuk menimpa file. Kalau
+   namanya cocok WP tak pernah sekaligus menimpa tanpa konfirmasi ini.
    (Alternatif 1-klik: plugin gratis **Git Updater** — WP menampilkan
    notifikasi update dari GitHub Releases.)
 3. Cek homepage + 2-3 halaman + clear cache (plugin cache/CDN bila ada).

@@ -82,9 +82,12 @@ Bisa — theme ini sudah lolos tes live di WP 7.0.7. Urutan aman:
 5. Template sudah **nempel otomatis** ke slug (file `page-{slug}.php`), jadi
    tiap Page langsung tampil desain penuhnya — tak perlu pilih Template manual.
    Boleh juga dipilih manual di dropdown *Template* (daftar `… — Al Mazaya`).
-6. **Appearance → Menus**: buat menu *Primary* (6 item utama + submenu
-   MMI/SMP/SMA di bawah Sekolah Kami, tiap bahasa) assign ke *Menu Utama*; buat menu footer assign ke *Menu Footer*.
-   Tanpa menu pun jalan (fallback otomatis = link bawaan ID/EN).
+6. **Appearance → Menus**: theme membuat menu awal **otomatis** (Menu Utama +
+   Menu Footer, sudah terpasang ke lokasinya) saat pertama aktif — tinggal
+   edit/tambah item. Kalau kosong pun tetap jalan (fallback otomatis = link
+   bawaan ID/EN). Untuk bahasa kedua, buat menu terjemahannya lewat Polylang.
+   (Markup menu dashboard otomatis disamakan dengan gaya bawaan: dropdown
+   submenu tetap berfungsi.)
 7. **Appearance → Customize → Tautan Al Mazaya**: isi URL SHS/JHS Virtual Class,
    Instagram (+ Instagram MMI), WhatsApp, YouTube, Portal PSB (default sudah terisi URL produksi).
 8. **Settings → General**: Site Title = `Al Mazaya Islamic School` (tampil di

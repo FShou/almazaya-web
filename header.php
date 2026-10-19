@@ -88,39 +88,7 @@
 <div class="mobile-nav">
   <button class="nav-close" aria-label="<?php echo esc_attr( almazaya_is_en() ? 'Close menu' : 'Tutup menu' ); ?>"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
   <div class="mobile-nav-inner">
-    <?php
-    $almazaya_cur = almazaya_current_slug();
-    $almazaya_pfx = almazaya_is_en() ? 'en/' : '';
-    $almazaya_inschool = in_array( $almazaya_cur, array( 'jenjang', 'mmi', 'smp', 'sma' ), true );
-    foreach ( almazaya_primary_links() as $almazaya_item ) {
-      $almazaya_slug  = $almazaya_item[0];
-      $almazaya_label = $almazaya_item[1];
-      $almazaya_sub   = isset( $almazaya_item[2] ) ? $almazaya_item[2] : null;
-      if ( $almazaya_sub ) {
-        printf(
-          '<a href="%s"%s>%s</a>',
-          esc_url( almazaya_url( $almazaya_slug, $almazaya_pfx ) ),
-          ( $almazaya_cur === $almazaya_slug ) ? ' class="active"' : '',
-          esc_html( $almazaya_label )
-        );
-        foreach ( $almazaya_sub as $almazaya_child ) {
-          printf(
-            '<a href="%s"%s>%s</a>',
-            esc_url( almazaya_url( $almazaya_child[0], $almazaya_pfx ) ),
-            ( $almazaya_cur === $almazaya_child[0] ) ? ' class="mobile-sub active"' : ' class="mobile-sub"',
-            esc_html( $almazaya_child[1] )
-          );
-        }
-      } else {
-        printf(
-          '<a href="%s"%s>%s</a>',
-          esc_url( almazaya_url( $almazaya_slug, $almazaya_pfx ) ),
-          ( $almazaya_cur === $almazaya_slug ) ? ' class="active"' : '',
-          esc_html( $almazaya_label )
-        );
-      }
-    }
-    ?>
+    <?php almazaya_mobile_nav(); ?>
     <?php almazaya_lang_toggle( 'mobile-lang' ); ?>
   </div>
 </div>

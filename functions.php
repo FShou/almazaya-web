@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ALMAZAYA_VERSION', '1.0.7' );
-define( 'ALMAZAYA_JS_VERSION', '1.0.7' );
+define( 'ALMAZAYA_VERSION', '1.0.8' );
+define( 'ALMAZAYA_JS_VERSION', '1.0.8' );
 
 /* ---------- Setup ---------- */
 
@@ -396,6 +396,177 @@ function almazaya_fallback_footer_nav() {
 	);
 	echo '</ul>';
 }
+
+/* ---------- Nav menus managed from the dashboard ----------
+ * The theme ships a built-in fallback nav, but editors can also build menus in
+ * Appearance → Menus and assign them to the "Menu Utama"/"Menu Footer"
+ * locations. WordPress-generated markup gets the same classes the stylesheet
+ * expects (has-sub / sub-nav / active) so both look and behave identically, and
+ * the first activation seeds ready-made starter menus (editable afterwards).
+ */
+
+function almazaya_nav_menu_css_class( $classes ) {
+	if ( in_array( 'menu-item-has-children', $classes, true ) && ! in_array( 'has-sub', $classes, true ) ) {
+		$classes[] = 'has-sub';
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'almazaya_nav_menu_css_class' );
+
+function almazaya_nav_submenu_css_class( $classes ) {
+	if ( ! in_array( 'sub-nav', $classes, true ) ) {
+		$classes[] = 'sub-nav';
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_submenu_css_class', 'almazaya_nav_submenu_css_class' );
+
+function almazaya_nav_link_attributes( $atts, $item ) {
+	if ( ! empty( $item->current ) || ! empty( $item->current_item_ancestor ) ) {
+		$atts['class'] = trim( ( isset( $atts['class'] ) ? $atts['class'] . ' ' : '' ) . 'active' );
+	}
+	return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'almazaya_nav_link_attributes', 10, 2 );
+
+/** Is a dashboard menu item the page currently shown? (for the active state) */
+function almazaya_menu_item_is_current( $item ) {
+	if ( (int) $item->object_id > 0 && (int) $item->object_id === (int) get_queried_object_id() ) {
+		return true;
+	}
+	if ( is_front_page() && 'custom' === $item->type ) {
+		return untrailingslashit( $item->url ) === untrailingslashit( home_url( '/' ) );
+	}
+	return false;
+}
+
+/** Mobile slide-in nav: mirror the assigned dashboard menu, else built-in links. */
+function almazaya_mobile_nav() {
+	$locations = get_nav_menu_locations();
+	if ( ! empty( $locations['primary'] ) ) {
+		$items = wp_get_nav_menu_items( $locations['primary'] );
+		if ( $items ) {
+			$by_parent = array();
+			foreach ( $items as $item ) {
+				$by_parent[ (int) $item->menu_item_parent ][] = $item;
+			}
+			foreach ( $by_parent[0] as $top ) {
+				printf(
+					'<a href="%s"%s>%s</a>',
+					esc_url( $top->url ),
+					almazaya_menu_item_is_current( $top ) ? ' class="active"' : '',
+					esc_html( $top->title )
+				);
+				foreach ( isset( $by_parent[ $top->ID ] ) ? $by_parent[ $top->ID ] : array() as $child ) {
+					printf(
+						'<a href="%s" class="mobile-sub%s">%s</a>',
+						esc_url( $child->url ),
+						almazaya_menu_item_is_current( $child ) ? ' active' : '',
+						esc_html( $child->title )
+					);
+				}
+			}
+			return;
+		}
+	}
+	$cur = almazaya_current_slug();
+	$pfx = almazaya_is_en() ? 'en/' : '';
+	$inschool = in_array( $cur, array( 'jenjang', 'mmi', 'smp', 'sma' ), true );
+	foreach ( almazaya_primary_links() as $item ) {
+		$slug  = $item[0];
+		$label = $item[1];
+		$sub   = isset( $item[2] ) ? $item[2] : null;
+		if ( $sub ) {
+			printf( '<a href="%s"%s>%s</a>', esc_url( almazaya_url( $slug, $pfx ) ), $inschool ? ' class="active"' : '', esc_html( $label ) );
+			foreach ( $sub as $child ) {
+				printf(
+					'<a href="%s" class="mobile-sub%s">%s</a>',
+					esc_url( almazaya_url( $child[0], $pfx ) ),
+					( $cur === $child[0] ) ? ' active' : '',
+					esc_html( $child[1] )
+				);
+			}
+		} else {
+			printf( '<a href="%s"%s>%s</a>', esc_url( almazaya_url( $slug, $pfx ) ), ( $cur === $slug ) ? ' class="active"' : '', esc_html( $label ) );
+		}
+	}
+}
+
+/** Build a menu item arg array from a theme nav link (slug, label). */
+function almazaya_nav_item_args( $slug, $label, $position ) {
+	$args = array(
+		'menu-item-title'    => $label,
+		'menu-item-status'   => 'publish',
+		'menu-item-position' => $position,
+	);
+	$page = ( 'index' === $slug ) ? null : get_page_by_path( $slug );
+	if ( $page instanceof WP_Post ) {
+		$args['menu-item-object-id'] = $page->ID;
+		$args['menu-item-object']    = 'page';
+		$args['menu-item-type']      = 'post_type';
+	} else {
+		$args['menu-item-url']  = ( 'index' === $slug ) ? home_url( '/' ) : home_url( '/' . $slug . '/' );
+		$args['menu-item-type'] = 'custom';
+	}
+	return $args;
+}
+
+function almazaya_create_menu_from_links( $name, $links ) {
+	$existing = wp_get_nav_menu_object( $name );
+	if ( $existing ) {
+		return (int) $existing->term_id;
+	}
+	$menu_id = wp_create_nav_menu( $name );
+	if ( is_wp_error( $menu_id ) || ! $menu_id ) {
+		return 0;
+	}
+	$pos = 0;
+	foreach ( $links as $link ) {
+		$children = isset( $link[2] ) ? $link[2] : array();
+		$parent   = wp_update_nav_menu_item( $menu_id, 0, almazaya_nav_item_args( $link[0], $link[1], ++$pos ) );
+		if ( is_wp_error( $parent ) || ! $parent ) {
+			continue;
+		}
+		foreach ( $children as $child ) {
+			wp_update_nav_menu_item(
+				$menu_id,
+				0,
+				array_merge(
+					almazaya_nav_item_args( $child[0], $child[1], ++$pos ),
+					array( 'menu-item-parent-id' => $parent )
+				)
+			);
+		}
+	}
+	return $menu_id;
+}
+
+/** One-time: create + assign starter menus so Appearance → Menus isn't empty. */
+function almazaya_seed_starter_menus() {
+	if ( get_option( 'almazaya_menus_seeded' ) ) {
+		return;
+	}
+	if ( ! function_exists( 'wp_create_nav_menu' ) ) {
+		return;
+	}
+	$locations = (array) get_theme_mod( 'nav_menu_locations', array() );
+	if ( empty( $locations['primary'] ) ) {
+		$id = almazaya_create_menu_from_links( __( 'Menu Utama', 'almazaya' ), almazaya_primary_links() );
+		if ( $id ) {
+			$locations['primary'] = $id;
+		}
+	}
+	if ( empty( $locations['footer'] ) ) {
+		$id = almazaya_create_menu_from_links( __( 'Menu Footer', 'almazaya' ), almazaya_footer_links() );
+		if ( $id ) {
+			$locations['footer'] = $id;
+		}
+	}
+	set_theme_mod( 'nav_menu_locations', $locations );
+	update_option( 'almazaya_menus_seeded', 1 );
+}
+add_action( 'after_switch_theme', 'almazaya_seed_starter_menus' );
+add_action( 'admin_init', 'almazaya_seed_starter_menus' );
 
 /** Language switcher: Polylang when available, static home links otherwise. */
 function almazaya_lang_toggle( $extra_class = '' ) {
